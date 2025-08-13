@@ -12884,7 +12884,37 @@ label password26:
     "{b}{i}[Rn] consulte ton dossier pendant un instant.{/i}{/b}"
     play sound "Click.mp3" noloop 
 
-    Rn "Ok, nous avons des batteries neuves pour [newname]. Les capacités sont : 4000 Wh, 7000 Wh et 10000 Wh. Laquelle voulez-vous ?"
+    Rn "Ok, nous avons des batteries neuves pour [newname]."
+    play sound "Click.mp3" noloop 
+
+    P "Ce sont les quelles ?"
+    play sound "Click.mp3" noloop 
+
+    Rn "Premièrement, il y a la Voltaris qui fait 4000 Wh."
+    play sound "Click.mp3" noloop
+
+    P "La seconde ?" 
+    play sound "Click.mp3" noloop
+
+    Rn "il y a le neutronix qui fait 7000 Wh"
+    play sound "Click.mp3" noloop
+
+    P "Et la dernière ?"
+    play sound "Click.mp3" noloop 
+
+    Rn "Et enfin, l'ultracore qui fait 10000 Wh."
+    play sound "Click.mp3" noloop
+
+    P "Je vois merci."
+    play sound "Click.mp3" noloop 
+
+    Rn "Du coup laquelle veux-tu ?"
+    play sound "Click.mp3" noloop 
+
+    P "Je ne sais pas trop, je vais devoir réfléchir un peu."
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Tu réfléchis un peu.{/i}{/b}"
     play sound "Click.mp3" noloop 
 
 label choice9:
@@ -13333,7 +13363,7 @@ label password28:
             hide screen day with moveoutleft
             scene black with fade 
 
-            "{b}{i}Fin numéro 15 : [newname] a refusé de démarrer à cause d'une batterie trop faible.{/i}{/b}"
+            "{b}{i}Fin numéro 15 : [newname] a refusé de démarrer correctement à cause d'une batterie trop faible.{/i}{/b}"
             play sound "Menu.mp3" noloop
 
             menu:    
@@ -14142,10 +14172,13 @@ label choice10:
     "{b}{i}Les filles se mettent à sourir.{/i}{/b}"
     play sound "Click.mp3" noloop
 
-    
+    Kh "Je suis contente que vous soyez contente."
+    play sound "Click.mp3" noloop
 
+    P ""
+    play sound "Click.mp3" noloop
 
-
+ 
      
     
 
