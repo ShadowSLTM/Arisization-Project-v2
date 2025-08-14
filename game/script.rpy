@@ -276,7 +276,7 @@ label début:
         S "Un [model] !? Tu n'es pas sérieux j'espère."
         play sound "Click.mp3" noloop
 
-    elif pronom == "elle":
+    else: 
 
         S "Un [model] !? Tu n'es pas sérieuse j'espère."
         play sound "Click.mp3" noloop
@@ -673,7 +673,7 @@ label choice1:
                 P "Oui, je suis sûr de vouloir la garder." 
                 play sound "Click.mp3" noloop
 
-            elif pronom == "elle": 
+            else: 
 
                 S "Mais tu es sûre de vouloir la garder ?"
                 play sound "Click.mp3" noloop
@@ -695,7 +695,7 @@ label choice1:
         P "Mais elle est abandonnée, et en plus je suis bon en informatique pour l'améliorer."
         play sound "Click.mp3" noloop 
 
-    elif pronom == "elle": 
+    else: 
 
         P "Mais elle est abandonnée, et en plus je suis bonne en informatique."
         play sound "Click.mp3" noloop 
@@ -752,7 +752,7 @@ label choice1:
         A "Oui, je suis contente pour toi que tu sois arrivé ici."
         play sound "Click.mp3" noloop 
 
-    elif pronom == "elle": 
+    else: 
 
         P "Enfin arrivées au lycée..."
         play sound "Click.mp3" noloop 
@@ -800,7 +800,7 @@ label choice1:
         P "Euh j'étais occupé..."
         play sound "Click.mp3" noloop
 
-    elif pronom == "elle": 
+    else: 
 
         A "Attend... Tu t'es inscrite dans un lycée et tu ne t'es pas renseignée un peu plus ?"
         play sound "Click.mp3" noloop
@@ -872,7 +872,7 @@ label choice1:
         P "[easter_egg]"
         play sound "Click.mp3" noloop 
 
-    elif pronom == "elle": 
+    else: 
 
         $ easter_egg = get_random_enchente_f() 
         P "[easter_egg]"
@@ -1003,7 +1003,7 @@ label choice1:
         E "ça va aller, ton créateur est là pour toi. N'est ce pas [P] ?" 
         play sound "Click.mp3" noloop
     
-    elif pronom == "elle": 
+    else: 
         
         E "ça va aller, ta créatrice est là pour toi. N'est ce pas [P] ?"
         play sound "Click.mp3" noloop
@@ -1154,7 +1154,7 @@ label choice1:
         R "C'est vrai, c'est une fille qui est avec lui."
         play sound "Click.mp3" noloop 
 
-    elif pronom == "elle": 
+    else: 
 
         R "Qui c'est encore celle-là ?"
         play sound "Click.mp3" noloop
@@ -1479,7 +1479,7 @@ label choice1:
         P "Je me présente, je m'appelle [P], j'ai dix-neuf ans et ancien élève du [origine]."
         play sound "Click.mp3" noloop 
 
-    elif pronom == "elle": 
+    else: 
     
         P "Je me présente, je m'appelle [P], j'ai dix-neuf ans et ancienne élève du [origine]."
         play sound "Click.mp3" noloop 
@@ -1520,7 +1520,7 @@ label choice1:
         I "Putain... tu dois vraiment être un génie pour avoir créer un [model], je comprend mieux pourquoi tu étais au [origine]."
         play sound "Click.mp3" noloop
 
-    elif pronom == "elle": 
+    else: 
 
         I "Putain... tu dois vraiment être une génie pour avoir créer un [model], je comprend mieux pourquoi tu étais au [origine]."
         play sound "Click.mp3" noloop
@@ -1574,7 +1574,7 @@ label choice1:
         I "Il te considère vraiment comme sa propre fille !?"
         play sound "Click.mp3" noloop
 
-    elif pronom == "elle": 
+    else: 
 
         I "Elle te considère vraiment comme sa propre fille !?"
         play sound "Click.mp3" noloop 
@@ -1772,7 +1772,7 @@ label choice1:
         K "Oh c'est bon fais pas le sérieux, détends-toi un peu."
         play sound "Click.mp3" noloop
 
-    elif pronom == "elle":
+    else:
         
         P "Calmez-vous, vous êtes dans un lycée je vous rappelle, un peu de tenue."
         play sound "Click.mp3" noloop
@@ -1788,7 +1788,7 @@ label choice1:
         P "Oui désolé c'est plus fort que moi."
         play sound "Click.mp3" noloop 
 
-    elif pronom == "elle": 
+    else: 
 
         P "Oui désolée c'est plus fort que moi."
         play sound "Click.mp3" noloop 
@@ -1801,7 +1801,7 @@ label choice1:
         P "Désolé madame."
         play sound "Click.mp3" noloop
 
-    elif pronom == "elle": 
+    else: 
 
         P "Désolée madame."
         play sound "Click.mp3" noloop
@@ -2049,7 +2049,7 @@ label choice2:
                 P "Aller visiter le lycée seul." 
                 play sound "Click.mp3" noloop
 
-            elif pronom == "elle": 
+            else: 
 
                 P "Aller visiter le lycée seule." 
                 play sound "Click.mp3" noloop
@@ -2133,7 +2133,7 @@ label choice2:
                 P "je suis juste venu voir la salle de club."
                 play sound "Click.mp3" noloop
 
-            elif pronom == "elle": 
+            else: 
 
                 P "je suis juste venue voir la salle de club."
                 play sound "Click.mp3" noloop 
@@ -2260,7 +2260,7 @@ label choice2:
                         P "Mince j'aurais dû être plus vigilant avec elle, mon projet est ruiné."
                         play music "gameover.mp3" noloop
 
-                    elif pronom == "elle": 
+                    else: 
 
                         P "Mince j'aurais dû être plus vigilante avec elle, mon projet est ruiné."
                         play music "gameover.mp3" noloop
@@ -2415,7 +2415,7 @@ label choice2:
         P "Désolé, je m'appelle [P], je suis en Seconde-E."
         play sound "Click.mp3" noloop
 
-    elif pronom == "elle": 
+    else: 
 
         P "Désolée, je m'appelle [P], je suis en Seconde-E."
         play sound "Click.mp3" noloop 
@@ -2888,7 +2888,7 @@ label choice5:
         A "[validation]"
         play sound "Click.mp3" noloop 
 
-    elif pronom == "elle":
+    else:
 
         P  "On est presque arrivées."
         play sound "Click.mp3" noloop
@@ -3131,7 +3131,7 @@ label choice5:
         P "C'est pas contre toi mais je préfère être seul avec [newname]"
         play sound "Click.mp3" noloop
 
-    elif pronom == "elle": 
+    else: 
 
         P "C'est pas contre toi mais je préfère être seule avec [newname]"
         play sound "Click.mp3" noloop 
@@ -3434,7 +3434,7 @@ label choice6:
         P "Hey, je me suis reposé aussi. Je ne pense pas qu'à la programmation et ton amélioration, tu devrais surtout dire ça à [I]."
         play sound "Click.mp3" noloop
 
-    elif pronom == "elle": 
+    else: 
 
         P "Hey, je me suis reposée aussi. Je ne pense pas qu'à la programmation et ton amélioration, tu devrais surtout dire ça à [I]."
         play sound "Click.mp3" noloop 
@@ -3922,7 +3922,7 @@ label choice6:
         P "C'était il y a un an je faisais de l'exploration avec un ami dans un lieu abandonné et je suis tombé sur [newname], j'ai essayé de la démarrer et elle fonctionnait encore."
         play sound "Click.mp3" noloop 
 
-    elif pronom == "elle": 
+    else: 
 
         P "C'était il y a un an je faisais de l'exploration avec un ami dans un lieu abandonné et je suis tombée sur [newname], j'ai essayé de la démarrer et elle fonctionnait encore."
         play sound "Click.mp3" noloop 
@@ -4449,7 +4449,7 @@ label choice6:
                 J1 "Laisse tomber il est en train de réviser." 
                 play sound "Click.mp3" noloop 
 
-            elif pronom == "elle": 
+            else: 
 
                 J2 "Tiens je n'avais pas vu qu'il y avait [prenom], elle fait quoi ?"
                 play sound "Click.mp3" noloop 
@@ -4486,7 +4486,7 @@ label choice6:
                 P "Je suis fatigué avec cette journée."
                 play sound "Click.mp3" noloop
 
-            elif pronom == "elle": 
+            else: 
 
                 P "Je suis fatiguée avec cette journée."
                 play sound "Click.mp3" noloop 
@@ -4636,7 +4636,7 @@ label choice6:
                 P "Je suis fatigué avec cette journée."
                 play sound "Footsteps.mp3" noloop 
 
-            elif pronom == "elle": 
+            else: 
 
                 P "Je suis fatiguée avec cette journée."
                 play sound "Footsteps.mp3" noloop 
@@ -4690,7 +4690,7 @@ label choice6:
         I "Je sais mais je vois aussi que tu es fatigué."
         play sound "Click.mp3" noloop 
 
-    elif pronom == "elle":
+    else:
        
         I "Je sais mais je vois aussi que tu es fatiguée."
         play sound "Click.mp3" noloop 
@@ -5443,7 +5443,7 @@ label choice8:
         P "Je dirais que je me suis bien débrouillé."
         play sound "Click.mp3" noloop
 
-    elif pronom == "elle": 
+    else: 
 
         P "Je dirais que je me suis bien débrouillée."
         play sound "Click.mp3" noloop 
@@ -5532,7 +5532,7 @@ label choice8:
         P "Oui désolé allons-y."
         play sound "Click.mp3" noloop 
 
-    elif pronom == "elle": 
+    else: 
 
         P "Oui désolée allons-y."
         play sound "Click.mp3" noloop 
@@ -5949,7 +5949,7 @@ label choice8:
         P "Bonjour enchanté, pourrais-je savoir qui vous êtes ?"
         play sound "Click.mp3" noloop 
 
-    elif pronom == "elle": 
+    else: 
 
         P "Bonjour enchantée, pourrais-je savoir qui vous êtes ?"
         play sound "Click.mp3" noloop 
@@ -6044,7 +6044,7 @@ label choice8:
         C "Donc, comment es-tu tombé sur [A] malgré le démantèlement des robots ?"
         play sound "Click.mp3" noloop 
 
-    elif pronom == "elle": 
+    else: 
 
         C "Donc, comment es-tu tombée sur [A] malgré le démantèlement des robots ?"
         play sound "Click.mp3" noloop 
@@ -6734,7 +6734,7 @@ label choice8:
         P "Bon on est presque arrivés."
         play sound "Click.mp3" noloop 
 
-    elif pronom == "elle": 
+    else: 
 
         P "Bon on est presque arrivées." 
         play sound "Click.mp3" noloop 
@@ -6863,7 +6863,7 @@ label choice8:
         P "Je suis venu entraîner [newname], pourquoi tu me demandes ça ?"
         play sound "Click.mp3" noloop 
 
-    elif pronom == "elle":
+    else:
 
         P "Je suis venue entraîner [newname], pourquoi tu me demandes ça ?"
         play sound "Click.mp3" noloop 
@@ -6962,7 +6962,7 @@ label suite:
         P "Enfin arrivés..."
         play sound "Click.mp3" noloop 
 
-    elif pronom == "elle": 
+    else: 
  
         P "Enfin arrivées..."
         play sound "Click.mp3" noloop 
@@ -7521,7 +7521,7 @@ label suite:
         S "Comment en es-tu arrivé là ?"
         play sound "Click.mp3" noloop
 
-    elif pronom == "elle": 
+    else: 
 
         S "Comment en es-tu arrivée là ?"
         play sound "Click.mp3" noloop
@@ -7567,7 +7567,7 @@ label suite:
         P "Désolé je ne voulais pas te causer ça."
         play sound "Click.mp3" noloop 
 
-    elif pronom == "elle": 
+    else: 
 
         P "Désolée je ne voulais pas te causer ça."
         play sound "Click.mp3" noloop 
@@ -8169,7 +8169,7 @@ label suite:
         P "Enfin arrivés..."
         play sound "Click.mp3" noloop 
 
-    elif pronom == "elle": 
+    else: 
  
         P "Enfin arrivées..."
         play sound "Click.mp3" noloop 
@@ -8312,7 +8312,7 @@ label suite:
                 P "Désolé mais je préfére rester avec [newname] et [I]"
                 play sound "Click.mp3" noloop
 
-            elif pronom == "elle": 
+            else: 
 
                 P "Désolée mais je préfére rester avec [newname] et [I]"
                 play sound "Click.mp3" noloop  
@@ -8697,7 +8697,7 @@ label debate:
                                         S "Tu es sérieux ?"
                                         play sound "Click.mp3" noloop 
 
-                                    elif pronom == "elle":
+                                    else:
 
                                         S "Tu es sérieuse ?"
                                         play sound "Click.mp3" noloop 
@@ -8822,7 +8822,7 @@ label debate_success:
         Na "Tu sais tu t'es vraiment bien débrouillé [prenom]."
         play sound "Click.mp3" noloop 
 
-    elif pronom == "elle": 
+    else: 
 
         Na "Tu sais tu t'es vraiment bien débrouillée [prenom]."
         play sound "Click.mp3" noloop 
@@ -8855,7 +8855,7 @@ label debate_success:
         P "Enfin je suis fatigué."
         play sound "Click.mp3" noloop 
 
-    elif pronom == "elle": 
+    else: 
 
         P "Enfin je suis fatiguée."
         play sound "Click.mp3" noloop 
@@ -9330,7 +9330,7 @@ label debate_success:
         "{b}{i}Quelques instants plus tard, tu te réveilles dans ta chambre, couché sur ton lit.{/i}{/b}"
         play sound "Click.mp3" noloop
 
-    elif pronom == "elle": 
+    else: 
 
         "{b}{i}Quelques instants plus tard, tu te réveilles dans ta chambre, couchée sur ton lit.{/i}{/b}"
         play sound "Click.mp3" noloop
@@ -9353,7 +9353,7 @@ label debate_success:
         Na "Tu es dans ta chambre. Tu t’es évanoui en classe, mais ne t'inquiète pas, Yuna et moi t’avons accompagné jusqu’ici."
         play sound "Click.mp3" noloop 
 
-    elif pronom == "elle": 
+    else: 
 
         Na "Tu es dans ta chambre. Tu t’es évanouie en classe, mais ne t'inquiète pas, Yuna et moi t’avons accompagné jusqu’ici."
         play sound "Click.mp3" noloop 
@@ -9378,7 +9378,7 @@ label debate_success:
         P "Pourquoi me suis-je evanoui ?"
         play sound "Click.mp3" noloop
 
-    elif pronom == "elle": 
+    else: 
 
         P "Pourquoi me suis-je evanouie ?"
         play sound "Click.mp3" noloop
@@ -9487,7 +9487,7 @@ label debate_success:
                 P "Désolé [newname]..."
                 play sound "Click.mp3" noloop
 
-            elif pronom == "elle": 
+            else: 
 
                 P "Désolée [newname]..."
                 play sound "Click.mp3" noloop 
@@ -10013,7 +10013,7 @@ label debate_success:
             P "Désolé mais je compte faire un système d'exploitation personnalisé pour elle de toute façon."
             play sound "Click.mp3" noloop 
 
-        elif pronom == "elle":
+        else:
         
             P "Désolée mais je compte faire un système d'exploitation personnalisé pour elle de toute façon."
             play sound "Click.mp3" noloop  
@@ -10363,7 +10363,7 @@ label debate_success:
         P "Enfin arrivés."
         play sound "Click.mp3" noloop
 
-    elif pronom == "elle": 
+    else: 
 
         P "Enfin arrivées."
         play sound "Click.mp3" noloop 
@@ -10841,7 +10841,7 @@ label update:
                 "{b}{i}Fin numéro 8 : Complétement plaqué et étranglé par [Na].{/i}{/b}"
                 play sound "Menu.mp3" noloop
 
-            elif pronom == "elle":
+            else:
 
                 "{b}{i}Fin numéro 8 : Complétement plaquée et étranglée par [Na].{/i}{/b}"
                 play sound "Menu.mp3" noloop
@@ -10967,7 +10967,7 @@ label update:
                 P "Oui je suis venu te voir car je ne t'ai pas vu de la journée et je me suis inquiété."
                 play sound "Click.mp3" noloop 
 
-            elif pronom == "elle": 
+            else: 
 
                 P "Oui je suis venue te voir car je ne t'ai pas vu de la journée et je me suis inquiétée."
                 play sound "Click.mp3" noloop 
@@ -10980,7 +10980,7 @@ label update:
                 P "De rien c'est normal entre amis."
                 play sound "Click.mp3" noloop 
 
-            elif pronom == "elle": 
+            else: 
 
                 P "De rien c'est normal entre amies."
                 play sound "Click.mp3" noloop 
@@ -11088,7 +11088,7 @@ label update:
         P "Enfin au dortoir je suis epuisé."
         play sound "Click.mp3" noloop
 
-    elif pronom == "elle": 
+    else: 
 
         P "Enfin au dortoir je suis epuisée."
         play sound "Click.mp3" noloop 
@@ -11728,7 +11728,7 @@ label update:
         Na "Es-tu sûr ?"
         play sound "Click.mp3" noloop
 
-    elif pronom == "elle":
+    else:
         
         Na "Es-tu sûre ?"
         play sound "Click.mp3" noloop
@@ -11766,7 +11766,7 @@ label update:
         Na "Enfin arrivés"
         play sound "Click.mp3" noloop
 
-    elif pronom == "elle":
+    else:
         
         Na "Enfin arrivées"
         play sound "Click.mp3" noloop
@@ -12024,7 +12024,7 @@ label update:
     hide screen day with moveoutleft
     scene black with fade 
 
-    "{b}{i} Puis tu quittas le bureau des élèves.{/i}{/b}"
+    "{b}{i} Puis tu quittes le bureau des élèves.{/i}{/b}"
     play sound "Door.mp3" noloop
 
     scene hall with fade
@@ -12143,7 +12143,7 @@ label update:
                 P "Je me suis inquiété pour toi car j'ai remarqué que tu étais distante, est-ce que tu vas vraiment bien ?"
                 play sound "Click.mp3" noloop  
 
-            elif pronom == "elle":
+            else:
         
                 I "Sinon pourquoi es-tu venue me voir ?"
                 play sound "Click.mp3" noloop  
@@ -13019,7 +13019,7 @@ label password:
         O "Mais si ce n'est pas lui, ça serait qui du coup car on a fouillé tous les lycéens."
         play sound "Click.mp3" noloop 
 
-    elif pronom == "elle": 
+    else: 
 
         O "Mais si ce n'est pas lui, ça serait qui du coup car on a fouillé tous les lycéens."
         play sound "Click.mp3" noloop 
@@ -13141,7 +13141,7 @@ label password:
         M "J'espére que tu n'es pas sérieux [prenom] !"
         play sound "Click.mp3" noloop 
 
-    elif pronom == "elle":
+    else:
         
         M "J'espére que tu n'es pas sérieuse [prenom] !"
         play sound "Click.mp3" noloop 
@@ -13305,7 +13305,7 @@ label password:
         Na "je vois, je comprend pourquoi tu es surpris."
         play sound "Click.mp3" noloop
 
-    elif pronom == "elle": 
+    else: 
 
         Na "je vois, je comprend pourquoi tu es surprise."
         play sound "Click.mp3" noloop 
@@ -13459,7 +13459,7 @@ label password:
         Na "Enfin arrivés."
         play sound "Click.mp3" noloop
 
-    elif pronom == "elle":
+    else:
 
         Na "Enfin arrivées."
         play sound "Click.mp3" noloop
@@ -13733,7 +13733,7 @@ label password1:
         M "Je vois mais essaye d'être concentré durant les cours."
         play sound "Click.mp3" noloop 
 
-    elif pronom == "elle":
+    else:
 
         $ je_vais_bien_txt = get_random_je_vais_bien() 
         P "[je_vais_bien_txt] Je suis inquiete pour [newname]." 
@@ -13966,7 +13966,7 @@ label password1:
                 Na "Tu n'est pas sérieux j'espére !?"
                 play sound "Click.mp3" noloop 
                 
-            elif pronom == "elle":
+            else:
 
                 Na "Tu n'est pas sérieuse j'espére !?"
                 play sound "Click.mp3" noloop 
@@ -13988,7 +13988,7 @@ label password1:
                 P "Désolé...."
                 play sound "Click.mp3" noloop 
                 
-            elif pronom == "elle":
+            else:
 
                 P "Désolée...."
                 play sound "Click.mp3" noloop 
@@ -14021,7 +14021,7 @@ label password1:
                 Na "Tu n'est pas sérieux j'espére !?"
                 play sound "Click.mp3" noloop 
                 
-            elif pronom == "elle":
+            else:
 
                 Na "Tu n'est pas sérieuse j'espére !?"
                 play sound "Click.mp3" noloop 
@@ -14043,7 +14043,7 @@ label password1:
                 P "Désolé...."
                 play sound "Click.mp3" noloop 
                 
-            elif pronom == "elle":
+            else:
 
                 P "Désolée...."
                 play sound "Click.mp3" noloop 
@@ -14196,7 +14196,7 @@ label password1:
         P "Enfin arrivés."
         play sound "Click.mp3" noloop
 
-    elif pronom == "elle":
+    else:
 
         P "Enfin arrivées."
         play sound "Click.mp3" noloop
@@ -15232,7 +15232,7 @@ label examen_pythagore:
         P "Enfin au dortoir je suis epuisé."
         play sound "Click.mp3" noloop
 
-    elif pronom == "elle": 
+    else: 
 
         P "Enfin au dortoir je suis epuisée."
         play sound "Click.mp3" noloop 
@@ -15553,7 +15553,7 @@ label password3:
         P "Merci je suis content que tu aie appris de choses."
         play sound "Click.mp3" noloop
 
-    elif pronom == "elle": 
+    else: 
 
         P "Merci je suis contente que tu aie appris de choses."
         play sound "Click.mp3" noloop
@@ -16516,7 +16516,7 @@ label password4:
         Na "Enfin arrivés."
         play sound "Click.mp3" noloop
 
-    elif pronom == "elle":
+    else:
 
         Na "Enfin arrivées."
         play sound "Click.mp3" noloop
@@ -16887,7 +16887,7 @@ label password6:
         P "Désolé."
         play sound "Click.mp3" noloop 
 
-    elif pronom == "elle": 
+    else: 
 
         M "[prenom], je sais que tu es investie pour les cours mais laisse les autres répondre aussi."
         play sound "Click.mp3" noloop  
@@ -17206,7 +17206,7 @@ label password6:
         Na "Enfin arrivés."
         play sound "Click.mp3" noloop
 
-    elif pronom == "elle":
+    else:
 
         Na "Enfin arrivées." 
         play sound "Click.mp3" noloop
@@ -17753,7 +17753,7 @@ label password7:
         Na "Enfin arrivés."
         play sound "Click.mp3" noloop
 
-    elif pronom == "elle":
+    else:
 
         Na "Enfin arrivées." 
         play sound "Click.mp3" noloop
@@ -18773,7 +18773,7 @@ label examen_runix:
         Na "Enfin arrivés."
         play sound "Click.mp3" noloop
 
-    elif pronom == "elle":
+    else:
 
         Na "Enfin arrivées." 
         play sound "Click.mp3" noloop
@@ -19609,7 +19609,7 @@ label code1:
         P "Je suis fatigué avec cette journée."
         play sound "Click.mp3" noloop
 
-    elif pronom == "elle": 
+    else: 
 
         P "Je suis fatiguée avec cette journée."
         play sound "Click.mp3" noloop 
@@ -19684,7 +19684,7 @@ label code1:
                     P "Oui… Je le savais. Et je suis désolé. Je t’avais promis de ne rien dire, mais je ne peux plus te mentir."
                     play sound "Click.mp3" noloop 
 
-                elif pronom == "elle": 
+                else: 
 
                     P "Oui… Je le savais. Et je suis désolée. Je t’avais promis de ne rien dire, mais je ne peux plus te mentir."
                     play sound "Click.mp3" noloop
@@ -19715,7 +19715,7 @@ label code1:
                     P "Je suis vraiment désolé… Je voulais juste te protéger. Te laisser vivre ta vie… sans chaînes."
                     play sound "Click.mp3" noloop
 
-                elif pronom == "elle": 
+                else: 
 
                     P "Je suis vraiment désolée… Je voulais juste te protéger. Te laisser vivre ta vie… sans chaînes."
                     play sound "Click.mp3" noloop
@@ -19963,7 +19963,7 @@ label password10:
             P "Ah je vois, je suis désolé de t'avoir dit la vérité."
             play sound "Click.mp3" noloop
 
-        elif pronom == "elle":
+        else:
 
             P "Ah je vois, je suis désolée de t'avoir dit la vérité."
             play sound "Click.mp3" noloop
@@ -20288,7 +20288,7 @@ label password10:
             P "Désolé mais pour moi elle devais savoir la vérité"
             play sound "Click.mp3" noloop 
 
-        elif pronom == "elle":
+        else:
 
             P "Désolée mais pour moi elle devais savoir la vérité"
             play sound "Click.mp3" noloop 
@@ -20724,7 +20724,7 @@ label update1:
                 "{b}{i}Fin numéro 11 : Complétement plaqué et étranglé par [Na].{/i}{/b}"
                 play sound "Menu.mp3" noloop
 
-            elif pronom == "elle":
+            else:
 
                 "{b}{i}Fin numéro 11 : Complétement plaquée et étranglée par [Na].{/i}{/b}"
                 play sound "Menu.mp3" noloop

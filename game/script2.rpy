@@ -726,7 +726,7 @@ label password11:
         I "Oui mais il faudra aussi rester vigilants."
         play sound "Click.mp3" noloop
 
-    elif pronom == "elle": 
+    else: 
 
         I "Oui mais il faudra aussi rester vigilantes."
         play sound "Click.mp3" noloop 
@@ -869,7 +869,7 @@ label password11:
         P "On va bien mais on est juste fatigués."
         play sound "Click.mp3" noloop 
 
-    elif pronom == "elle":
+    else:
 
         P "On va bien mais on est juste fatiguées."
         play sound "Click.mp3" noloop 
@@ -973,7 +973,7 @@ label password11:
         Na "Oui... Merci. T’es arrivé juste à temps..."
         play sound "Click.mp3" noloop
 
-    elif pronom == "elle":
+    else:
 
         Na "Oui... Merci. T’es arrivée juste à temps..."
         play sound "Click.mp3" noloop
@@ -1095,7 +1095,7 @@ label password11:
     hide screen day with moveoutleft
     scene black with fade 
 
-    "{b}{i} Puis tu quittas le bureau des élèves.{/i}{/b}"
+    "{b}{i} Puis tu quittes le bureau des élèves.{/i}{/b}"
     play sound "Door.mp3" noloop
 
     scene hall with fade 
@@ -2927,7 +2927,7 @@ label examen_francais:
         P "Super, je suis content pour toi !"
         play sound "Click.mp3" noloop 
 
-    elif pronom == "elle": 
+    else: 
 
         P "Super, je suis contente pour toi !"
         play sound "Click.mp3" noloop 
@@ -3320,7 +3320,7 @@ label examen_francais:
         Na "Enfin arrivés."
         play sound "Click.mp3" noloop
 
-    elif pronom == "elle":
+    else:
 
         Na "Enfin arrivées."
         play sound "Click.mp3" noloop
@@ -4132,7 +4132,7 @@ label password15:
         P "Enfin arrivés."
         play sound "Click.mp3" noloop
 
-    elif pronom == "elle":
+    else:
 
         P "Enfin arrivées."
         play sound "Click.mp3" noloop
@@ -4226,7 +4226,7 @@ label update2:
                 "{b}{i}Fin numéro 13 : Complétement plaqué et étranglé par [Na].{/i}{/b}"
                 play sound "Menu.mp3" noloop
 
-            elif pronom == "elle":
+            else:
 
                 "{b}{i}Fin numéro 13 : Complétement plaquée et étranglée par [Na].{/i}{/b}"
                 play sound "Menu.mp3" noloop
@@ -4866,7 +4866,7 @@ label password16:
         P "Enfin au dortoir je suis epuisé."
         play sound "Click.mp3" noloop
 
-    elif pronom == "elle": 
+    else: 
 
         P "Enfin au dortoir je suis epuisée."
         play sound "Click.mp3" noloop 
@@ -5564,7 +5564,7 @@ label philosophie_technologie:
         Y "Salut les amis, vous allez bien ?"
         play sound "Click.mp3" noloop  
 
-    elif pronom == "elle": 
+    else: 
 
         Y "Salut les amies, vous allez bien ?"
         play sound "Click.mp3" noloop           
@@ -6298,7 +6298,7 @@ label philosophie_technologie:
         H "Oh salut les amis, désolé si j'avais pas fait attention à vous."  
         play sound "Click.mp3" noloop  
 
-    elif pronom == "elle": 
+    else: 
 
         H "Oh salut les amies, désolé si j'avais pas fait attention à vous."  
         play sound "Click.mp3" noloop  
@@ -7068,7 +7068,7 @@ label password18:
         H "Oui c'est vrai [pronom] s'est évanoui en classe."
         play sound "Click.mp3" noloop
 
-    elif pronom == "elle": 
+    else: 
 
         H "Oui c'est vrai [pronom] s'est évanouie en classe."
         play sound "Click.mp3" noloop
@@ -7276,7 +7276,7 @@ label password18:
                 Na "Tu ferais ça pour moi ? T'es sûr ?"
                 play sound "Click.mp3" noloop
 
-            elif pronom == "elle": 
+            else: 
 
                 Na "Tu ferais ça pour moi ? T'es sûre ?"
                 play sound "Click.mp3" noloop
@@ -7324,7 +7324,7 @@ label password18:
                 P "Moi je vais réviser seul de mon coté."
                 play sound "Click.mp3" noloop
 
-            elif pronom == "elle": 
+            else: 
 
                 P "Moi je vais réviser seule de mon coté."
                 play sound "Click.mp3" noloop
@@ -8608,7 +8608,7 @@ label password20:
         I "Salut les amis."
         play sound "Click.mp3" noloop
 
-    elif pronom == "elle": 
+    else: 
 
         I "Salut les amies."
         play sound "Click.mp3" noloop
@@ -9482,7 +9482,7 @@ label password21:
         P "Oui je suis prêt."
         play sound "Click.mp3" noloop 
 
-    elif pronom == "elle": 
+    else: 
 
         I "Oui om peut commencer, vous étes prêtes les [nom] ?"
         play sound "Click.mp3" noloop 
@@ -9516,7 +9516,7 @@ label password21:
         I "[prenom] est-tu sûr que ça va ?"
         play sound "Click.mp3" noloop 
 
-    elif pronom == "elle": 
+    else: 
 
         I "[prenom] est-tu sûre que ça va ?"
         play sound "Click.mp3" noloop 
@@ -9548,7 +9548,7 @@ label password21:
                 P "Oui je suis doué mais là la professeure a vraiment poussé les exercices."
                 play sound "Click.mp3" noloop
 
-            elif pronom == "elle":
+            else:
 
                 I "De rien mais attend je croyais que était vraiment forte en informatique."
                 play sound "Click.mp3" noloop
@@ -9571,7 +9571,7 @@ label password21:
                 Na "Tu sais [prenom] même si tu es doué c'est normal de demander de l'aide."
                 play sound "Click.mp3" noloop 
 
-            elif pronom == "elle": 
+            else: 
 
                 Na "Tu sais [prenom] même si tu es douée c'est normal de demander de l'aide."
                 play sound "Click.mp3" noloop 
@@ -10238,7 +10238,7 @@ label password22:
         I "Salut les amis."
         play sound "Click.mp3" noloop
 
-    elif pronom == "elle": 
+    else: 
 
         I "Salut les amies."
         play sound "Click.mp3" noloop
@@ -10967,7 +10967,7 @@ label password23:
         I "Salut les amis."
         play sound "Click.mp3" noloop
 
-    elif pronom == "elle": 
+    else: 
 
         I "Salut les amies."
         play sound "Click.mp3" noloop
@@ -11319,7 +11319,7 @@ label password23:
                 P "C’est possible, mais ce n’est pas dans son habitude de rester silencieux aussi longtemps. Je préfère rester vigilant."
                 play sound "Click.mp3" noloop
 
-            elif pronom == "elle": 
+            else: 
 
                 P "C’est possible, mais ce n’est pas dans son habitude de rester silencieux aussi longtemps. Je préfère rester vigilante."
                 play sound "Click.mp3" noloop
@@ -11545,7 +11545,7 @@ label password24:
         Na "Tu es cruel."
         play sound "Click.mp3" noloop 
 
-    elif pronom == "elle":
+    else:
 
         Na "Tu es cruelle."
         play sound "Click.mp3" noloop 
@@ -11713,7 +11713,7 @@ label password24:
         I "Salut les amis."
         play sound "Click.mp3" noloop
 
-    elif pronom == "elle": 
+    else: 
 
         I "Salut les amies."
         play sound "Click.mp3" noloop
@@ -13774,7 +13774,7 @@ label choice10:
         P "Oui, je comprends, mais je ne suis pas fou au point de supprimer le fichier system32."
         play sound "Click.mp3" noloop
 
-    elif pronom == "elle":
+    else:
 
         P "Oui, je comprends, mais je ne suis pas folle au point de supprimer le fichier system32."
         play sound "Click.mp3" noloop
@@ -14011,10 +14011,10 @@ label choice10:
     N "Oui dis-moi, je t'écoute."
     play sound "Click.mp3" noloop 
 
-    P "Tu sais ce que [Y] fait de ses journées ?"   
-    play sound "Click.mp3" noloop 
-
     if persistent.endgame == False:
+
+        P "Tu sais ce que [Y] fait de ses journées ?"   
+        play sound "Glitch.mp3" noloop 
 
         if pronom == "il":
 
@@ -14024,9 +14024,12 @@ label choice10:
         else: 
 
             N "Non, je ne sais pas du tout mais tu es déjà sensée le savoir."
-            play sound "Click.mp3" noloop
+            play sound "Click.mp3" noloop  
 
     else: 
+
+        P "Tu sais ce que [Y] fait de ses journées ?"   
+        play sound "Click.mp3" noloop 
 
         N "Non, je ne sais pas du tout."
         play sound "Click.mp3" noloop
@@ -14175,15 +14178,111 @@ label choice10:
     Kh "Je suis contente que vous soyez contente."
     play sound "Click.mp3" noloop
 
-    P ""
+    P "Moi aussi surtout pour [newname]."
     play sound "Click.mp3" noloop
 
- 
-     
+    Kh "Et pourquoi dis-tu cela ?"
+    play sound "Click.mp3" noloop
+
+    P "Car elle n'a jamais vécu une soirée pyjama."
+    play sound "Click.mp3" noloop
+
+    Kh "Ah d'accord, je comprends mieux."
+    play sound "Click.mp3" noloop
+
+    if pronom == "il":
+
+        P "Oui, c'est pour ça que je suis content de pouvoir lui offrir cette expérience."
+        play sound "Click.mp3" noloop
+
+    else:
+       
+        P "Oui, c'est pour ça que je suis contente de pouvoir lui offrir cette expérience."
+        play sound "Click.mp3" noloop
+
+    Kh "C'est une belle attention de ta part."
+    play sound "Click.mp3" noloop
+
+    P "Merci ! J'espère qu'elle va adorer."
+    play sound "Click.mp3" noloop
+
+    Kh "Je suis sûre qu'elle va adorer."
+    play sound "Click.mp3" noloop
+
+    P "Oui, j'espère aussi."
+    play sound "Click.mp3" noloop
+
+    Kh "bon je vous laisse partir"
+    play sound "Click.mp3" noloop
+
+    Kh "Amusez-vous bien !"
+    play sound "Click.mp3" noloop
+
+    I "Merci beaucoup !"
+    play sound "Click.mp3" noloop
+
+    P "Merci [Kh] !"
+    play sound "Click.mp3" noloop
+
+    Na "Merci beaucoup !"
+    play sound "Click.mp3" noloop
+
+    hide screen office with moveoutright
+    hide screen points with moveoutleft
+    hide screen day with moveoutleft
+    scene black with fade 
+
+    "{b}{i}Puis vous quittez le bureau des élèves.{/i}{/b}"
+    play sound "Door.mp3" noloop
+
+    scene hall with fade 
+    show screen day with moveinleft
+    show screen points with moveinleft
+    show screen hall with moveinright 
+
+    "{b}{i}Vous continuez vers le hall.{/i}{/b}"
+    play sound "Footsteps.mp3" noloop 
+
+    hide screen hallway with moveoutright
+    hide screen points with moveoutleft
+    hide screen day with moveoutleft
+    scene staircase with fade
+
+    "{b}{i}Vous continues vers le premier étage.{/i}{/b}"
+    play sound "Footsteps.mp3" noloop 
+
+    scene hallway with fade 
+    show screen day with moveinleft
+    show screen points with moveinleft
+    show screen hallway with moveinright 
+
+
+
+
+
+
+    "{b}{i}Vous continuez votre chemin.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+
+
+
+
+
+
+    hide screen hallway with moveoutright
+    hide screen points with moveoutleft
+    hide screen day with moveoutleft
+    scene black with fade 
+
+    "{b}{i} Vous entres dans le dortoir.{/i}{/b}" 
+    play sound "Door.mp3" noloop 
+
+    scene room with fade 
+    show screen day with moveinleft
+    show screen points with moveinleft
+    show screen room with moveinright 
     
-
-
-     
 
 label end_script2:
     call script3 
