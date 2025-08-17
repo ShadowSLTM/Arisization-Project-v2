@@ -821,12 +821,12 @@ label choice1:
     P "[suivi]"
     play sound "Footsteps.mp3" noloop
 
-    hide screen hall with moveoutright
+    hide screen hallway with moveoutright
     hide screen day with moveoutleft
-    scene staircase with fade 
-    
-    "{b}{i}Vous vous dirigez donc au premier étage.{/i}{/b}" 
-    play sound "Footsteps.mp3" noloop
+    scene staircase with fade
+
+    "{b}{i}Vous continues vers le premier étage.{/i}{/b}"
+    play sound "Footsteps.mp3" noloop 
 
     scene hallway with fade 
     show screen day with moveinleft
@@ -1099,7 +1099,7 @@ label choice1:
 
     hide screen update with moveoutright
 
-    E "Bien. Voici le contrat UCN000001 pour l'utilsation complète de [A] au sain du lycée Nexus." 
+    E "Bien. Voici le contrat UCN000001 pour l'utilsation complète d'[A] au sain du lycée Nexus." 
     play sound "Click.mp3" noloop
 
     P "Merci, mais j'aimerais savoir pourquoi j'ai besoin d'un contrat pour utiliser ma propre invention dans le lycée."
@@ -1183,7 +1183,7 @@ label choice1:
     P "Je ne sais pas du tout."
     play sound "Click.mp3" noloop
 
-    "{b}{i}L'élève s'approche un peu trop près de [A]...{/i}{/b}"
+    "{b}{i}L'élève s'approche un peu trop près d'[A]...{/i}{/b}"
     play sound "Click.mp3" noloop
 
     A "Mais qu'est-ce que tu fais !?" 
@@ -1746,7 +1746,7 @@ label choice1:
     Y "Mais pourquoi vous avez accepté cette demande ?"
     play sound "Click.mp3" noloop
 
-    P "C'est simple, car je tiens à la sécurité de [A], je ne peux pas me permettre de la laisser seule parce-qu'elle ne connais pratiquement rien de ce monde."
+    P "C'est simple, car je tiens à la sécurité d'[A], je ne peux pas me permettre de la laisser seule parce-qu'elle ne connais pratiquement rien de ce monde."
     play sound "Click.mp3" noloop
 
     Y "Ah je comprends mieux pourquoi cette demande."
@@ -1981,7 +1981,7 @@ label choice1:
     P "Oui, dis moi [Kh]."
     play sound "Click.mp3" noloop
 
-    Kh "Pourrai-je voir la fameuse petite [A] qu'[E] m'a parlé."
+    Kh "Pourrai-je voir la fameuse petite [A] dont [E] m'a parlé."
     play sound "Click.mp3" noloop
 
     P "Oui bien sûr, [A] tu peux venir s'il te plait."
@@ -2266,12 +2266,12 @@ label choice2:
                         play music "gameover.mp3" noloop
 
                     hide screen room with moveoutright
-                    hide screen point with moveoutleft
+                    hide screen points with moveoutleft
                     hide screen day with moveoutleft
                     scene black with fade 
 
                     "{b}{i}Fin numéro 2 : [A] complètement détruite et ruinée par manque de vigilance.{/i}{/b}"
-                    play sound "Menu.mp3" noloop
+                    play sound "Menu.mp3" noloop 
 
                     menu:    
 
@@ -2286,7 +2286,7 @@ label choice2:
                             scene room with fade 
                             show screen day with moveinleft
                             show screen room with moveinright
-                            show screen point with moveinleft
+                            show screen points with moveinleft
                             
                             jump choice2 
 
@@ -2540,7 +2540,7 @@ label choice3:
             play music "gameover.mp3" noloop
 
             hide screen room with moveoutright
-            hide screen point with moveoutleft
+            hide screen points with moveoutleft
             hide screen day with moveoutleft
             scene black with fade
  
@@ -2559,7 +2559,7 @@ label choice3:
 
                     scene room with fade 
                     show screen room with moveinright
-                    show screen point with moveinleft
+                    show screen points with moveinleft
                     show screen day with moveinleft
                     
                     jump choice3
@@ -2654,7 +2654,7 @@ label choice3:
 
     $ cpu = "Corzen 7"
 
-    P "L'ancien propriétaire de [A] avais vraiment des goûts médiocres en terme de composants..."
+    P "L'ancien propriétaire d'[A] avais vraiment des goûts médiocres en terme de composants..."
     play sound "Click.mp3" noloop
 
     "{b}{i}Tu déballes le nouveau processeur pour voir la notice et tu vois un message de la part de [Ah].{/i}{/b}"
@@ -2695,7 +2695,7 @@ label choice3:
     A "Ok vas-y."
     play sound "Click.mp3" noloop
     
-    "{b}{i}Tu ouvres le panneau configuration de [A] depuis ton ordinateur.{/i}{/b}"
+    "{b}{i}Tu ouvres le panneau configuration d'[A] depuis ton ordinateur.{/i}{/b}"
     play sound "Click.mp3" noloop
 
     P "Voyons voir..."
@@ -2738,7 +2738,7 @@ label choice3:
 label choice4:
 
     play sound "Menu.mp3" noloop
-    $ newname = renpy.input("Veuillez écrire le nouveau prénom de [A].")
+    $ newname = renpy.input("Veuillez écrire le nouveau prénom d'[A].")
     $ newname = newname.strip()
 
     if newname == "Aris":
@@ -2764,7 +2764,7 @@ label choice4:
         play sound "Menu.mp3" noloop
         jump choice4
     
-    "{b}{i}Soudainement, le processeur te demande de paramétrer l'adresse IP de [newname].{/i}{/b}"
+    "{b}{i}Soudainement, le processeur te demande de paramétrer l'adresse IP d'[newname].{/i}{/b}"
     play sound "Click.mp3" noloop 
 
     P "Mince..."
@@ -2773,7 +2773,7 @@ label choice4:
     "{b}{i}Tu regardes les paramètres et tu vois que tu dois mettre l'adresse IP.{/i}{/b}"
     play sound "Click.mp3" noloop 
 
-    P "J'ai une idée : je vais faire en sorte que chaque lettre de [newname] soit un nombre correspondant à sa position dans l'alphabet."
+    P "J'ai une idée : je vais faire en sorte que chaque lettre d'[newname] soit un nombre correspondant à sa position dans l'alphabet."
     play sound "Click.mp3" noloop
    
     "{b}{i}Essaye de trouver l'adresse en utilisant ce principe pour chaque lettre.{/i}{/b}"
@@ -2781,7 +2781,7 @@ label choice4:
 
 label choice5:
 
-    $ ip = renpy.input("Entrez l'adresse IP de [newname] en suivant la méthode de conversion suggérée (trois chiffres pour chaque partie : 000.000.000.000).")
+    $ ip = renpy.input("Entrez l'adresse IP d'[newname] en suivant la méthode de conversion suggérée (trois chiffres pour chaque partie : 000.000.000.000).")
     $ ip = ip.strip()
 
     if ip == "001.018.009.019":
@@ -2803,7 +2803,7 @@ label choice5:
 
         hide screen update with moveoutright
 
-        "{b}{i}L'adresse IP de [newname] est maintenant [ip].{/i}{/b}"
+        "{b}{i}L'adresse IP d'[newname] est maintenant [ip].{/i}{/b}"
         play sound "Click.mp3" noloop
 
     else:
@@ -3148,7 +3148,7 @@ label choice5:
     P "J'ai le matériel pour paramétrer [newname]."
     play sound "Click.mp3" noloop 
 
-    "{b}{i} Tu ouvres les paramètres de [newname].{/i}{/b}"
+    "{b}{i} Tu ouvres les paramètres d'[newname].{/i}{/b}"
     play sound "Click.mp3" noloop 
 
     "{b}{i} Soudainement, l'adresse IP 201.125.114.115 tente de se connecter.{/i}{/b}"
@@ -3869,7 +3869,7 @@ label choice6:
     H "Les protocoles de sécurité n'étaient pas assez stricts, n'est-ce pas ?"
     play sound "Click.mp3" noloop
 
-    M "Exactement. Ils ont été conçus pour s'adapter et apprendre en temps réel, mais cette capacité d'évolution est devenue leur plus grande menace. Certains robots ont commencé à prendre des décisions qui n'étaient pas prévues... au point de devenir imprévisibles."
+    M "Exactement. Ils ont été conçus pour s'adapter et apprendre en temps réel, mais cette capacité d'évolution est devenue leur plus grande menace. Certains robots ont commencé à prendre des décisions qui n'étaient pas prévues... au points de devenir imprévisibles."
     play sound "Click.mp3" noloop
 
     H "C'est là que sont nés les premiers incidents, n'est-ce pas ?"
@@ -3945,7 +3945,7 @@ label choice6:
     "{b}{i}Les décrypteuses soupirent et abandonnent.{/i}{/b}"
     play sound "Click.mp3" noloop
 
-    M "Je comprends votre point de vue mais les choses sont comme ça."
+    M "Je comprends votre points de vue mais les choses sont comme ça."
     play sound "Click.mp3" noloop
 
     J1 "Ok alors je respecte la décision."
@@ -4599,7 +4599,7 @@ label choice6:
                 play music "gameover.mp3" noloop                
                         
                 hide screen clubroom with moveoutright
-                hide screen point with moveoutleft
+                hide screen points with moveoutleft
                 hide screen day with moveoutleft
                 scene black with fade 
 
@@ -4614,7 +4614,7 @@ label choice6:
                     "{b}{i}Réessayer.{/i}{/b}" : 
                         scene clubroom with fade 
                         show screen clubroom with moveinright
-                        show screen point with moveinleft
+                        show screen points with moveinleft
                         show screen day with moveinleft
                         
                         jump choice7
@@ -4813,7 +4813,7 @@ label choice6:
     P "Ah oui celle-là je vois..."
     play sound "Click.mp3" noloop
 
-    Mo "Bon à un de ces jours et occupe-toi bien de [newname]."
+    Mo "Bon à un de ces jours et occupe-toi bien d'[newname]."
     play sound "Click.mp3" noloop
 
     P "Oui je te le promet."
@@ -4939,7 +4939,7 @@ label choice6:
     P "Bon aujourd'hui c'est mon premier examen de cette année."
     play sound "Click.mp3" noloop 
 
-    "{b}{i} Tu te changes et t'approches de [newname].{/i}{/b}"
+    "{b}{i} Tu te changes et t'approches d'[newname].{/i}{/b}"
     play sound "Click.mp3" noloop
 
     P "Elle est encore déconnectée."
@@ -5611,7 +5611,7 @@ label choice8:
         play sound "Click.mp3" noloop
 
         hide screen class_404 with moveoutright
-        hide screen point with moveoutleft
+        hide screen points with moveoutleft
         hide screen day with moveoutleft
         scene black with fade 
 
@@ -5631,7 +5631,7 @@ label choice8:
 
                 scene black with fade
                 show screen class_404 with moveinright
-                show screen point with moveinleft
+                show screen points with moveinleft
                 show screen day with moveinleft
                 $ points += 600
                 
@@ -6003,7 +6003,7 @@ label choice8:
     C "C'est simple, je suis son créateur et son concepteur original."
     play sound "Click.mp3" noloop 
 
-    P "C'est donc vous à l'origine de [A]."
+    P "C'est donc vous à l'origine d'[A]."
     play sound "Click.mp3" noloop 
 
     C "Oui c'est exact."
@@ -6149,7 +6149,7 @@ label choice8:
     P "Oui dites-moi."
     play sound "Click.mp3" noloop 
 
-    C "Connais-tu l'entièreté des capacités de [A] ?"
+    C "Connais-tu l'entièreté des capacités d'[A] ?"
     play sound "Click.mp3" noloop
 
     P "Non pas complétment à mon insu malheureusement."
@@ -6198,7 +6198,7 @@ label choice8:
             P "Oui, je vous écoute."
             play sound "Click.mp3" noloop
 
-            C "J'aimerais que [newname] s'éloigne un instant. Ce que j'ai à dire est... sensible."
+            C "J'aimerais qu'[newname] s'éloigne un instant. Ce que j'ai à dire est... sensible."
             play sound "Click.mp3" noloop
 
             P "[newname], s'il te plaît... laisse-nous quelques minutes."
@@ -6579,7 +6579,7 @@ label choice8:
     P "Bon aujourd'hui je vais demander à [E] si je peux emprunter le gymnase."
     play sound "Click.mp3" noloop 
 
-    "{b}{i} Tu te changes et t'approches de [newname].{/i}{/b}"
+    "{b}{i} Tu te changes et t'approches d'[newname].{/i}{/b}"
     play sound "Click.mp3" noloop
 
     P "Elle est encore déconnectée."
@@ -6870,7 +6870,7 @@ label choice8:
 
 label conversation:
 
-    Y "Aussi, juste pour savoir... Bon, je sais que c'est important de le faire pour mon domaine et je pense aussi pour le tien, mais tu penses à faire les mises à jour de sécurité de [newname] ?"
+    Y "Aussi, juste pour savoir... Bon, je sais que c'est important de le faire pour mon domaine et je pense aussi pour le tien, mais tu penses à faire les mises à jour de sécurité d'[newname] ?"
     play sound "Click.mp3" noloop
 
     if update == 1.0:
@@ -10832,7 +10832,7 @@ label update:
             play music "gameover.mp3" noloop
 
             hide screen clubroom with moveoutright
-            hide screen point with moveoutleft
+            hide screen points with moveoutleft
             hide screen day with moveoutleft
             scene black with fade
 
@@ -10858,7 +10858,7 @@ label update:
 
                     scene clubroom with fade
                     show screen clubroom with moveinright
-                    show screen point with moveinleft
+                    show screen points with moveinleft
                     show screen day with moveinleft
                     
                     jump update
@@ -11999,7 +11999,7 @@ label update:
     E "Tu veux vraiment faire ça ?"
     play sound "Click.mp3" noloop
 
-    P "Oui, car il le faut pour la sécurité de [newname]."
+    P "Oui, car il le faut pour la sécurité d'[newname]."
     play sound "Click.mp3" noloop
 
     E "Ok, je ne juge pas."
@@ -14229,7 +14229,7 @@ label password1:
     P "Et ça disait quoi ?"
     play sound "Click.mp3" noloop   
 
-    Na "Qu’elle s’est énormément développée à partir de 2060, au point de devenir la région la plus avancée technologiquement du Japon."
+    Na "Qu’elle s’est énormément développée à partir de 2060, au points de devenir la région la plus avancée technologiquement du Japon."
     play sound "Click.mp3" noloop   
 
     Na "D’ailleurs, tu savais que Danto, c’est l’acronyme de {b}Development Area for New Technological Operations{/b} ?"
@@ -14950,7 +14950,7 @@ label examen_pythagore:
         play music "gameover.mp3" noloop
 
         hide screen class_404 with moveoutright
-        hide screen point with moveoutleft
+        hide screen points with moveoutleft
         hide screen day with moveoutleft
         scene black with fade
 
@@ -14969,7 +14969,7 @@ label examen_pythagore:
 
                 scene classroom
                 show screen class_404 with moveinright
-                show screen point with moveinleft
+                show screen points with moveinleft
                 show screen day with moveinleft
                 $ points += 300
                 
@@ -16108,7 +16108,7 @@ label password4:
     P "Oui dites-moi."
     play sound "Click.mp3" noloop  
 
-    Oh "Est-ce que [newname] est déclarée à l'état civil ?"
+    Oh "Est-ce qu'[newname] est déclarée à l'état civil ?"
     play sound "Click.mp3" noloop  
 
     P "Non... malheureusement."
@@ -18369,7 +18369,7 @@ label examen_runix:
 # cours de français 2
 ###########################################################################################################################
 
-    M "Aujourd'hui, nous allons étudier un point essentiel : les différentes classes de mots."
+    M "Aujourd'hui, nous allons étudier un points essentiel : les différentes classes de mots."
     play sound "Click.mp3" noloop
 
     M "Il existe dix classes principales. On les divise souvent en deux catégories : les mots variables et les mots invariables."
@@ -18681,7 +18681,7 @@ label examen_runix:
     "{b}{i}Le cours de français commence dans une atmosphère studieuse.{/i}{/b}"
     play sound "Click.mp3" noloop
 
-    M "Aujourd’hui, on va parler d’un point souvent redouté en grammaire : l’accord du participe passé avec l’auxiliaire avoir."
+    M "Aujourd’hui, on va parler d’un points souvent redouté en grammaire : l’accord du participe passé avec l’auxiliaire avoir."
     play sound "Click.mp3" noloop
 
     M "Avec avoir, le participe passé ne s’accorde pas avec le sujet. Mais il peut s’accorder avec le complément d’objet direct, s’il est placé avant le verbe."
@@ -19066,7 +19066,7 @@ label password9:
         play music "gameover.mp3" noloop
 
         hide screen class_404 with moveoutright
-        hide screen point with moveoutleftts
+        hide screen points with moveoutleftts
         hide screen day with moveoutleft
         scene black with fade
 
@@ -19085,7 +19085,7 @@ label password9:
 
                 scene classroom
                 show screen class_404 with moveinright
-                show screen point with moveinleft
+                show screen points with moveinleft
                 show screen day with moveinleft
                 $ day -= 1 
                 $ points += 400 
@@ -20715,7 +20715,7 @@ label update1:
             play music "gameover.mp3" noloop
 
             hide screen room with moveoutright
-            hide screen point with moveoutleft
+            hide screen points with moveoutleft
             hide screen day with moveoutleft
             scene black with fade
 
@@ -20741,7 +20741,7 @@ label update1:
 
                     scene room with fade
                     show screen room with moveinright
-                    show screen point with moveinleft
+                    show screen points with moveinleft
                     show screen day with moveinleft
                     
                     jump update1

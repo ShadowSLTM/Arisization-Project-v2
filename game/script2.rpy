@@ -382,13 +382,13 @@ label password11:
     Ln "Je suis au courant grâce à la DGCS. Le gouvernement surveille tout ce qui concerne les projets non-répertoriés. Et celui-ci... dépasse largement tout ce que nous avons vu jusque-là."
     play sound "Click.mp3" noloop
 
-    P "Que voulez-vous de moi et de [newname] ?"
+    P "Que voulez-vous de moi et d'[newname] ?"
     play sound "Click.mp3" noloop 
 
     Ln "Rien. Je suis là pour éviter que la situation ne dégénère. [newname] n'est pas encore considérée comme une menace. Pas encore."
     play sound "Click.mp3" noloop
 
-    P "Et si je vous disais que [newname] est bien plus qu’un simple programme ?"
+    P "Et si je vous disais qu'[newname] est bien plus qu’un simple programme ?"
     play sound "Click.mp3" noloop
 
     Ln "Je le sais déjà. C’est justement pour ça que je suis ici. Dis-moi, es-tu réellement capable de la contrôler ?"
@@ -1571,7 +1571,7 @@ label password13:
     M "Très belle analogie, Kendo. Dernière notion pour aujourd’hui : le routage."
     play sound "Click.mp3" noloop
 
-    K "C’est le chemin que les paquets empruntent pour aller d’un point A à un point B, non ?"
+    K "C’est le chemin que les paquets empruntent pour aller d’un points A à un points B, non ?"
     play sound "Click.mp3" noloop
 
     M "Oui. Et ce chemin peut changer à chaque seconde, selon la congestion, les coupures ou les priorités réseau."
@@ -3040,7 +3040,7 @@ label examen_francais:
         play music "gameover.mp3" noloop
 
         hide screen class_404 with moveoutright
-        hide screen point with moveoutleft
+        hide screen points with moveoutleft
         hide screen day with moveoutleft
         scene black with fade
 
@@ -3059,7 +3059,7 @@ label examen_francais:
 
                 scene classroom with fade
                 show screen class_404 with moveinright
-                show screen point with moveinleft
+                show screen points with moveinleft
                 show screen day with moveinleft
                 $ points += 300
                 $ stockage -= 5.0 
@@ -3904,7 +3904,7 @@ label password15:
             I "J'avoue que cette comparaison était un peu osée."
             play sound "Click.mp3" noloop 
  
-        "{b}{i} Faire les éloges de [newname].{/i}{/b}" : 
+        "{b}{i} Faire les éloges d'[newname].{/i}{/b}" : 
             play sound "Menu.mp3" noloop 
 
             $ renpy.block_rollback()
@@ -3956,10 +3956,10 @@ label password15:
             J1 "Ce n'est pas un peu trop exagéré ?"
             play sound "Click.mp3" noloop
 
-            P "Non je donne juste mon point de vue."
+            P "Non je donne juste mon points de vue."
             play sound "Click.mp3" noloop
 
-            J1 "Ok je respect ton point de vue."
+            J1 "Ok je respect ton points de vue."
             play sound "Click.mp3" noloop 
 
     "{b}{i} Vous continuez de discuter jusqu'à la sonnerie.{/i}{/b}"
@@ -4217,7 +4217,7 @@ label update2:
             play music "gameover.mp3" noloop
 
             hide screen room with moveoutright 
-            hide screen point with moveoutleft
+            hide screen points with moveoutleft
             hide screen day with moveoutleft
             scene black with fade 
 
@@ -4243,7 +4243,7 @@ label update2:
 
                     scene room with fade
                     show screen room with moveinright
-                    show screen point with moveinleft
+                    show screen points with moveinleft
                     show screen day with moveinleft
                     
                     jump update2
@@ -4541,7 +4541,7 @@ label password16:
     Y "Avec les réseaux sociaux et les IA, j’ai l’impression qu’on parle plus aux écrans qu’aux gens."
     play sound "Click.mp3" noloop
 
-    M "C’est un bon point de départ. Selon Bernard Stiegler, les technologies numériques modifient notre manière d’aimer, de penser, de nous souvenir."
+    M "C’est un bon points de départ. Selon Bernard Stiegler, les technologies numériques modifient notre manière d’aimer, de penser, de nous souvenir."
     play sound "Click.mp3" noloop
 
     M "Il parle de prolétarisation cognitive : quand on délègue notre mémoire ou notre pensée aux machines, on perd une part de nous-mêmes."
@@ -5703,7 +5703,7 @@ label philosophie_technologie:
         play music "gameover.mp3" noloop
 
         hide screen class_404 with moveoutright
-        hide screen point with moveoutleft
+        hide screen points with moveoutleft
         hide screen day with moveoutleft
         scene black with fade
 
@@ -5722,7 +5722,7 @@ label philosophie_technologie:
 
                 scene classroom with fade
                 show screen class_404 with moveinright
-                show screen point with moveinleft
+                show screen points with moveinleft
                 show screen day with moveinleft
                 $ points += 300
                 
@@ -7289,7 +7289,7 @@ label password18:
 
             show screen update with moveinright
 
-            Na "Merci... vraiment. J’avais un peu la tête sous l’eau, là. T’as pas idée à quel point ça me soulage."
+            Na "Merci... vraiment. J’avais un peu la tête sous l’eau, là. T’as pas idée à quel points ça me soulage."
             play sound "Click.mp3" noloop
 
             hide screen update with moveoutright
@@ -11145,7 +11145,7 @@ label password23:
     Na "Non, mais je pense que chacun a le droit de choisir ce qu’il partage ou non."
     play sound "Click.mp3" noloop    
 
-    M "C’est un point de vue très intéressant, [newname]."
+    M "C’est un points de vue très intéressant, [newname]."
     play sound "Click.mp3" noloop   
 
     P "Je comprends ta position, [newname]. Respecter tes limites est essentiel, même si cela complique parfois mon travail."
@@ -12765,7 +12765,7 @@ label password26:
     P "Oui et alors c'est juste une batterie ?"
     play sound "Click.mp3" noloop
 
-    Na "Oui mais de mon point de vue se sera difficile de trouver une batterie spécifiquement pour moi."
+    Na "Oui mais de mon points de vue se sera difficile de trouver une batterie spécifiquement pour moi."
     play sound "Click.mp3" noloop 
 
     P "Je t'ai déjà trouvée un batterie le jour oû je t'ai récupérée donc...."
@@ -13359,7 +13359,7 @@ label password28:
             play sound "Click.mp3" noloop
 
             hide screen clubroom with moveoutright
-            hide screen point with moveoutleft
+            hide screen points with moveoutleft
             hide screen day with moveoutleft
             scene black with fade 
 
@@ -13379,7 +13379,7 @@ label password28:
 
                     scene clubroom with fade
                     show screen class_404 with moveinright
-                    show screen point with moveinleft
+                    show screen points with moveinleft
                     show screen day with moveinleft
                     $ points += 2000
                     jump choice9
@@ -13423,7 +13423,7 @@ label password28:
             play sound "Click.mp3" noloop
 
             hide screen clubroom with moveoutright
-            hide screen point with moveoutleft
+            hide screen points with moveoutleft
             hide screen day with moveoutleft
             scene black with fade
 
@@ -13443,7 +13443,7 @@ label password28:
 
                     scene clubroom with fade
                     show screen class_404 with moveinright
-                    show screen point with moveinleft
+                    show screen points with moveinleft
                     show screen day with moveinleft
                     $ points += 4000
                     
@@ -13724,7 +13724,7 @@ label choice10:
                 play music "gameover.mp3" noloop
 
                 hide screen clubroom with moveoutright
-                hide screen point with moveoutleftts
+                hide screen points with moveoutleftts
                 hide screen day with moveoutleft
                 scene black with fade
 
@@ -13743,7 +13743,7 @@ label choice10:
 
                         scene clubroom
                         show screen clubroom with moveinright
-                        show screen point with moveinleft
+                        show screen points with moveinleft
                         show screen day with moveinleft 
                         jump choice10
 
@@ -13771,12 +13771,12 @@ label choice10:
 
     if pronom == "il":
 
-        P "Oui, je comprends, mais je ne suis pas fou au point de supprimer le fichier system32."
+        P "Oui, je comprends, mais je ne suis pas fou au points de supprimer le fichier system32."
         play sound "Click.mp3" noloop
 
     else:
 
-        P "Oui, je comprends, mais je ne suis pas folle au point de supprimer le fichier system32."
+        P "Oui, je comprends, mais je ne suis pas folle au points de supprimer le fichier system32."
         play sound "Click.mp3" noloop
 
     Na "Je le sais bien car tu prends vraiment bien soin de moi."
@@ -14175,6 +14175,14 @@ label choice10:
     "{b}{i}Les filles se mettent à sourir.{/i}{/b}"
     play sound "Click.mp3" noloop
 
+    $ stockage += 1.0 
+
+    Na "Oui c'est vraiment génial."
+    play sound "Click.mp3" noloop
+
+    I "Oui vraiment"
+    play sound "Click.mp3" noloop
+
     Kh "Je suis contente que vous soyez contente."
     play sound "Click.mp3" noloop
 
@@ -14256,14 +14264,25 @@ label choice10:
     show screen points with moveinleft
     show screen hallway with moveinright 
 
-
-
-
-
-
-    "{b}{i}Vous continuez votre chemin.{/i}{/b}"
+    P "Sinon la soirée pyjama on la fait ce weeek-end ?"
     play sound "Click.mp3" noloop
 
+    I "Oui ça sera mieux je trouve."
+    play sound "Click.mp3" noloop
+
+    P "Mais du coup on devrait prendre quoi ?"
+    play sound "Click.mp3" noloop
+
+    I "On pourrait prendre des jeux de société, des jeux vidéos et des films."
+    play sound "Click.mp3" noloop
+
+    I "On pourrait aussi prendre des snacks et des boissons."
+    play sound "Click.mp3" noloop
+
+
+
+    "{b}{i}Vous finissez de discuter et vous continuez votre chemin.{/i}{/b}"
+    play sound "Click.mp3" noloop
 
 
 
