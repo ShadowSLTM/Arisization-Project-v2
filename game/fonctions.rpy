@@ -403,6 +403,19 @@ init python:
         return random.choice(seethat_list)
 
 init python:
+    import random
+
+    dontknow_list = [
+        "Je ne sais pas....",
+        "Je ne sais pas trop....", 
+        "Je ne sais pas vraiment....",    
+        "Je ne sais pas encore....", 
+    ]
+
+    def get_dontknow_service():
+        return random.choice(dontknow_list)
+
+init python:
     import getpass
 
     nom_utilisateur_pc = getpass.getuser() 

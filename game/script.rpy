@@ -1837,6 +1837,8 @@ label choice1:
     "{b}{i}La professeure regarde l'heure.{/i}{/b}"
     play sound "Click.mp3" noloop
     
+    # à modifier pour ajouter la distribution des livres
+    
     M "Bon, maintenant que toutes les informations ont été données, vous pouvez disposer. N'hésitez pas à visiter le lycée puisque vous n'avez pas cours cet après-midi."
     play sound "Footsteps.mp3" noloop
 
@@ -11503,7 +11505,7 @@ label update:
     P "Avec plaisir."
     play sound "Click.mp3" noloop 
 
-    "{b}{i} Puis [I] s'éloigna pour aller manger seul.{/i}{/b}"
+    "{b}{i} Puis [I] s'éloigne pour aller manger seul.{/i}{/b}"
     play sound "Click.mp3" noloop 
 
     P "[newname] tu sais ce qu'elle a ?"
@@ -19589,7 +19591,7 @@ label code1:
     Na "Ok je vois."
     play sound "Click.mp3" noloop 
 
-    P "Bon voyons voir."
+    P "Bon voyons voir...."
     play sound "Click.mp3" noloop 
 
     "{b}{i}Tu regardes toutes ses informations techniques et paramétres pendant une heure et demi.{/i}{/b}"

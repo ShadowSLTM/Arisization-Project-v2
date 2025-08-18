@@ -79,3 +79,4 @@ define Ln = Character('Luna Nagumo', color="#ffffff")
 # directeur du jeu  
 
 define Dc = Character('Seydou N\'Doye', color="#ffffff")
+
