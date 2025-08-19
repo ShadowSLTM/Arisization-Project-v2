@@ -1793,9 +1793,33 @@ screen flag():
 
 screen update():
     frame: 
-        yalign 0.08
-        xalign 0.999
+        yalign 0.3
+        xalign 0.5
         add "success.jpg"
+
+screen englishbook():
+    frame: 
+        yalign 0.3
+        xalign 0.5
+        add "englishbook.png"
+
+screen frenchbook():
+    frame: 
+        yalign 0.3
+        xalign 0.5
+        add "frenchbook.png"
+
+screen techbook():
+    frame: 
+        yalign 0.3
+        xalign 0.5
+        add "techbook.png"
+
+screen runixbook():
+    frame: 
+        yalign 0.3
+        xalign 0.5
+        add "runixbook.png"
 
 screen credit():
 

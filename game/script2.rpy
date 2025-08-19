@@ -14359,7 +14359,11 @@ label choice10:
     P "Ah bon et pourquoi ?"
     play sound "Click.mp3" noloop  
 
-    # à modifier
+    Na "j'ai trouver que les actions étaient prévisibles ou trop longues."
+    play sound "Click.mp3" noloop
+
+    P "Je comprends, c'est vrai que parfois les livres peuvent être un peu trop longs."
+    play sound "Click.mp3" noloop 
 
     Na "Bon on va prendre à manger ?"
     play sound "Click.mp3" noloop 
@@ -14437,6 +14441,89 @@ label choice10:
 
     "{b}{i}Tu te réveilles tranquillement.{/i}{/b}"
     play sound "Click.mp3" noloop 
+
+    $ line = get_random_morning_line()
+    P "[line]"
+    play sound "Click.mp3" noloop 
+
+    "{b}{i}Tu te changes et puis tu aperçois [newname] déconnectée contre le mur.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    P "Elle est encore déconnectée."
+    play sound "Click.mp3" noloop 
+    
+    P "Je vais la démarrer."
+    play sound "Menu.mp3" noloop   
+
+    menu:   
+
+        "{b}{i} Démarrer [newname].{/i}{/b}" :
+            play sound "Menu.mp3" noloop 
+
+label password29:  
+
+    $ entered_password = renpy.input("Veuillez entrer votre mot de passe pour [newname].")
+    $ entered_password = entered_password.strip()
+
+    if entered_password == stored_password:
+
+        "Mot de passe correct. Accès autorisé." 
+        play sound "Menu.mp3" noloop
+
+    else: 
+
+        "Mot de passe incorrect. Accès refusé." 
+        play sound "Menu.mp3" noloop
+        jump password29
+
+    $ start = get_random_start()
+    Na "[start]"
+    play sound "Click.mp3" noloop 
+
+    $  salutation_rdm = get_random_salutation()
+    Na "[salutation_rdm]"
+    play sound "Click.mp3" noloop
+
+    $ comment_ca_va = get_random_comment_ca_va()
+    P "[comment_ca_va]"
+    play sound "Click.mp3" noloop
+
+    $ je_vais_bien_txt = get_random_je_vais_bien() 
+    Na "[je_vais_bien_txt] Et toi ?"
+    play sound "Click.mp3" noloop
+
+    $ je_vais_bien_txt = get_random_je_vais_bien() 
+    P "[je_vais_bien_txt]"
+    play sound "Click.mp3" noloop
+
+    Na "Cool alors, bon on fait quoi aujourd'hui ?"
+    play sound "Click.mp3" noloop   
+
+    P "Je ne sais pas trop, on pourrait réviser un peu."
+    play sound "Click.mp3" noloop
+
+    Na "Non pas aujourd'hui, on avait dit la deuxième semaine des vacances pour réviser."
+    play sound "Click.mp3" noloop
+
+    P "oui c'est vrai tu as raison."
+    play sound "Click.mp3" noloop
+
+    Na "Du coup on fait quoi ?"
+    play sound "Click.mp3" noloop
+
+    P "On pourrait regarder une série."
+    play sound "Click.mp3" noloop
+
+    Na "Oui, pourquoi pas."
+    play sound "Click.mp3" noloop
+
+    P ""
+    play sound "Click.mp3" noloop
+
+    
+
+
+
 
 
 label end_script2:

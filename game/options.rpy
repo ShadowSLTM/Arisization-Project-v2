@@ -21,7 +21,7 @@ define build.director_name = _("Shadow")
 ## Détermine si le titre renseigné plus haut est affiché sur l'écran du menu
 ## principal Configurez-le à False (Faux) pour cacher le titre.
 
-define gui.show_name = True
+define gui.show_name = True 
 
 ## La version du jeu. 
 
@@ -152,7 +152,7 @@ define config.window_icon = "gui/window_icon.jpg"
 ## Cette section paramètre la façon dont Ren’Py transforme votre projet en
 ## fichier à distribuer.
 
-init python:
+init python: 
 
     ## Les fonctions suivantes prennent en paramètres un format de fichier. Les
     ## formats de fichiers ne sont pas sensibles à la casse et correspondent au
