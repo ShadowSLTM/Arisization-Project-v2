@@ -60,23 +60,6 @@ init python:
         else:
             return round(random.uniform(14, 20), 1)  
 
-# remerciement_rdm est une liste de phrases qui seront affichées aléatoirement au moment des remerciements envers la professeure.
-init python:
-    import random
-
-    remerciement_rdm = [ 
-        "Merci pour ces deux années ici.",
-        "C'était un honneur d'être ici.",
-        "On a appris plein de choses grâce à vous.",
-        "Merci encore infiniment pour tout.",
-        "Votre enseignement nous a beaucoup apporté, merci.",
-        "Nous garderons un excellent souvenir de ces années, merci.",
-        "Un grand merci pour votre patience et votre engagement.",
-    ]
-
-    def get_random_remerciement():
-        return random.choice(remerciement_rdm)
-
 # validation_rdm est une liste de phrases qui seront affichées aléatoirement au moment des validations de choix.
 init python:
     import random
@@ -399,21 +382,8 @@ init python:
         "Alors voyons voir ceci....",
     ]
 
-    def get_seethat_service():
+    def get_seethat():
         return random.choice(seethat_list)
-
-init python:
-    import random
-
-    dontknow_list = [
-        "Je ne sais pas....",
-        "Je ne sais pas trop....", 
-        "Je ne sais pas vraiment....",    
-        "Je ne sais pas encore....", 
-    ]
-
-    def get_dontknow_service():
-        return random.choice(dontknow_list)
 
 init python:
     import getpass

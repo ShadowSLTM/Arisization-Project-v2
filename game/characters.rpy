@@ -20,12 +20,12 @@ define S = Character('Subaru Shinomiya', color="#ffffff") # Takumi kisaragi dans
 
 define M = Character('Sakura Kusanagi', color="#ffdfef") 
 define I = Character('Yuna Nishimura', color="#ae33ff")
-define H = Character('Hajime Ayanokoji', color="#ffffff")
+define H = Character('Hajime Yukizome', color="#ffffff")
 define K = Character('Kendo Sato', color="#ffffff")
 define N = Character('Naoto Saotome', color="#ffee00") 
 define Hi = Character('Haruki Ichinose', color="#ffffff")
 define Y = Character('Yuki Hiiragi', color="#0059ff") # Misaki Mikazuki dans la D04
-
+  
 # Les antagonistes secondaires.  
 
 define J1 = Character('Ayano Sumino', color="#ff2323") 

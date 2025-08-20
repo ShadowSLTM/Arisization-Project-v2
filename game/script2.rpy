@@ -2526,8 +2526,9 @@ label examen_francais:
 
     $ grade = 0.0 
 
-    P "Bon voyons voir....." 
-    play sound "Click.mp3" noloop 
+    $ seethat = get_seethat()
+    P "[seethat]"     
+    play sound "Click.mp3" noloop
 
     "Question 1 : Quelle est la nature du mot 'rapidement' ?"
     play sound "Menu.mp3" noloop
@@ -3279,7 +3280,8 @@ label examen_francais:
     M "[endlesson]"
     play sound "Click.mp3" noloop
 
-    P "Bon, [newname] on retourne au dortoir ?" 
+    $ godorm = get_random_return_dorm()
+    P "[godorm]"
     play sound "Click.mp3" noloop
 
     $ suivi = get_random_suivi()
@@ -4091,7 +4093,8 @@ label password15:
     M "[endlesson]" 
     play sound "Click.mp3" noloop 
 
-    P "Bon, [newname] on retourne au dortoir ?" 
+    $ godorm = get_random_return_dorm()
+    P "[godorm]"
     play sound "Click.mp3" noloop
 
     $ suivi = get_random_suivi()
@@ -4707,7 +4710,7 @@ label password16:
     I "Je te suis aussi."
     play sound "Footsteps.mp3" noloop 
 
-    hide screen lunchroom with moveinright
+    hide screen lunchroom with moveoutright
     hide screen points with moveoutleft
     hide screen day with moveoutleft
     scene black with fade 
@@ -4825,7 +4828,8 @@ label password16:
     Na "[validation]"
     play sound "Click.mp3" noloop 
 
-    P "Bon, [newname] on retourne au dortoir ?" 
+    $ godorm = get_random_return_dorm()
+    P "[godorm]"
     play sound "Click.mp3" noloop
 
     $ suivi = get_random_suivi()
@@ -5311,7 +5315,8 @@ label password17:
     "{b}{i}Tout le monde retourne sa copie.{/i}{/b}"
     play sound "Click.mp3" noloop 
 
-    P "Bien voyons voir." 
+    $ seethat = get_seethat()
+    P "[seethat]"     
     play sound "Click.mp3" noloop 
 
 label philosophie_technologie:
@@ -5612,7 +5617,7 @@ label philosophie_technologie:
     Na "[suivi]"
     play sound "Footsteps.mp3" noloop
 
-    hide screen lunchroom with moveinright
+    hide screen lunchroom with moveoutright
     hide screen points with moveoutleft
     hide screen day with moveoutleft
     scene black with fade 
@@ -6123,7 +6128,8 @@ label philosophie_technologie:
 
     $ stockage += 5.0
 
-    P "Bon, [newname] on retourne au dortoir ?" 
+    $ godorm = get_random_return_dorm()
+    P "[godorm]"
     play sound "Click.mp3" noloop
 
     $ suivi = get_random_suivi()
@@ -7196,7 +7202,8 @@ label password18:
 
     $ stockage += 6.0 
 
-    P "Bon on retourne au dortoir ?"
+    $ godorm = get_random_return_dorm()
+    P "[godorm]"
     play sound "Click.mp3" noloop
 
     $ suivi = get_random_suivi()
@@ -7847,7 +7854,7 @@ label password19:
     Na "[suivi]"
     play sound "Footsteps.mp3" noloop
 
-    hide screen lunchroom with moveinright
+    hide screen lunchroom with moveoutright
     hide screen points with moveoutleft
     hide screen day with moveoutleft
     scene black with fade 
@@ -8435,7 +8442,8 @@ label password20:
     S "[validation]"
     play sound "Click.mp3" noloop 
 
-    P "Bon voyons voir....."
+    $ seethat = get_seethat()
+    P "[seethat]"     
     play sound "Click.mp3" noloop 
 
     "{b}{i}Tu ouvres ton manuel et commence les exercices.{/i}{/b}"
@@ -8703,7 +8711,7 @@ label password20:
     Na "[suivi]"
     play sound "Footsteps.mp3" noloop
 
-    hide screen lunchroom with moveinright
+    hide screen lunchroom with moveoutright
     hide screen points with moveoutleft
     hide screen day with moveoutleft
     scene black with fade 
@@ -8767,7 +8775,8 @@ label password20:
     M "Bien vous pouvez disposer."
     play sound "Click.mp3" noloop 
 
-    P "Bon on retourne au dortoir ?"
+    $ godorm = get_random_return_dorm()
+    P "[godorm]"
     play sound "Click.mp3" noloop
 
     $ suivi = get_random_suivi()
@@ -9311,7 +9320,7 @@ label password21:
     Na "[suivi]" 
     play sound "Footsteps.mp3" noloop
 
-    hide screen lunchroom with moveinright
+    hide screen lunchroom with moveoutright
     hide screen points with moveoutleft
     hide screen day with moveoutleft
     scene black with fade 
@@ -9499,7 +9508,8 @@ label password21:
     "{b}{i}Vous commencez à faire les devoirs.{/i}{/b}"
     play sound "Click.mp3" noloop
 
-    P "Bon voyons voir...."
+    $ seethat = get_seethat()
+    P "[seethat]"     
     play sound "Click.mp3" noloop 
 
     "{b}{i}Tu regardes ce que sont les exercices.{/i}{/b}"
@@ -9656,7 +9666,8 @@ label password21:
     Hi "Bien alors."
     play sound "Click.mp3" noloop 
 
-    P "Bon, [newname] on retourne au dortoir ?" 
+    $ godorm = get_random_return_dorm()
+    P "[godorm]"
     play sound "Click.mp3" noloop
 
     $ suivi = get_random_suivi()
@@ -10308,7 +10319,7 @@ label password22:
     Na "[suivi]" 
     play sound "Footsteps.mp3" noloop
 
-    hide screen lunchroom with moveinright
+    hide screen lunchroom with moveoutright
     hide screen points with moveoutleft
     hide screen day with moveoutleft
     scene black with fade 
@@ -11189,7 +11200,8 @@ label password23:
     M "[endlesson]"
     play sound "Click.mp3" noloop 
 
-    P "Bon on retourne au dortoir ?"
+    $ godorm = get_random_return_dorm()
+    P "[godorm]"
     play sound "Click.mp3" noloop
 
     $ suivi = get_random_suivi()
@@ -11844,7 +11856,8 @@ label password24:
     "{b}{i}[I] se lève et part vers la sortie du réfectoire.{/i}{/b}"
     play sound "Click.mp3" noloop
 
-    P "Bon on retourne au dortoir ?"
+    $ godorm = get_random_return_dorm()
+    P "[godorm]"
     play sound "Click.mp3" noloop
 
     $ suivi = get_random_suivi() 
@@ -12422,7 +12435,8 @@ label password25:
     Na "Bien."
     play sound "Click.mp3" noloop 
 
-    P "Bon on retourne au dortoir ?"
+    $ godorm = get_random_return_dorm()
+    P "[godorm]"
     play sound "Click.mp3" noloop
 
     $ suivi = get_random_suivi()
@@ -12797,8 +12811,9 @@ label password26:
     "{b}{i}Tu t'approches pour inspecter l'ancienne batterie.{/i}{/b}"
     play sound "Click.mp3" noloop 
 
-    P "Bon voyons voir...."
-    play sound "Click.mp3" noloop
+    $ seethat = get_seethat()
+    P "[seethat]"     
+    play sound "Click.mp3" noloop 
 
     Na "Alors trouver quelques choses sur l'ancienne batterie ?"
     play sound "Click.mp3" noloop 
@@ -12884,19 +12899,19 @@ label password26:
     P "Ce sont les quelles ?"
     play sound "Click.mp3" noloop 
 
-    Rn "Premièrement, il y a la Voltaris qui fait 4000 Wh."
+    Rn "Premièrement, il y a la Voltaris qui fait 4000W."
     play sound "Click.mp3" noloop
 
     P "La seconde ?" 
     play sound "Click.mp3" noloop
 
-    Rn "il y a le neutronix qui fait 7000 Wh"
+    Rn "il y a le neutronix qui fait 7000W"
     play sound "Click.mp3" noloop
 
     P "Et la dernière ?"
     play sound "Click.mp3" noloop 
 
-    Rn "Et enfin, l'ultracore qui fait 10000 Wh."
+    Rn "Et enfin, l'ultracore qui fait 10000W."
     play sound "Click.mp3" noloop
 
     P "Je vois merci."
@@ -13614,8 +13629,9 @@ label password28:
     "{b}{i}Tu te pose tramquillement pour voir ça.{/i}{/b}"
     play sound "Click.mp3" noloop
 
-    P "Bon voyons voir...."
-    play sound "Click.mp3" noloop
+    $ seethat = get_seethat()
+    P "[seethat]"     
+    play sound "Click.mp3" noloop 
 
     "{b}{i}Tu ouvres l'explorateur de fichiers.{/i}{/b}"
     play sound "Click.mp3" noloop
@@ -13779,8 +13795,9 @@ label choice10:
     "{b}{i}Tu te mets à regarder les fichiers systémes pour voir s'il y a du nouveau.{/i}{/b}"
     play sound "Click.mp3" noloop 
 
-    P "Bon voyons voir...."
-    play sound "Click.mp3" noloop
+    $ seethat = get_seethat()
+    P "[seethat]"     
+    play sound "Click.mp3" noloop 
 
     "{b}{i}Tu remarques qu'il y a rien de nouveaux.{/i}{/b}"
     play sound "Click.mp3" noloop  
@@ -14305,8 +14322,9 @@ label choice10:
     "{b}{i}Puis [I] s'éloigne pour aller dans son dortoir.{/i}{/b}"
     play sound "Click.mp3" noloop 
 
-    P "Bon on retourne au dortoir [newname] ?"
-    play sound "Click.mp3" noloop 
+    $ godorm = get_random_return_dorm()
+    P "[godorm]"
+    play sound "Click.mp3" noloop
 
     $ suivi = get_random_suivi()
     Na "[suivi]"
@@ -14502,8 +14520,15 @@ label password29:
     P "Je ne sais pas trop, on pourrait réviser un peu."
     play sound "Click.mp3" noloop
 
-    Na "Non pas aujourd'hui, on avait dit la deuxième semaine des vacances pour réviser."
-    play sound "Click.mp3" noloop
+    if grade == 20.0:
+
+        Na "Non pas aujourd'hui, on avait dit la deuxième semaine des vacances pour réviser, après tous les efforts que tu as faits, tu mérites du repos."
+        play sound "Click.mp3" noloop
+
+    else:
+
+        Na "Non pas aujourd'hui, on avait dit la deuxième semaine des vacances pour réviser, il faut garder le rythme."
+        play sound "Click.mp3" noloop 
 
     P "oui c'est vrai tu as raison."
     play sound "Click.mp3" noloop
@@ -14517,11 +14542,192 @@ label password29:
     Na "Oui, pourquoi pas."
     play sound "Click.mp3" noloop
 
-    P ""
+    P "Tu veux qu’on regarde quoi ?"
+    play sound "Click.mp3" noloop  
+
+    Na "Hmm... peut-être une série d’action ? Ça fait longtemps."
+    play sound "Click.mp3" noloop  
+
+    P "Bonne idée. Tu pensais à laquelle ?"
+    play sound "Click.mp3" noloop  
+
+    Na "Pourquoi pas {b}{i}Cyber Rebirth{/i}{/b} ? On m’en a beaucoup parlé."
+    play sound "Click.mp3" noloop  
+
+    P "Ah oui, la série futuriste avec les IA ?"
+    play sound "Click.mp3" noloop  
+
+    Na "Exactement ! Ça devrait nous plaire, non ?"
+    play sound "Click.mp3" noloop  
+
+    P "Alors c’est parti, je lance le premier épisode."
+    play sound "Click.mp3" noloop  
+
+    Na "Cool !"
+    play sound "Click.mp3" noloop 
+
+    "{b}{i}Vous vous posez tranquillement pour regarder la serie toute la matinée.{/i}{/b}"
     play sound "Click.mp3" noloop
 
-    
+    $ go_eat = get_random_go_eat()
+    P "[go_eat]"
+    play sound "Click.mp3" noloop 
 
+    $ suivi = get_random_suivi()
+    Na "[suivi]"
+    play sound "Footsteps.mp3" noloop
+
+    hide screen room with moveoutright 
+    hide screen points with moveoutleft
+    hide screen day with moveoutleft
+    scene black with fade 
+
+    "{b}{i} Vous sortez du dortoir.{/i}{/b}"
+    play sound "Door.mp3" noloop
+
+    scene hallway with fade
+    show screen day with moveinleft
+    show screen points with moveinleft
+    show screen hallway with moveinright 
+
+    "{b}{i}Tu continues vers les escaliers.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    hide screen hallway with moveoutright
+    hide screen points with moveoutleft
+    hide screen day with moveoutleft
+    scene staircase with fade
+
+    "{b}{i}Puis vers le hall.{/i}{/b}"
+    play sound "Footsteps.mp3" noloop
+
+    scene hall with fade
+    show screen day with moveinleft
+    show screen points with moveinleft
+    show screen hall with moveinright 
+
+    "{b}{i} Puis encore vers le réféctoire.{/i}{/b}"
+    play sound "Footsteps.mp3" noloop
+
+    hide screen hall with moveoutright
+    hide screen points with moveoutleft
+    hide screen day with moveoutleft
+    scene black with fade
+
+    "{b}{i} Vous entrez enfin au réfectoire.{/i}{/b}"
+    play sound "Door.mp3" noloop
+
+    scene lunchroom with fade
+    show screen day with moveinleft
+    show screen points with moveinleft
+    show screen lunchroom with moveinright
+
+    $ find_food = get_random_find_food()
+    Na "[find_food]"
+    play sound "Click.mp3" noloop 
+
+    $ suivi = get_random_suivi()
+    P "[suivi]"
+    play sound "Footsteps.mp3" noloop
+
+    "{b}{i} Vous allez vers le comptoir pour prendre à manger.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    $ points -= 300 
+
+    $ service = get_random_service()
+    P "[service]"
+    play sound "Click.mp3" noloop 
+
+    $ sit = get_random_sit()
+    Na "[sit]"
+    play sound "Click.mp3" noloop
+
+    P "Bonne appétit."
+    play sound "Click.mp3" noloop
+
+    Na "Bonne appétit à toi aussi."
+    play sound "Click.mp3" noloop
+
+    "{b}{i} Vous mangez tranquillement pendant que vous commencez à discuter.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    Na "Sinon tu veux faire quoi cette aprés-midi ?"
+    play sound "Click.mp3" noloop
+
+    P "Je verrais sur le moment."
+    play sound "Click.mp3" noloop
+
+    Na "D'accord je te laisse réfléchir."
+    play sound "Click.mp3" noloop
+
+    "{b}{i} Vous continuez de manger tranquillement jusqu'à la sonnerie.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    $ godorm = get_random_return_dorm()
+    P "[godorm]"
+    play sound "Click.mp3" noloop
+
+    $ suivi = get_random_suivi()
+    Na "[suivi]" 
+    play sound "Footsteps.mp3" noloop
+
+    hide screen lunchroom with moveoutright
+    hide screen points with moveoutleft
+    hide screen day with moveoutleft
+    scene black with fade 
+
+    "{b}{i} Vous sortez du réfectoire.{/i}{/b}"
+    play sound "Door.mp3" noloop
+
+    scene hall with fade
+    show screen day with moveinleft
+    show screen points with moveinleft
+    show screen hall with moveinright
+
+    "{b}{i} Vous continuez votre chemin vers le dortoir.{/i}{/b}"
+    play sound "Footsteps.mp3" noloop
+
+    hide screen hall with moveoutright 
+    hide screen points with moveoutleft
+    hide screen day with moveoutleft
+    scene staircase with fade 
+
+    "{b}{i} Vous montez au premier étage.{/i}{/b}"
+    play sound "Footsteps.mp3" noloop
+
+    scene hallway with fade
+    show screen day with moveinleft
+    show screen points with moveinleft
+    show screen hallway with moveinright 
+
+    "{b}{i} Vous continuez dans le couloir.{/i}{/b}"
+    play sound "Footsteps.mp3" noloop
+
+    hide screen hallway with moveoutright
+    hide screen points with moveoutleft
+    hide screen day with moveoutleft
+    scene black with fade
+
+    "{b}{i}Vous entrez dans ton dortoir.{/i}{/b}"
+    play sound "Door.mp3" noloop
+
+    scene room with fade 
+    show screen day with moveinleft
+    show screen points with moveinleft
+    show screen room with moveinright 
+
+    $ dortoir = get_random_dortoir()
+    Na "[dortoir]"
+    play sound "Click.mp3" noloop
+
+    $ bien = get_random_fais_du_bien()
+    P "[bien]" 
+    play sound "Click.mp3" noloop 
+
+    Na "Bon on fait quoi ?"
+    play sound "Click.mp3" noloop 
+    
 
 
 

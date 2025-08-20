@@ -1863,6 +1863,8 @@ screen credit():
 
             text _("Illustration du menu : [Dc] (Shadow_SLTM)\n") 
 
+            text _("Illustration des livres : [Dc] (Shadow_SLTM)\n") 
+            
             text _("Programmation : [Dc] (Shadow_SLTM)\n") 
 
             text _("Correction du jeu : [Dc] (Shadow_SLTM)\n")
