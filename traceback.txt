@@ -1,32 +1,38 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 2289, in script
-    show screen point with moveinleft
-  File "renpy/common/000statements.rpy", line 647, in execute_show_screen
-    renpy.show_screen(name, *args, **kwargs)
-Exception: Screen point is not known.
-
+  File "renpy/common/00start.rpy", line 244, in script call
+    call _splashscreen from _call_splashscreen_1
+  File "game/security.rpy", line 82, in script call
+    call main_menu
+  File "game/security.rpy", line 82, in script call
+    call main_menu
+  File "game/security.rpy", line 82, in script call
+    call main_menu
+  [Previous line repeated 501228 more times]
+  File "game/security.rpy", line 81, in script
+    label main_menu:
+Exception: Possible infinite loop.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 2289, in script
-    show screen point with moveinleft
-  File "C:\Users\Aris\Documents\renpy-8.3.7-sdk\renpy\ast.py", line 1987, in execute
-    self.call("execute")
-  File "C:\Users\Aris\Documents\renpy-8.3.7-sdk\renpy\ast.py", line 1966, in call
-    return renpy.statements.call(method, parsed, *args, **kwargs)
-  File "C:\Users\Aris\Documents\renpy-8.3.7-sdk\renpy\statements.py", line 374, in call
-    return method(parsed, *args, **kwargs)
-  File "renpy/common/000statements.rpy", line 647, in execute_show_screen
-    renpy.show_screen(name, *args, **kwargs)
-  File "C:\Users\Aris\Documents\renpy-8.3.7-sdk\renpy\display\screen.py", line 1328, in show_screen
-    raise Exception("Screen %s is not known.\n" % (name[0],))
-Exception: Screen point is not known.
-
+  File "renpy/common/00start.rpy", line 244, in script call
+    call _splashscreen from _call_splashscreen_1
+  File "game/security.rpy", line 82, in script call
+    call main_menu
+  File "game/security.rpy", line 82, in script call
+    call main_menu
+  File "game/security.rpy", line 82, in script call
+    call main_menu
+  [Previous line repeated 501228 more times]
+  File "game/security.rpy", line 81, in script
+    label main_menu:
+  File "C:\Users\Aris\Documents\renpy-8.3.7-sdk\renpy\execution.py", line 61, in check_infinite_loop
+    raise Exception("Possible infinite loop.")
+Exception: Possible infinite loop.
 
 Windows-10-10.0.26100 AMD64
 Ren'Py 8.3.7.25031702
 Arisization Project Version_0.0.5
-Sat Aug 16 13:35:59 2025
+Thu Aug 21 22:17:08 2025

@@ -14727,9 +14727,128 @@ label password29:
 
     Na "Bon on fait quoi ?"
     play sound "Click.mp3" noloop 
+
+    P "On pourrait ranger un peu la chambre."
+    play sound "Click.mp3" noloop 
+
+    Na "On commence par quoi ?"
+    play sound "Click.mp3" noloop 
+
+    P "On pourrait commencer par ranger le bureau."
+    play sound "Click.mp3" noloop
+
+    $ validation = get_random_validation() 
+    Na "[validation]"
+    play sound "Click.mp3" noloop 
+
+    P "Alors commençons par le bureau car il est rempli d'affaires qui traînent."
+    play sound "Click.mp3" noloop 
+
+    "{b}{i}Vous approchez du bureau pour voir.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    $ seethat = get_seethat()
+    P "[seethat]"     
+    play sound "Click.mp3" noloop 
+
+    Na "C'est vraiment sale ici."
+    play sound "Click.mp3" noloop 
+
+    P "Je te le confirme."
+    play sound "Click.mp3" noloop 
+
+    Na "On dois vraiment nettoyer ça."
+    play sound "Click.mp3" noloop 
+
+    P "Alors, qu'est-ce qu'on attend pour commencer ?"
+    play sound "Click.mp3" noloop
+
+    Na "On s'y met tout de suite !"
+    play sound "Click.mp3" noloop
+
+    P "Ok moi je vais m'occuper du lit."
+    play sound "Click.mp3" noloop
+
+    $ validation = get_random_validation() 
+    Na "[validation]"
+    play sound "Click.mp3" noloop 
+
+    "{b}{i}Tu commence à ranger le lit.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    P "ça donne quoi de ton coté ?"
+    play sound "Click.mp3" noloop
+
+    Na "J'ai presque fini de ranger le bureau et toi ?"
+    play sound "Click.mp3" noloop
+
+    P "J'ai presque fini aussi."
+    play sound "Click.mp3" noloop
+
+    $ validation = get_random_validation() 
+    Na "[validation]"
+    play sound "Click.mp3" noloop 
+
+    "{b}{i}Vous continuez de ranger pour le reste de l'après-midi.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+
+
+
+
+
+
+
+    P "Bon, on va à la salle de club pour préparer la soirée pyjama ?"
+    play sound "Click.mp3" noloop
+
+    $ suivi = get_random_suivi()
+    Na "[suivi]"
+    play sound "Footsteps.mp3" noloop
+
+    hide screen room with moveoutright  
+    hide screen points with moveoutleft
+    hide screen day with moveoutleft
+    scene black with fade 
+
+    "{b}{i}Tu quittes ta chambre avec [newname].{/i}{/b}"
+    play sound "Door.mp3" noloop
+
+    scene hallway with fade 
+    show screen day with moveinleft
+    show screen points with moveinleft
+    show screen hallway with moveinright
+
+    "{b}{i}Tu continues dans le couloir avec [newname].{/i}{/b}"
+    play sound "Footsteps.mp3" noloop  
+ 
+    hide screen hallway with moveoutright
+    hide screen points with moveoutleft
+    hide screen day with moveoutleft
+    scene staircase with fade 
+
+    "{b}{i}Tu continues vers le hall avec [newname].{/i}{/b}"
+    play sound "Footsteps.mp3" noloop   
+
+    scene hall with fade
+    show screen day with moveinleft
+    show screen points with moveinleft
+    show screen hall with moveinright
+
+    "{b}{i}Tu entres dans ta salle de club.{/i}{/b}"
+    play sound "Door.mp3" noloop 
+ 
+    scene clubroom with fade 
+    show screen day with moveinleft
+    show screen points with moveinleft
+    show screen clubroom with moveinright 
+
+
+
     
-
-
+    $ bien = get_random_fais_du_bien()
+    P "[bien]" 
+    play sound "Click.mp3" noloop  
 
 
 label end_script2:

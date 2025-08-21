@@ -1821,6 +1821,12 @@ screen runixbook():
         xalign 0.5
         add "runixbook.png"
 
+screen physicsbook():
+    frame: 
+        yalign 0.3
+        xalign 0.5
+        add "physicsbook.png"
+
 screen credit():
 
     tag menu

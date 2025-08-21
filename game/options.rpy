@@ -69,7 +69,7 @@ define config.main_menu_music = "Lastencounter.mp3"
 ## Ces variables configurent les transitions qui sont utilisées quand certains
 ## événements surviennent. Chaque variable peuvent être configurée pour une
 ## transition. La valeur None indique qu’aucune transition ne doit être
-## utilisée.
+## utilisée. 
 
 ## À l’entrée ou à la sortie du menu du jeu.
 

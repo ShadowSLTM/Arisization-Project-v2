@@ -1855,7 +1855,7 @@ label choice1:
     M "C'est celui-ci."
     play sound "Click.mp3" noloop 
 
-    show screen frenchbook with moveinbottom
+    hide screen frenchbook with moveoutbottom
 
     M "Ensuite, vous avez le livre d'anglais."
     play sound "Click.mp3" noloop 
@@ -1865,7 +1865,17 @@ label choice1:
     M "C'est celui-là."
     play sound "Click.mp3" noloop 
 
-    show screen englishbook with moveinbottom
+    hide screen englishbook with moveoutbottom
+
+    M "le suivant, c'est le livre de physique."
+    play sound "Click.mp3" noloop 
+
+    show screen physicsbook with moveinbottom
+
+    M "C'est celui-là."
+    play sound "Click.mp3" noloop 
+
+    hide screen physicsbook with moveoutbottom 
 
     M "l'avant dernier, c'est le livre technique."
     play sound "Click.mp3" noloop 
@@ -1875,9 +1885,9 @@ label choice1:
     M "C'est celui-là."
     play sound "Click.mp3" noloop 
 
-    show screen techbook with moveinbottom
+    hide screen techbook with moveoutbottom 
 
-    M "l'avant dernier, c'est le livre de programmation Runix."
+    M "le dernier, c'est le livre de programmation Runix."
     play sound "Click.mp3" noloop 
 
     show screen runixbook with moveinbottom
@@ -1885,7 +1895,7 @@ label choice1:
     M "C'est celui-là."
     play sound "Click.mp3" noloop 
 
-    show screen runixbook with moveinbottom 
+    hide screen runixbook with moveoutbottom 
 
     M "Les deux derniers livres sont les plus importants donc ne les perdez pas."
     play sound "Click.mp3" noloop 
