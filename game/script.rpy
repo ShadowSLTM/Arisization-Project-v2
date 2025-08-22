@@ -20905,11 +20905,6 @@ label update1:
     "{b}{i}Tu te changes avant d'aller de te coucher.{/i}{/b}"
     play sound "Click.mp3" noloop
 
-    P "Bon voyons voir, par quoi on commence ?"     
-    play sound "Click.mp3" noloop 
-
-    Na ""
-
 label end_script:
     call script2
     return 

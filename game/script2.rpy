@@ -6015,6 +6015,30 @@ label philosophie_technologie:
 
     $ stockage += 2.0
 
+    M "Donc la première semaine de janvier quand vous revenez les permanance seront obligatoire."
+    play sound "Click.mp3" noloop 
+
+    J1 "Quoi mais pourquoi !?"
+    play sound "Click.mp3" noloop 
+
+    Y "Parce que c'est une épreuve éliminatoire."
+    play sound "Click.mp3" noloop 
+
+    M "Exactement [Y]"
+    play sound "Click.mp3" noloop 
+
+    J1 "Je vois mais tu reste aussi calme alors cette épreuve"
+    play sound "Click.mp3" noloop 
+
+    Y "J'ai mes propres raisons qui ne te regarde pas."
+    play sound "Click.mp3" noloop 
+
+    J1 "Désolée de t'avoir posé cette question."
+    play sound "Click.mp3" noloop 
+
+    Y "C'est rien."
+    play sound "Click.mp3" noloop 
+
     M "Bien maintenant je vais vous donner la liste."
     play sound "Click.mp3" noloop 
 
@@ -14792,12 +14816,12 @@ label password29:
     "{b}{i}Vous continuez de ranger pour le reste de l'après-midi.{/i}{/b}"
     play sound "Click.mp3" noloop
 
+    P "On a enfin fini de ranger cette chambre."
+    play sound "Click.mp3" noloop
 
-
-
-
-
-
+    $ bien = get_random_fais_du_bien()
+    Na "[bien]" 
+    play sound "Click.mp3" noloop 
 
     P "Bon, on va à la salle de club pour préparer la soirée pyjama ?"
     play sound "Click.mp3" noloop
@@ -14843,16 +14867,56 @@ label password29:
     show screen points with moveinleft
     show screen clubroom with moveinright 
 
-
-
+    Na "Enfin au club."
+    play sound "Click.mp3" noloop 
     
     $ bien = get_random_fais_du_bien()
     P "[bien]" 
     play sound "Click.mp3" noloop  
 
+    Na "Bon c'est quoi la priorité ?"
+    play sound "Click.mp3" noloop  
+
+    P "Je pense qu'on peut pousser la table et les chaises au fond de la salle vers la fenêtre pour commencer."
+    play sound "Click.mp3" noloop
+
+    Na "Oui bonne idée."
+    play sound "Click.mp3" noloop
+
+    P "Alors, c'est parti."
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Vous commencer à pousser la table et déplacer les chaises.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    Na "On fait du bon travail."
+    play sound "Click.mp3" noloop
+
+    P "Oui je sais."
+    play sound "Click.mp3" noloop
+
+    Na "Bon maintenant on fait quoi ?"
+    play sound "Click.mp3" noloop
+
+    P "on pouurait déplacer un peu les meubles."
+    play sound "Click.mp3" noloop
+
+    Na "Oui c'est une bonne idée."
+    play sound "Click.mp3" noloop
+
+    P "Alors c'est parti."
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Vous commencer à pousser les meubles pour faire de la places.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    
+
+ 
+     
 
 label end_script2:
     call script3 
     return 
-
+ 
 # Aris la plus belle ################### 
