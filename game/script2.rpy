@@ -2136,7 +2136,7 @@ label newpassword:
     hide screen day with moveoutleft
     scene black with fade
 
-    "{b}{i} Puis tu sors de la salle de club général.{/i}{/b}"
+    "{b}{i}Vous sortez de la salle de club général.{/i}{/b}"
     play sound "Door.mp3" noloop
 
     scene hall with fade
@@ -2144,7 +2144,7 @@ label newpassword:
     show screen points with moveinleft
     show screen hall with moveinright 
 
-    "{b}{i}Tu prends les escaliers.{/i}{/b}"
+    "{b}{i}Vous continuez vers les escaliers.{/i}{/b}"
     play sound "Footsteps.mp3" noloop
 
     hide screen hall with moveoutright
@@ -2152,7 +2152,7 @@ label newpassword:
     hide screen day with moveoutleft
     scene staircase with fade
 
-    "{b}{i} Puis tu continues vers le couloir avec [Na].{/i}{/b}"
+    "{b}{i}Vous continuez vers le couloir.{/i}{/b}"
     play sound "Footsteps.mp3" noloop
 
     scene hallway with fade 
@@ -2160,7 +2160,7 @@ label newpassword:
     show screen points with moveinleft
     show screen hallway with moveinright 
 
-    "{b}{i} Vous continues vers le dortoir.{/i}{/b}"
+    "{b}{i}Vous continuez vers le dortoir.{/i}{/b}"
     play sound "Footsteps.mp3" noloop
 
     hide screen hallway with moveoutright
@@ -2168,7 +2168,7 @@ label newpassword:
     hide screen day with moveoutleft
     scene black with fade
 
-    "{b}{i}Tu entres dans ton dortoir.{/i}{/b}"
+    "{b}{i}Vous entrez dans ton dortoir.{/i}{/b}"
     play sound "Door.mp3" noloop
 
     scene room with fade 
@@ -9698,7 +9698,7 @@ label password21:
     Na "[suivi]"
     play sound "Footsteps.mp3" noloop
 
-    hide screen cluboom with moveinright
+    hide screen clubroom with moveinright
     hide screen points with moveoutleft
     hide screen day with moveoutleft
     scene black with fade
@@ -14889,14 +14889,8 @@ label password29:
     "{b}{i}Vous commencer à pousser la table et déplacer les chaises.{/i}{/b}"
     play sound "Click.mp3" noloop
 
-    Na "On fait du bon travail."
-    play sound "Click.mp3" noloop
-
-    P "Oui je sais."
-    play sound "Click.mp3" noloop
-
     Na "Bon maintenant on fait quoi ?"
-    play sound "Click.mp3" noloop
+    play sound "Click.mp3" noloop 
 
     P "on pouurait déplacer un peu les meubles."
     play sound "Click.mp3" noloop
@@ -14910,10 +14904,143 @@ label password29:
     "{b}{i}Vous commencer à pousser les meubles pour faire de la places.{/i}{/b}"
     play sound "Click.mp3" noloop
 
+    P "On a enfin finir de faire ça."
+    play sound "Click.mp3" noloop  
     
+    Na "Oui, on a fait du bon travail."
+    play sound "Click.mp3" noloop
 
- 
-     
+    P "Oui je sais."
+    play sound "Click.mp3" noloop
+
+    $ godorm = get_random_return_dorm()
+    Na "[godorm]"
+    play sound "Click.mp3" noloop
+
+    $ suivi = get_random_suivi()
+    P "[suivi]" 
+    play sound "Footsteps.mp3" noloop
+
+    hide screen clubroom with moveoutright
+    hide screen points with moveoutleft
+    hide screen day with moveoutleft
+    scene black with fade 
+
+    "{b}{i} Vous sortez de la salle de club.{/i}{/b}"
+    play sound "Door.mp3" noloop
+
+    scene hall with fade
+    show screen day with moveinleft
+    show screen points with moveinleft
+    show screen hall with moveinright 
+
+    "{b}{i}Vous continuez vers les escaliers.{/i}{/b}"
+    play sound "Footsteps.mp3" noloop
+
+    hide screen hall with moveoutright
+    hide screen points with moveoutleft
+    hide screen day with moveoutleft
+    scene staircase with fade
+
+    "{b}{i}Vous continuez vers le couloir.{/i}{/b}"
+    play sound "Footsteps.mp3" noloop
+
+    scene hallway with fade 
+    show screen day with moveinleft
+    show screen points with moveinleft
+    show screen hallway with moveinright 
+
+    "{b}{i}Vous continuez vers le dortoir.{/i}{/b}"
+    play sound "Footsteps.mp3" noloop
+
+    hide screen hallway with moveoutright
+    hide screen points with moveoutleft
+    hide screen day with moveoutleft
+    scene black with fade
+
+    "{b}{i}Vous entrez dans ton dortoir.{/i}{/b}"
+    play sound "Door.mp3" noloop
+
+    scene room with fade 
+    show screen day with moveinleft
+    show screen points with moveinleft
+    show screen room with moveinright 
+
+    $ dortoir = get_random_dortoir()
+    P "[dortoir]"
+    play sound "Click.mp3" noloop
+
+    $ bien = get_random_fais_du_bien()
+    Na "[bien]" 
+    play sound "Click.mp3" noloop  
+
+    P "Bon on prends quoi la soirée pyjama ?"
+    play sound "Click.mp3" noloop  
+
+    Na "Je dirais une couverture et un oreiller."
+    play sound "Click.mp3" noloop  
+
+    P "Ok."
+    play sound "Click.mp3" noloop  
+
+    Na "Mais j'ai une question [prenom]."
+    play sound "Click.mp3" noloop  
+
+    P "Oui dis-moi, je t'écoute."
+    play sound "Click.mp3" noloop  
+    
+    if pronom == "il": 
+
+        Na "Pourquoi nous sommes allés ranger la salle de club avant et pas quand nous irons poser nos affaires pour la soirée pyjama ?"
+        play sound "Click.mp3" noloop 
+
+    else: 
+
+        Na "Pourquoi nous sommes allées ranger la salle de club avant et pas quand nous irons poser nos affaires pour la soirée pyjama ?"
+        play sound "Click.mp3" noloop 
+
+    P "J'ai choisi de faire ça car comme ça nous serons tranquille pour la soirée pyjama ?"
+    play sound "Click.mp3" noloop 
+
+    Na "Oh c'est vrai que ça permet de ne pas faire cette tâche après."
+    play sound "Click.mp3" noloop 
+
+    P "Bon revenons à ce que nus faisions."
+    play sound "Click.mp3" noloop 
+
+    Na "Donc il nous faudra aussi...."
+    play sound "Knock.mp3" noloop 
+
+    "{b}{i}Quelqu'un frappe soudainement à la porte.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    P "[newname] va voir c'est qui s'il te plais."
+    play sound "Click.mp3" noloop 
+
+    $ validation = get_random_validation() 
+    Na "[validation]"
+    play sound "Click.mp3" noloop 
+
+    "{b}{i}[newname] s'approche pour ouvrir la porte.{/i}{/b}"
+    play sound "Door.mp3" noloop
+
+    Na "Oh salut [I] comment ça va ?"
+    play sound "Click.mp3" noloop
+
+    I "Je vais bien et vous ?"
+    play sound "Click.mp3" noloop 
+
+    Na "Nous allons bien."
+    play sound "Click.mp3" noloop 
+
+    I "Cool alors mais j'aurais une question."
+    play sound "Click.mp3" noloop 
+
+    Na "Oui dis-nous."
+    play sound "Click.mp3" noloop 
+
+    I "Vous allez déjà à la salle de club pour la soirée ou pas ?"
+    play sound "Click.mp3" noloop 
 
 label end_script2:
     call script3 

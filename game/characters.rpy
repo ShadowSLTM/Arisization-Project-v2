@@ -11,7 +11,6 @@ default Na = Character('[newname] [nom]', color="#00eeff")
 
 define Su = Character('Suzune Horimiya', color="#ffffff")
 define Sk = Character('Shiro Katsuya', color="#ffffff") 
-
 # antagoniste principale 
 
 define S = Character('Subaru Shinomiya', color="#ffffff") # Takumi kisaragi dans la D04   

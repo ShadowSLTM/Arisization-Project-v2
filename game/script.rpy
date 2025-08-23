@@ -20683,8 +20683,6 @@ label password10:
     Na "[bien]" 
     play sound "Click.mp3" noloop  
 
-    
-
     P "Juste il faut que tu le saches mais en général les journalistes sont vraiment chiants."
     play sound "Click.mp3" noloop 
 

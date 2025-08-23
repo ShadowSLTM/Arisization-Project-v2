@@ -1898,7 +1898,13 @@ screen credit():
             text _("Fonctions aléatoires : [Dc] (Shadow_SLTM)\n") 
 
             label "{b}{i}— Remerciements —\n{/i}{/b}"  
-            
+
+            text _("Musique de la fin du jeu : Chan Walrus\n") 
+
+            text _("Musique de gameover : MB Music\n")
+
+            text _("bandes originales durant le jeu : BeatGrounds & MirAudio\n")
+
             text _("Musiques utilisées sous licence libre.\n") 
 
             text _("Décors utilisés sous licence libre.\n") 
