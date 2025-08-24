@@ -363,7 +363,7 @@ label hack:
             play sound "Menu.mp3" noloop 
 
             $ success += 1 
-            $ quest2 += 1
+            $ quest1 += 1
 
             if persistent.abandon == True: 
 
@@ -517,7 +517,7 @@ label hack:
     A "C’est difficile à croire, mais... merci."
     play sound "Click.mp3" noloop
 
-    A "Et… Me reste-t-il un avenir ? Voudra-t-on encore de moi ?"
+    A "Et maintenant… ai-je encore une place dans ce monde...?"
     play sound "Menu.mp3" noloop
 
     menu:
@@ -527,7 +527,7 @@ label hack:
 
             $ renpy.block_rollback()
             $ success += 1
-            $ quest4 += 1  
+            $ quest2 += 1  
 
             show screen update with moveinright
 
@@ -1090,7 +1090,7 @@ label choice1:
 
             $ renpy.block_rollback()
             $ success += 1
-            $ quest5 += 1 
+            $ quest4 += 1 
 
     show screen update with moveinright
 
@@ -2813,7 +2813,7 @@ label choice4:
     if newname == "Aris":
 
         $ success += 1
-        $ quest6 += 1
+        $ quest4 += 1
         $ robotname = nom
         $ stockage += 2.0 
         $ cpu = "Corzen 11KS"
@@ -2856,7 +2856,7 @@ label choice5:
     if ip == "001.018.009.019":
 
         $ success += 1
-        $ quest7 += 1 
+        $ quest5 += 1 
         $ stockage += 2.0 
         $ baseip = "001.018.009.019" 
 
@@ -3790,7 +3790,7 @@ label choice6:
     if grade == 20.0:
 
         $ success += 1
-        $ quest8 += 1 
+        $ quest6 += 1 
 
         show screen update with moveinright
 
@@ -4583,7 +4583,7 @@ label choice6:
         "{b}{i}aller au club{/i}{/b}" :
             
             $ success += 1
-            $ quest9 += 1 
+            $ quest7 += 1 
 
             show screen update with moveinright
 
@@ -5660,7 +5660,7 @@ label choice8:
     if grade == 20.0:
         
         $ success += 1
-        $ quest10 += 1 
+        $ quest8 += 1 
 
         show screen update with moveinright
 
@@ -6256,7 +6256,7 @@ label choice8:
             $ renpy.block_rollback()
 
             $ success += 1
-            $ quest11 += 1 
+            $ quest9 += 1 
 
             show screen update with moveinright
 
@@ -6573,7 +6573,7 @@ label choice8:
     "{b}{i}[newname] se déconnecte et recharge sa batterie.{/i}{/b}"
     play sound "Click.mp3" noloop 
 
-    if quest11 == 1:
+    if quest9 == 1:
 
         "{b}{i} Tu te poses en regardant les documents que tu as eus.{/i}{/b}"
         play sound "Click.mp3" noloop 
@@ -6748,7 +6748,7 @@ label choice8:
             play sound "Menu.mp3" noloop 
 
             $ success += 1 
-            $ quest40 += 1
+            $ quest10 += 1
             $ stockage += 5.0 
             $ update += 1.0 
 
@@ -7459,7 +7459,7 @@ label suite:
     P "Ok je vois." 
     play sound "Click.mp3" noloop 
 
-    if quest4: 
+    if quest2 == 1: 
 
         S "Je vois que tu as encore l'autre [A] avec toi."
         play sound "Click.mp3" noloop 
@@ -8313,7 +8313,7 @@ label suite:
     
             $ renpy.block_rollback()
             $ success += 1
-            $ quest13 += 1
+            $ quest11 += 1
 
             show screen update with moveinright
 
@@ -8812,7 +8812,7 @@ label debate:
                                             play sound "Click.mp3" noloop 
 
                                             $ success += 1
-                                            $ quest14 += 1
+                                            $ quest12 += 1
 
                                             show screen update with moveinright
 
@@ -9142,7 +9142,7 @@ label debate_success:
             $ renpy.block_rollback()
 
             $ success += 1 
-            $ quest15 += 1
+            $ quest13 += 1
 
             P "Bon voyons voir ce que [Su] m'a envoyé."
             play sound "Click.mp3" noloop 
@@ -9484,7 +9484,7 @@ label debate_success:
     "{b}{i} Les filles quittent la chambre.{/i}{/b}"
     play sound "Click.mp3" noloop 
 
-    if quest14 == 0:
+    if quest12 == 0:
     
         menu: 
 
@@ -9573,7 +9573,7 @@ label debate_success:
         "{b}{i} Se reposer {/i}{/b}" : 
             
             $ success += 1 
-            $ quest16 += 1
+            $ quest14 += 1
 
             $ renpy.block_rollback() 
 
@@ -10063,7 +10063,7 @@ label debate_success:
     I "Tu sais sur quel système d'exploitation tourne [newname] ?"
     play sound "Click.mp3" noloop
 
-    if quest11 == 1:
+    if quest9 == 1:
 
         P "Elle tourne sur Aether OS."
         play sound "Click.mp3" noloop  
@@ -10204,7 +10204,7 @@ label debate_success:
     if Code == "print(\"text\")":
 
         $ success += 1
-        $ quest17 += 1
+        $ quest15 += 1
 
         show screen update with moveinright
 
@@ -10564,7 +10564,7 @@ label code:
                                             play sound "Menu.mp3" noloop 
 
                                             $ success += 1 
-                                            $ quest18 += 1
+                                            $ quest16 += 1
 
                                             show screen update with moveinright
 
@@ -11017,7 +11017,7 @@ label update:
             $ renpy.block_rollback()
 
             $ success += 1
-            $ quest19 += 1
+            $ quest17 += 1
     
             "{b}{i} Tu approches calmement pour la réveiller.{/i}{/b}"
             play sound "Click.mp3" noloop
@@ -11652,7 +11652,7 @@ label update:
             $ renpy.block_rollback()
 
             $ success += 1 
-            $ quest20 += 1
+            $ quest18 += 1
 
             show screen update with moveinright
 
@@ -11927,7 +11927,7 @@ label update:
             
             $ suspect = "Aiko"
             $ success += 1 
-            $ quest21 += 1
+            $ quest19 += 1
 
             show screen update with moveinright
 
@@ -12160,7 +12160,7 @@ label update:
             $ renpy.block_rollback()
 
             $ success += 1 
-            $ quest22 += 1 
+            $ quest20 += 1 
 
             P "Je vais aller la voir pour voir si elle va bien."
             play sound "Footsteps.mp3" noloop 
@@ -12446,7 +12446,7 @@ label password:
 
         if len(entered_password) > 10:
             $ success += 1
-            $ quest23 += 1   
+            $ quest21 += 1   
             $ stockage += 5.0
 
             show screen update with moveinright
@@ -12885,7 +12885,7 @@ label password:
     Oh "Bien je vois, juste [prenom] qu'est-ce que c'est que ces documents sur ton bureau ?"
     play sound "Click.mp3" noloop 
 
-    if quest11 == 1:
+    if quest9 == 1:
 
         P "Ce sont des documents techniques pour [newname]."
         play sound "Click.mp3" noloop
@@ -14023,7 +14023,7 @@ label password1:
             $ renpy.block_rollback()
 
             $ success += 1
-            $ quest24 += 1
+            $ quest22 += 1
 
             show screen update with moveinright
 
@@ -15004,7 +15004,7 @@ label examen_pythagore:
     if grade == 20.0:
 
         $ success += 1
-        $ quest25 += 1
+        $ quest23 += 1
 
         show screen update with moveinright
 
@@ -16521,7 +16521,7 @@ label password4:
     if answer == "initiate_humanoid_robot(setting=true)": 
 
         $ success += 1 
-        $ quest26 += 1
+        $ quest24 += 1
 
         show screen update with moveinright
 
@@ -18053,7 +18053,7 @@ label password8:
             Na "Vérification...."
             play sound "Menu.mp3" noloop 
             $ success += 1 
-            $ quest27 += 1
+            $ quest25 += 1
             $ stockage += 3.0 
             $ update += 1.0 
 
@@ -18342,8 +18342,6 @@ label examen_runix:
     "{b}{i}Après cela tout le monde remet sa copie.{/i}{/b}"
     play sound "Click.mp3" noloop 
 
-    
-
     M "Parfait maintenant vous pouvez aller en pause, je vous renderez vos copies demain matin."
     play sound "Click.mp3" noloop  
 
@@ -18631,17 +18629,21 @@ label examen_runix:
     S "[nothing] Sinon comment elle va ta machine, [prenom] ?"
     play sound "Click.mp3" noloop
 
-    P "Déjà, on ne dit pas machine c'est super péjoraif, mais [model] doté d'une conscience humaine avancée."
+    $ nothing = get_random_nothing()
+    S "[nothing] Sinon, comment va ta machine ces derniers temps, [prenom] ?"
     play sound "Click.mp3" noloop
 
-    S "Ah ok, moi j'ai un terme moins péjoratif pour elle, pourquoi pas engrenage sur pattes."
+    P "Tu ne vas pas te contenter de l’appeler une simple machine. [newname] a une conscience et sait prendre des initiatives."
     play sound "Click.mp3" noloop
 
-    "{b}{i}Puis il y a un blanc pendant un instant avant qu'[newname] s'adresse à [S].{/i}{/b}"
-    play sound "Click.mp3" noloop 
+    S "Hmm… alors comment la surnommer ? Je propose… Engrenage sur pattes."
+    play sound "Click.mp3" noloop
 
-    Na "Je suis [newname], fils de pute."
-    play sound "Click.mp3" noloop 
+    "{b}{i}Un silence plane un instant avant qu'[newname] ne te fixe, visiblement agacée.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    Na "Je suis [newname] !! Tu pourrais au moins essayer de me prendre au sérieux !!"
+    play sound "Click.mp3" noloop
 
     P "Calme toi un peu [newname]."
     play sound "Click.mp3" noloop 
@@ -19119,7 +19121,7 @@ label password9:
     if grade == 20.0:
 
         $ success += 1 
-        $ quest28 += 1
+        $ quest26 += 1
 
         show screen update with moveinright
 
@@ -19619,7 +19621,7 @@ label password9:
             $ renpy.block_rollback()
 
             $ success += 1 
-            $ quest29 += 1
+            $ quest27 += 1
 
             show screen update with moveinright
 
@@ -19728,7 +19730,7 @@ label code1:
     Na "Le truc qui me dérange ce que je n'ai plus de ma date d'anniversaire en tête....."
     play sound "Click.mp3" noloop 
 
-    if quest11 == 1: 
+    if quest9 == 1: 
  
         menu:    
 
@@ -19738,7 +19740,7 @@ label code1:
                 $ renpy.block_rollback()
 
                 $ success += 1 
-                $ quest30 += 1
+                $ quest28 += 1
 
                 show screen update with moveinright
 
@@ -19834,11 +19836,11 @@ label code1:
     "{b}{i}Son regard se perd à travers la fenêtre, comme si elle cherchait une autre réalité....{/i}{/b}"
     play sound "Click.mp3" noloop 
 
-    Na "Puis-je trouver une vie qui ressemble à un conte de fées ? Loin de cette tragédie."
-    play sound "Click.mp3" noloop           
+    Na "Puis-je trouver une vie paisible ? Loin de cette tragédie et de ces insultes."
+    play sound "Click.mp3" noloop
 
-    P "Mais tu l'as déjà trouvé ta vie qui ressemble à un conte de fées, c'est depuis que tu es sous ma responsabilté."
-    play sound "Click.mp3" noloop            
+    P "Mais tu as déjà trouvé ta vie paisible, depuis que tu es sous ma responsabilité."
+    play sound "Click.mp3" noloop      
 
     "{b}{i}Elle baisse légèrement les yeux, puis esquisse un sourire discret.{/i}{/b}"
     play sound "Click.mp3" noloop 
@@ -20027,7 +20029,7 @@ label password10:
     P "[comment_ca_va]"
     play sound "Click.mp3" noloop 
 
-    if quest30 == 1:
+    if quest28 == 1:
 
         $ je_vais_bien_txt = get_random_je_vais_bien() 
         Na "[je_vais_bien_txt] Et toi sinon ça va ?" 
@@ -20303,7 +20305,7 @@ label password10:
     I "Oh salut [prenom] et [newname], oui moi ça va bien et vous ?"
     play sound "Click.mp3" noloop 
 
-    if quest30 == 1:
+    if quest28 == 1:
 
         $ je_vais_bien_txt = get_random_je_vais_bien() 
         Na "[je_vais_bien_txt] Et toi ?" 
@@ -20624,7 +20626,7 @@ label password10:
             $ renpy.block_rollback()
 
             $ success += 1  
-            $ quest31 += 1
+            $ quest29 += 1
 
             show screen update with moveinright
 

@@ -451,7 +451,7 @@ label password11:
             $ renpy.block_rollback()
 
             $ success += 1 
-            $ quest32 += 1 
+            $ quest30 += 1 
  
             show screen update with moveinright
 
@@ -1907,7 +1907,7 @@ label password13:
             $ renpy.block_rollback()
 
             $ success += 1 
-            $ quest33 += 1 
+            $ quest31 += 1 
 
             P "Oui pas de soucis si vraiment ça te dérange." 
             play sound "Click.mp3" noloop
@@ -3017,7 +3017,7 @@ label examen_francais:
     if grade == 20.0:
 
         $ success += 1 
-        $ quest34 += 1
+        $ quest32 += 1
 
         show screen update with moveinright
 
@@ -3397,7 +3397,7 @@ label examen_francais:
             Na "Vérification...."
             play sound "Menu.mp3" noloop 
             $ success += 1        
-            $ quest35 += 1
+            $ quest33 += 1
             $ stockage += 5.0 
             $ update += 1.0 
 
@@ -3928,7 +3928,7 @@ label password15:
                 play sound "Click.mp3" noloop 
 
             $ success += 1        
-            $ quest36 += 1
+            $ quest34 += 1
 
             show screen update with moveinright
 
@@ -4923,7 +4923,7 @@ label password16:
             $ renpy.block_rollback()
 
             $ success += 1 
-            $ quest37 += 1
+            $ quest35 += 1
             $ stockage += 2.0 
 
             show screen update with moveinright
@@ -5681,7 +5681,7 @@ label philosophie_technologie:
     if grade == 20.0:
 
         $ success += 1
-        $ quest38 += 1
+        $ quest36 += 1
 
         show screen update with moveinright
 
@@ -6410,7 +6410,7 @@ label philosophie_technologie:
     P "Et tu as trouvé quoi à apart les connexion faites par moi ?"  
     play sound "Click.mp3" noloop  
 
-    if quest12 == 1: 
+    if quest10 == 1: 
 
         K "Le 9 octobre, il y a eu une tentative de connexion sans succès."  
         play sound "Click.mp3" noloop
@@ -6420,7 +6420,7 @@ label philosophie_technologie:
         K "Le 9 octobre, il y a eu une connexion à [newname] et un début de transfert de donnés vers un autre ordinateur."  
         play sound "Click.mp3" noloop
 
-    if quest27 == 1:
+    if quest25 == 1:
 
         K "Le 15 novmebre, il y a eu une tentative de connexion sans succès."  
         play sound "Click.mp3" noloop
@@ -6430,7 +6430,7 @@ label philosophie_technologie:
         K "Le 19 novembre, il y a eu une connexion à [newname] et un début de transfert de données vers un autre ordinateur"  
         play sound "Click.mp3" noloop
 
-    if quest23 == 1:
+    if quest21 == 1:
 
         K "Le 19 novembre, il y a eu une tentative de compromission du mot de passe."  
         play sound "Click.mp3" noloop 
@@ -6440,7 +6440,7 @@ label philosophie_technologie:
         K "Le 19 novembre, son mot de passe a été compris par force-brute."  
         play sound "Click.mp3" noloop
 
-    if quest35 == 1:
+    if quest33 == 1:
 
         K "Le 3 décembre, il y a eu une tentative de connexion sans succès."  
         play sound "Click.mp3" noloop
@@ -7291,7 +7291,7 @@ label password18:
             $ renpy.block_rollback()
 
             $ success += 1
-            $ quest39 += 1 
+            $ quest37 += 1 
 
             "{b}{i}Tu t’approches d’elle, observant les feuilles éparpillées sur sa table. Elle semble un peu perdue dans ses notes, fronçant légèrement les sourcils.{/i}{/b}"
             play sound "Click.mp3" noloop
@@ -8476,7 +8476,7 @@ label password20:
     P "Encore des exercices de connaisance sur l'informatique..."
     play sound "Click.mp3" noloop
 
-    if quest39 == 1:
+    if quest37 == 1:
 
         "{b}{i}Tu commences à faire les exercices.{/i}{/b}"
         play sound "Click.mp3" noloop
@@ -9737,6 +9737,11 @@ label password21:
 
     "{b}{i} Vous entrez dans votre dortoir.{/i}{/b}" 
     play sound "Door.mp3" noloop
+
+    scene room with fade 
+    show screen day with moveinleft
+    show screen points with moveinleft
+    show screen room with moveinright 
 
     $ dortoir = get_random_dortoir()
     Na "[dortoir]"
@@ -12775,7 +12780,7 @@ label password26:
     Na "Mais pour commencer tu as une idée sur la batterie qu'il me faudrait ?"
     play sound "Click.mp3" noloop
 
-    if quest11 == 1: 
+    if quest9 == 1: 
 
         P "Je ne sais pas du tout car dans tes documents il n'est fait aucune mention d'une batterie spécifique." 
         play sound "Click.mp3" noloop
@@ -13184,24 +13189,32 @@ label password27:
 
     "{b}{i}Tu continues dans le couloir avec [newname].{/i}{/b}"
     play sound "Footsteps.mp3" noloop  
- 
+
     hide screen hallway with moveoutright
     hide screen points with moveoutleft
     hide screen day with moveoutleft
     scene staircase with fade 
 
     "{b}{i}Tu continues vers le hall avec [newname].{/i}{/b}"
-    play sound "Footsteps.mp3" noloop   
+    play sound "Footsteps.mp3" noloop  
 
     scene hall with fade
     show screen day with moveinleft
     show screen points with moveinleft
-    show screen hall with moveinright
+    show screen hall with moveinright 
 
-    "{b}{i}Tu entres dans ta salle de club.{/i}{/b}"
-    play sound "Door.mp3" noloop 
+    "{b}{i}Vous continuez vers la salle de clubes{/i}{/b}"
+    play sound "Footsteps.mp3" noloop
+
+    hide screen hall with moveinright
+    hide screen points with moveoutleft
+    hide screen day with moveoutleft
+    scene black with fade
+
+    "{b}{i}Vous entrez dans la salle de club générale.{/i}{/b}"
+    play sound "Door.mp3" noloop
  
-    scene clubroom with fade 
+    scene clubroom with fade
     show screen day with moveinleft
     show screen points with moveinleft
     show screen clubroom with moveinright 
@@ -13362,7 +13375,7 @@ label password28:
         play sound "Menu.mp3" noloop 
 
         $ success += 1 
-        $ quest40 += 1
+        $ quest38 += 1
         $ stockage += 15.0 
 
         show screen update with moveinright
@@ -14852,17 +14865,25 @@ label password29:
     scene staircase with fade 
 
     "{b}{i}Tu continues vers le hall avec [newname].{/i}{/b}"
-    play sound "Footsteps.mp3" noloop   
+    play sound "Footsteps.mp3" noloop  
 
     scene hall with fade
     show screen day with moveinleft
     show screen points with moveinleft
-    show screen hall with moveinright
+    show screen hall with moveinright 
 
-    "{b}{i}Tu entres dans ta salle de club.{/i}{/b}"
-    play sound "Door.mp3" noloop 
+    "{b}{i}Vous continuez vers la salle de clubes{/i}{/b}"
+    play sound "Footsteps.mp3" noloop
+
+    hide screen hall with moveinright
+    hide screen points with moveoutleft
+    hide screen day with moveoutleft
+    scene black with fade
+
+    "{b}{i}Vous entrez dans la salle de club générale.{/i}{/b}"
+    play sound "Door.mp3" noloop
  
-    scene clubroom with fade 
+    scene clubroom with fade
     show screen day with moveinleft
     show screen points with moveinleft
     show screen clubroom with moveinright 
@@ -14958,7 +14979,7 @@ label password29:
     hide screen day with moveoutleft
     scene black with fade
 
-    "{b}{i}Vous entrez dans ton dortoir.{/i}{/b}"
+    "{b}{i}Vous entrez dans le dortoir.{/i}{/b}"
     play sound "Door.mp3" noloop
 
     scene room with fade 
@@ -15005,7 +15026,7 @@ label password29:
     Na "Oh c'est vrai que ça permet de ne pas faire cette tâche après."
     play sound "Click.mp3" noloop 
 
-    P "Bon revenons à ce que nus faisions."
+    P "Bon revenons à ce que nous faisions."
     play sound "Click.mp3" noloop 
 
     Na "Donc il nous faudra aussi...."
@@ -15041,6 +15062,130 @@ label password29:
 
     I "Vous allez déjà à la salle de club pour la soirée ou pas ?"
     play sound "Click.mp3" noloop 
+
+    Na "Non pas encore car nous sommes en train de faire nos affaire pour la soirée."
+    play sound "Click.mp3" noloop 
+
+    I "Je vois bien ça."
+    play sound "Click.mp3" noloop 
+
+    Na "Mais tu peux déjà y aller si tu veux car nous avons déjà rangés la salle de club."
+    play sound "Click.mp3" noloop 
+
+    $ validation = get_random_validation() 
+    I "[validation]"
+    play sound "Click.mp3" noloop 
+
+    Na "Bon à toute à l'heure du coup."
+    play sound "Click.mp3" noloop 
+
+    I "à toute l'heure."
+    play sound "Footsteps.mp3" noloop 
+
+    "{b}{i}[I] finit par vous laisser.{/i}{/b}"
+    play sound "Door.mp3" noloop
+
+    Na "Bon on finit de faire nos affaires."
+    play sound "Click.mp3" noloop 
+
+    Na "Il nous faut aussi des snacks."
+    play sound "Click.mp3" noloop
+
+    P "On pourrait prendre des chips et des bonbons."
+    play sound "Click.mp3" noloop
+
+    Na "Il nous faut aussi des boissons."
+    play sound "Click.mp3" noloop
+
+    P "On pourrait prendre des sodas et des jus de fruits."
+    play sound "Click.mp3" noloop
+
+    Na "Oui mais je pense que Yuna a déjà prévu des choses aussi."
+    play sound "Click.mp3" noloop
+
+    P "On pourrait lui demander ce qu'elle a prévu."
+    play sound "Click.mp3" noloop
+
+    Na "On lui demandera ce qu'elle a prévu."
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Vous continuez de faire vos affaires pour la soirée pyjama.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    P "C'est bon, nous avons tout ce qu'il nous faut."
+    play sound "Click.mp3" noloop
+
+    Na "Tout est prêt pour la soirée pyjama !"
+    play sound "Click.mp3" noloop
+
+    P "Oui, ça va être super !"
+    play sound "Click.mp3" noloop
+
+    Na "Oui, Je confirme."
+    play sound "Click.mp3" noloop
+
+    P "Alors, on y va ?"
+    play sound "Click.mp3" noloop 
+
+    $ suivi = get_random_suivi()
+    Na "[suivi]"
+    play sound "Footsteps.mp3" noloop
+
+    hide screen room with moveoutright  
+    hide screen points with moveoutleft
+    hide screen day with moveoutleft
+    scene black with fade 
+
+    "{b}{i}Tu quittes ta chambre avec [newname].{/i}{/b}"
+    play sound "Door.mp3" noloop
+
+    scene hallway with fade 
+    show screen day with moveinleft
+    show screen points with moveinleft
+    show screen hallway with moveinright
+
+    "{b}{i}Tu continues dans le couloir avec [newname].{/i}{/b}"
+    play sound "Footsteps.mp3" noloop  
+ 
+    hide screen hallway with moveoutright
+    hide screen points with moveoutleft
+    hide screen day with moveoutleft
+    scene staircase with fade 
+
+    "{b}{i}Tu continues vers le hall avec [newname].{/i}{/b}"
+    play sound "Footsteps.mp3" noloop  
+
+    scene hall with fade
+    show screen day with moveinleft
+    show screen points with moveinleft
+    show screen hall with moveinright 
+
+    "{b}{i}Vous continuez vers la salle de clubes{/i}{/b}"
+    play sound "Footsteps.mp3" noloop
+
+    hide screen hall with moveinright
+    hide screen points with moveoutleft
+    hide screen day with moveoutleft
+    scene black with fade
+
+    "{b}{i}Vous entrez dans la salle de club générale.{/i}{/b}"
+    play sound "Door.mp3" noloop
+ 
+    scene clubroom with fade
+    show screen day with moveinleft
+    show screen points with moveinleft
+    show screen clubroom with moveinright 
+
+    Na "Enfin au club."
+    play sound "Click.mp3" noloop 
+    
+    $ bien = get_random_fais_du_bien()
+    P "[bien]" 
+    play sound "Click.mp3" noloop 
+
+    
+
+
 
 label end_script2:
     call script3 

@@ -299,10 +299,10 @@ screen navigation():
 
             if persistent.abandon == True: 
 
-                textbutton _("test de la réalité") action Start() 
+                textbutton _("N◼uv▨ll◼ P▩rti◼") action Start() 
 
             else: 
-                
+
                 textbutton _("Nouvelle partie") action Start() 
 
         else: 
@@ -1869,7 +1869,7 @@ screen credit():
 
             text _("Illustration du menu : [Dc] (Shadow_SLTM)\n") 
 
-            text _("Illustration des livres : [Dc] (Shadow_SLTM)\n") 
+            text _("Illustration des livres de Nexus : [Dc] (Shadow_SLTM)\n") 
             
             text _("Programmation : [Dc] (Shadow_SLTM)\n") 
 
@@ -1934,50 +1934,50 @@ screen success():
 
             label "{b}{i}— Progression —\n{/i}{/b}" 
 
-            text _("Succès : [success]/40\n") 
+            text _("Succès : [success]/40\n")
 
             label "{b}{i}— liste des succès —\n{/i}{/b}" 
 
-            text _("Premier piratage : [quest2]/1\n")
-            text _("L'espoir fait vivre : [quest4]/1\n") 
-            text _("Acceptation : [quest5]/1\n")  
-            text _("Nouvelle identité : [quest6]/1\n")
-            text _("Nouvelle adresse : [quest7]/1\n")
-            text _("Ce n’est que le début : [quest8]/1\n")
-            text _("Au club !!! : [quest9]/1\n")
-            text _("Maître de guerre : [quest10]/1\n")
-            text _("Vive la documentation : [quest11]/1\n")
-            text _("Première mise à jour : [quest12]/1\n")  
-            text _("Oublier le passé : [quest13]/1\n") 
-            text _("J'ai raison : [quest14]/1\n")       
-            text _("Lis-mon message : [quest15]/1\n") 
-            text _("Le repos avant tout : [quest16]/1\n")
-            text _("Petit exercice de python : [quest17]/1\n")
-            text _("Nouveau système : [quest18]/1\n")      
-            text _("Affection pour les autres : [quest19]/1\n")
-            text _("Entre connaissances : [quest20]/1\n")
-            text _("le bon présumé : [quest21]/1\n")
-            text _("Affection pour les autres partie 2 : [quest22]/1\n")
-            text _("Mot de passe solide : [quest23]/1\n")
-            text _("La vérité avant tout : [quest24]/1\n")
-            text _("Génie des maths : [quest25]/1\n") 
-            text _("Petit exercice de Runix : [quest26]/1\n") 
-            text _("Seconde mise à jour : [quest27]/1\n")
-            text _("Génie de l’informatique : [quest28]/1\n")
-            text _("Détail du passé : [quest29]/1\n")
-            text _("Mentir n’est pas si mal : [quest30]/1\n")
-            text _("Journalistes de merde : [quest31]/1\n")
-            text _("Dire les termes : [quest32]/1\n")           
-            text _("Silence brutal : [quest33]/1\n") 
-            text _("Molière c'est toi ? : [quest34]/1\n") 
-            text _("Jamais deux sans trois : [quest35]/1\n")  
-            text _("Sa vraie valeur : [quest36]/1\n") 
-            text _("Faire de la philosophie : [quest37]/1\n") 
-            text _("Bon philosophe : [quest38]/1\n") 
-            text _("L'entraide scolaire : [quest39]/1\n") 
-            text _("Nouvelle batterie : [quest40]/1\n")             
-            text _("Quatrième mise à jour : [quest41]/1\n")
-            text _("Maître du chaos ordonné : [quest42]/1\n") 
+            text _("Premier piratage : [quest1]/1\n")
+            text _("L'espoir fait vivre : [quest2]/1\n") 
+            text _("Acceptation : [quest3]/1\n")  
+            text _("Nouvelle identité : [quest4]/1\n")
+            text _("Nouvelle adresse : [quest5]/1\n")
+            text _("Ce n’est que le début : [quest6]/1\n")
+            text _("Au club !!! : [quest7]/1\n")
+            text _("Maître de guerre : [quest8]/1\n")
+            text _("Vive la documentation : [quest9]/1\n")
+            text _("Première mise à jour : [quest10]/1\n")  
+            text _("Oublier le passé : [quest11]/1\n") 
+            text _("J'ai raison : [quest12]/1\n")       
+            text _("Lis-mon message : [quest13]/1\n") 
+            text _("Le repos avant tout : [quest14]/1\n")
+            text _("Petit exercice de python : [quest15]/1\n")
+            text _("Nouveau système : [quest16]/1\n")      
+            text _("Affection pour les autres : [quest17]/1\n")
+            text _("Entre connaissances : [quest18]/1\n")
+            text _("le bon présumé : [quest19]/1\n")
+            text _("Affection pour les autres partie 2 : [quest20]/1\n")
+            text _("Mot de passe solide : [quest21]/1\n")
+            text _("La vérité avant tout : [quest22]/1\n")
+            text _("Génie des maths : [quest23]/1\n") 
+            text _("Petit exercice de Runix : [quest24]/1\n") 
+            text _("Seconde mise à jour : [quest25]/1\n")
+            text _("Génie de l’informatique : [quest26]/1\n")
+            text _("Détail du passé : [quest27]/1\n")
+            text _("Mentir n’est pas si mal : [quest28]/1\n")
+            text _("Journalistes de merde : [quest29]/1\n")
+            text _("Dire les termes : [quest30]/1\n")           
+            text _("Silence brutal : [quest31]/1\n") 
+            text _("Molière c'est toi ? : [quest32]/1\n") 
+            text _("Jamais deux sans trois : [quest33]/1\n")  
+            text _("Sa vraie valeur : [quest34]/1\n") 
+            text _("Faire de la philosophie : [quest35]/1\n") 
+            text _("Bon philosophe : [quest36]/1\n") 
+            text _("L'entraide scolaire : [quest37]/1\n") 
+            text _("Nouvelle batterie : [quest38]/1\n")             
+            text _("Quatrième mise à jour : [quest39]/1\n")
+            text _("Maître du chaos ordonné : [quest40]/1\n") 
 
 style about_label is gui_label   
 style about_label_text is gui_label_text
