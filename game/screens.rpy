@@ -1825,7 +1825,31 @@ screen physicsbook():
     frame: 
         yalign 0.3
         xalign 0.5
-        add "physicsbook.png"
+        add "physicbook.jpg"
+
+screen philobook():
+    frame: 
+        yalign 0.3
+        xalign 0.5
+        add "philobook.png"
+
+screen elecbook():
+    frame: 
+        yalign 0.3
+        xalign 0.5
+        add "elecbook.png"
+
+screen mathbook():
+    frame: 
+        yalign 0.3
+        xalign 0.5
+        add "mathbook.png"
+
+screen infobook():
+    frame: 
+        yalign 0.3
+        xalign 0.5
+        add "infobook.png"
 
 screen credit():
 

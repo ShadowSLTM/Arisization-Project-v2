@@ -4034,8 +4034,12 @@ label password15:
     Na "Et à l'heure."
     play sound "Click.mp3" noloop
 
-    M "Bien nous pouvons reprendre le cours, sortez vos livres."
+    show screen philobook with moveinbottom
+
+    M "Bien nous pouvons reprendre le cours, sortez votre livre de philo."
     play sound "Click.mp3" noloop
+
+    hide screen philobook with moveoutbottom
 
 # cours de philosophie 1
 ###############################################################################
@@ -4529,8 +4533,12 @@ label password16:
     Na "Présente, madame."
     play sound "Click.mp3" noloop  
 
+    show screen philobook with moveinbottom
+
     M "Bien vu que tout le monde est là nous pouvons continuer notre cours de philo d'hier."
     play sound "Click.mp3" noloop 
+
+    hide screen philobook with moveoutbottom
 
 # cours de philosophie 2
 ###############################################################################
@@ -4687,10 +4695,22 @@ label password16:
     I "Oui mais pas avec moi."
     play sound "Click.mp3" noloop
 
-    Na "Alors pour répondre à ta question je dirais que le sens de la vie... c'est ce qui nous pousse à continuer même quand tout semble perdu."
+    Na "Alors, pour répondre à ta question... je dirais que le sens de la vie, c'est ce qui nous pousse à continuer, même quand tout semble perdu."
     play sound "Click.mp3" noloop
 
-    I "Putain ta réponse est si touchante et si sincére."
+    I "Putain, ta réponse est si touchante et si sincère."
+    play sound "Click.mp3" noloop
+
+    Na "Mais pour moi... c'est un peu différent."
+    play sound "Click.mp3" noloop
+
+    Na "Parce que je ne suis pas humaine... je suis un robot humanoïde."
+    play sound "Click.mp3" noloop
+
+    Na "Et pourtant, je crois que le sens de la vie, pour moi, c'est finir par agir comme une humaine."
+    play sound "Click.mp3" noloop
+
+    I "Wow... c'est... bouleversant."
     play sound "Click.mp3" noloop
 
     $ thanks = get_random_thanks()  
@@ -4761,12 +4781,17 @@ label password16:
     Na "Rebonjour."
     play sound "Click.mp3" noloop
 
-    M "Bien nous pouvons reprendre le cours."
+    show screen philobook with moveinbottom
+
+    M "Bien nous pouvons reprendre le cours de philo."
     play sound "Click.mp3" noloop 
+
+    hide screen philobook with moveoutbottom
 
     $ validation = get_random_validation() 
     Y "[validation]"
     play sound "Click.mp3" noloop 
+
 
 # cours de philosophie 3
 ############################################################################################################
@@ -9124,11 +9149,90 @@ label password21:
     J1 "[validation]"
     play sound "Click.mp3" noloop 
 
-    M "Sortez votre livre à la page 36."
+    show screen physicsbook with moveinbottom
+
+    M "Sortez votre livre de physique à la page 2."
     play sound "Click.mp3" noloop 
 
-# cours d'informatique
+    hide screen physicsbook with moveoutbottom 
+
+# cours de physique 
 ######################################################################################################################################
+
+    M "Aujourd’hui, nous allons voir les 7 grandeurs fondamentales du Système International."
+    play sound "Click.mp3" noloop
+
+    M "Ces grandeurs servent de base à toutes les autres en physique."
+    play sound "Click.mp3" noloop
+
+    M "Première grandeur : la longueur."
+    play sound "Click.mp3" noloop
+
+    M "Unité : le mètre, symbole m."
+    play sound "Click.mp3" noloop
+
+    M "Exemple : la hauteur d’un bâtiment est de 15 m."
+    play sound "Click.mp3" noloop
+
+    M "Deuxième grandeur : la masse."
+    play sound "Click.mp3" noloop
+
+    M "Unité : le kilogramme, symbole kg."
+    play sound "Click.mp3" noloop
+
+    M "Exemple : une pomme pèse environ 0,2 kg."
+    play sound "Click.mp3" noloop
+
+    M "Troisième grandeur : le temps."
+    play sound "Click.mp3" noloop
+
+    M "Unité : la seconde, symbole s."
+    play sound "Click.mp3" noloop
+
+    M "Exemple : une course dure 12 secondes."
+    play sound "Click.mp3" noloop
+
+    M "Quatrième grandeur : l’intensité électrique."
+    play sound "Click.mp3" noloop
+
+    M "Unité : l’ampère, symbole A."
+    play sound "Click.mp3" noloop
+
+    M "Exemple : une ampoule LED consomme environ 0,02 A."
+    play sound "Click.mp3" noloop
+
+    M "Cinquième grandeur : la température thermodynamique."
+    play sound "Click.mp3" noloop
+
+    M "Unité : le kelvin, symbole K."
+    play sound "Click.mp3" noloop
+
+    M "Exemple : 0 °C correspond à 273,15 K."
+    play sound "Click.mp3" noloop
+
+    M "Sixième grandeur : la quantité de matière."
+    play sound "Click.mp3" noloop
+
+    M "Unité : la mole, symbole mol."
+    play sound "Click.mp3" noloop
+
+    M "Exemple : 1 mole contient environ 6,022 × 10^23 particules."
+    play sound "Click.mp3" noloop
+
+    M "Septième grandeur : l’intensité lumineuse."
+    play sound "Click.mp3" noloop
+
+    M "Unité : la candela, symbole cd."
+    play sound "Click.mp3" noloop
+
+    M "Exemple : une bougie correspond à environ 1 cd."
+    play sound "Click.mp3" noloop
+
+    M "Voilà pour les 7 grandeurs fondamentales."
+    play sound "Click.mp3" noloop
+
+    M "Retenez bien : toutes les autres grandeurs physiques, comme la vitesse ou l’énergie, se construisent à partir de celles-ci."
+    play sound "Click.mp3" noloop
 
 ######################################################################################################################################
 
@@ -9398,7 +9502,7 @@ label password21:
     M "Bien nous pouvons reprendre le cours."
     play sound "Click.mp3" noloop 
 
-# cours d'informatique
+# cours de physique 2
 ######################################################################################################################################
 
 ######################################################################################################################################
@@ -10048,7 +10152,7 @@ label password22:
     M "Bien nous pouvons commencer le cours."
     play sound "Click.mp3" noloop   
 
-# cours d'informatique 
+# cours de physique 3
 ######################################################################################################################################
 
     M "Pour commencer, je vais vous récupérer les devoirs que vous aviez à faire pour aujourd'hui."
@@ -10175,7 +10279,7 @@ label password22:
     Na "[validation]"
     play sound "Click.mp3" noloop 
 
-# cours d'informatique
+# cours de physique 4
 ######################################################################################################################################
 
 ######################################################################################################################################
@@ -10412,7 +10516,7 @@ label password22:
     "{b}{i} Tous les élèves sortent leur livre.{/i}{/b}"
     play sound "Click.mp3" noloop
 
-# cours d'informatique
+# cours d
 ######################################################################################################################################
 
 ######################################################################################################################################
@@ -10482,7 +10586,7 @@ label password22:
     P "Je ne sais pas vraiment."
     play sound "Click.mp3" noloop  
 
-# cours d'informatique
+# cours d
 ######################################################################################################################################
 
 ######################################################################################################################################
@@ -15183,9 +15287,137 @@ label password29:
     P "[bien]" 
     play sound "Click.mp3" noloop 
 
-    
+    "{b}{i}Vous posez vos affaires et vous appercevez [I] dans la salle.{/i}{/b}"
+    play sound "Click.mp3" noloop
 
+    P "On est là."
+    play sound "Click.mp3" noloop 
 
+    I "Oui je sais, donc tous est prêt."
+    play sound "Click.mp3" noloop 
+
+    P "Oui absolument."
+    play sound "Click.mp3" noloop 
+
+    I "Je vois aussi que vous avez du bon boulot dans la salle de club."
+    play sound "Click.mp3" noloop 
+
+    P "On y a passé toute l'après-midi."
+    play sound "Click.mp3" noloop 
+
+    I "Je vois bien ça."
+    play sound "Click.mp3" noloop 
+
+    P "Sinon tu as amené des trucs pour la soirée ?"
+    play sound "Click.mp3" noloop
+
+    I "Oui j'ai amené quelques snacks et boissons."
+    play sound "Click.mp3" noloop
+
+    P "Cool nous aussi nous avons des chips et des sodas."
+    play sound "Click.mp3" noloop
+
+    I "Super, ça va être une bonne soirée !"
+    play sound "Click.mp3" noloop
+
+    Na "Oui je suis trop impatiente !"
+    play sound "Click.mp3" noloop
+
+    P "Nous aussi !"
+    play sound "Click.mp3" noloop
+
+    I "Je sais bien ça."
+    play sound "Click.mp3" noloop
+
+    P "Alors, qu'est-ce qu'on fait maintenant ?"
+    play sound "Click.mp3" noloop
+
+    Na "Nous pouvons voir tout ce que nous avons amené."
+    play sound "Click.mp3" noloop
+
+    I "Oui pourquoi pas ça peut être intéressant."
+    play sound "Click.mp3" noloop
+
+    Na "Moi j'ai ramené ma couverture et mon oreiller pour commencer"
+    play sound "Click.mp3" noloop
+
+    P "Pareil pour moi aussi !"
+    play sound "Click.mp3" noloop
+
+    Na "Et toi [I] ?"
+    play sound "Click.mp3" noloop
+
+    I "C'est de même aussi."
+    play sound "Click.mp3" noloop
+
+    P "Ok ça s'est fait."
+    play sound "Click.mp3" noloop
+
+    Na "Par contre j'aimerai dire un truc."
+    play sound "Click.mp3" noloop
+
+    I "Oui dis-nous [newname]"
+    play sound "Click.mp3" noloop
+
+    Na "J'aimerai qu'on profite de ce week-end sans nos téléphones."
+    play sound "Click.mp3" noloop
+
+    P "Oui c'est une bonne idée."
+    play sound "Click.mp3" noloop
+
+    I "Je suis d'accord avec vous."
+    play sound "Click.mp3" noloop
+
+    P "Parfait, ça nous permettra de vraiment nous détendre."
+    play sound "Click.mp3" noloop
+
+    Na "Exactement, pas de distractions, juste nous et le club."
+    play sound "Click.mp3" noloop
+
+    I "Alors commençons par installer nos affaires confortablement."
+    play sound "Click.mp3" noloop
+
+    P "Je peux mettre la musique doucement en fond ?"
+    play sound "Click.mp3" noloop
+
+    I "Oui, quelque chose de relaxant serait parfait."
+    play sound "Click.mp3" noloop
+
+    Na "Je vais préparer les snacks pendant que vous faites ça."
+    play sound "Click.mp3" noloop
+
+    P "Ok, je mets les chips sur la table."
+    play sound "Click.mp3" noloop
+
+    I "Et je dispose les boissons."
+    play sound "Click.mp3" noloop
+
+    Na "Tout est prêt ! On peut enfin s'installer."
+    play sound "Click.mp3" noloop
+
+    P "Super, je prends le canapé."
+    play sound "Click.mp3" noloop
+
+    I "Moi je m'installe sur le tapis avec ma couverture."
+    play sound "Click.mp3" noloop
+
+    Na "Et moi je prends mon oreiller près de la fenêtre."
+    play sound "Click.mp3" noloop
+
+    P "Ça commence vraiment à ressembler à une soirée détente."
+    play sound "Click.mp3" noloop
+
+    I "Oui, on va bien profiter de ce moment."
+    play sound "Click.mp3" noloop
+
+    Na "Allez, premier toast pour notre week-end sans téléphone !"
+    play sound "Click.mp3" noloop
+
+    P "À nous !"
+    play sound "Click.mp3" noloop
+
+    I "À notre week-end !"
+    play sound "Click.mp3" noloop
 
 label end_script2:
     call script3 

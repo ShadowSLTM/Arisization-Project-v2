@@ -1867,6 +1867,16 @@ label choice1:
 
     hide screen englishbook with moveoutbottom
 
+    M "Ensuite, vous avez le livre de philosophie."
+    play sound "Click.mp3" noloop 
+
+    show screen philobook with moveinbottom
+
+    M "C'est celui-là."
+    play sound "Click.mp3" noloop 
+
+    hide screen philobook with moveoutbottom
+
     M "le suivant, c'est le livre de physique."
     play sound "Click.mp3" noloop 
 
@@ -1876,6 +1886,16 @@ label choice1:
     play sound "Click.mp3" noloop 
 
     hide screen physicsbook with moveoutbottom 
+
+    M "le suivant, c'est le livre de physique."
+    play sound "Click.mp3" noloop 
+
+    show screen elecbook with moveinbottom
+
+    M "C'est celui-ci."
+    play sound "Click.mp3" noloop 
+
+    hide screen elecbook with moveoutbottom 
 
     M "l'avant dernier, c'est le livre technique."
     play sound "Click.mp3" noloop 
@@ -1892,16 +1912,23 @@ label choice1:
 
     show screen runixbook with moveinbottom
 
-    M "C'est celui-là."
+    M "C'est celui-ci."
     play sound "Click.mp3" noloop 
 
-    hide screen runixbook with moveoutbottom 
+    hide screen runixbook with moveoutbottom  
 
-    M "Les deux derniers livres sont les plus importants donc ne les perdez pas."
+    M "Les trois derniers livres sont les plus importants donc ne les perdez pas."
     play sound "Click.mp3" noloop 
 
     $ validation = get_random_validation() 
     P "[validation]"
+    play sound "Click.mp3" noloop 
+
+    M "Vous utillserez une partie des livres jusqu'au vacances de Noël."
+    play sound "Click.mp3" noloop
+
+    $ validation = get_random_validation() 
+    Na "[validation]"
     play sound "Click.mp3" noloop 
 
     M "Bon, maintenant que toutes les informations ont été données, vous pouvez disposer. N'hésitez pas à visiter le lycée puisque vous n'avez pas cours cet après-midi."
@@ -3687,10 +3714,10 @@ label choice6:
     Na "[validation]"
     play sound "Click.mp3" noloop 
 
-# cours sur la guerre
+# cours sur la guerre 
 ###############################################################################################################################
 
-    M "Bon, aujourd'hui petit cours d'histoire sur la guerre technologique."
+    M "Bon, aujourd'hui petit cours d'histoire et de technologie sur la guerre technologique."
     play sound "Click.mp3" noloop 
 
     P "Cool."
@@ -3926,15 +3953,18 @@ label choice6:
     P "[validation]"
     play sound "Click.mp3" noloop 
 
-    M "Pour commencer, l'outil technologique qui a été utilisé était des robots humanoïdes mis en service par l'entreprise NeoGen Technologies."
+    "{b}{i}[M] distribue un dossier sur la guerre et les robots humanoïdes.{/i}{/b}"
     play sound "Click.mp3" noloop
+
+    M "Pour commencer, l'outil technologique qui a été utilisé était des robots humanoïdes mis en service par l'entreprise NeoGen Technologies."
+    play sound "Click.mp3" noloop 
 
     M "En 2095, la guerre technologique a atteint son apogée avec l'introduction massive des robots humanoïdes. Ces machines étaient supposées représenter le futur de la défense, mais très vite, elles sont devenues une arme à double tranchant."
     play sound "Click.mp3" noloop
 
     H "Je me souviens des récits de cette époque... Des robots qui décidaient de leurs cibles, qui évoluaient de manière autonome sur le champ de bataille."
     play sound "Click.mp3" noloop
-#Correction jusquici
+
     M "Oui, et c'est là  où tout a basculé. La rapidité et l'efficacité de ces robots étaient inégalées, mais dès que les premières unités ont commencé à montrer des signes d'indépendance, les choses ont pris une tournure inattendue."
     play sound "Click.mp3" noloop
 
@@ -7978,14 +8008,14 @@ label suite:
     Na "[validation]"
     play sound "Click.mp3" noloop 
 
-    S "Il n'y a pas soucis de toute façon j'avais déjà vu ce sujet à Lexus."
+    S "Il n'y a pas soucis de toute façon j'avais déjà vu le sujet de la guerre à Lexus."
     play sound "Click.mp3" noloop
 
     M "Au temps pour moi alors."
     play sound "Click.mp3" noloop
 
     S "Il n'y a pas de soucis."
-    play sound "Click.mp3" noloop
+    play sound "Click.mp3" noloop 
 
 # cours de math 
 ###########################################################################################################
@@ -16443,8 +16473,12 @@ label password4:
     S "Désolé."
     play sound "Click.mp3" noloop 
     
-    M "Bien veuillez sortir vos livre d'informatique."
+    show screen runixbook with moveinbottom
+
+    M "Bien veuillez sortir vos livre de runix."
     play sound "Click.mp3" noloop 
+
+    hide screen runixbook with moveoutbottom  
 
     "{b}{i} Tout le monde sort son livre et écoute la [T].{/i}{/b}"
     play sound "Click.mp3" noloop  
@@ -18446,11 +18480,15 @@ label examen_runix:
     Na "Je vois, merci."
     play sound "Click.mp3" noloop
 
-# cours de français 2
+# cours de français 1
 ###########################################################################################################################
 
-    M "Aujourd'hui, nous allons étudier un points essentiel : les différentes classes de mots."
+    show screen frenchbook with moveinbottom
+
+    M "Aujourd'hui, nous allons étudier un points essentiel : les différentes classes de mots dnc sortez votre livre de français."
     play sound "Click.mp3" noloop
+
+    hide screen frenchbook with moveoutbottom
 
     M "Il existe dix classes principales. On les divise souvent en deux catégories : les mots variables et les mots invariables."
     play sound "Click.mp3" noloop
@@ -20904,6 +20942,7 @@ label update1:
 
     "{b}{i}Tu te changes avant d'aller de te coucher.{/i}{/b}"
     play sound "Click.mp3" noloop
+
 
 label end_script:
     call script2
