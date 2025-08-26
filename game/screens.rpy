@@ -1843,13 +1843,13 @@ screen mathbook():
     frame: 
         yalign 0.3
         xalign 0.5
-        add "mathbook.png"
+        add "mathbook.jpg"
 
 screen infobook():
     frame: 
         yalign 0.3
         xalign 0.5
-        add "infobook.png"
+        add "infobook.jpg"
 
 screen credit():
 

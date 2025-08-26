@@ -1490,12 +1490,13 @@ label password13:
     M "Bon commençons le cours."
     play sound "Click.mp3" noloop 
 
-# cours d'informatiuqe 
+# cours d'informatique 
 ######################################################################################################
+
 
     M "Veuillez sortir pour une fois vos ordinateurs."
     play sound "Click.mp3" noloop
-
+    
     M "Aujourd’hui, on plonge dans les réseaux informatiques. Un pilier de notre société numérique."
     play sound "Click.mp3" noloop
 
@@ -6160,8 +6161,12 @@ label philosophie_technologie:
     P "Bien entendu."
     play sound "Click.mp3" noloop 
     
+    show screen infobook with moveinbottom
+
     M "Bien, sortez votre livre d'informatique à la page 28."
     play sound "Click.mp3" noloop
+
+    hide screen infobook with moveoutbottom 
 
 # cours d'informatique
 #########################################################################################################
@@ -6952,8 +6957,12 @@ label password18:
     Na "[validation]"
     play sound "Click.mp3" noloop 
 
+    show screen infobook with moveinbottom 
+
     M "Sortez votre livre d'informatique à la page 29."
     play sound "Click.mp3" noloop  
+
+    hide screen infobook with moveoutbottom 
 
     $ validation = get_random_validation() 
     P "[validation]"
@@ -7276,7 +7285,7 @@ label password18:
     play sound "Click.mp3" noloop 
 
     hide screen hallway with moveoutright
-    hide screen points with moveoutleft
+    hide screen points with moveoutleft 
     hide screen day with moveoutleft
     scene black with fade
 
@@ -8376,15 +8385,19 @@ label password20:
     J1 "[validation]"
     play sound "Click.mp3" noloop 
 
+    show screen infobook with moveinbottom
+
     M "Sortez votre livre à la page 36."
     play sound "Click.mp3" noloop 
+
+    hide screen infobook with moveoutbottom 
 
 # cours d'informatique
 ######################################################################################################################################
 
 ######################################################################################################################################
 
-    "{b}{i}Le cours commence sans problème.{/i}{/b}"
+    "{b}{i}Le cours continue sans problème.{/i}{/b}"
     play sound "Bell.mp3" noloop 
 
     M "Bien maintenant vous pouvez aller en pause."
@@ -10857,8 +10870,12 @@ label password23:
     Na "[validation]"
     play sound "Click.mp3" noloop 
 
+    show screen infobook with moveinbottom
+
     M "Veuillez sortir votre livre d'informatique."
     play sound "Click.mp3" noloop
+
+    hide screen infobook with moveoutbottom
 
     "{b}{i}Tous les élèves sortent leur livre.{/i}{/b}"
     play sound "Click.mp3" noloop
@@ -11236,6 +11253,16 @@ label password23:
     play sound "Click.mp3" noloop
 
     M "Nous voici à notre dernier cours consacré aux données numériques. Aujourd’hui, nous allons parler de leur gestion et traitement, un enjeu essentiel à l’ère du numérique."
+    play sound "Click.mp3" noloop
+
+    show screen infobook with moveinbottom
+
+    M "Veuillez sortir vos livre d'informatique."
+    play sound "Click.mp3" noloop
+
+    hide screen infobook with moveoutbottom 
+
+    "{b}{i}Tout le monde son livre d'informatique.{/i}{/b}"
     play sound "Click.mp3" noloop
 
     M "Traiter des données ne se limite pas à les organiser ou analyser. Cela demande aussi de comprendre leur nature, leur volume et les responsabilités qui en découlent."
@@ -15419,8 +15446,32 @@ label password29:
     I "À notre week-end !"
     play sound "Click.mp3" noloop
 
-label end_script2:
-    call script3 
-    return 
+    "{b}{i}Vous vous posez tranquillement, profitant de l'instant.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    Na "Bon on fait quoi comme première activité ?"
+    play sound "Click.mp3" noloop
+
+    I "Que diriez-vous d'un jeu de société ?"
+    play sound "Click.mp3" noloop
+
+    Na "Oui j'ai jamais eu l'occasion d'en faire."
+    play sound "Click.mp3" noloop
+
+    P ""
+
+
+    
+
  
+
+
+
+
+
+
+    label end_script2:
+    call script3
+    return
+
 # Aris la plus belle ################### 

@@ -1887,7 +1887,7 @@ label choice1:
 
     hide screen physicsbook with moveoutbottom 
 
-    M "le suivant, c'est le livre de physique."
+    M "le suivant, c'est le livre d'électronique."
     play sound "Click.mp3" noloop 
 
     show screen elecbook with moveinbottom
@@ -1896,6 +1896,26 @@ label choice1:
     play sound "Click.mp3" noloop 
 
     hide screen elecbook with moveoutbottom 
+
+    M "le suivant, c'est le livre de mathématique."
+    play sound "Click.mp3" noloop 
+
+    show screen mathbook with moveinbottom
+
+    M "C'est celui-ci."
+    play sound "Click.mp3" noloop 
+
+    hide screen mathbook with moveoutbottom 
+
+    M "le suivant, c'est le livre d'informatique."
+    play sound "Click.mp3" noloop 
+
+    show screen infobook with moveinbottom
+
+    M "C'est celui-ci."
+    play sound "Click.mp3" noloop 
+
+    hide screen infobook with moveoutbottom 
 
     M "l'avant dernier, c'est le livre technique."
     play sound "Click.mp3" noloop 
@@ -8020,8 +8040,12 @@ label suite:
 # cours de math 
 ###########################################################################################################
 
+    show screen mathbook with moveinbottom
+
     M "Bon Commençons, sortez vos livres de mathématique page 15."
     play sound "Click.mp3" noloop
+
+    hide screen mathbook with moveoutbottom 
 
     M "Le cours d'aujourd'hui sera sur le théorème de Pythagore." 
     play sound "Click.mp3" noloop
@@ -14137,7 +14161,7 @@ label password1:
             play sound "Click.mp3" noloop 
 
             Na "Oui mais pas besoin de quitter le lycée pour ma sécurité, tu m'as déjà assez sécurisée, ou est ton sens de la moralité ?"
-            play sound "Click.mp3" noloop 
+            play sound "Click.mp3" noloop  
 
             P "Oui mais...."
             play sound "Click.mp3" noloop 
