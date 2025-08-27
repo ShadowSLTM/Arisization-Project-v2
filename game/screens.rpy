@@ -1821,7 +1821,7 @@ screen runixbook():
         xalign 0.5
         add "runixbook.png"
 
-screen physicsbook():
+screen physicbook():
     frame: 
         yalign 0.3
         xalign 0.5
@@ -1843,13 +1843,19 @@ screen mathbook():
     frame: 
         yalign 0.3
         xalign 0.5
-        add "mathbook.jpg"
+        add "mathbook.png"
 
 screen infobook():
     frame: 
         yalign 0.3
         xalign 0.5
-        add "infobook.jpg"
+        add "infobook.png"
+
+screen docubook():
+    frame: 
+        yalign 0.3
+        xalign 0.5
+        add "docubook.png"
 
 screen credit():
 

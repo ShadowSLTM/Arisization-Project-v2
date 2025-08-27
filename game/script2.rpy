@@ -55,17 +55,17 @@ label password11:
 
     if entered_password == stored_password: 
 
-        "Mot de passe correct. Accès autorisé." 
+        "{b}{i}Mot de passe correct. Accès autorisé.{/i}{/b}"
         play sound "Menu.mp3" noloop
 
     else: 
 
-        "Mot de passe incorrect. Accès refusé." 
+        "{b}{i}Mot de passe incorrect. Accès refusé.{/i}{/b}" 
         play sound "Menu.mp3" noloop
         jump password11
 
     $ start = get_random_start()
-    Na "[start]"
+    "{b}{i}[start]{/i}{/b}"
     play sound "Click.mp3" noloop 
 
     Na  "Démarrage terminé, Bonjour [P]."
@@ -1166,17 +1166,17 @@ label password12:
 
     if entered_password == stored_password: 
 
-        "Mot de passe correct. Accès autorisé." 
+        "{b}{i}Mot de passe correct. Accès autorisé.{/i}{/b}"
         play sound "Menu.mp3" noloop
 
     else: 
 
-        "Mot de passe incorrect. Accès refusé." 
+        "{b}{i}Mot de passe incorrect. Accès refusé.{/i}{/b}" 
         play sound "Menu.mp3" noloop
         jump password12
 
     $ start = get_random_start()
-    Na "[start]"
+    "{b}{i}[start]{/i}{/b}"
     play sound "Click.mp3" noloop 
 
     Na  "Démarrage terminé, Bonjour [P]."
@@ -1305,17 +1305,17 @@ label password13:
 
     if entered_password == stored_password: 
 
-        "Mot de passe correct. Accès autorisé." 
+        "{b}{i}Mot de passe correct. Accès autorisé.{/i}{/b}"
         play sound "Menu.mp3" noloop
 
     else: 
 
-        "Mot de passe incorrect. Accès refusé." 
+        "{b}{i}Mot de passe incorrect. Accès refusé.{/i}{/b}" 
         play sound "Menu.mp3" noloop
         jump password13 
 
     $ start = get_random_start()
-    Na "[start]"
+    "{b}{i}[start]{/i}{/b}"
     play sound "Click.mp3" noloop 
 
     Na  "Démarrage terminé, Bonjour [P]."
@@ -2029,11 +2029,11 @@ label newpassword:
 
                     $ stockage += 5.0
 
-                    "Mot de passe correct. Accès autorisé." 
+                    "{b}{i}Mot de passe correct. Accès autorisé.{/i}{/b}"
                     play sound "Menu.mp3" noloop 
 
                     $ start = get_random_start()
-                    Na "[start]"
+                    "{b}{i}[start]{/i}{/b}"
                     play sound "Click.mp3" noloop 
 
                     $  salutation_rdm = get_random_salutation()
@@ -2063,7 +2063,7 @@ label newpassword:
 
             else:
 
-                "Mot de passe incorrect. Accès refusé." 
+                "{b}{i}Mot de passe incorrect. Accès refusé.{/i}{/b}" 
                 play sound "Menu.mp3" noloop
                 jump newpassword  
 
@@ -2329,17 +2329,17 @@ label password14:
 
     if entered_password == stored_password: 
 
-        "Mot de passe correct. Accès autorisé." 
+        "{b}{i}Mot de passe correct. Accès autorisé.{/i}{/b}"
         play sound "Menu.mp3" noloop
 
     else: 
 
-        "Mot de passe incorrect. Accès refusé." 
+        "{b}{i}Mot de passe incorrect. Accès refusé.{/i}{/b}" 
         play sound "Menu.mp3" noloop
         jump password14
 
     $ start = get_random_start()
-    Na "[start]"
+    "{b}{i}[start]{/i}{/b}"
     play sound "Click.mp3" noloop 
 
     Na "Démarrage terminé, Bonjour [P]."
@@ -3362,41 +3362,48 @@ label examen_francais:
             P "Merci."
             play sound "Click.mp3" noloop
 
-            Na "Initialisation de la mise à jour en cours."
+            Na "Déconnexion...."
             play sound "Click.mp3" noloop
 
-            Na "10\%"
+            "{b}{i}Initialisation de la mise à jour en cours...{/i}{/b}"
             play sound "Click.mp3" noloop
 
-            Na "20\%"
+            "{b}{i}10\%{/i}{/b}"
             play sound "Click.mp3" noloop
 
-            Na "30\%"
+            "{b}{i}20\%{/i}{/b}"
             play sound "Click.mp3" noloop
 
-            Na "40\%"
+            "{b}{i}30\%{/i}{/b}"
             play sound "Click.mp3" noloop
 
-            Na "50\%"
+            "{b}{i}40\%{/i}{/b}"
             play sound "Click.mp3" noloop
 
-            Na "60\%"
+            "{b}{i}50\%{/i}{/b}"
             play sound "Click.mp3" noloop
 
-            Na "70\%"
+            "{b}{i}60\%{/i}{/b}"
             play sound "Click.mp3" noloop
 
-            Na "80\%" 
+            "{b}{i}70\%{/i}{/b}"
             play sound "Click.mp3" noloop
 
-            Na "90\%"
+            "{b}{i}80\%{/i}{/b}" 
             play sound "Click.mp3" noloop
 
-            Na "100\%"
+            "{b}{i}90\%{/i}{/b}"
             play sound "Click.mp3" noloop
 
-            Na "Vérification...."
-            play sound "Menu.mp3" noloop 
+            "{b}{i}100\%{/i}{/b}"
+            play sound "Click.mp3" noloop
+
+            "{b}{i}Vérification en cours...{/i}{/b}"
+            play sound "Click.mp3" noloop
+
+            "{b}{i}Reconnexion au systéme...{/i}{/b}"
+            play sound "Menu.mp3" noloop
+            
             $ success += 1        
             $ quest33 += 1
             $ stockage += 5.0 
@@ -3524,17 +3531,17 @@ label password15:
 
     if entered_password == stored_password: 
 
-        "Mot de passe correct. Accès autorisé." 
+        "{b}{i}Mot de passe correct. Accès autorisé.{/i}{/b}"
         play sound "Menu.mp3" noloop
 
     else: 
 
-        "Mot de passe incorrect. Accès refusé." 
+        "{b}{i}Mot de passe incorrect. Accès refusé.{/i}{/b}" 
         play sound "Menu.mp3" noloop
         jump password15
 
     $ start = get_random_start()
-    Na "[start]"
+    "{b}{i}[start]{/i}{/b}"
     play sound "Click.mp3" noloop 
 
     Na "Démarrage terminé, Bonjour [P]."
@@ -4198,7 +4205,7 @@ label update2:
             define Na = Character('[newname] [nom]', color="#00eeff")
             
             $ start = get_random_start()
-            Na "[start]"
+            "{b}{i}[start]{/i}{/b}"
             play sound "Click.mp3" noloop 
 
             $  salutation_rdm = get_random_salutation()
@@ -4382,17 +4389,17 @@ label password16:
 
     if entered_password == stored_password: 
 
-        "Mot de passe correct. Accès autorisé." 
+        "{b}{i}Mot de passe correct. Accès autorisé.{/i}{/b}"
         play sound "Menu.mp3" noloop
 
     else: 
 
-        "Mot de passe incorrect. Accès refusé." 
+        "{b}{i}Mot de passe incorrect. Accès refusé.{/i}{/b}" 
         play sound "Menu.mp3" noloop
         jump password16 
 
     $ start = get_random_start()
-    Na "[start]"
+    "{b}{i}[start]{/i}{/b}"
     play sound "Click.mp3" noloop 
 
     Na "Démarrage terminé, Bonjour [P]."
@@ -5173,17 +5180,17 @@ label password17:
 
     if entered_password == stored_password: 
 
-        "Mot de passe correct. Accès autorisé." 
+        "{b}{i}Mot de passe correct. Accès autorisé.{/i}{/b}"
         play sound "Menu.mp3" noloop
 
     else: 
 
-        "Mot de passe incorrect. Accès refusé." 
+        "{b}{i}Mot de passe incorrect. Accès refusé.{/i}{/b}" 
         play sound "Menu.mp3" noloop
         jump password17 
 
     $ start = get_random_start()
-    Na "[start]"
+    "{b}{i}[start]{/i}{/b}"
     play sound "Click.mp3" noloop 
 
     Na "Démarrage terminé, Bonjour [P]."
@@ -6794,17 +6801,17 @@ label password18:
 
     if entered_password == stored_password: 
 
-        "Mot de passe correct. Accès autorisé." 
+        "{b}{i}Mot de passe correct. Accès autorisé.{/i}{/b}"
         play sound "Menu.mp3" noloop
 
     else: 
 
-        "Mot de passe incorrect. Accès refusé." 
+        "{b}{i}Mot de passe incorrect. Accès refusé.{/i}{/b}" 
         play sound "Menu.mp3" noloop
         jump password18
 
     $ start = get_random_start()
-    Na "[start]"
+    "{b}{i}[start]{/i}{/b}"
     play sound "Click.mp3" noloop 
 
     Na "Démarrage terminé, Bonjour [P]."
@@ -7537,17 +7544,17 @@ label password19:
 
     if entered_password == stored_password: 
 
-        "Mot de passe correct. Accès autorisé." 
+        "{b}{i}Mot de passe correct. Accès autorisé.{/i}{/b}"
         play sound "Menu.mp3" noloop
 
     else: 
 
-        "Mot de passe incorrect. Accès refusé." 
+        "{b}{i}Mot de passe incorrect. Accès refusé.{/i}{/b}" 
         play sound "Menu.mp3" noloop
         jump password19
 
     $ start = get_random_start()
-    Na "[start]"
+    "{b}{i}[start]{/i}{/b}"
     play sound "Click.mp3" noloop 
 
     Na "Démarrage terminé, Bonjour [P]."
@@ -8225,18 +8232,18 @@ label password20:
 
     if entered_password == stored_password: 
 
-        "Mot de passe correct. Accès autorisé." 
+        "{b}{i}Mot de passe correct. Accès autorisé.{/i}{/b}"
         play sound "Menu.mp3" noloop
 
     else: 
 
-        "Mot de passe incorrect. Accès refusé." 
+        "{b}{i}Mot de passe incorrect. Accès refusé.{/i}{/b}" 
         play sound "Menu.mp3" noloop
 
         jump password20 
 
     $ start = get_random_start()
-    Na "[start]" 
+    "{b}{i}[start]{/i}{/b}" 
     play sound "Click.mp3" noloop 
 
     Na "Démarrage terminé, Bonjour [P]."
@@ -9006,18 +9013,18 @@ label password21:
 
     if entered_password == stored_password: 
 
-        "Mot de passe correct. Accès autorisé." 
+        "{b}{i}Mot de passe correct. Accès autorisé.{/i}{/b}"
         play sound "Menu.mp3" noloop
 
     else: 
 
-        "Mot de passe incorrect. Accès refusé." 
+        "{b}{i}Mot de passe incorrect. Accès refusé.{/i}{/b}" 
         play sound "Menu.mp3" noloop
         
         jump password21
 
     $ start = get_random_start()
-    Na "[start]" 
+    "{b}{i}[start]{/i}{/b}" 
     play sound "Click.mp3" noloop 
 
     Na "Démarrage terminé, Bonjour [P]."
@@ -10013,18 +10020,18 @@ label password22:
 
     if entered_password == stored_password: 
 
-        "Mot de passe correct. Accès autorisé." 
+        "{b}{i}Mot de passe correct. Accès autorisé.{/i}{/b}"
         play sound "Menu.mp3" noloop
 
     else: 
 
-        "Mot de passe incorrect. Accès refusé." 
+        "{b}{i}Mot de passe incorrect. Accès refusé.{/i}{/b}" 
         play sound "Menu.mp3" noloop
         
         jump password22
 
     $ start = get_random_start()
-    Na "[start]" 
+    "{b}{i}[start]{/i}{/b}" 
     play sound "Click.mp3" noloop 
 
     Na "Démarrage terminé, Bonjour [P]."
@@ -10706,18 +10713,18 @@ label password23:
 
     if entered_password == stored_password: 
 
-        "Mot de passe correct. Accès autorisé." 
+        "{b}{i}Mot de passe correct. Accès autorisé.{/i}{/b}"
         play sound "Menu.mp3" noloop
 
     else: 
 
-        "Mot de passe incorrect. Accès refusé." 
+        "{b}{i}Mot de passe incorrect. Accès refusé.{/i}{/b}" 
         play sound "Menu.mp3" noloop
         
         jump password23
 
     $ start = get_random_start()
-    Na "[start]" 
+    "{b}{i}[start]{/i}{/b}" 
     play sound "Click.mp3" noloop 
 
     Na "Démarrage terminé, Bonjour [P]."
@@ -11635,18 +11642,18 @@ label password24:
 
     if entered_password == stored_password: 
 
-        "Mot de passe correct. Accès autorisé." 
+        "{b}{i}Mot de passe correct. Accès autorisé.{/i}{/b}"
         play sound "Menu.mp3" noloop
 
     else: 
 
-        "Mot de passe incorrect. Accès refusé." 
+        "{b}{i}Mot de passe incorrect. Accès refusé.{/i}{/b}" 
         play sound "Menu.mp3" noloop
         
         jump password24
 
     $ start = get_random_start()
-    Na "[start]" 
+    "{b}{i}[start]{/i}{/b}" 
     play sound "Click.mp3" noloop 
 
     Na "Démarrage terminé, Bonjour [P]."
@@ -12407,17 +12414,17 @@ label password25:
 
     if entered_password == stored_password:
 
-        "Mot de passe correct. Accès autorisé." 
+        "{b}{i}Mot de passe correct. Accès autorisé.{/i}{/b}"
         play sound "Menu.mp3" noloop
 
     else: 
 
-        "Mot de passe incorrect. Accès refusé." 
+        "{b}{i}Mot de passe incorrect. Accès refusé.{/i}{/b}" 
         play sound "Menu.mp3" noloop
         jump password25
 
     $ start = get_random_start()
-    Na "[start]"
+    "{b}{i}[start]{/i}{/b}"
     play sound "Click.mp3" noloop 
 
     $  salutation_rdm = get_random_salutation()
@@ -12806,17 +12813,17 @@ label password26:
 
     if entered_password == stored_password:
 
-        "Mot de passe correct. Accès autorisé." 
+        "{b}{i}Mot de passe correct. Accès autorisé.{/i}{/b}"
         play sound "Menu.mp3" noloop
 
     else: 
 
-        "Mot de passe incorrect. Accès refusé." 
+        "{b}{i}Mot de passe incorrect. Accès refusé.{/i}{/b}" 
         play sound "Menu.mp3" noloop
         jump password26
 
     $ start = get_random_start()
-    Na "[start]"
+    "{b}{i}[start]{/i}{/b}"
     play sound "Click.mp3" noloop 
 
     $  salutation_rdm = get_random_salutation()
@@ -13268,17 +13275,17 @@ label password27:
 
     if entered_password == stored_password: 
 
-        "Mot de passe correct. Accès autorisé." 
+        "{b}{i}Mot de passe correct. Accès autorisé.{/i}{/b}"
         play sound "Menu.mp3" noloop
 
     else: 
 
-        "Mot de passe incorrect. Accès refusé." 
+        "{b}{i}Mot de passe incorrect. Accès refusé.{/i}{/b}" 
         play sound "Menu.mp3" noloop
         jump password27 
 
     $ start = get_random_start()
-    Na "[start]"
+    "{b}{i}[start]{/i}{/b}"
     play sound "Click.mp3" noloop
 
     $ salutation_rdm = get_random_salutation()
@@ -13454,56 +13461,59 @@ label password28:
 
     if entered_password == stored_password: 
 
-        "Mot de passe correct. Accès autorisé." 
+        "{b}{i}Mot de passe correct. Accès autorisé.{/i}{/b}"
         play sound "Menu.mp3" noloop
 
     else: 
 
-        "Mot de passe incorrect. Accès refusé." 
+        "{b}{i}Mot de passe incorrect. Accès refusé.{/i}{/b}" 
         play sound "Menu.mp3" noloop
+
         jump password28
 
+label battery_start:
+
     $ start = get_random_start()
-    Na "[start]"
+    "{b}{i}[start]{/i}{/b}"
     play sound "Click.mp3" noloop
 
-    Na "Initialisation de la batterie en cours."
+    "{b}{i}Initialisation de la batterie en cours...{/i}{/b}"
     play sound "Click.mp3" noloop
 
-    Na "10\%"
+    "{b}{i}10\%{/i}{/b}"
     play sound "Click.mp3" noloop
 
-    Na "20\%"
+    "{b}{i}20\%{/i}{/b}"
     play sound "Click.mp3" noloop
 
-    Na "30\%"
+    "{b}{i}30\%{/i}{/b}"
     play sound "Click.mp3" noloop
 
-    Na "40\%"
+    "{b}{i}40\%{/i}{/b}"
     play sound "Click.mp3" noloop
 
     if newbattery == "7000":
 
-        Na "50\%"
+        "{b}{i}50\%{/i}{/b}"
         play sound "Click.mp3" noloop
 
-        Na "60\%"
+        "{b}{i}60\%{/i}{/b}"
         play sound "Click.mp3" noloop
 
-        Na "70\%"
+        "{b}{i}70\%{/i}{/b}"
         play sound "Click.mp3" noloop
 
-        Na "80\%" 
+        "{b}{i}80\%{/i}{/b}"
         play sound "Click.mp3" noloop
 
-        Na "90\%"
+        "{b}{i}90\%{/i}{/b}"
         play sound "Click.mp3" noloop
 
-        Na "100\%"
+        "{b}{i}100\%...{/i}{/b}"
         play sound "Click.mp3" noloop
 
-        Na "Vérification...."
-        play sound "Menu.mp3" noloop 
+        "{b}{i}Vérification en cours...{/i}{/b}"
+        play sound "Menu.mp3" noloop
 
         $ success += 1 
         $ quest38 += 1
@@ -13516,115 +13526,116 @@ label password28:
 
         hide screen update with moveoutright
 
-    else: 
+    elif newbattery == "4000":
+  
+        "{b}{i}Échec de l'initialisation de la batterie.{b}{i}"
+        play sound "Click.mp3" noloop 
 
-        if newbattery == "4000":
+        P "Quoi ? Comment ça ?"
+        play sound "Click.mp3" noloop
 
-            Na "échec de l'initialisation de la batterie."
-            play sound "Click.mp3" noloop 
+        "{b}{i}La batterie est trop faible pour démarrer correctement.{b}{i}"
+        play sound "Click.mp3" noloop
 
-            P "Quoi ? Comment ça ?"
-            play sound "Click.mp3" noloop
+        "{b}{i}[newname] s'éteint subitement.{/i}{/b}"
+        play sound "Click.mp3" noloop
 
-            Na "La batterie est trop faible pour démarrer correctement."
-            play sound "Click.mp3" noloop
+        P "Et merde....."
+        play sound "Click.mp3" noloop
 
-            "{b}{i}[newname] s'éteint subitement.{/i}{/b}"
-            play sound "Click.mp3" noloop
+        hide screen clubroom with moveoutright
+        hide screen points with moveoutleft
+        hide screen day with moveoutleft
+        scene black with fade 
 
-            P "Et merde....."
-            play sound "Click.mp3" noloop
+        "{b}{i}Fin numéro 15 : [newname] a refusé de démarrer correctement à cause d'une batterie trop faible.{/i}{/b}"
+        play sound "Menu.mp3" noloop
 
-            hide screen clubroom with moveoutright
-            hide screen points with moveoutleft
-            hide screen day with moveoutleft
-            scene black with fade 
+        menu:
 
-            "{b}{i}Fin numéro 15 : [newname] a refusé de démarrer correctement à cause d'une batterie trop faible.{/i}{/b}"
-            play sound "Menu.mp3" noloop
+            "{b}{i}Abandonner{/i}{/b}":
 
-            menu:    
+                return
+            "{b}{i}Réessayer{/i}{/b}":
+                play sound "Menu.mp3" noloop
 
-                "{b}{i}Abandonner{/i}{/b}" :
-                    return
-                 
-                "{b}{i}Réessayer.{/i}{/b}" : 
-                    play sound "Menu.mp3" noloop
+                P "Non [newname] refuserait que j'abandonne si facilement."
+                play sound "Click.mp3" noloop
 
-                    P "Non [newname] refuserait que j'abandonne si facilement."
-                    play sound "Click.mp3" noloop
+                scene clubroom with fade
+                show screen class_404 with moveinright
+                show screen points with moveinleft
+                show screen day with moveinleft
 
-                    scene clubroom with fade
-                    show screen class_404 with moveinright
-                    show screen points with moveinleft
-                    show screen day with moveinleft
-                    $ points += 2000
-                    jump choice9
+                $ points += 2000
 
-        else:
+                jump choice9
 
-            Na "50\%"
-            play sound "Click.mp3" noloop
+    else:
+      
+        "{b}{i}50\%{/i}{/b}"
+        play sound "Click.mp3" noloop
 
-            Na "60\%"
-            play sound "Click.mp3" noloop
+        "{b}{i}60\%{/i}{/b}"
+        play sound "Click.mp3" noloop
 
-            Na "70\%"
-            play sound "Click.mp3" noloop
+        "{b}{i}70\%{/i}{/b}"
+        play sound "Click.mp3" noloop
 
-            Na "80\%" 
-            play sound "Click.mp3" noloop
+        "{b}{i}80\%{/i}{/b}"
+        play sound "Click.mp3" noloop
 
-            Na "90\%"
-            play sound "Click.mp3" noloop
+        "{b}{i}90\%{/i}{/b}"
+        play sound "Click.mp3" noloop
 
-            Na "100\%"
-            play sound "Click.mp3" noloop
+        "{b}{i}100\%{/i}{/b}"
+        play sound "Click.mp3" noloop
 
-            Na "Vérification...."
-            play sound "Menu.mp3" noloop 
-            
-            Na "échec de l'initialisation de la batterie."
-            play sound "Click.mp3" noloop 
+        "{b}{i}Vérification en cours...{/i}{/b}"
+        play sound "Menu.mp3" noloop
 
-            P "Quoi ? Comment ça ?"
-            play sound "Click.mp3" noloop
+        Na "Échec de l'initialisation de la batterie."
+        play sound "Click.mp3" noloop 
 
-            Na "La batterie est trop puissante pour moi."
-            play sound "Click.mp3" noloop
+        P "Quoi ? Comment ça ?"
+        play sound "Click.mp3" noloop
 
-            "{b}{i}[newname] commeence à surchauffer et fini par griller.{/i}{/b}"
-            play sound "Click.mp3" noloop
+        Na "La batterie est trop puissante pour moi."
+        play sound "Click.mp3" noloop
 
-            P "Et merde....."
-            play sound "Click.mp3" noloop
+        "{b}{i}[newname] commence à surchauffer et finit par griller.{/i}{/b}"
+        play sound "Click.mp3" noloop
 
-            hide screen clubroom with moveoutright
-            hide screen points with moveoutleft
-            hide screen day with moveoutleft
-            scene black with fade
+        P "Et merde....."
+        play sound "Click.mp3" noloop
 
-            "{b}{i}Fin numéro 16 : [newname] a surchauffé à cause d'une batterie trop puissante.{/i}{/b}"
-            play sound "Menu.mp3" noloop
+        hide screen clubroom with moveoutright
+        hide screen points with moveoutleft
+        hide screen day with moveoutleft
+        scene black with fade
 
-            menu:    
+        "{b}{i}Fin numéro 16 : [newname] a surchauffé à cause d'une batterie trop puissante.{/i}{/b}"
+        play sound "Menu.mp3" noloop
 
-                "{b}{i}Abandonner{/i}{/b}" :
-                    return
-                 
-                "{b}{i}Réessayer.{/i}{/b}" : 
-                    play sound "Menu.mp3" noloop
+        menu:
+            "{b}{i}Abandonner{/i}{/b}":
 
-                    P "Non [newname] refuserait que j'abandonne si facilement."
-                    play sound "Click.mp3" noloop
+                return
 
-                    scene clubroom with fade
-                    show screen class_404 with moveinright
-                    show screen points with moveinleft
-                    show screen day with moveinleft
-                    $ points += 4000
-                    
-                    jump choice9
+            "{b}{i}Réessayer{/i}{/b}":
+                play sound "Menu.mp3" noloop
+
+                P "Non [newname] refuserait que j'abandonne si facilement."
+                play sound "Click.mp3" noloop
+
+                scene clubroom with fade
+                show screen class_404 with moveinright
+                show screen points with moveinleft
+                show screen day with moveinleft
+
+                $ points += 4000
+                
+                jump choice9
 
     P "Oui ça fonctionne correctement."
     play sound "Click.mp3" noloop
@@ -13898,7 +13909,7 @@ label choice10:
                 P "Parce que je voulais voir ce qui se passerait."
                 play sound "Click.mp3" noloop   
 
-                Na "Erreur systéme détectée."
+                "{b}{i}Erreur systéme détectée.{/i}{/b}"
                 play music "gameover.mp3" noloop
 
                 hide screen clubroom with moveoutright
@@ -13932,7 +13943,7 @@ label choice10:
 
                 jump choice10 
         
-        "{b}{i} surveiller les fichiers.{/i}{/b}" : 
+        "{b}{i}surveiller les fichiers.{/i}{/b}" : 
             play sound "Menu.mp3" noloop 
 
             P "évidemment que je ne vais pas le supprimer."
@@ -14653,17 +14664,17 @@ label password29:
 
     if entered_password == stored_password:
 
-        "Mot de passe correct. Accès autorisé." 
+        "{b}{i}Mot de passe correct. Accès autorisé.{/i}{/b}"
         play sound "Menu.mp3" noloop
 
     else: 
 
-        "Mot de passe incorrect. Accès refusé." 
+        "{b}{i}Mot de passe incorrect. Accès refusé.{/i}{/b}" 
         play sound "Menu.mp3" noloop
         jump password29
 
     $ start = get_random_start()
-    Na "[start]"
+    "{b}{i}[start]{/i}{/b}"
     play sound "Click.mp3" noloop 
 
     $  salutation_rdm = get_random_salutation()
@@ -15458,15 +15469,31 @@ label password29:
     Na "Oui j'ai jamais eu l'occasion d'en faire."
     play sound "Click.mp3" noloop
 
-    P ""
+    P "Cool se sera l'occasion d'en faire un alors."
+    play sound "Click.mp3" noloop
 
-
-    
-
+    I "Cool alors je vais aller le chercher dans mon sac."
+    play sound "Footsteps.mp3" noloop
  
+    "{b}{i}[I] part chercher le jeu dans son sac.{/i}{/b}"
+    play sound "Click.mp3" noloop
 
+    I "Bon voyons voir où il est."
+    play sound "Click.mp3" noloop
 
+    I "Ah, le voilà !"
+    play sound "Click.mp3" noloop
 
+    "{b}{i}[I] revient avec le jeu.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    I "On peut enfin commencer à jouer !"
+    play sound "Click.mp3" noloop
+
+    Na "Oui enfin !"
+    play sound "Click.mp3" noloop 
+
+    I ""
 
 
 
