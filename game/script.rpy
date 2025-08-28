@@ -184,26 +184,6 @@ label identity:
 
     $ origine = "collège d'hoshikawa" 
     
-label auto_save: 
-
-    show screen logo
-    
-    transform unrotate: 
-        zoom 0.5
-        rotate 360 
-        linear 2.0 rotate 0
-
-    "{b}{i}Bienvenue dans Arisization Project cher/chère lycéen, Ce jeu appartient à SLTM.{/i}{/b}"   
-    play sound "Click.mp3" noloop 
- 
-    hide screen logo 
-
-    "{b}{i}Avertissement : Ce jeu contient des scènes pouvant heurter la sensibilité de certains joueurs. Inspiré de faits réels, il explore des thématiques complexes telles que la moralité, les dilemmes éthiques et les conséquences humaines.{/i}{/b}"
-    play sound "Click.mp3" noloop
-
-    "{b}{i}Avant de commencer, veuillez noter que chaque décision prise dans ce jeu est irréversible et aura un impact permanent sur votre progression.{/i}{/b}"
-    play sound "Transition.mp3" noloop
-
 label début: 
 
     scene main with fade    
@@ -375,7 +355,7 @@ label hack:
 
             show screen update with moveinright
 
-            R "système ouvert avec succès." 
+            "{b}{i}système ouvert avec succès.{/i}{/b}" 
             play sound "Click.mp3" noloop 
 
             hide screen update with moveoutright
@@ -384,7 +364,7 @@ label hack:
 
         else: 
 
-            R "Erreur système, le démarrage a échoué." 
+            "{/i}{/b}Erreur système, le démarrage a échoué.{/i}{/b}" 
             play sound "Click.mp3" noloop     
 
             P "Mince..." 
@@ -821,7 +801,7 @@ label choice1:
     P "[suivi]"
     play sound "Footsteps.mp3" noloop
 
-    hide screen hallway with moveoutright
+    hide screen hall with moveoutright
     hide screen day with moveoutleft
     scene staircase with fade
 
@@ -1880,7 +1860,7 @@ label choice1:
     M "le suivant, c'est le livre de physique."
     play sound "Click.mp3" noloop 
 
-    show screen physisbook with moveinbottom
+    show screen physicbook with moveinbottom
 
     M "C'est celui-là."
     play sound "Click.mp3" noloop 

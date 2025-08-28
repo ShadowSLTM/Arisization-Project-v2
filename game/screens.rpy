@@ -1671,16 +1671,6 @@ screen clubroom():
             size 50
             xalign 0.5 
 
-screen Dev():
-    frame:
-        xalign 0.5
-        ypos 10 
-        has vbox  
-
-        text "Developper mode":
-            size 20
-            xalign 0.5 
-
 screen logo():
     frame:
         yalign 0.5
@@ -1707,16 +1697,6 @@ screen perm():
             size 50
             xalign 0.5 
 
-screen origine():
-    frame:
-        xalign 0.999
-        ypos 10 
-        has vbox  
-
-        text "[origine]":
-            size 50
-            xalign 0.5 
-
 screen WC():
     frame:
         xalign 0.999
@@ -1739,7 +1719,7 @@ screen gymnase():
 
 screen Yunaroom():
     frame:
-        xalign 0.99
+        xalign 0.999
         ypos 10 
         has vbox  
 
@@ -1793,8 +1773,8 @@ screen flag():
 
 screen update():
     frame: 
-        yalign 0.3
-        xalign 0.5
+        yalign 0.1
+        xalign 0.999
         add "success.jpg"
 
 screen englishbook():
@@ -1825,7 +1805,7 @@ screen physicbook():
     frame: 
         yalign 0.3
         xalign 0.5
-        add "physicbook.jpg"
+        add "physicbook.png "
 
 screen philobook():
     frame: 
@@ -1883,7 +1863,7 @@ screen credit():
 
             text _("Animations du jeu : [Dc] (Shadow_SLTM)\n") 
 
-            text _("Concepts : [Dc] (Shadow_SLTM)\n") 
+            text _("Concepts d'origine : [Dc] (Shadow_SLTM)\n") 
 
             text _("Système des succès : [Dc] (Shadow_SLTM)\n") 
 
@@ -1895,35 +1875,41 @@ screen credit():
 
             text _("Illustration du drapeau du lycée Nexus : [Dc] (Shadow_SLTM)\n")
 
-            text _("Illustration de l'interface Windows : [Dc] (Shadow_SLTM)\n")
+            text _("Illustration de la barre des tâches : [Dc] (Shadow_SLTM)\n")
 
             text _("Illustration du menu : [Dc] (Shadow_SLTM)\n") 
 
             text _("Illustration des livres de Nexus : [Dc] (Shadow_SLTM)\n") 
-            
-            text _("Programmation : [Dc] (Shadow_SLTM)\n") 
+
+            text _("Illustration de la couverture du jeu : [Dc] (Shadow_SLTM)\n") 
+
+            text _("Programmation : [Dc] (Shadow_SLTM)\n")  
 
             text _("Correction du jeu : [Dc] (Shadow_SLTM)\n")
 
             text _("Gestion des fichiers du jeu : [Dc] (Shadow_SLTM)\n") 
+
+            text _("Sécurités du jeu : [Dc] (Shadow_SLTM)\n") 
             
             label "{b}{i}— Contributions secondaires —\n{/i}{/b}" 
 
             text _("Phrase « Bon après ça ne m'étonne pas venant de toi » : Sararnbb\n") 
 
-            text _("Dessin de [Su] : Sararnbb  par [Dc] (Shadow_SLTM\n") 
+            text _("Dessin de [Su] : Sararnbb et validé par [Dc] (Shadow_SLTM)\n") 
 
             text _("Idée du personnage de [Sk] : Kama\n") 
              
             text _("Idée du personnage de Seigo : Kama\n") 
 
-            text _("Idée de la variante AK-25 : Kama et validé par [Dc] (Shadow_SLTM)")  
+            text _("Idée de la variante AK-25 : Kama et validé par [Dc] (Shadow_SLTM)\n")  
 
-            text _("Correction partielle de l’orthographe du chapitre 0 : Kama\n") 
+            text _("Correction partielle de l’orthographe du chapitre 0 : Kama \n") 
+
+            text _("Correction partielle de l’orthographe du début du chapitre 1 : Le_vrai_draken\n")
 
             text _("Idée des textes de narration : Louks\n") 
 
-            text _("Terme « Engrenage sur pattes » : Nathanaël (Loki)\n")
+            text _("Terme « Engrenage sur pattes » : Nathanaël (Loki) et validé par [Dc] (Shadow_SLTM)\n")
 
             text _("Fonctions aléatoires : [Dc] (Shadow_SLTM)\n") 
 
@@ -1931,7 +1917,7 @@ screen credit():
 
             text _("Musique de la fin du jeu : Chan Walrus\n") 
 
-            text _("Musique de gameover : MB Music\n")
+            text _("Musique de gameover : MB Music\n") 
 
             text _("bandes originales durant le jeu : BeatGrounds & MirAudio\n")
 

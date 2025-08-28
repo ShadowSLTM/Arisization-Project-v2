@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/security.rpy", line 84: Line is indented, but the preceding call statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
-    return
-    ^
+File "game/screens.rpy", line 290: 'with' is not a keyword argument or valid child of the screen statement.
+    with fade
+        ^
 
 Ren'Py Version: Ren'Py 8.3.7.25031702
-Thu Aug 21 22:18:27 2025
+Thu Aug 28 20:27:38 2025

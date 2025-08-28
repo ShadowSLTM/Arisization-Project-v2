@@ -15493,7 +15493,140 @@ label password29:
     Na "Oui enfin !"
     play sound "Click.mp3" noloop 
 
-    I ""
+    P "Allez, c'est partie !!"
+    play sound "Click.mp3" noloop
+
+    "{b}{i}[I] commence à ouvrir le jeu et à expliquer.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    I "Vous avez compris les régles ?"
+    play sound "Click.mp3" noloop 
+
+    P "Oui pour moi."
+    play sound "Click.mp3" noloop 
+
+    Na "Oui à peu prés."
+    play sound "Click.mp3" noloop 
+
+    I "Bien alors on peut commencer."
+    play sound "Click.mp3" noloop 
+
+    $ validation = get_random_validation() 
+    P "[validation]"
+    play sound "Click.mp3" noloop 
+
+    "{b}{i}Vous jouez pendant une heure.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    Na "Super j'ai encore perdu...."
+    play sound "Click.mp3" noloop 
+
+    P "Ce n'est pas grâve, tu es encore en train d'apprendre."
+    play sound "Click.mp3" noloop 
+
+    Na "Je sais masi quand même..."
+    play sound "Click.mp3" noloop 
+
+    I "Bon on retente une partie."
+    play sound "Click.mp3" noloop 
+
+    P "évidemment."
+    play sound "Click.mp3" noloop 
+
+    Na "Avec plaisir"
+    play sound "Click.mp3" noloop 
+
+    I "Bien alors."
+    play sound "Click.mp3" noloop 
+
+    "{b}{i}Vous commencer une autre partie pour une revanche et quelque chose de nouveau se passe.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    Na "J'ai gagné la partie !"
+    play sound "Click.mp3" noloop 
+
+    P "Bien joué !"
+    play sound "Click.mp3" noloop 
+
+    I "Mais comment c'est possible ?"
+    play sound "Click.mp3" noloop
+
+    Na "Je ne sais pas, mais tu peux demander à [prenom]."
+    play sound "Click.mp3" noloop 
+
+    "{b}{i}[I] se tourne vers toi.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    I "Tu m'expliques comment elle a fait pour qu'elle gagne cette partie alors qu'elle perdait les précédentes."
+    play sound "Click.mp3" noloop
+
+    P "C'est vraiment simple comme explication."
+    play sound "Click.mp3" noloop
+
+    I "Cooment ça ?"
+    play sound "Click.mp3" noloop
+
+    P "Elle a ce qu'on appelle le Deep learning et le machine learning."
+    play sound "Click.mp3" noloop
+
+    I  "C'est à dire pour être précis ?"
+    play sound "Click.mp3" noloop 
+
+    P "ça veut dire qu'elle apprend vite si on lui fournit assez de données de base."
+    play sound "Click.mp3" noloop
+
+    I "Je vois mieux ce que tu veux dire."
+    play sound "Click.mp3" noloop
+
+    I "Merci pour l'explication !"
+    play sound "Click.mp3" noloop
+
+    P "De rien, c'est toujours un plaisir d'aider."
+    play sound "Click.mp3" noloop
+
+    Na "Bon on fait quoi comme activité maintenant ?"
+    play sound "Click.mp3" noloop  
+
+    I "Que diriez-vous d'un film ?"
+    play sound "Click.mp3" noloop
+
+    Na "Oui, pourquoi pas !"
+    play sound "Click.mp3" noloop
+
+    P "ça me va aussi."
+    play sound "Click.mp3" noloop
+
+    I "Quel genre de film voulez-vous regarder ?"
+    play sound "Click.mp3" noloop
+
+    Na "Je ne sais pas, peut-être un film d'action ?"
+    play sound "Click.mp3" noloop
+
+    P "Un film d'action, ça me semble bien !"
+    play sound "Click.mp3" noloop
+
+    I "C'est parti alors."
+    play sound "Click.mp3" noloop
+
+    Na "On regarde lequel du coup ?"
+    play sound "Click.mp3" noloop
+
+    I "On pourrait regarder......" 
+    play sound "Click.mp3" noloop
+
+    Na "Bonne idée !"
+    play sound "Click.mp3" noloop
+
+    P "Ce n'est pas le film qui parle de...."
+    play sound "Click.mp3" noloop
+
+    
+
+
+
+
+
+
 
 
 
