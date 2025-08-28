@@ -1911,13 +1911,13 @@ screen credit():
 
             text _("Phrase « Bon après ça ne m'étonne pas venant de toi » : Sararnbb\n") 
 
-            text _("Dessin de [Su] : Sararnbb\n") 
+            text _("Dessin de [Su] : Sararnbb  par [Dc] (Shadow_SLTM\n") 
 
             text _("Idée du personnage de [Sk] : Kama\n") 
              
             text _("Idée du personnage de Seigo : Kama\n") 
 
-            text _("Idée de la variante AK-25 : Kama\n")  
+            text _("Idée de la variante AK-25 : Kama et validé par [Dc] (Shadow_SLTM)")  
 
             text _("Correction partielle de l’orthographe du chapitre 0 : Kama\n") 
 
