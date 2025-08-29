@@ -15611,22 +15611,165 @@ label password29:
     Na "On regarde lequel du coup ?"
     play sound "Click.mp3" noloop
 
-    I "On pourrait regarder......" 
+    I "On pourrait regarder {b}{i}Cyber Rebirth{/i}{/b}." 
     play sound "Click.mp3" noloop
 
     Na "Bonne idée !"
     play sound "Click.mp3" noloop
 
-    P "Ce n'est pas le film qui parle de...."
+    P "Ce n'est pas le film qui parle de l'intelligence artificielle ?"
+    play sound "Click.mp3" noloop 
+
+    I "Oui, c'est un film qui explore les implications de l'IA dans la société."
+    play sound "Click.mp3" noloop 
+
+    Na "Ça a l'air intéressant !"
     play sound "Click.mp3" noloop
 
-    
+    P "Alors, on le regarde ?"
+    play sound "Click.mp3" noloop
 
+    Na "Oui, allons-y !"
+    play sound "Click.mp3" noloop
 
+    I "Bien, je vais préparer le popcorn !"
+    play sound "Click.mp3" noloop
 
+    Na "Et moi je vais chercher des boissons."
+    play sound "Click.mp3" noloop
 
+    I "Et n'oublie pas de prendre des serviettes !"
+    play sound "Click.mp3" noloop
 
+    Na "Bien sûr !"
+    play sound "Click.mp3" noloop
 
+    "{b}{i}Vous prenez tout ce qu'il vous faut."
+    play sound "Click.mp3" noloop
+
+    I "C'est bon vous avez tout préparé ?"
+    play sound "Click.mp3" noloop
+
+    P "Tout est prêt !"
+    play sound "Click.mp3" noloop
+
+    I "Parfait, alors on peut commencer le film."
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Vous vous installez confortablement et commencez à regarder le film.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Vous êtes captivés par le film et passez un bon moment ensemble.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Vous terminez le film et en discutez ensemble.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    Na "Il était vraiment bien ce film."
+    play sound "Click.mp3" noloop   
+
+    I "Oui, c'était un excellent film !"
+    play sound "Click.mp3" noloop
+
+    P "Tout à fait d'accord !"
+    play sound "Click.mp3" noloop
+
+    Na "Oui il nous a appris beaucoup de choses."
+    play sound "Click.mp3" noloop
+
+    "{b}{i}[newname] commence à se fatiguer.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    P "Est-ce que ça va [newname] ?"
+    play sound "Click.mp3" noloop
+
+    Na "Oui ça va, je suis juste un peu fatiguée."
+    play sound "Click.mp3" noloop
+
+    P "Tu veux te reposer un peu ?"
+    play sound "Click.mp3" noloop
+
+    Na "Oui, je pense que je vais aller me coucher."
+    play sound "Click.mp3" noloop
+
+    P "D'accord, repose-toi bien !"
+    play sound "Click.mp3" noloop
+
+    I "Bonne nuit [newname] !"
+    play sound "Click.mp3" noloop
+
+    Na "Juste elle est oû mon alimentation électrique ?"
+    play sound "Click.mp3" noloop
+
+    P "Elle est sois de mon sac sois dans le tiens."
+    play sound "Click.mp3" noloop
+
+    Na "Ok je vais voir ça."
+    play sound "Click.mp3" noloop
+
+    "{b}{i}[newname] se lève pour chercher son alimentation électrique.{/i}{/b}"    
+    play sound "Click.mp3" noloop
+
+    Na "Ah je l'ai trouvée."
+    play sound "Click.mp3" noloop
+
+    "{b}{i}[newname] se rassoit avec son alimentation électrique.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    Na "Bon je vais me déconnecter."
+    play sound "Click.mp3" noloop
+
+    P "D'accord, repose-toi bien !"
+    play sound "Click.mp3" noloop
+
+    "{b}{i}[newname] se déconnecte.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    I "Je pense que je vais aller me coucher aussi."
+    play sound "Click.mp3" noloop 
+
+    P "Oui moi aussi."
+    play sound "Click.mp3" noloop
+
+    I "Oui, je vais me changer."
+    play sound "Click.mp3" noloop
+
+    $ validation = get_random_validation() 
+    P "[validation]"
+    play sound "Click.mp3" noloop 
+
+    "{b}{i}Tu pars te changer avant d'aller de te coucher.{/i}{/b}"
+    play sound "Click.mp3" noloop 
+
+    I "Juste [prenom] tu devrais verrouiller la porte de la salle de club."
+    play sound "Click.mp3" noloop 
+
+    menu: 
+
+        "{b}{i}Ne rien faire.{/i}{/b}" : 
+            play sound "Menu.mp3" noloop 
+
+            
+
+        "{b}{i}Verrouiller la porte.{/i}{/b}" : 
+            play sound "Menu.mp3" noloop 
+
+    hide screen day with moveoutleft
+    hide screen clubroom with moveoutright
+    hide screen points with moveoutleft
+    scene black with fade
+
+    "{b}{i} Le lendemain matin, le 28 décembre 2097{/i}{/b}"
+    play sound "Alarm.mp3" noloop
+
+    $ day += 1 
+
+    scene room with fade 
+    show screen day with moveinleft
+    show screen clubroom with moveinright
+    show screen points with moveinleft
+
+     
 
 
 

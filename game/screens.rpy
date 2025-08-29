@@ -1907,6 +1907,8 @@ screen credit():
 
             text _("Correction partielle de l’orthographe du début du chapitre 1 : Le_vrai_draken\n")
 
+            text _("Proposition du changement de hall principale : Le_vrai_draken\n")
+
             text _("Idée des textes de narration : Louks\n") 
 
             text _("Terme « Engrenage sur pattes » : Nathanaël (Loki) et validé par [Dc] (Shadow_SLTM)\n")

@@ -2245,7 +2245,7 @@ label choice2:
                     P "[I], C'est quoi cette cartouche ?"
                     play sound "Click.mp3" noloop
 
-                    I "Laisse tomber c'est mon ancien jeu vidéo qui se nommait Anarchy School."
+                    I "Laisse tomber c'est mon ancien jeu vidéo que j'ai abandonné."
                     play sound "Click.mp3" noloop
 
                     P "Ok je vois mais pourquoi tu l'as abandonné ?"
@@ -7837,19 +7837,7 @@ label suite:
     P "[je_vais_bien_txt]" 
     play sound "Click.mp3" noloop
 
-    Na "Cool mais juste hier j'avais oublié de te dire un truc."
-    play sound "Click.mp3" noloop
-
-    P "Oui dit-moi, je t'écoute"
-    play sound "Click.mp3" noloop
-
-    Na  "Tu sais [prenom] tu t’occupes tellement bien de moi que je pourrais te surnommer Undertaker."
-    play sound "Click.mp3" noloop 
-
-    P "Undertaker !?"
-    play sound "Click.mp3" noloop
-
-    Na "Oui c'est bien ça."
+    Na "Cool alors."
     play sound "Click.mp3" noloop
 
     P "Merci beaucoup ça fait plaisir de l'entendre."
@@ -16565,6 +16553,15 @@ label password4:
 
     S "Si tu le dis."
     play sound "Click.mp3" noloop
+
+    Y "Mais pour moi un fichier code sans point-virgule ce n'est pas un fichier code mais un fichier texte."
+    play sound "Click.mp3" noloop
+
+    S "Sérieusemnt ?"
+    play sound "Click.mp3" noloop 
+
+    Y "Oui de mon point de vue."
+    play sound "Click.mp3" noloop 
 
     M "Bien, nous allons faire un exercice pour voir si vous avez bien compris."
     play sound "Click.mp3" noloop
