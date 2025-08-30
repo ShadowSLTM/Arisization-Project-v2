@@ -6,7 +6,6 @@
 ## sont du code commenté et vous pouvez les décommentez quand c’est approprié
 ## (pour votre projet). 
 
-
 ## Bases #######################################################################
 
 ## Un nom de jeu intelligible. Il est utilisé pour personnaliser le titre de la
@@ -62,7 +61,6 @@ define config.skip_delay = 2
 ## le jeu, jusqu’à ce qu'il soit stoppé ou qu’un autre fichier soit joué.
 
 define config.main_menu_music = "Lastencounter.mp3"
-
 
 ## Transitions #################################################################
 ##

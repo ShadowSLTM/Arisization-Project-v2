@@ -62,6 +62,7 @@ label password11:
 
         "{b}{i}Mot de passe incorrect. Accès refusé.{/i}{/b}" 
         play sound "Menu.mp3" noloop
+
         jump password11
 
     $ start = get_random_start()
@@ -1173,6 +1174,7 @@ label password12:
 
         "{b}{i}Mot de passe incorrect. Accès refusé.{/i}{/b}" 
         play sound "Menu.mp3" noloop
+
         jump password12
 
     $ start = get_random_start()
@@ -3052,9 +3054,11 @@ label examen_francais:
         menu:    
 
             "{b}{i}Abandonner{/i}{/b}" :
+                play sound "Menu.mp3" noloop 
                 return
                 
             "{b}{i}Réessayer.{/i}{/b}" :
+                play sound "Menu.mp3" noloop 
 
                 P "Non [newname] refuserait que j'abandonne si facilement."
                 play sound "Click.mp3" noloop
@@ -3341,6 +3345,7 @@ label examen_francais:
     menu:
 
         "{b}{i} Refuser la mise à jour {/i}{/b}" :
+            play sound "Menu.mp3" noloop 
 
             $ renpy.block_rollback()
 
@@ -3353,6 +3358,7 @@ label examen_francais:
             play sound "Click.mp3" noloop 
 
         "{b}{i} faire la mise à jour {/i}{/b}" : 
+            play sound "Menu.mp3" noloop 
 
             $ renpy.block_rollback() 
         
@@ -4249,9 +4255,11 @@ label update2:
             menu:
 
                 "{b}{i}Abandonner{/i}{/b}": 
+                    play sound "Menu.mp3" noloop 
                     return 
                     
                 "{b}{i}Réessayer.{/i}{/b}":
+                    play sound "Menu.mp3" noloop 
 
                     P "Non [newname] refuserait que j'abandonne si facilement."
                     play sound "Click.mp3" noloop
@@ -5187,6 +5195,7 @@ label password17:
 
         "{b}{i}Mot de passe incorrect. Accès refusé.{/i}{/b}" 
         play sound "Menu.mp3" noloop
+
         jump password17 
 
     $ start = get_random_start()
@@ -5751,9 +5760,11 @@ label philosophie_technologie:
         menu:    
 
             "{b}{i}Abandonner{/i}{/b}" :
+                play sound "Menu.mp3" noloop 
                 return
                  
             "{b}{i}Réessayer.{/i}{/b}" : 
+                play sound "Menu.mp3" noloop 
 
                 P "Non [newname] refuserait que j'abandonne si facilement."
                 play sound "Click.mp3" noloop
@@ -13554,8 +13565,9 @@ label battery_start:
         menu:
 
             "{b}{i}Abandonner{/i}{/b}":
-
+                play sound "Menu.mp3" noloop 
                 return
+
             "{b}{i}Réessayer{/i}{/b}":
                 play sound "Menu.mp3" noloop
 
@@ -13619,7 +13631,7 @@ label battery_start:
 
         menu:
             "{b}{i}Abandonner{/i}{/b}":
-
+                play sound "Menu.mp3" noloop 
                 return
 
             "{b}{i}Réessayer{/i}{/b}":
@@ -13923,9 +13935,11 @@ label choice10:
                 menu: 
 
                     "{b}{i}Abandonner{/i}{/b}" :
+                        play sound "Menu.mp3" noloop 
                         return
                 
                     "{b}{i}Réessayer.{/i}{/b}" :
+                        play sound "Menu.mp3" noloop 
 
                         P "Non [newname] refuserait que j'abandonne si facilement."
                         play sound "Click.mp3" noloop
@@ -15741,7 +15755,9 @@ label password29:
     "{b}{i}Tu pars te changer avant d'aller de te coucher.{/i}{/b}"
     play sound "Click.mp3" noloop 
 
-    I "Juste [prenom] tu devrais verrouiller la porte de la salle de club."
+label lockornot:
+
+    I "Juste [prenom] je pense que tu devrais verrouiller la porte de la salle de club."
     play sound "Click.mp3" noloop 
 
     menu: 
@@ -15749,10 +15765,177 @@ label password29:
         "{b}{i}Ne rien faire.{/i}{/b}" : 
             play sound "Menu.mp3" noloop 
 
-            
+            P "Je ne vois pas trop l'intérêt de verrouiller la porte car on est les seuls ici."
+            play sound "Click.mp3" noloop
+
+            I "C'est sûrtout pour [newname] que je dis ça."
+            play sound "Click.mp3" noloop
+
+            $ validation = get_random_validation() 
+            P "[validation]"
+            play sound "Click.mp3" noloop 
+
+            I "Bon moi je vais me coucher."
+            play sound "Click.mp3" noloop
+
+            P "D'accord, repose-toi bien !"
+            play sound "Click.mp3" noloop
+
+            I "Bonne nuit [prenom] !"
+            play sound "Click.mp3" noloop
+
+            P "Bonne nuit Yuna !"
+            play sound "Click.mp3" noloop
+
+            hide screen day with moveoutleft
+            hide screen clubroom with moveoutright
+            hide screen points with moveoutleft
+            scene black with fade
+
+            "{b}{i} Le lendemain matin, le 28 décembre 2097{/i}{/b}"
+            play sound "Alarm.mp3" noloop
+
+            $ day += 1 
+
+            scene room with fade 
+            show screen day with moveinleft
+            show screen clubroom with moveinright
+            show screen points with moveinleft
+
+            "{b}{i}Tu te réveilles tranquillement.{/i}{/b}"
+            play sound "Click.mp3" noloop 
+
+            $ line = get_random_morning_line()
+            P "[line]"
+            play sound "Click.mp3" noloop
+
+            "{b}{i}Tu te changes et puis tu aperçois [newname] déconnectée contre le mur.{/i}{/b}"
+            play sound "Click.mp3" noloop
+
+            P "Elle est encore déconnectée."
+            play sound "Click.mp3" noloop 
+    
+            P "Je vais la démarrer."
+            play sound "Menu.mp3" noloop   
+
+            menu:   
+
+                "{b}{i} Démarrer [newname].{/i}{/b}" :
+                    play sound "Menu.mp3" noloop 
+
+            "{b}{i}{/i}{/b}"
+            play sound "Click.mp3" noloop
+
+            if pronom == "il":
+
+                P "Mince j'aurais dû être plus vigilant avec elle, mon projet est ruiné."
+                play music "gameover.mp3" noloop
+
+            else: 
+
+                P "Mince j'aurais dû être plus vigilante avec elle, mon projet est ruiné."
+                play music "gameover.mp3" noloop
+
+            hide screen clubroomroom with moveoutright
+            hide screen points with moveoutleft
+            hide screen day with moveoutleft
+            scene black with fade 
+
+            "{b}{i}Fin numéro 18 : [newname] complètement détruite et ruinée par manque de vigilance.{/i}{/b}"
+            play sound "Menu.mp3" noloop 
+
+            menu:    
+
+                "{b}{i}Abandonner{/i}{/b}" :
+                    play sound "Menu.mp3" noloop 
+                    return 
+
+                "{b}{i}Réessayer{/i}{/b}" :
+                    play sound "Menu.mp3" noloop 
+
+                    P "Non [A] refuserait que j'abandonne si facilement."
+                    play sound "Click.mp3" noloop
+
+                    scene clubroom with fade 
+                    show screen day with moveinleft
+                    show screen room with moveinright
+                    show screen points with moveinleft
+                            
+                    jump lockornot 
 
         "{b}{i}Verrouiller la porte.{/i}{/b}" : 
             play sound "Menu.mp3" noloop 
+
+    P "Oui bonne idée, je vais le faire."
+    play sound "Click.mp3" noloop
+
+    I "C'est sûrtout pour [newname] que je dis ça."
+    play sound "Click.mp3" noloop
+
+    $ validation = get_random_validation() 
+    P "[validation]"
+    play sound "Click.mp3" noloop 
+
+    I "Merci de t'en occuper."
+    play sound "Click.mp3" noloop 
+
+    $ nothing = get_random_nothing()
+    P "[nothing]"
+    play sound "Footsteps.mp3" noloop
+
+    "{b}{i}Tu pars verrouiller la porte.{/i}{/b}"
+    play sound "Click.mp3" noloop  
+
+    P "C'est bon c'est fait."
+    play sound "Click.mp3" noloop
+
+    $ thanks = get_random_thanks()
+    I "[thanks]"
+    play sound "Click.mp3" noloop
+
+    $ nothing = get_random_nothing()
+    P "[nothing]"
+    play sound "Click.mp3" noloop 
+
+    "{b}{i}[I] se met à rougir un peu.{/i}{/b}"
+    play sound "Click.mp3" noloop  
+
+    P "Est-ce que ça va ?"
+    play sound "Click.mp3" noloop
+
+    I "Oui ça va."
+    play sound "Click.mp3" noloop
+
+    P "Tu rougis, tu aurais pas un petit faible pour [newname] ?"
+    play sound "Click.mp3" noloop
+
+    I "Non, pas du tout !"
+    play sound "Click.mp3" noloop
+
+    I "Je ne sais pas de quoi tu parles."
+    play sound "Click.mp3" noloop
+
+    P "Tu es sûre ?"
+    play sound "Click.mp3" noloop
+
+      
+
+
+
+
+
+
+    I "Bon moi je vais me coucher."
+    play sound "Click.mp3" noloop
+
+    P "D'accord, repose-toi bien !"
+    play sound "Click.mp3" noloop
+
+    I "Bonne nuit [prenom] !"
+    play sound "Click.mp3" noloop
+
+    P "Bonne nuit Yuna !"
+    play sound "Click.mp3" noloop
 
     hide screen day with moveoutleft
     hide screen clubroom with moveoutright
@@ -15769,8 +15952,26 @@ label password29:
     show screen clubroom with moveinright
     show screen points with moveinleft
 
-     
+    "{b}{i}Tu te réveilles tranquillement.{/i}{/b}"
+    play sound "Click.mp3" noloop 
 
+    $ line = get_random_morning_line()
+    P "[line]"
+    play sound "Click.mp3" noloop 
+
+    "{b}{i}Tu te changes et puis tu aperçois [newname] déconnectée contre le mur.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    P "Elle est encore déconnectée."
+    play sound "Click.mp3" noloop 
+    
+    P "Je vais la démarrer."
+    play sound "Menu.mp3" noloop   
+
+    menu:   
+
+        "{b}{i} Démarrer [newname].{/i}{/b}" :
+            play sound "Menu.mp3" noloop 
 
 
     label end_script2:

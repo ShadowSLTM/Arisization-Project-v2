@@ -1067,6 +1067,7 @@ label choice1:
     menu:
 
         "{b}{i}Accepter le contrat{/i}{/b}":
+            play sound "Menu.mp3" noloop 
 
             $ renpy.block_rollback()
             $ success += 1
@@ -2239,6 +2240,7 @@ label choice2:
             menu:  
 
                 "{b}{i}Demander à Yuna ce que c'est{/i}{/b}" :
+                    play sound "Menu.mp3" noloop 
 
                     $ renpy.block_rollback()
 
@@ -2371,9 +2373,11 @@ label choice2:
                     menu:    
 
                         "{b}{i}Abandonner{/i}{/b}" :
+                            play sound "Menu.mp3" noloop 
                             return 
 
                         "{b}{i}Réessayer{/i}{/b}" :
+                            play sound "Menu.mp3" noloop 
 
                             P "Non [A] refuserait que j'abandonne si facilement."
                             play sound "Click.mp3" noloop
@@ -2386,6 +2390,7 @@ label choice2:
                             jump choice2 
 
                 "{b}{i}Retourner au dortoir{/i}{/b}" :
+                    play sound "Menu.mp3" noloop 
 
                     $ renpy.block_rollback()
 
@@ -2470,6 +2475,7 @@ label choice2:
                             play sound "Click.mp3" noloop
 
         "{b}{i}Travailler sur [A]{/i}{/b}" :
+            play sound "Menu.mp3" noloop 
 
             P "Je vais travailler sur ton amélioration." 
             play sound "Click.mp3" noloop
@@ -2532,7 +2538,8 @@ label choice3:
     menu:    
 
         "{b}{i}Choisir le Corzen 11{/i}{/b}" :
-            
+            play sound "Menu.mp3" noloop 
+
             $ renpy.block_rollback()
 
             P "Je vais vous prendre le Corzen 11. Je pense que se sera suffisant."
@@ -2645,9 +2652,11 @@ label choice3:
             menu:    
 
                 "{b}{i}Abandonner{/i}{/b}" :
+                    play sound "Menu.mp3" noloop 
                     return
                     
                 "{b}{i}Réessayer.{/i}{/b}" :
+                    play sound "Menu.mp3" noloop 
 
                     P "Non [A] refuserait que j'abandonne si facilement."
                     play sound "Click.mp3" noloop
@@ -2660,6 +2669,7 @@ label choice3:
                     jump choice3
 
         "{b}{i}Choisir le Corzen 11K{/i}{/b}" :
+            play sound "Menu.mp3" noloop 
 
             $ renpy.block_rollback()
 
@@ -3259,11 +3269,13 @@ label choice6:
     menu:    
 
         "{b}{i} Refuser {/i}{/b}" :  
+            play sound "Menu.mp3" noloop 
 
             "{b}{i}Tu refuses l'accès à cette adresse IP.{/i}{/b}"
             play sound "Click.mp3" noloop
 
         "{b}{i} Accepter {/i}{/b}" :  
+            play sound "Menu.mp3" noloop 
 
             "{b}{i} Tu acceptes la connexion mais [newname] agit bizarrement.{/i}{/b}"
             play music "gameover.mp3" noloop
@@ -3279,9 +3291,11 @@ label choice6:
             menu:    
 
                 "{b}{i}Abandonner{/i}{/b}" :
+                    play sound "Menu.mp3" noloop 
                     return
                     
                 "{b}{i}Réessayer{/i}{/b}" : 
+                    play sound "Menu.mp3" noloop 
 
                     P "Non [newname] refuserait que j'abandonne si facilement."
                     play sound "Click.mp3" noloop
@@ -4520,6 +4534,7 @@ label studentmode:
     menu:    
 
         "{b}{i}aller réviser en permanence{/i}{/b}" : 
+            play sound "Menu.mp3" noloop 
 
             P "aller en salle de permanence pour réviser."
             play sound "Footsteps.mp3" noloop 
@@ -4739,9 +4754,12 @@ label studentmode:
                 menu:    
 
                     "{b}{i}Retourner au menu principal.{/i}{/b}" :
+                        play sound "Menu.mp3" noloop 
                         return
                         
                     "{b}{i}Réessayer.{/i}{/b}" : 
+                        play sound "Menu.mp3" noloop 
+
                         scene clubroom with fade 
                         show screen clubroom with moveinright
                         show screen points with moveinleft
@@ -5533,6 +5551,8 @@ label choice8:
     menu:    
 
         "{b}{i} Pâtes carbonara {/i}{/b}" :
+            play sound "Menu.mp3" noloop 
+
             $ points -= 600
 
     $ service = get_random_service()
@@ -5752,9 +5772,11 @@ label choice8:
         menu:    
 
             "{b}{i}Abandonner{/i}{/b}" :
+                play sound "Menu.mp3" noloop 
                 return 
                 
             "{b}{i}Réessayer.{/i}{/b}" :
+                play sound "Menu.mp3" noloop 
 
                 P "Non [newname] refuserait que j'abandonne si facilement."
                 play sound "Click.mp3" noloop
@@ -6313,6 +6335,7 @@ label choice8:
     menu:    
 
         "{b}{i} Accepter les documents.{/i}{/b}" :
+            play sound "Menu.mp3" noloop 
 
             $ renpy.block_rollback()
 
@@ -6372,6 +6395,7 @@ label choice8:
             play sound "Click.mp3" noloop 
 
         "{b}{i} Refuser les documents. {/i}{/b}" : 
+            play sound "Menu.mp3" noloop 
 
             $ renpy.block_rollback()
 
@@ -6751,6 +6775,7 @@ label choice8:
     menu: 
 
         "{b}{i} Refuser la mise à jour {/i}{/b}" :
+            play sound "Menu.mp3" noloop 
 
             $ renpy.block_rollback()
             $ Na = Character('[newname] [nom]', color="#0066ff")
@@ -6763,6 +6788,7 @@ label choice8:
             play sound "Click.mp3" noloop 
         
         "{b}{i} faire la mise à jour {/i}{/b}" : 
+            play sound "Menu.mp3" noloop 
         
             $ renpy.block_rollback()
 
@@ -8363,7 +8389,8 @@ label suite:
     menu:    
 
         "{b}{i} Accepter [S]{/i}{/b}" :
-    
+            play sound "Menu.mp3" noloop 
+
             $ renpy.block_rollback()
             $ success += 1
             $ quest11 += 1
@@ -8428,6 +8455,7 @@ label suite:
             play sound "Click.mp3" noloop 
 
         "{b}{i} Refuser [S]{/i}{/b}" : 
+            play sound "Menu.mp3" noloop 
 
             $ renpy.block_rollback()
 
@@ -8726,6 +8754,7 @@ label debate:
     menu:
 
         "{b}{i}Ils peuvent aider dans les cours{/i}{/b}":
+            play sound "Menu.mp3" noloop 
 
             $ renpy.block_rollback()
 
@@ -8750,6 +8779,7 @@ label debate:
             jump debate_failed
 
         "{b}{i}Ils sont utiles dans plusieurs domaines{/i}{/b}":
+            play sound "Menu.mp3" noloop 
 
             P "OBJECTION !"
             play sound "Click.mp3" noloop 
@@ -8766,6 +8796,7 @@ label debate:
             menu:
 
                 "{b}{i}Dans le domaine militaire{/i}{/b}":
+                    play sound "Menu.mp3" noloop 
 
                     $ renpy.block_rollback()
 
@@ -8784,6 +8815,7 @@ label debate:
                     jump debate_failed
 
                 "{b}{i}Dans l’administration{/i}{/b}":
+                    play sound "Menu.mp3" noloop 
 
                     $ renpy.block_rollback()
 
@@ -8796,6 +8828,7 @@ label debate:
                     menu:
 
                         "{b}{i}Répondre sur l’emploi{/i}{/b}":
+                            play sound "Menu.mp3" noloop 
 
                             P "Bonne question. En réalité, on ne perd pas des emplois, on en crée de nouveaux."
                             play sound "Click.mp3" noloop 
@@ -8812,6 +8845,7 @@ label debate:
                             menu:
 
                                 "{b}{i}Contester et nuancer{/i}{/b}":
+                                    play sound "Menu.mp3" noloop 
 
                                     P "Les modèles les plus avancés sont capables d'apprendre, d'adapter leur comportement, voire de développer une forme de conscience artificielle contrôlée."
                                     play sound "Click.mp3" noloop 
@@ -8839,6 +8873,7 @@ label debate:
                                     menu:
 
                                         "{b}{i}Expliquer au tableau{/i}{/b}":
+                                            play sound "Menu.mp3" noloop 
 
                                             $ renpy.block_rollback()
 
@@ -8854,6 +8889,7 @@ label debate:
                                             jump debate_failed
 
                                         "{b}{i}Pointer [newname]{/i}{/b}":
+                                            play sound "Menu.mp3" noloop 
 
                                             P "[newname] ici présent(e) incarne parfaitement les arguments que j’ai avancés."
                                             play sound "Click.mp3" noloop 
@@ -8896,9 +8932,11 @@ label debate_failed:
     menu:
 
         "{b}{i}Abandonner{/i}{/b}":
+            play sound "Menu.mp3" noloop 
             return
 
         "{b}{i}Réessayer{/i}{/b}":
+            play sound "Menu.mp3" noloop 
 
             P "Non [newname] refuserait que j'abandonne si facilement."
             play sound "Click.mp3" noloop
@@ -9570,7 +9608,8 @@ label debate_success:
     menu:    
 
         "{b}{i} Rattrapper mon retard en math.{/i}{/b}" :
-            
+            play sound "Menu.mp3" noloop 
+
             $ renpy.block_rollback()
 
             P "Bon je vais essayser de travailler un peu..."
@@ -9624,7 +9663,8 @@ label debate_success:
             play sound "Click.mp3" noloop 
 
         "{b}{i} Se reposer {/i}{/b}" : 
-            
+            play sound "Menu.mp3" noloop 
+
             $ success += 1 
             $ quest14 += 1
 
@@ -10564,6 +10604,7 @@ label code:
     play sound "Menu.mp3" noloop 
 
     menu: 
+
         "{b}{i} Compiler le code.{/i}{/b}" :
             play sound "Menu.mp3" noloop 
 
@@ -10980,9 +11021,11 @@ label update:
             menu:
 
                 "{b}{i}Abandonner{/i}{/b}":
+                    play sound "Menu.mp3" noloop 
                     return
                     
                 "{b}{i}Réessayer.{/i}{/b}":
+                    play sound "Menu.mp3" noloop 
 
                     P "Non [newname] refuserait que j'abandonne si facilement."
                     play sound "Click.mp3" noloop
@@ -11069,6 +11112,7 @@ label update:
     menu:    
 
         "{b}{i} Réveiller [I] {/i}{/b}" : 
+            play sound "Menu.mp3" noloop 
 
             $ renpy.block_rollback()
 
@@ -11157,6 +11201,7 @@ label update:
             show screen hall with moveinright 
             
         "{b}{i} La laisser dormir {/i}{/b}" : 
+            play sound "Menu.mp3" noloop 
 
             $ renpy.block_rollback()
 
@@ -11965,6 +12010,7 @@ label update:
 
         "{b}{i}[J1].{/i}{/b}" :
             play sound "Menu.mp3" noloop 
+
             $ suspect = "Ayano"
  
             P "Je pense que c'est [J1]."
@@ -15094,9 +15140,11 @@ label examen_pythagore:
         menu:    
 
             "{b}{i}Abandonner{/i}{/b}" :
+                play sound "Menu.mp3" noloop 
                 return
                 
             "{b}{i}Réessayer.{/i}{/b}" :
+                play sound "Menu.mp3" noloop 
 
                 P "Non [newname] refuserait que j'abandonne si facilement."
                 play sound "Click.mp3" noloop
@@ -18066,6 +18114,7 @@ label password8:
     menu: 
 
         "{b}{i} Refuser la mise à jour {/i}{/b}" :
+            play sound "Menu.mp3" noloop 
 
             $ renpy.block_rollback()
             $ Na = Character('[newname] [nom]', color="#0066ff")
@@ -18077,6 +18126,7 @@ label password8:
             play sound "Click.mp3" noloop
 
         "{b}{i} faire la mise à jour {/i}{/b}" : 
+            play sound "Menu.mp3" noloop 
         
             $ renpy.block_rollback()
 
@@ -19235,9 +19285,11 @@ label password9:
         menu:    
 
             "{b}{i}Abandonner{/i}{/b}" :
+                play sound "Menu.mp3" noloop 
                 return
                 
             "{b}{i}Réessayer.{/i}{/b}" :
+                play sound "Menu.mp3" noloop 
 
                 P "Non [newname] refuserait que j'abandonne si facilement."
                 play sound "Click.mp3" noloop
@@ -19691,6 +19743,7 @@ label password9:
     menu:    
 
         "{b}{i} La perte de la mémoire.{/i}{/b}" :
+            play sound "Menu.mp3" noloop 
 
             $ renpy.block_rollback()
 
@@ -19705,6 +19758,7 @@ label password9:
             hide screen update with moveoutright
 
         "{b}{i} Le manque de connaissance.{/i}{/b}" : 
+            play sound "Menu.mp3" noloop 
 
             $ renpy.block_rollback() 
 
@@ -20612,6 +20666,7 @@ label password10:
     menu:    
 
         "{b}{i} Accepter l'interview {/i}{/b}" : 
+            play sound "Menu.mp3" noloop 
 
             $ renpy.block_rollback()
 
@@ -20696,6 +20751,7 @@ label password10:
             play sound "Footsteps.mp3" noloop 
 
         "{b}{i} refuser l'interview {/i}{/b}" : 
+            play sound "Menu.mp3" noloop 
 
             $ renpy.block_rollback()
 
@@ -20890,9 +20946,11 @@ label update1:
             menu:
 
                 "{b}{i}Abandonner{/i}{/b}":
+                    play sound "Menu.mp3" noloop 
                     return
                     
                 "{b}{i}Réessayer.{/i}{/b}":
+                    play sound "Menu.mp3" noloop 
 
                     P "Non [newname] refuserait que j'abandonne si facilement."
                     play sound "Click.mp3" noloop
