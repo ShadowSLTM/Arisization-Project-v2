@@ -15826,6 +15826,28 @@ label lockornot:
             "{b}{i}{/i}{/b}"
             play sound "Click.mp3" noloop
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+
             if pronom == "il":
 
                 P "Mince j'aurais dû être plus vigilant avec elle, mon projet est ruiné."
@@ -15897,36 +15919,47 @@ label lockornot:
     P "[nothing]"
     play sound "Click.mp3" noloop 
 
-    "{b}{i}[I] se met à rougir un peu.{/i}{/b}"
+    "{b}{i}[I] détourne le regard et ses joues rosissent légèrement.{/i}{/b}"
     play sound "Click.mp3" noloop  
 
-    P "Est-ce que ça va ?"
-    play sound "Click.mp3" noloop
+    P "Hé... ça va ?"
+    play sound "Click.mp3" noloop  
 
-    I "Oui ça va."
-    play sound "Click.mp3" noloop
+    I "O-oui, ça va..."
+    play sound "Click.mp3" noloop  
 
-    P "Tu rougis, tu aurais pas un petit faible pour [newname] ?"
-    play sound "Click.mp3" noloop
+    P "Tu rougis... Ne me dis pas que tu as un petit faible pour [newname] ?"
+    play sound "Click.mp3" noloop  
 
-    I "Non, pas du tout !"
-    play sound "Click.mp3" noloop
+    I "Quoi ?! N-non, pas du tout !"
+    play sound "Click.mp3" noloop  
 
-    I "Je ne sais pas de quoi tu parles."
-    play sound "Click.mp3" noloop
+    I "Je... je ne vois pas de quoi tu parles."
+    play sound "Click.mp3" noloop  
 
-    P "Tu es sûre ?"
-    play sound "Click.mp3" noloop
+    P "Tu es sûre de toi ?"
+    play sound "Click.mp3" noloop  
 
-      
+    I "Oui... enfin..."
+    play sound "Click.mp3" noloop  
 
+    P "Allez, dis-moi la vérité."
+    play sound "Click.mp3" noloop  
 
+    I "...D’accord. J’admets... j’ai un faible pour elle."
+    play sound "Click.mp3" noloop  
 
+    P "Vraiment ?"
+    play sound "Click.mp3" noloop  
 
+    I "Oui, vraiment."
+    play sound "Click.mp3" noloop  
 
+    P "Je comprends..."
+    play sound "Click.mp3" noloop  
 
-    I "Bon moi je vais me coucher."
-    play sound "Click.mp3" noloop
+    I "Bon... moi je vais aller me coucher, bonne nuit."
+    play sound "Click.mp3" noloop  
 
     P "D'accord, repose-toi bien !"
     play sound "Click.mp3" noloop
@@ -15936,6 +15969,9 @@ label lockornot:
 
     P "Bonne nuit Yuna !"
     play sound "Click.mp3" noloop
+
+    "{b}{i}Tu pars te coucher tranquillement.{/i}{/b}"
+    play sound "Click.mp3" noloop  
 
     hide screen day with moveoutleft
     hide screen clubroom with moveoutright
@@ -15972,6 +16008,48 @@ label lockornot:
 
         "{b}{i} Démarrer [newname].{/i}{/b}" :
             play sound "Menu.mp3" noloop 
+
+label password30:  
+
+    $ entered_password = renpy.input("Veuillez entrer votre mot de passe pour [newname].")
+    $ entered_password = entered_password.strip()
+
+    if entered_password == stored_password: 
+
+        "{b}{i}Mot de passe correct. Accès autorisé.{/i}{/b}"
+        play sound "Menu.mp3" noloop
+
+    else: 
+
+        "{b}{i}Mot de passe incorrect. Accès refusé.{/i}{/b}" 
+        play sound "Menu.mp3" noloop
+
+        jump password230
+
+    $ start = get_random_start()
+    "{b}{i}[start]{/i}{/b}"
+    play sound "Click.mp3" noloop 
+
+    Na "Démarrage terminé, Bonjour [P]."
+    play sound "Click.mp3" noloop 
+
+    $ comment_ca_va = get_random_comment_ca_va()
+    P "[comment_ca_va]"
+    play sound "Click.mp3" noloop
+
+    $ je_vais_bien_txt = get_random_je_vais_bien() 
+    Na "[je_vais_bien_txt] Et toi ?" 
+    play sound "Click.mp3" noloop
+
+    $ je_vais_bien_txt = get_random_je_vais_bien() 
+    P "[je_vais_bien_txt]"
+    play sound "Click.mp3" noloop
+
+    Na "Cool alors."
+    play sound "Click.mp3" noloop  
+
+    
+    
 
 
     label end_script2:
