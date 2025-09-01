@@ -188,7 +188,10 @@ init python:
     Nothing_list = [
         "De rien.",
         "Mais de rien.",
+        "Pas de problème.",
+        "Il n'y a pas de souci.",
         "Pas de souci.",
+        "Il n'y a pas de quoi.",
         "Pas de quoi.",
     ]
 

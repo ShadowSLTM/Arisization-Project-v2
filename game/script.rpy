@@ -1606,7 +1606,7 @@ label choice1:
     A "[nothing]" 
     play sound "Click.mp3" noloop
 
-#fin des présentations des élèves
+#fin des présentations des élèves 
 
     T "Donc les présentations sont terminées je vais me présenter à mon tour."
     play sound "Click.mp3" noloop 

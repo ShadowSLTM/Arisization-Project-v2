@@ -15823,32 +15823,16 @@ label lockornot:
                 "{b}{i} Démarrer [newname].{/i}{/b}" :
                     play sound "Menu.mp3" noloop 
 
-            "{b}{i}{/i}{/b}"
+            "{b}{i}Mais [newname] refuse de démarrer.{/i}{/b}"
             play sound "Click.mp3" noloop
 
+            P "Il se passe quoi encore !?"
+            play sound "Click.mp3" noloop 
 
+            "{b}{i}Tu regardes un peu plus et tu réalises que [newname] a été sabotée{/i}{/b}"
+            play sound "Click.mp3" noloop
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            
-
-            if pronom == "il":
+            if pronom == "il": 
 
                 P "Mince j'aurais dû être plus vigilant avec elle, mon projet est ruiné."
                 play music "gameover.mp3" noloop
@@ -16048,8 +16032,176 @@ label password30:
     Na "Cool alors."
     play sound "Click.mp3" noloop  
 
+    "{b}{i}Vous regardez dans les alentours et vous voyez [I] encore endormie.{/i}{/b}"
+    play sound "Click.mp3" noloop 
+
+    Na "Oh elle est encore endormie..."
+    play sound "Click.mp3" noloop 
+
+    P "Oui je vois bien ça." 
+    play sound "Click.mp3" noloop 
+
+    Na "Elle est trop mignonne quand elle dort."
+    play sound "Click.mp3" noloop 
+
+    P "Tu trouves vraiment qu'elle est mignonne ?"
+    play sound "Click.mp3" noloop 
+
+    Na "Oui vraiment."
+    play sound "Click.mp3" noloop 
+
+    P "Tu es vraiment sûre de ça ?"
+    play sound "Click.mp3" noloop 
+
+    Na "Oui, je suis sûre."
+    play sound "Click.mp3" noloop 
+
+    P "Bon on range un peu la salle de club ?"
+    play sound "Click.mp3" noloop 
+
+    $ validation = get_random_validation() 
+    Na "[validation]"
+    play sound "Click.mp3" noloop 
+
+    "{b}{i}Vous rangez un peu la salle de club.{/i}{/b}"
+    play sound "Click.mp3" noloop 
+
+    Na "C'est bon, on a fini de ranger."
+    play sound "Click.mp3" noloop 
+
+    P "Oui, c'est vrai."
+    play sound "Click.mp3" noloop
+
+    Na "Bon on fait quoi maintenant ?"
+    play sound "Click.mp3" noloop
+
+    $ go_eat = get_random_go_eat()
+    P "[go_eat]"
+    play sound "Click.mp3" noloop 
+
+    Na "tu veux pas attendre Yuna pour qu'on mange ensemble ?"
+    play sound "Click.mp3" noloop 
+
+    P "Oui c'est une bonne idée."
+    play sound "Click.mp3" noloop 
+
+    "{b}{i}Vous vous posez un peu le temps que Yuna se réveille.{/i}{/b}"
+    play sound "Click.mp3" noloop 
+
+    "{b}{i}Une demi-heure plus tard.{/i}{/b}"
+    play sound "Click.mp3" noloop 
+
+    I "Mhmmm quelle heure est-il ?"
+    play sound "Click.mp3" noloop
+
+    Na "Il est 10h30 heures passée."
+    play sound "Click.mp3" noloop
+
+    if pronom == "il":
+
+        I "Sinon vous étes levés depuis quand ?"
+        play sound "Click.mp3" noloop
+
+        Na "On est levés depuis 9h."
+        play sound "Click.mp3" noloop
+
+    else: 
+
+        I "Sinon vous étes levées depuis quand ?"
+        play sound "Click.mp3" noloop
+  
+        Na "On est levées depuis 9h."
+        play sound "Click.mp3" noloop
+
+    I "Je vois, vous étes du genre matinal."
+    play sound "Click.mp3" noloop
+
+    P "Oui on peut dire ça."
+    play sound "Click.mp3" noloop
+
+    I "Je vais juste me changer."
+    play sound "Click.mp3" noloop
+
+    I "Je reviens tout de suite."
+    play sound "Click.mp3" noloop
+
+    $ validation = get_random_validation() 
+    Na "[validation]"
+    play sound "Click.mp3" noloop 
     
+    "{b}{i}[I] part se changer.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    Na "J'espére qu'elle ne va pas trop long car j'ai faim."
+    play sound "Click.mp3" noloop
+
+    P "Oui je l'espére aussi."
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Dix minutes plus tard, [I] finit par revenir.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    I "Désolée pour l'attente."
+    play sound "Click.mp3" noloop
+
+    Na "Il n'y a pas de souci."
+    play sound "Click.mp3" noloop
+
+    P "Bien et si nous allions manger ?"
+    play sound "Click.mp3" noloop
+
+    I "Oui je suis d'accord j'ai faim aussi"
+    play sound "Click.mp3" noloop
+
+    Na "D'accord je vous suis."
+    play sound "Footsteps.mp3" noloop
+
+    hide screen day with moveoutleft
+    hide screen clubroom with moveoutright 
+    hide screen points with moveoutleft
+    scene black with fade 
+
+    "{b}{i} Vous partez chercher à manger avant de revenir.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    $ points -= 300 
+
+    scene clubroom with fade 
+    show screen day with moveinleft
+    show screen room with moveinright
+    show screen points with moveinleft
+
+    P "Enfin à manger... "
+    play sound "Click.mp3" noloop 
+
+    $ bien = get_random_fais_du_bien()
+    Na "[bien]"
+    play sound "Click.mp3" noloop  
+
+    "{b}{i} Vous mangez tranquillement pendant une demi-heure.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    P "Vous avez fini de manger ?"
+    play sound "Click.mp3" noloop
+
+    Na "Oui, je n'ai plus faim."
+    play sound "Click.mp3" noloop 
+
+    I "ça m'a fait vraiment plaisir de manger avec vous comme d'habitude."
+    play sound "Click.mp3" noloop  
+
+    P "Oui moi aussi."
+    play sound "Click.mp3" noloop
+
+    Na "Bon on fait quoi maintenant ?"
+    play sound "Click.mp3" noloop
+
+    I ""
+    play sound "Click.mp3" noloop
+
     
+
+
 
 
     label end_script2:
