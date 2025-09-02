@@ -3,32 +3,32 @@
 While running game code:
   File "renpy/common/00start.rpy", line 244, in script call
     call _splashscreen from _call_splashscreen_1
-  File "game/security.rpy", line 123, in script
-    scene black with Dissolve
-Exception: Expected transition to return a displayable, not a <partial <class 'renpy.display.transition.Dissolve'> () {'old_widget': <renpy.display.layout.Fixed object at 0x00000000082fe760>, 'new_widget': <renpy.display.layout.Fixed object at 0x00000000082fe7c0>}>
+  File "game/securityv2.rpy", line 110, in script
+    $ valid, message = security_check()
+  File "game/securityv2.rpy", line 110, in <module>
+    $ valid, message = security_check()
+  File "game/securityv2.rpy", line 66, in security_check
+    debug_messages.append(f"Chemin du jeu: '{os.path.dirname(os.path.abspath(__file__))}'")
+NameError: name '__file__' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
   File "renpy/common/00start.rpy", line 244, in script call
     call _splashscreen from _call_splashscreen_1
-  File "game/security.rpy", line 123, in script
-    scene black with Dissolve
-  File "C:\Users\Aris\Documents\renpy-8.3.7-sdk\renpy\ast.py", line 1374, in execute
-    renpy.exports.with_statement(trans, paired=paired)
-  File "C:\Users\Aris\Documents\renpy-8.3.7-sdk\renpy\exports\statementexports.py", line 257, in with_statement
-    return renpy.game.interface.do_with(trans, paired, clear=clear)
-  File "C:\Users\Aris\Documents\renpy-8.3.7-sdk\renpy\display\core.py", line 1581, in do_with
-    return self.interact(trans_pause=True,
-  File "C:\Users\Aris\Documents\renpy-8.3.7-sdk\renpy\display\core.py", line 2218, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
-  File "C:\Users\Aris\Documents\renpy-8.3.7-sdk\renpy\display\core.py", line 2669, in interact_core
-    trans = instantiate_transition(None, old_root, layers_root)
-  File "C:\Users\Aris\Documents\renpy-8.3.7-sdk\renpy\display\core.py", line 2583, in instantiate_transition
-    raise Exception("Expected transition to return a displayable, not a {!r}".format(trans))
-Exception: Expected transition to return a displayable, not a <partial <class 'renpy.display.transition.Dissolve'> () {'old_widget': <renpy.display.layout.Fixed object at 0x00000000082fe760>, 'new_widget': <renpy.display.layout.Fixed object at 0x00000000082fe7c0>}>
+  File "game/securityv2.rpy", line 110, in script
+    $ valid, message = security_check()
+  File "C:\Users\Aris\Documents\renpy-8.3.7-sdk\renpy\ast.py", line 834, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "C:\Users\Aris\Documents\renpy-8.3.7-sdk\renpy\python.py", line 1187, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/securityv2.rpy", line 110, in <module>
+    $ valid, message = security_check()
+  File "game/securityv2.rpy", line 66, in security_check
+    debug_messages.append(f"Chemin du jeu: '{os.path.dirname(os.path.abspath(__file__))}'")
+NameError: name '__file__' is not defined
 
 Windows-10-10.0.26100 AMD64
 Ren'Py 8.3.7.25031702
 Arisization Project Version_0.0.5
-Thu Aug 28 20:13:46 2025
+Tue Sep  2 18:00:23 2025

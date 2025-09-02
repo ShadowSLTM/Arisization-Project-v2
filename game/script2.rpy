@@ -584,7 +584,7 @@ label password11:
     play sound "Click.mp3" noloop 
 
     $ suivi = get_random_suivi()
-    P "[suivi]"
+    Na "[suivi]"
     play sound "Footsteps.mp3" noloop
 
     hide screen class_404 with moveoutright 
@@ -3753,7 +3753,7 @@ label password15:
     "{b}{i} Vous vous dirigez votre chemin vers la réfectoire.{/i}{/b}"
     play sound "Footsteps.mp3" noloop
 
-    hide screen hall with moveoutright
+    hide screen hallway with moveoutright
     hide screen points with moveoutleft
     hide screen day with moveoutleft
     scene staircase with fade
@@ -15842,7 +15842,7 @@ label lockornot:
                 P "Mince j'aurais dû être plus vigilante avec elle, mon projet est ruiné."
                 play music "gameover.mp3" noloop
 
-            hide screen clubroomroom with moveoutright
+            hide screen clubroom with moveoutright
             hide screen points with moveoutleft
             hide screen day with moveoutleft
             scene black with fade 
@@ -16187,7 +16187,7 @@ label password30:
     Na "Oui, je n'ai plus faim."
     play sound "Click.mp3" noloop 
 
-    I "ça m'a fait vraiment plaisir de manger avec vous comme d'habitude."
+    I "ça m'a fait vraiment plaisir de manger avec vous ce matin."
     play sound "Click.mp3" noloop  
 
     P "Oui moi aussi."
@@ -16196,16 +16196,245 @@ label password30:
     Na "Bon on fait quoi maintenant ?"
     play sound "Click.mp3" noloop
 
-    I ""
+    I "On pourrait peut-être faire une activité ensemble ?"
     play sound "Click.mp3" noloop
+
+    Na "Oui bonne idée ! Tu as quelque chose en tête ?"
+    play sound "Click.mp3" noloop
+
+    I "Et si on jouait aux cartes ? J'ai un jeu dans mon sac."
+    play sound "Click.mp3" noloop
+
+    P "Pourquoi pas, ça peut être sympa."
+    play sound "Click.mp3" noloop
+
+    Na "D'accord, on fait ça !"
+    play sound "Click.mp3" noloop
+
+    "{b}{i}[I] sort un jeu de cartes de son sac et vous vous installez autour d'une table.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    I "On joue à quoi ? Bataille ? Rami ?"
+    play sound "Click.mp3" noloop
+
+    Na "Bataille c'est simple et rapide."
+    play sound "Click.mp3" noloop
+
+    P "Parfait pour moi."
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Vous jouez à la bataille pendant une vingtaine de minutes dans une ambiance détendue.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    I "Haha j'ai gagné !"
+    play sound "Click.mp3" noloop
+
+    Na "Bravo ! Tu as eu de la chance avec tes cartes."
+    play sound "Click.mp3" noloop
+
+    P "Bien joué [I]."
+    play sound "Click.mp3" noloop
+
+    I "Merci ! On refait une partie ?"
+    play sound "Click.mp3" noloop
+
+    Na "Pourquoi pas, j'ai encore du temps."
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Vous entamez une deuxième partie qui dure encore quinze minutes.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    Na "Cette fois c'est moi qui gagne !"
+    play sound "Click.mp3" noloop
+
+    P "Bien joué [newname] !"
+    play sound "Click.mp3" noloop
+
+    I "Tu as eu ta revanche, félicitations !"
+    play sound "Click.mp3" noloop
+
+    Na "Merci les amis."
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Il est maintenant 11h30.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    I "Oh regardez l'heure, il est déjà 11h30."
+    play sound "Click.mp3" noloop
+
+    Na "Le temps passe vite quand on s'amuse."
+    play sound "Click.mp3" noloop
+
+    P "C'est vrai, on a encore une demi-heure avant midi."
+    play sound "Click.mp3" noloop
+
+    I "On pourrait peut-être écouter un peu de musique en discutant ?"
+    play sound "Click.mp3" noloop
+
+    Na "Bonne idée ! Tu as quelque chose à proposer ?"
+    play sound "Click.mp3" noloop
+
+    I "J'ai ma playlist sur mon téléphone."
+    play sound "Click.mp3" noloop
+
+    P "Vas-y, mets ce que tu veux."
+    play sound "Click.mp3" noloop
+
+    "{b}{i}[I] lance sa playlist et une musique douce commence à jouer.{/i}{/b}"
+    play music "Click.mp3" noloop
+
+    Na "J'aime bien cette chanson, c'est quoi ?"
+    play sound "Click.mp3" noloop
+
+    I "C'est un morceau de lo-fi que j'adore."
+    play sound "Click.mp3" noloop
+
+    P "Ça crée une bonne ambiance."
+    play sound "Click.mp3" noloop
+
+    Na "Oui c'est très relaxant."
+    play sound "Click.mp3" noloop
+
+    I "Au fait, vous avez prévu quoi pour cet après-midi ?"
+    play sound "Click.mp3" noloop
+
+    Na "Pas grand-chose pour le moment, et toi ?"
+    play sound "Click.mp3" noloop
+
+    P "Moi non plus, je suis libre."
+    play sound "Click.mp3" noloop
+
+    I "On pourrait peut-être rester ici et continuer à passer du temps ensemble ?"
+    play sound "Click.mp3" noloop
+
+    Na "Oui, on est bien dans la salle de club."
+    play sound "Click.mp3" noloop
+
+    P "C'est vrai, on est tranquilles ici."
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Vous continuez à discuter tranquillement en écoutant la musique.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Les minutes passent paisiblement.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    Na "Oh regardez, il est presque midi."
+    play sound "Click.mp3" noloop
+
+    I "Déjà ? Le temps a vraiment filé."
+    play sound "Click.mp3" noloop
+
+    P "C'était une excellente matinée."
+    play sound "Click.mp3" noloop
+
+    Na "Oui, j'ai passé un très bon moment avec vous."
+    play sound "Click.mp3" noloop
+
+    I "Moi aussi, merci pour ce moment."
+    play sound "Click.mp3" noloop
+
+    "{b}{i}L'horloge sonne midi.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    Na "Et voilà, il est midi pile."
+    play sound "Click.mp3" noloop
+
+    P "Parfait timing."
+    play sound "Click.mp3" noloop
+
+    I "Alors, on va manger ? J'ai de nouveau faim."
+    play sound "Click.mp3" noloop
+
+    Na "Moi aussi, le petit-déjeuner c'était il y a longtemps déjà."
+    play sound "Click.mp3" noloop
+
+    P "Bonne idée, allons chercher le déjeuner."
+    play sound "Click.mp3" noloop
+
+    $ suivi = get_random_suivi()
+    Na "[suivi]"
+    play sound "Footsteps.mp3" noloop
+
+    hide screen clubroom with moveoutright
+    hide screen points with moveoutleft
+    hide screen day with moveoutleft
+    scene black with fade 
+
+    "{b}{i} Vous sortez de la salle de club.{/i}{/b}"
+    play sound "Door.mp3" noloop
+
+    scene hall with fade
+    show screen day with moveinleft
+    show screen points with moveinleft
+    show screen hall with moveinright 
+
+    "{b}{i}Puis vous continuez vers le réfectoire.{/i}{/b}"
+    play sound "Footsteps.mp3" noloop
+
+    hide screen hall with moveinright
+    hide screen points with moveoutleft
+    hide screen day with moveoutleft
+    scene black with fade
+
+    "{b}{i} Vous arrivez enfin au réfectoire.{/i}{/b}"
+    play sound "Door.mp3" noloop
+
+    scene lunchroom with fade
+    show screen day with moveinleft
+    show screen points with moveinleft
+    show screen lunchroom with moveinright
+
+    $ find_food = get_random_find_food()
+    Na "[find_food]"
+    play sound "Click.mp3" noloop 
+
+    $ suivi = get_random_suivi()
+    P "[suivi]"
+    play sound "Footsteps.mp3" noloop
+
+    "{b}{i} Vous allez vers le comptoir pour prendre à manger.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    $ points -= 300 
+
+    $ service = get_random_service()
+    P "[service]"
+    play sound "Click.mp3" noloop 
+
+    $ sit = get_random_sit()
+    Na "[sit]"
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Vous vous installez à une table pour manger.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    P "Bonne appétit."
+    play sound "Click.mp3" noloop
+
+    I "Bonne appétit."
+    play sound "Click.mp3" noloop
+
+    Na "Bonne appétit à toi aussi."
+    play sound "Click.mp3" noloop
+
+    "{b}{i} Vous mangez tranquillement pendant que vous commencez à discuter.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    Na "Sinon vous voulez faire quoi cette aprés-midi ?"
+    play sound "Click.mp3" noloop 
+
+    I "Je ne sais pas trop à vrai dire et vous ?"
+    play sound "Click.mp3" noloop 
 
     
 
 
 
 
+
     label end_script2:
-    call script3
+    call script3 from _call_script3
     return
 
 # Aris la plus belle ################### 

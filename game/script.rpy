@@ -21038,5 +21038,5 @@ label update1:
     play sound "Click.mp3" noloop
 
 label end_script:
-    call script2
+    call script2 from _call_script2
     return 

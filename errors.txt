@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/screens.rpy", line 290: 'with' is not a keyword argument or valid child of the screen statement.
-    with fade
-        ^
+File "game/screens.rpy", line 1932: 'b' is not a keyword argument or valid child of the text statement.
+    text _("Arisization Project (The Realization Project of Aris) appartient à [Dc] (Shadow_SLTM)\n")      b  v     
+                                                                                                            ^
 
 Ren'Py Version: Ren'Py 8.3.7.25031702
-Thu Aug 28 20:27:38 2025
+Tue Sep  2 14:57:43 2025

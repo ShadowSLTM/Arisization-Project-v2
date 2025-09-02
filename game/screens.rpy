@@ -1929,7 +1929,7 @@ screen credit():
 
             label "{b}{i}— Propriété —\n{/i}{/b}"   
 
-            text _("Arisization Project (The Realization Project of Aris) appartient à [Dc] (Shadow_SLTM)\n")      b  v     
+            text _("Arisization Project (The Realization Project of Aris) appartient à [Dc] (Shadow_SLTM)\n")        
 
             text _("Éditeur : SLTM\n") 
 
