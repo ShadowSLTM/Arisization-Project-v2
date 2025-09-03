@@ -12463,8 +12463,6 @@ label password25:
     Na "Je veux essayer le jeu Watch Dogs que j'ai vu sur internet, regardes la page du jeu."
     play sound "Click.mp3" noloop 
 
-    $ renpy.open_url("https://store.steampowered.com/app/243470/Watch_Dogs/")
-
     P "Oui pourquoi pas, en plus il pousse ta réflexion sans être trop complexe comme Nocture core."
     play sound "Click.mp3" noloop
 
@@ -16427,8 +16425,259 @@ label password30:
     I "Je ne sais pas trop à vrai dire et vous ?"
     play sound "Click.mp3" noloop 
 
-    
+    P "On pourrait retenter de rejouer à Nocture core."
+    play sound "Click.mp3" noloop
 
+    Na "Je refuse catégoriquement de rejouer à Nocture core."
+    play sound "Click.mp3" noloop
+
+    P "Je vois, on pourra faire autre chose."
+    play sound "Click.mp3" noloop
+
+    I "Je pense que Nocture core l'a vraiment fatigué."
+    play sound "Click.mp3" noloop
+
+    Na "Oui c'est vrai."
+    play sound "Click.mp3" noloop
+
+    P "Je comprends, faisons autre chose."
+    play sound "Click.mp3" noloop
+
+    I "Alors, qu'est-ce que vous voulez faire ?"
+    play sound "Click.mp3" noloop
+
+    P "Je ne sais pas trop, vous avez des idées ?"
+    play sound "Click.mp3" noloop
+
+    Na "Moi je vais lire cette après-midi en tout cas."
+    play sound "Click.mp3" noloop
+
+    P "Je vois et toi Yuna ?"
+    play sound "Click.mp3" noloop
+
+    I "Je vais probablement faire un peu de programmation."
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Les filles se mettent à te regarder.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    P "Il y a quoi encore !?"
+    play sound "Click.mp3" noloop
+
+    Na "Tu vas faire quoi cette après-midi ?"
+    play sound "Click.mp3" noloop 
+
+    P "Comme je vous l'ai dit je ne sais pas encore."
+    play sound "Click.mp3" noloop
+
+    I "Ok il n'y a pas de soucis, tu as le temps de réfléchir."
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Vous continuez de discuter.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    Na "Bon je vais vous laisser, je vais à la bibliothèque."
+    play sound "Click.mp3" noloop
+
+    $ validation = get_random_validation() 
+    P "[validation]"
+    play sound "Click.mp3" noloop 
+
+    I "Moi aussi je vais dans ma chambre pour faire de la programmation."
+    play sound "Click.mp3" noloop
+
+    $ validation = get_random_validation()
+    P "[validation]"
+    play sound "Click.mp3" noloop
+
+    Na "A toute à l'heure [prenom]."
+    play sound "Click.mp3" noloop
+
+    P "A toute à l'heure [newname]."
+    play sound "Click.mp3" noloop
+
+    I "On se revoit à la salle de club pour continuer notre soirée."
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Les filles finissent par quitter le réfectoire.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    P "Bon je vais yaller aussi, je ne vais pas rester sans rien faire."
+    play sound "Click.mp3" noloop 
+
+    "{b}{i}Tu te léves pour partir.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    hide screen lunchroom with moveoutright
+    hide screen points with moveoutleft
+    hide screen day with moveoutleft
+    scene black with fade 
+
+    "{b}{i}Tu sors du réfectoire.{/i}{/b}"
+    play sound "Door.mp3" noloop
+
+    scene hall with fade
+    show screen day with moveinleft
+    show screen points with moveinleft
+    show screen hall with moveinright
+
+    P "Bon je fais quoi maintenant ?"
+    play sound "Menu.mp3" noloop
+
+    show screen freetime with moveinright
+
+    "{b}{i}Tu disposes maintenant de temps libre pour faire ce que tu veux.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    hide screen freetime with moveoutright
+
+    menu:   
+
+        "{b}{i}Aller à la bibliothèque.{/i}{/b}" :
+            play sound "Menu.mp3" noloop 
+
+            P "Je pense que je vais aller à la bibliothèque pour changer."
+            play sound "Click.mp3" noloop
+
+            "{b}{i}Tu continues vers la bibliothèque.{/i}{/b}"
+            play sound "Footsteps.mp3" noloop
+
+            hide screen hall with moveoutright
+            hide screen points with moveoutleft
+            hide screen day with moveoutleft
+            scene black with fade
+
+            "{b}{i}Tu entres dans la bibliothèque.{/i}{/b}"
+            play sound "Footsteps.mp3" noloop
+
+            scene library with fade 
+            show screen day with moveinleft
+            show screen points with moveinleft
+            show screen library with moveinright 
+
+            if pronom == "il":
+        
+                P "Enfin arrivé."
+                play sound "Click.mp3" noloop 
+
+            else:
+
+                P "Enfin arrivée."
+                play sound "Click.mp3" noloop 
+
+            "{b}{i}Tu regardes un peu et tu aperçois [newname] en train de lire.{/i}{/b}"
+            play sound "Click.mp3" noloop
+
+             
+
+
+
+        "{b}{i}Aller au dortoir.{/i}{/b}" :
+            play sound "Menu.mp3" noloop 
+
+            "{b}{i}Tu continues vers les escaliers.{/i}{/b}"
+            play sound "Footsteps.mp3" noloop
+
+            hide screen hall with moveoutright
+            hide screen points with moveoutleft
+            hide screen day with moveoutleft
+            scene staircase with fade
+
+            "{b}{i}Vous continuez vers le couloir.{/i}{/b}"
+            play sound "Footsteps.mp3" noloop
+
+            scene hallway with fade 
+            show screen day with moveinleft
+            show screen points with moveinleft
+            show screen hallway with moveinright 
+
+            "{b}{i}Tu continues vers le dortoir.{/i}{/b}"
+            play sound "Footsteps.mp3" noloop
+
+            hide screen hallway with moveoutright
+            hide screen points with moveoutleft
+            hide screen day with moveoutleft
+            scene black with fade
+
+            "{b}{i}Tu entres dans ton dortoir.{/i}{/b}"
+            play sound "Door.mp3" noloop
+
+            scene room with fade 
+            show screen day with moveinleft
+            show screen points with moveinleft
+            show screen room with moveinright 
+
+            $ dortoir = get_random_dortoir()
+            P "[dortoir]"
+            play sound "Click.mp3" noloop
+
+            P "Bon je vais lire un peu mon livre que j'avais pas fini."
+            play sound "Click.mp3" noloop 
+
+            "{b}{i}Tu te poses tranquillement sur ton lit pour lire.{/i}{/b}"
+            play sound "Click.mp3" noloop
+
+            P "Bon ou j'en étais déjà ?"
+            play sound "Click.mp3" noloop 
+
+            "{b}{i}.{/i}{/b}"
+            play sound "Click.mp3" noloop
+      
+
+
+
+
+
+
+
+
+
+        "{b}{i}Aller voir [I].{/i}{/b}" :
+            play sound "Menu.mp3" noloop 
+
+            "{b}{i}Tu continues vers les escaliers.{/i}{/b}"
+            play sound "Footsteps.mp3" noloop
+
+            hide screen hall with moveoutright
+            hide screen points with moveoutleft
+            hide screen day with moveoutleft
+            scene staircase with fade
+
+            "{b}{i}Vous continuez vers le couloir.{/i}{/b}"
+            play sound "Footsteps.mp3" noloop
+
+            scene hallway with fade 
+            show screen day with moveinleft
+            show screen points with moveinleft
+            show screen hallway with moveinright 
+
+            "{b}{i}Tu te diriges vers le dortoir d'[I] avant d'y parvenir.{/i}{/b}"
+            play sound "Click.mp3" noloop  
+
+            P "Bon....."
+            play sound "Knock.mp3" noloop 
+
+            "{b}{i}Tu frappes à la porte d'[I] et patientes puis elle t'ouvre la porte.{/i}{/b}"
+            play sound "Door.mp3" noloop  
+
+            I "Oh c'est toi [prenom], vas-y entres." 
+            play sound "Click.mp3" noloop  
+
+            P "Merci."
+            play sound "Click.mp3" noloop  
+
+            hide screen hallway with moveoutright 
+            hide screen points with moveoutleft
+            hide screen day with moveoutleft
+            scene black with fade
+
+            "{b}{i}Tu entres dans son dortoir.{/i}{/b}"
+            play sound "Door.mp3" noloop  
+
+            scene room with fade
+            show screen day with moveinleft
+            show screen points with moveinleft
+            show screen Yunaroom with moveinright
 
 
 

@@ -1747,6 +1747,16 @@ screen day():
             size 30
             xalign 0.5 
 
+screen freetime():
+    frame: 
+        xalign 0
+        ypos 60
+        has vbox  
+
+        text "Temps libre":
+            size 30
+            xalign 0.5 
+
 screen draw():
     frame:
         yalign 0.3
