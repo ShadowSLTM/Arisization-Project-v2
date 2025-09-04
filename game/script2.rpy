@@ -14213,7 +14213,7 @@ label choice10:
     N "Oui dis-moi, je t'écoute."
     play sound "Click.mp3" noloop 
 
-    if persistent.endgame == False:
+    if persistent.endgame == True:
 
         P "Tu sais ce que [Y] fait de ses journées ?"   
         play sound "Glitch.mp3" noloop 
@@ -16483,7 +16483,7 @@ label password30:
     P "[validation]"
     play sound "Click.mp3" noloop 
 
-    I "Moi aussi je vais dans ma chambre pour faire de la programmation."
+    I "Moi aussi je vais dans mon dortoir pour faire de la programmation."
     play sound "Click.mp3" noloop
 
     $ validation = get_random_validation()
@@ -16568,7 +16568,380 @@ label password30:
             "{b}{i}Tu regardes un peu et tu aperçois [newname] en train de lire.{/i}{/b}"
             play sound "Click.mp3" noloop
 
-             
+            menu:   
+
+                "{b}{i}Aller voir [newname].{/i}{/b}" :
+                    play sound "Menu.mp3" noloop 
+
+                    P "Je vais aller la voir."
+                    play sound "Click.mp3" noloop 
+
+                    "{b}{i}Tu vas aller voir [newname].{/i}{/b}"
+                    play sound "Click.mp3" noloop
+
+                    P "Salut [newname], tu lis quoi ?"
+                    play sound "Click.mp3" noloop
+
+                    Na "Oh salut [prenom], je lis un roman de science-fiction."
+                    play sound "Click.mp3" noloop
+
+                    P "Ah intéressant."
+                    play sound "Click.mp3" noloop
+
+                    Na "Oui c'est vraiment captivant."
+                    play sound "Click.mp3" noloop
+
+                    "{b}{i}Tu t'asseoit à côté d'elle pour lire ton livre.{/i}{/b}"
+                    play sound "Click.mp3" noloop
+
+                    P "Je vais lire un peu mon livre que j'avais pas fini."
+                    play sound "Click.mp3" noloop
+
+                    "{b}{i}Tu te poses tranquillement pour lire.{/i}{/b}"
+                    play sound "Click.mp3" noloop
+
+                    P "Bon ou j'en étais déjà ?"
+                    play sound "Click.mp3" noloop
+
+                    P "Ah oui..."
+                    play sound "Click.mp3" noloop
+
+                    "{b}{i}Tu lis pendant deux heures.{/i}{/b}"
+                    play sound "Click.mp3" noloop
+
+                    P "J'ai presque fini de lire, je finirai le dernier chapitre ce soir."
+                    play sound "Click.mp3" noloop
+
+                    "{b}{i}Tu finis par ranger ton livre.{/i}{/b}"
+                    play sound "Click.mp3" noloop
+
+                    $ godorm = get_random_return_dorm()
+                    P "[godorm]"
+                    play sound "Click.mp3" noloop
+
+                    $ suivi = get_random_suivi()
+                    Na "[suivi]"
+                    play sound "Footsteps.mp3" noloop
+
+                    hide screen library with moveoutright
+                    hide screen points with moveoutleft
+                    hide screen day with moveoutleft
+                    scene black with fade
+
+                    "{b}{i}Vous quittez la bibliothèque.{/i}{/b}"
+                    play sound "Door.mp3" noloop 
+
+                    scene hall with fade
+                    show screen day with moveinleft
+                    show screen points with moveinleft
+                    show screen hall with moveinright
+
+                    "{b}{i}Vous continuez vers les escaliers.{/i}{/b}"
+                    play sound "Footsteps.mp3" noloop
+
+                    hide screen hall with moveoutright
+                    hide screen points with moveoutleft
+                    hide screen day with moveoutleft
+                    scene staircase with fade 
+
+                    "{b}{i}Vous montez au premier étage.{/i}{/b}"
+                    play sound "Footsteps.mp3" noloop
+
+                    scene hallway with fade 
+                    show screen day with moveinleft
+                    show screen points with moveinleft
+                    show screen hallway with moveinright
+
+                    "{b}{i}Vous apercevez [I] dans le couloir.{/i}{/b}"
+                    play sound "Click.mp3" noloop
+
+                    if pronom == "il":
+        
+                        I "Oh Salut les amis."
+                        play sound "Click.mp3" noloop 
+
+                    else:
+
+                        I "Oh salut les amies."
+                        play sound "Click.mp3" noloop 
+
+                    P "Salut."
+                    play sound "Click.mp3" noloop
+
+                    Na "Salut."
+                    play sound "Click.mp3" noloop
+
+                    P "Tu faisais quoi ici, je croyais que tu étais à ton dortoir."
+                    play sound "Click.mp3" noloop
+
+                    I "J'y étais mais je suis juste passée aux toilettes."
+                    play sound "Click.mp3" noloop
+
+                    P "Ah ok je vois."
+                    play sound "Click.mp3" noloop
+
+                    I "Sinon j'ai croisé Yuki avec un livre."
+                    play sound "Click.mp3" noloop
+
+                    P "Un livre et c'était quoi comme livre ?"
+                    play sound "Click.mp3" noloop
+
+                    if persistent.endgame == True:
+
+                        I "C'était un livre qui se nommait {b}Comment réparer...{/b} mais je n'arrivais pas à lire la suite." 
+                        play sound "Click.mp3" noloop
+
+                    else: 
+
+                        I "C'était un livre qui se nommait {b}Comment briser...{/b} mais je n'arrivais pas à lire la suite."
+                        play sound "Click.mp3" noloop 
+
+                    P "Je vois mais je me demande pourquoi elle a ce livre."
+                    play sound "Click.mp3" noloop fadein
+
+                    I "Je ne sais pas trop, peut-être qu'elle s'intéresse à ce genre de sujet."
+                    play sound "Click.mp3" noloop
+
+                    Na "Peut-être, en tout cas elle avait l'air vraiment concentrée dessus."
+                    play sound "Click.mp3" noloop
+
+                    P "Oui c'est vrai."
+                    play sound "Click.mp3" noloop
+
+                    I "Qui sait… Avec Yuki, il y a toujours un mystère."
+                    play sound "Click.mp3" noloop
+
+                    "{b}{i}Un silence étrange s’installe quelques instants dans le couloir…{/i}{/b}"
+                    play sound "Click.mp3" noloop 
+
+                    I "Bon je vais y aller, je vais encore faire de la programmation."
+                    play sound "Click.mp3" noloop
+
+                    $ validation = get_random_validation()
+                    P "[validation]"
+                    play sound "Click.mp3" noloop
+
+                    "{b}{i}Puis vous continuez dans le couloir.{/i}{/b}"
+                    play sound "Footsteps.mp3" noloop
+
+                    hide screen hallway with moveoutright
+                    hide screen points with moveoutleft
+                    hide screen day with moveoutleft
+                    scene black with fade
+
+                    "{b}{i}Vous entrez dans ton dortoir.{/i}{/b}" 
+                    play sound "Door.mp3" noloop
+ 
+                    scene room with fade 
+                    show screen day with moveinleft
+                    show screen points with moveinleft
+                    show screen room with moveinright 
+
+                    $ dortoir = get_random_dortoir()
+                    P "[dortoir]"
+                    play sound "Click.mp3" noloop
+
+                    $ bien = get_random_fais_du_bien()
+                    Na "[bien]" 
+                    play sound "Click.mp3" noloop       
+
+
+
+
+
+
+
+
+
+                "{b}{i}Aller lire en solitude.{/i}{/b}" :
+                    play sound "Menu.mp3" noloop 
+
+                    P "Je vais la laisser tranquille et lire un peu mon livre que j'avais pas fini."
+                    play sound "Click.mp3" noloop 
+
+                    "{b}{i}Tu te poses tranquillement pour lire.{/i}{/b}"
+                    play sound "Click.mp3" noloop
+
+                    P "Bon ou j'en étais déjà ?"
+                    play sound "Click.mp3" noloop 
+
+                    P "Ah oui..."
+                    play sound "Click.mp3" noloop 
+
+                    "{b}{i}Tu lis pendant deux heures.{/i}{/b}"
+                    play sound "Click.mp3" noloop
+
+                    P "J'ai presque fini de lire, je finirai le dernier chapitre ce soir."
+                    play sound "Click.mp3" noloop            
+
+                    "{b}{i}Puis [newname] viens vers toi.{/i}{/b}"
+                    play sound "Click.mp3" noloop
+
+                    P "Oh salut [newname]."
+                    play sound "Click.mp3" noloop
+
+                    Na "Salut mais depuis quand tu viens à la bibliothèque ?"
+                    play sound "Click.mp3" noloop
+
+                    P "Je voulais venir un peu pour lire mon livre."
+                    play sound "Click.mp3" noloop
+
+                    Na "Je vois mais ça fait combien temps que tu es ici ?"
+                    play sound "Click.mp3" noloop
+
+                    P "ça dois faire deux heures."
+                    play sound "Click.mp3" noloop
+
+                    Na "Ah je devais vraiment être concentrée sur ma lecture pour ne pas t'avoir vu venir."
+                    play sound "Click.mp3" noloop
+
+                    P "Bon c'est aussi que j'ai choisi de te liasser tranquille."
+                    play sound "Click.mp3" noloop
+
+                    Na "Tu l'as vraiment fait ?"
+                    play sound "Click.mp3" noloop
+
+                    P "Oui absolument."
+                    play sound "Click.mp3" noloop 
+
+                    $ thanks = get_random_thanks()
+                    Na "[thanks]"
+                    play sound "Click.mp3" noloop
+
+                    $ nothing = get_random_nothing()
+                    P "[nothing]"
+                    play sound "Click.mp3" noloop
+
+                    $ godorm = get_random_return_dorm()
+                    P "[godorm]"
+                    play sound "Click.mp3" noloop
+
+                    $ suivi = get_random_suivi()
+                    Na "[suivi]"
+                    play sound "Footsteps.mp3" noloop
+
+                    hide screen library with moveoutright
+                    hide screen points with moveoutleft
+                    hide screen day with moveoutleft
+                    scene black with fade
+
+                    "{b}{i}Vous quittez la bibliothèque.{/i}{/b}"
+                    play sound "Door.mp3" noloop 
+
+                    scene hall with fade
+                    show screen day with moveinleft
+                    show screen points with moveinleft
+                    show screen hall with moveinright
+
+                    "{b}{i}Vous continuez vers les escaliers.{/i}{/b}"
+                    play sound "Footsteps.mp3" noloop
+
+                    hide screen hall with moveoutright
+                    hide screen points with moveoutleft
+                    hide screen day with moveoutleft
+                    scene staircase with fade 
+
+                    "{b}{i}Vous montez au premier étage.{/i}{/b}"
+                    play sound "Footsteps.mp3" noloop
+
+                    scene hallway with fade 
+                    show screen day with moveinleft
+                    show screen points with moveinleft
+                    show screen hallway with moveinright
+
+                    "{b}{i}Vous apercevez [I] dans le couloir.{/i}{/b}"
+                    play sound "Click.mp3" noloop
+
+                    if pronom == "il":
+        
+                        I "Oh Salut les amis."
+                        play sound "Click.mp3" noloop 
+
+                    else:
+
+                        I "Oh salut les amies."
+                        play sound "Click.mp3" noloop 
+
+                    P "Salut."
+                    play sound "Click.mp3" noloop
+
+                    Na "Salut."
+                    play sound "Click.mp3" noloop
+
+                    P "Tu faisais quoi ici, je croyais que tu étais à ton dortoir."
+                    play sound "Click.mp3" noloop
+
+                    I "J'y étais mais je suis juste passée aux toilettes."
+                    play sound "Click.mp3" noloop
+
+                    P "Ah ok je vois."
+                    play sound "Click.mp3" noloop
+
+                    I "Sinon j'ai croisé Yuki avec un livre."
+                    play sound "Click.mp3" noloop
+
+                    P "Un livre et c'était quoi comme livre ?"
+                    play sound "Click.mp3" noloop
+
+                    if persistent.endgame == True:
+
+                        I "C'était un livre qui se nommait {b}Comment réparer...{/b} mais je n'arrivais pas à lire la suite." 
+                        play sound "Click.mp3" noloop
+
+                    else: 
+
+                        I "C'était un livre qui se nommait {b}Comment briser...{/b} mais je n'arrivais pas à lire la suite."
+                        play sound "Click.mp3" noloop 
+                         
+                    P "Je vois mais je me demande pourquoi elle a ce livre."
+                    play sound "Click.mp3" noloop fadein
+
+                    I "Je ne sais pas trop, peut-être qu'elle s'intéresse à ce genre de sujet."
+                    play sound "Click.mp3" noloop
+
+                    Na "Peut-être, en tout cas elle avait l'air vraiment concentrée dessus."
+                    play sound "Click.mp3" noloop
+
+                    P "Oui c'est vrai."
+                    play sound "Click.mp3" noloop
+
+                    I "Qui sait… Avec Yuki, il y a toujours un mystère."
+                    play sound "Click.mp3" noloop
+
+                    "{b}{i}Un silence étrange s’installe quelques instants dans le couloir…{/i}{/b}"
+                    play sound "Click.mp3" noloop 
+
+                    I "Bon je vais y aller, je vais encore faire de la programmation."
+                    play sound "Click.mp3" noloop
+
+                    $ validation = get_random_validation()
+                    P "[validation]"
+                    play sound "Click.mp3" noloop
+
+                    "{b}{i}Puis vous continuez dans le couloir.{/i}{/b}"
+                    play sound "Footsteps.mp3" noloop
+
+                    hide screen hallway with moveoutright
+                    hide screen points with moveoutleft
+                    hide screen day with moveoutleft
+                    scene black with fade
+
+                    "{b}{i}Vous entrez dans ton dortoir.{/i}{/b}" 
+                    play sound "Door.mp3" noloop
+
+                    scene room with fade 
+                    show screen day with moveinleft
+                    show screen points with moveinleft
+                    show screen room with moveinright 
+
+                    $ dortoir = get_random_dortoir()
+                    P "[dortoir]"
+                    play sound "Click.mp3" noloop
+
+                    $ bien = get_random_fais_du_bien()
+                    Na "[bien]" 
+                    play sound "Click.mp3" noloop       
+
 
 
 
@@ -16620,64 +16993,38 @@ label password30:
             P "Bon ou j'en étais déjà ?"
             play sound "Click.mp3" noloop 
 
-            "{b}{i}.{/i}{/b}"
+            "{b}{i}Tu lis pendant deux heures.{/i}{/b}"
             play sound "Click.mp3" noloop
+
+            P "J'ai presque fini de lire, je finirai le dernier chapitre ce soir."
+            play sound "Click.mp3" noloop           
+
+            "{b}{i}Tu finis par ranger ton livre.{/i}{/b}"
+            play sound "Click.mp3" noloop 
+
+            P "Bon je me demande c'est quand que [newname] revient."
+            play sound "Click.mp3" noloop 
+
+            "{b}{i}Tu attends encore cinq minutes .{/i}{/b}"
+            play sound "Click.mp3" noloop 
+
+
+
+
+            if persistent.endgame == True:
+
+
+
+            else: 
+
+  
+
       
 
 
 
 
 
-
-
-
-
-        "{b}{i}Aller voir [I].{/i}{/b}" :
-            play sound "Menu.mp3" noloop 
-
-            "{b}{i}Tu continues vers les escaliers.{/i}{/b}"
-            play sound "Footsteps.mp3" noloop
-
-            hide screen hall with moveoutright
-            hide screen points with moveoutleft
-            hide screen day with moveoutleft
-            scene staircase with fade
-
-            "{b}{i}Vous continuez vers le couloir.{/i}{/b}"
-            play sound "Footsteps.mp3" noloop
-
-            scene hallway with fade 
-            show screen day with moveinleft
-            show screen points with moveinleft
-            show screen hallway with moveinright 
-
-            "{b}{i}Tu te diriges vers le dortoir d'[I] avant d'y parvenir.{/i}{/b}"
-            play sound "Click.mp3" noloop  
-
-            P "Bon....."
-            play sound "Knock.mp3" noloop 
-
-            "{b}{i}Tu frappes à la porte d'[I] et patientes puis elle t'ouvre la porte.{/i}{/b}"
-            play sound "Door.mp3" noloop  
-
-            I "Oh c'est toi [prenom], vas-y entres." 
-            play sound "Click.mp3" noloop  
-
-            P "Merci."
-            play sound "Click.mp3" noloop  
-
-            hide screen hallway with moveoutright 
-            hide screen points with moveoutleft
-            hide screen day with moveoutleft
-            scene black with fade
-
-            "{b}{i}Tu entres dans son dortoir.{/i}{/b}"
-            play sound "Door.mp3" noloop  
-
-            scene room with fade
-            show screen day with moveinleft
-            show screen points with moveinleft
-            show screen Yunaroom with moveinright
 
 
 
