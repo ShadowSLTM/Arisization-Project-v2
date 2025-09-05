@@ -15314,7 +15314,7 @@ label password29:
     show screen points with moveinleft
     show screen hall with moveinright 
 
-    "{b}{i}Vous continuez vers la salle de clubes{/i}{/b}"
+    "{b}{i}Vous continuez vers la salle de clubs{/i}{/b}"
     play sound "Footsteps.mp3" noloop
 
     hide screen hall with moveinright
@@ -15322,7 +15322,7 @@ label password29:
     hide screen day with moveoutleft
     scene black with fade
 
-    "{b}{i}Vous entrez dans la salle de club générale.{/i}{/b}"
+    "{b}{i}Vous entrez dans la salle de club.{/i}{/b}"
     play sound "Door.mp3" noloop
  
     scene clubroom with fade
@@ -16683,21 +16683,24 @@ label password30:
                     I "Sinon j'ai croisé Yuki avec un livre."
                     play sound "Click.mp3" noloop
 
-                    P "Un livre et c'était quoi comme livre ?"
-                    play sound "Click.mp3" noloop
-
                     if persistent.endgame == True:
+
+                        P "Un livre et c'était quoi comme livre ?"
+                        play sound "Glitch.mp3" noloop
 
                         I "C'était un livre qui se nommait {b}Comment réparer...{/b} mais je n'arrivais pas à lire la suite." 
                         play sound "Click.mp3" noloop
 
                     else: 
 
+                        P "Un livre et c'était quoi comme livre ?"
+                        play sound "Click.mp3" noloop
+
                         I "C'était un livre qui se nommait {b}Comment briser...{/b} mais je n'arrivais pas à lire la suite."
                         play sound "Click.mp3" noloop 
 
                     P "Je vois mais je me demande pourquoi elle a ce livre."
-                    play sound "Click.mp3" noloop fadein
+                    play sound "Click.mp3" noloop
 
                     I "Je ne sais pas trop, peut-être qu'elle s'intéresse à ce genre de sujet."
                     play sound "Click.mp3" noloop
@@ -16745,13 +16748,8 @@ label password30:
                     Na "[bien]" 
                     play sound "Click.mp3" noloop       
 
-
-
-
-
-
-
-
+                    "{b}{i}Un silence étrange s’installe quelques instants dans le dortoir…{/i}{/b}"
+                    play sound "Click.mp3" noloop
 
                 "{b}{i}Aller lire en solitude.{/i}{/b}" :
                     play sound "Menu.mp3" noloop 
@@ -16878,23 +16876,26 @@ label password30:
                     play sound "Click.mp3" noloop
 
                     I "Sinon j'ai croisé Yuki avec un livre."
-                    play sound "Click.mp3" noloop
-
-                    P "Un livre et c'était quoi comme livre ?"
-                    play sound "Click.mp3" noloop
+                    play sound "Click.mp3" noloop 
 
                     if persistent.endgame == True:
+
+                        P "Un livre et c'était quoi comme livre ?"
+                        play sound "Glitch.mp3" noloop
 
                         I "C'était un livre qui se nommait {b}Comment réparer...{/b} mais je n'arrivais pas à lire la suite." 
                         play sound "Click.mp3" noloop
 
                     else: 
 
+                        P "Un livre et c'était quoi comme livre ?"
+                        play sound "Click.mp3" noloop
+
                         I "C'était un livre qui se nommait {b}Comment briser...{/b} mais je n'arrivais pas à lire la suite."
                         play sound "Click.mp3" noloop 
                          
                     P "Je vois mais je me demande pourquoi elle a ce livre."
-                    play sound "Click.mp3" noloop fadein
+                    play sound "Click.mp3" noloop
 
                     I "Je ne sais pas trop, peut-être qu'elle s'intéresse à ce genre de sujet."
                     play sound "Click.mp3" noloop
@@ -16936,14 +16937,14 @@ label password30:
 
                     $ dortoir = get_random_dortoir()
                     P "[dortoir]"
-                    play sound "Click.mp3" noloop
+                    play sound "Click.mp3" noloop 
 
                     $ bien = get_random_fais_du_bien()
                     Na "[bien]" 
                     play sound "Click.mp3" noloop       
 
-
-
+                    "{b}{i}Un silence étrange s’installe quelques instants dans le dortoir…{/i}{/b}"
+                    play sound "Click.mp3" noloop
 
         "{b}{i}Aller au dortoir.{/i}{/b}" :
             play sound "Menu.mp3" noloop 
@@ -17005,21 +17006,170 @@ label password30:
             P "Bon je me demande c'est quand que [newname] revient."
             play sound "Click.mp3" noloop 
 
-            "{b}{i}Tu attends encore cinq minutes .{/i}{/b}"
+            "{b}{i}Tu attends encore cinq minutes puis [newname] finir par revenir.{/i}{/b}"
+            play sound "Door.mp3" noloop 
+
+            Na "Je suis suis de retour."
             play sound "Click.mp3" noloop 
 
+            P "Oh coucou c'était bien à la bibliothèque ?" 
+            play sound "Click.mp3" noloop 
 
+            Na "Oui je me posais pour lire un bon livre."
+            play sound "Click.mp3" noloop 
 
+            P "Cool alors et c'était quoi comme livre ?"
+            play sound "Click.mp3" noloop 
+
+            Na "Oh salut [prenom], je lisais un roman de science-fiction."
+            play sound "Click.mp3" noloop
+
+            P "Ah intéressant."
+            play sound "Click.mp3" noloop
+
+            Na "Oui c'est vraiment captivant."
+            play sound "Click.mp3" noloop
+
+            P "Je vois cool que ça te plaise."
+            play sound "Click.mp3" noloop
+
+            Na "Juste avant de partir j'ai croisé [I] dans le couloir."
+            play sound "Click.mp3" noloop
+
+            P "Ah oui et elle faisait quoi ?"
+            play sound "Click.mp3" noloop
+
+            Na "Elle venait de croiser Yuki avec un livre."
+            play sound "Click.mp3" noloop
 
             if persistent.endgame == True:
 
+                P "Un livre et c'était quoi comme livre ?"
+                play sound "Glitch.mp3" noloop
 
+                Na "Yuna m'as dit que c'était un livre qui se nommait {b}Comment réparer...{/b} mais elle n'arrivait pas à lire la suite."
+                play sound "Click.mp3" noloop
 
             else: 
 
-  
+                P "Un livre et c'était quoi comme livre ?"
+                play sound "Click.mp3" noloop 
 
-      
+                Na "Yuna m'as dit que c'était un livre qui se nommait {b}Comment briser...{/b} mais elle n'arrivait pas à lire la suite."
+                play sound "Click.mp3" noloop
+
+            P "Je vois mais je me demande pourquoi elle a ce livre."
+            play sound "Click.mp3" noloop
+
+            Na "Je ne sais pas trop, peut-être qu'elle s'intéresse à ce genre de sujet."
+            play sound "Click.mp3" noloop
+
+            P "Oui c'est vrai."
+            play sound "Click.mp3" noloop
+
+            Na "Qui sait… Avec Yuki, il y a toujours un mystère."
+            play sound "Click.mp3" noloop
+
+            "{b}{i}Un silence étrange s’installe quelques instants dans le dortoir…{/i}{/b}"
+            play sound "Click.mp3" noloop
+
+    Na "Bon on fait quoi maintenant ?"
+    play sound "Click.mp3" noloop
+
+    P "Je ne sais pas trop, tu as des idées ?"
+    play sound "Click.mp3" noloop
+
+    Na "On pourrait aller à la salle de club ?"
+    play sound "Click.mp3" noloop
+
+    P "Non car on y va déjà ce soir pour la soirée pyjama."
+    play sound "Click.mp3" noloop
+
+     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    P "Alors, on y va ?"
+    play sound "Click.mp3" noloop 
+
+    $ suivi = get_random_suivi()
+    Na "[suivi]"
+    play sound "Footsteps.mp3" noloop
+
+    hide screen room with moveoutright  
+    hide screen points with moveoutleft
+    hide screen day with moveoutleft
+    scene black with fade 
+
+    "{b}{i}Tu quittes ta chambre avec [newname].{/i}{/b}"
+    play sound "Door.mp3" noloop
+
+    scene hallway with fade 
+    show screen day with moveinleft
+    show screen points with moveinleft
+    show screen hallway with moveinright
+
+    "{b}{i}Tu continues dans le couloir avec [newname].{/i}{/b}"
+    play sound "Footsteps.mp3" noloop  
+ 
+    hide screen hallway with moveoutright
+    hide screen points with moveoutleft
+    hide screen day with moveoutleft
+    scene staircase with fade 
+
+    "{b}{i}Tu continues vers le hall avec [newname].{/i}{/b}"
+    play sound "Footsteps.mp3" noloop  
+
+    scene hall with fade
+    show screen day with moveinleft
+    show screen points with moveinleft
+    show screen hall with moveinright 
+
+    "{b}{i}Vous continuez vers la salle de clubs{/i}{/b}"
+    play sound "Footsteps.mp3" noloop
+
+    hide screen hall with moveinright
+    hide screen points with moveoutleft
+    hide screen day with moveoutleft
+    scene black with fade
+
+    "{b}{i}Vous entrez dans la salle de club.{/i}{/b}"
+    play sound "Door.mp3" noloop
+ 
+    scene clubroom with fade
+    show screen day with moveinleft
+    show screen points with moveinleft
+    show screen clubroom with moveinright 
+
+    Na "Enfin au club."
+    play sound "Click.mp3" noloop 
+    
+    $ bien = get_random_fais_du_bien()
+    P "[bien]" 
+    play sound "Click.mp3" noloop 
+
+    Na "Tiens elle est ou Yuna ?"
+    play sound "Click.mp3" noloop 
+
+    P ""
 
 
 

@@ -54,7 +54,7 @@ define Mo = Character('Mayumi [nom]', color="#ff00ea")
 
 define C = Character('Takeshi Kurosawa', color="#aa009c")
 
-# les créateurs de Runix (Neogen Technologies)
+# les créatrices de Runix (Neogen Technologies)
 
 define Sa = Character('Saori Kaminari', color="#ffffff")
 define My = Character('Mizuki Suzumiya', color="#ffffff")

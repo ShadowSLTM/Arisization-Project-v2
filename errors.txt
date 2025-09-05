@@ -2,9 +2,17 @@
 errors listed below, and try again.
 
 
-File "game/screens.rpy", line 1932: 'b' is not a keyword argument or valid child of the text statement.
-    text _("Arisization Project (The Realization Project of Aris) appartient à [Dc] (Shadow_SLTM)\n")      b  v     
-                                                                                                            ^
+File "game/script2.rpy", line 16700: expected simple expression
+    play sound "Click.mp3" noloop fadein
+                                        ^
+
+File "game/script2.rpy", line 16892: expected simple expression
+    play sound "Click.mp3" noloop fadein
+                                        ^
+
+File "game/script2.rpy", line 17053: expected simple expression
+    play sound "Click.mp3" noloop fadein
+                                        ^
 
 Ren'Py Version: Ren'Py 8.3.7.25031702
-Tue Sep  2 14:57:43 2025
+Fri Sep  5 19:46:21 2025
