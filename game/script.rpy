@@ -151,8 +151,8 @@ label identity:
 
     $ domaine = "inégalable créateur" if pronom == "il" else "inégalable créatrice"
     
-    $ noms_interdits = {"Kusanagi", "Nishimura", "Ayanokoji", "Sato", "Saotome", "Ichinose", "Hiiragi", "Katsuragi", "Hanemiya", "Sumino", "Hoshino", "Shinomiya", "Katsuya", "Horimiya", "Tachibana", "Sakayanagi", "Nagumo", "Kaminari", "Suzumiya", "Kobayashi", "Kaneda", "Nanami", "Kurosawa"}
-    $ prenoms_interdits = {"Yuna", "Hajime", "Kendo", "Naoto", "Haruki", "Yuki", "Emika", "Kazumi", "Ayano", "Aiko", "Akeno", "Subaru", "Suzune", "Shiro", "Kaede", "Naomi", "Seigo", "Takeshi", "Saori", "Mizuki", "Rika", "Natsuo", "Reiichi", "Mayumi", "Luna", "Hiroyuki"}
+    $ noms_interdits = {"Kusanagi", "Nishimura", "Ayanokoji", "Sato", "Saotome", "Ichinose", "Hiiragi", "Katsuragi", "Hanemiya", "Sumino", "Kisaragi", "Hoshino", "Shinomiya", "Katsuya", "Horimiya", "Tachibana", "Sakayanagi", "Nagumo", "Kaminari", "Suzumiya", "Kobayashi", "Kaneda", "Nanami", "Kurosawa"}
+    $ prenoms_interdits = {"Yuna", "Hajime", "Kendo", "Naoto", "Haruki", "Yuki", "Emika", "Kazumi", "Ayano", "Aiko", "Akeno", "Subaru", "Takumi", "Suzune", "Shiro", "Kaede", "Naomi", "Seigo", "Takeshi", "Saori", "Mizuki", "Rika", "Natsuo", "Reiichi", "Mayumi", "Luna", "Hiroyuki"}
 
     if prenom in prenoms_interdits:
         "Ce prénom n'est pas autorisé."
@@ -208,8 +208,25 @@ label début:
 
     scene warehouse with fade
 
-    P "Bon, on fait quoi ?"
-    play sound "Click.mp3" noloop  
+    if persistent.endgame == True:
+
+        P "Bon, on fait quoi ?"
+        play sound "Glitch.mp3" noloop
+
+        default S = Character('Takumi Kisaragi', color="#ffffff") 
+
+        S "On pourrait fouiller les lieux déjà ?"
+        play sound "Click.mp3" noloop
+
+    else: 
+
+        P "Bon, on fait quoi ?"
+        play sound "Click.mp3" noloop  
+
+        default S = Character('Subaru Shinomiya', color="#ffffff") 
+
+        S "On pourrait fouiller les lieux déjà ?"
+        play sound "Click.mp3" noloop
 
     S "On pourrait fouiller les lieux déjà ?"
     play sound "Click.mp3" noloop
@@ -626,7 +643,7 @@ label choice1:
                 play sound "Glitch.mp3" noloop 
 
                 A "Merci infiniment [prenom] même si je sais ce que tu as fait dans le passé."
-                play sound "Glitch.mp3" noloop 
+                play sound "CLick.mp3" noloop 
 
                 P "Attend quoi !?"
                 play sound "Click.mp3" noloop 
@@ -2495,7 +2512,7 @@ label choice2:
     A "Ah oui, je vois mieux."  
     play sound "Click.mp3" noloop
 
-    P "Je vais commander ce qu'il faut."
+    P "Je vais commander ce qu'il me faut."
     play sound "Click.mp3" noloop
 
     $ validation = get_random_validation() 
@@ -2619,14 +2636,23 @@ label choice3:
             P "L'ancien propriétaire d'[A] avais vraiment des goûts médiocres en terme de composants..."
             play sound "Click.mp3" noloop
 
-            "{b}{i}Tu déballes le nouveau processeur pour lire la notice.{/i}{/b}"
+            "{b}{i}Tu déballes le nouveau processeur et parcours rapidement la notice.{/i}{/b}"
             play sound "Click.mp3" noloop
 
             $ validation = get_random_validation() 
             P "[validation]"
             play sound "Click.mp3" noloop 
 
-            "{b}{i}Tu retires délicatement l'ancien processeur pour installer le nouveau.{/i}{/b}"
+            "{b}{i}Tu retires délicatement l'ancien processeur de son socket pour y placer le nouveau.{/i}{/b}"
+            play sound "Click.mp3" noloop
+
+            "{b}{i}Avant de l’installer, tu appliques soigneusement une fine couche de pâte thermique Nanotherm X9 sur le processeur.{/i}{/b}"
+            play sound "Click.mp3" noloop
+
+            P "Parfait... ça devrait mieux dissiper la chaleur."
+            play sound "Click.mp3" noloop
+
+            "{b}{i}Tu verrouilles le nouveau processeur et refermes le système.{/i}{/b}"
             play sound "Click.mp3" noloop
 
             P "C'est fait, je vais la redémarrer."
@@ -2635,7 +2661,7 @@ label choice3:
             A "Initialisation..."
             play sound "Click.mp3" noloop 
 
-            "{b}{i}Mais soudainement le processeur brûle complètement et endommage les autres composants d'[A].{/i}{/b}"
+            "{b}{i}Mais soudainement, malgré le Nanotherm X9, le processeur surchauffe et brûle complètement, endommageant les autres composants d'[A].{/i}{/b}"
             play sound "Click.mp3" noloop
 
             P "Mince..."
@@ -2765,19 +2791,22 @@ label choice3:
     "{b}{i}Tu déballes le nouveau processeur pour voir la notice et tu vois un message de la part de [Ah].{/i}{/b}"
     play sound "Click.mp3" noloop 
      
-    Ah "{i}finalement, j'ai regardé le dossier de ton projet et j'ai pu te trouver un Corzen 11KS spécialement pour [A]. Il a de meilleures performances, tu peux le garder. Je ne te ferai pas payer la différence de prix.{/i}"   
-    play sound "Click.mp3" noloop
+    Ah "{i}Finalement, j'ai regardé le dossier de ton projet et j'ai pu te trouver un Corzen 11KS spécialement pour [A]. Il a de meilleures performances, tu peux le garder. En plus, il est fourni avec une pâte thermique Nanotherm X9. Je ne te ferai pas payer la différence de prix.{/i}"   
+    play sound "Click.mp3" noloop 
 
     P "Génial ça."
     play sound "Click.mp3" noloop
 
-    "{b}{i}Tu retires délicatement l'ancien processeur pour installer le nouveau.{/i}{/b}"
+    "{b}{i}Tu retires délicatement l'ancien processeur de son socket pour installer le nouveau.{/i}{/b}"
     play sound "Click.mp3" noloop
 
-    P "C'est fait maintenant je vais la redémarrer."
+    "{b}{i}Avant de le placer, tu appliques une fine couche de pâte thermique Nanotherm X9 pour optimiser la dissipation de chaleur.{/i}{/b}"
     play sound "Click.mp3" noloop
 
-    A "Initialisation...."
+    P "Voilà, ça devrait tenir parfaitement. Maintenant, je vais la redémarrer."
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Initialisation en cours....{/i}{/b}"
     play sound "Click.mp3" noloop 
 
     P "Allez... Allez..."
@@ -2785,6 +2814,8 @@ label choice3:
 
     A "Initialisation terminée, la version actuelle du processeur est la [update]."
     play sound "Menu.mp3" noloop
+
+    $ cpu = "Corzen 11KS"
 
     $ comment_ca_va = get_random_comment_ca_va()
     P "[comment_ca_va]"
@@ -7661,7 +7692,7 @@ label suite:
     play sound "Click.mp3" noloop 
 
     P "Qu'est-ce que tu me veux Subaru ?"
-    play sound "Click.mp3" noloop 
+    play sound "Click.mp3" noloop  
 
     S "C'est concernant [newname]."
     play sound "Click.mp3" noloop 

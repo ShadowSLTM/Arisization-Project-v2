@@ -13,7 +13,7 @@ define Su = Character('Suzune Horimiya', color="#ffffff")
 define Sk = Character('Shiro Katsuya', color="#ffffff") 
 # antagoniste principale 
 
-define S = Character('Subaru Shinomiya', color="#ffffff") # Takumi kisaragi dans la D04   
+default S = Character('??????????', color="#ffffff") 
 
 # Les élèves de Seconde-E. 
 

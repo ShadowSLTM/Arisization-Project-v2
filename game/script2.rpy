@@ -277,8 +277,6 @@ label password11:
     "{b}{i}Tu entres dans le bureau des élèves.{/i}{/b}"
     play sound "Door.mp3" noloop
 
-    
-
     scene office with fade 
     show screen day with moveinleft
     show screen points with moveinleft
