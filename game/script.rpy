@@ -213,7 +213,7 @@ label début:
         P "Bon, on fait quoi ?"
         play sound "Glitch.mp3" noloop
 
-        default S = Character('Takumi Kisaragi', color="#ffffff") 
+        define  S = Character('Takumi Kisaragi', color="#ffffff") 
 
         S "On pourrait fouiller les lieux déjà ?"
         play sound "Click.mp3" noloop
@@ -223,7 +223,7 @@ label début:
         P "Bon, on fait quoi ?"
         play sound "Click.mp3" noloop  
 
-        default S = Character('Subaru Shinomiya', color="#ffffff") 
+        define S = Character('Subaru Shinomiya', color="#ffffff") 
 
         S "On pourrait fouiller les lieux déjà ?"
         play sound "Click.mp3" noloop
@@ -2884,7 +2884,6 @@ label choice4:
         $ quest4 += 1
         $ robotname = nom
         $ stockage += 2.0 
-        $ cpu = "Corzen 11KS"
         $ renpy.block_rollback()
 
         show screen update with moveinright
@@ -7078,6 +7077,7 @@ label conversation:
 
         P "Oui, j'en avais une ce matin et je l'ai faite."
         play sound "Click.mp3" noloop
+
         jump suite 
 
 label suite:
@@ -10634,12 +10634,15 @@ label code:
     $ Line8 = renpy.input("Écris ceci : modify_address_access(access=false)")
     play sound "Menu.mp3" noloop 
 
+    $ Line9 = renpy.input("Écris ceci : keep_studentmode(settings=serious)")
+    play sound "Menu.mp3" noloop
+
     menu: 
 
         "{b}{i} Compiler le code.{/i}{/b}" :
             play sound "Menu.mp3" noloop 
 
-            "Vérification en cours...."
+            "{b}{i}Vérification en cours....{/i}{/b}"
             play sound "Menu.mp3" noloop 
 
             if Line1 == "create_system(name=Aris,mode=secure,boot=true,fightmode=false)":
@@ -10658,106 +10661,118 @@ label code:
 
                                         if Line8 == "modify_address_access(access=false)":
 
-                                            "{b}{i}10\%{/i}{/b}"
-                                            play sound "Click.mp3" noloop
+                                            if Line9 == "keep_studentmode(settings=serious)":
 
-                                            "{b}{i}20\%{/i}{/b}"
-                                            play sound "Click.mp3" noloop
+                                                "{b}{i}10\%{/i}{/b}"
+                                                play sound "Click.mp3" noloop
 
-                                            "{b}{i}30\%{/i}{/b}"
-                                            play sound "Click.mp3" noloop
+                                                "{b}{i}20\%{/i}{/b}"
+                                                play sound "Click.mp3" noloop
 
-                                            "{b}{i}40\%{/i}{/b}"
-                                            play sound "Click.mp3" noloop
+                                                "{b}{i}30\%{/i}{/b}"
+                                                play sound "Click.mp3" noloop
 
-                                            "{b}{i}50\%{/i}{/b}"
-                                            play sound "Click.mp3" noloop
+                                                "{b}{i}40\%{/i}{/b}"
+                                                play sound "Click.mp3" noloop
 
-                                            "{b}{i}60\%{/i}{/b}"
-                                            play sound "Click.mp3" noloop
+                                                "{b}{i}50\%{/i}{/b}"
+                                                play sound "Click.mp3" noloop
 
-                                            "{b}{i}70\%{/i}{/b}"
-                                            play sound "Click.mp3" noloop
+                                                "{b}{i}60\%{/i}{/b}"
+                                                play sound "Click.mp3" noloop
 
-                                            "{b}{i}80\%{/i}{/b}" 
-                                            play sound "Click.mp3" noloop
+                                                "{b}{i}70\%{/i}{/b}"
+                                                play sound "Click.mp3" noloop
 
-                                            "{b}{i}90\%{/i}{/b}"
-                                            play sound "Click.mp3" noloop
+                                                "{b}{i}80\%{/i}{/b}" 
+                                                play sound "Click.mp3" noloop
 
-                                            "{b}{i}100\%{/i}{/b}"
-                                            play sound "Click.mp3" noloop
+                                                "{b}{i}90\%{/i}{/b}"
+                                                play sound "Click.mp3" noloop
 
-                                            "{b}{i}Vérification en cours...{/i}{/b}"
-                                            play sound "Menu.mp3" noloop
+                                                "{b}{i}100\%{/i}{/b}"
+                                                play sound "Click.mp3" noloop
 
-                                            $ success += 1 
-                                            $ quest16 += 1
+                                                "{b}{i}Vérification en cours...{/i}{/b}"
+                                                play sound "Menu.mp3" noloop
 
-                                            show screen update with moveinright
+                                                $ success += 1 
+                                                $ quest16 += 1
 
-                                            "Le code a été correctement compilé." 
-                                            play sound "Click.mp3" noloop 
+                                                show screen update with moveinright
 
-                                            hide screen update with moveoutright
+                                                "Le code a été correctement compilé." 
+                                                play sound "Click.mp3" noloop 
+
+                                                hide screen update with moveoutright
+
+                                            else:
+
+                                                "{b}{i}Erreur détectée à la neuvième ligne, le code a été mal compilé.{/i}{/b}"
+                                                play sound "Click.mp3" noloop
+
+                                                jump code
 
                                         else: 
 
-                                            "Erreur détectée à la huitième ligne, le code a été mal compilé."
-                                            play sound "Click.mp3" noloop    
+                                            "{b}{i}Erreur détectée à la huitième ligne, le code a été mal compilé.{/i}{/b}"
+                                            play sound "Click.mp3" noloop
 
                                             jump code 
 
                                     else:
 
-                                        "Erreur détectée à la septième ligne, le code a été mal compilé."
-                                        play sound "Click.mp3" noloop    
+                                        "{b}{i}Erreur détectée à la septième ligne, le code a été mal compilé.{/i}{/b}"
+                                        play sound "Click.mp3" noloop
 
                                         jump code 
 
                                 else: 
 
-                                    "Erreur détectée à la sixième ligne, le code a été mal compilé."
+                                    "{b}{i}Erreur détectée à la sixième ligne, le code a été mal compilé.{/i}{/b}"
                                     play sound "Click.mp3" noloop 
 
                                     jump code  
 
                             else:
 
-                                "Erreur détectée à la cinquième ligne, le code a été mal compilé."
+                                "{b}{i}Erreur détectée à la cinquième ligne, le code a été mal compilé.{/i}{/b}"
                                 play sound "Click.mp3" noloop 
 
                                 jump code  
 
                         else: 
 
-                            "Erreur détectée à la quatrième ligne, le code a été mal compilé."
+                            "{b}{i}Erreur détectée à la quatrième ligne, le code a été mal compilé.{/i}{/b}"
                             play sound "Click.mp3" noloop 
 
                             jump code  
 
                     else: 
 
-                        "Erreur détectée à la troisième ligne, le code a été mal compilé."
+                        "{b}{i}Erreur détectée à la troisième ligne, le code a été mal compilé.{/i}{/b}"
                         play sound "Click.mp3" noloop  
 
                         jump code 
                         
                 else: 
 
-                    "Erreur détectée à la seconde ligne, le code a été mal compilé."
+                    "{b}{i}Erreur détectée à la seconde ligne, le code a été mal compilé.{/i}{/b}"
                     play sound "Click.mp3" noloop 
 
                     jump code  
     
             else: 
 
-                "Erreur détectée à la première ligne, le code a été mal compilé."
+                "{b}{i}Erreur détectée à la première ligne, le code a été mal compilé.{/i}{/b}"
                 play sound "Click.mp3" noloop 
 
                 jump code 
 
     P "Bien il semblerait que le code fonctionne correctement."
+    play sound "Click.mp3" noloop
+
+    P "Donc si le code fonnctionne je vais appliquer la règle la plus importante c'est à dire de ne plus toucher au code."
     play sound "Click.mp3" noloop
 
     "{b}{i}Tu continues de travailler sur [newname] pendant trois heures.{/i}{/b}" 
@@ -16609,7 +16624,7 @@ label password4:
     S "Je vois." 
     play sound "Click.mp3" noloop
 
-    M "Tous les fichiers en .rnx peuvent commencer par plusieurs commandes : initiate_ ,create_ ,delete_ ,remove_ ,modify_ puis suivi du nom de l'objet, exmeple : initiate_humanoid_robot."
+    M "Tous les fichiers en .rnx peuvent commencer par plusieurs commandes : initiate_ ,create_ ,delete_ ,remove_ ,modify_ ,add_ ,keep_ puis suivi du nom de l'objet, exmeple : initiate_humanoid_robot."
     play sound "Click.mp3" noloop
 
     S "Et pour les paramétres plus avancées ?" 

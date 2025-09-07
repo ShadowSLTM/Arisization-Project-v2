@@ -5031,10 +5031,10 @@ label password16:
     "{b}{i} Puis [S] quittes votre dortoir.{/i}{/b}"
     play sound "Click.mp3" noloop 
 
-    Na "Je ne sais si bien ou bizarre de savoir que Subaru sois venu s'excuser ?" 
+    Na "Je ne sais si bien ou bizarre de savoir qu'il sois venu s'excuser ?" 
     play sound "Click.mp3" noloop
-
-    P "C'est vrai, Ayano puis maintemant Subaru...." 
+ 
+    P "C'est vrai, Ayano puis maintemant lui...." 
     play sound "Click.mp3" noloop 
 
     Na "La seule personne qui n'est jamais venue pour s'excuser c'est [J2]." 
@@ -11323,7 +11323,7 @@ label password23:
     S "Tiens [newname] qui refuse de te donner des informations."
     play sound "Click.mp3" noloop 
 
-    Na "Oh boucle-la Subaru, ça ne te regardes pas."
+    Na "Oh boucle-la, ça ne te regardes pas."
     play sound "Click.mp3" noloop 
 
     S "Et alors ? Tu penses que ça te donne le droit de tout savoir ?"
@@ -14714,7 +14714,7 @@ label password29:
         Na "Non pas aujourd'hui, on avait dit la deuxième semaine des vacances pour réviser, après tous les efforts que tu as faits, tu mérites du repos."
         play sound "Click.mp3" noloop
 
-    else:
+    else: 
 
         Na "Non pas aujourd'hui, on avait dit la deuxième semaine des vacances pour réviser, il faut garder le rythme."
         play sound "Click.mp3" noloop 
@@ -14741,7 +14741,7 @@ label password29:
     play sound "Click.mp3" noloop  
 
     Na "Pourquoi pas {b}{i}Cyber Rebirth{/i}{/b} ? On m’en a beaucoup parlé."
-    play sound "Click.mp3" noloop  
+    play sound "Click.mp3" noloop
 
     P "Ah oui, la série futuriste avec les IA ?"
     play sound "Click.mp3" noloop  
@@ -14757,6 +14757,8 @@ label password29:
 
     "{b}{i}Vous vous posez tranquillement pour regarder la serie toute la matinée.{/i}{/b}"
     play sound "Click.mp3" noloop
+
+    $ stockage += 5.0
 
     $ go_eat = get_random_go_eat()
     P "[go_eat]"
@@ -15177,6 +15179,8 @@ label password29:
 
     Na "Oh c'est vrai que ça permet de ne pas faire cette tâche après."
     play sound "Click.mp3" noloop 
+
+    $ stockage += 2.0 
 
     P "Bon revenons à ce que nous faisions."
     play sound "Click.mp3" noloop 
@@ -15675,6 +15679,8 @@ label password29:
     "{b}{i}Vous terminez le film et en discutez ensemble.{/i}{/b}"
     play sound "Click.mp3" noloop
 
+    $ stockage += 7.0
+
     Na "Il était vraiment bien ce film."
     play sound "Click.mp3" noloop   
 
@@ -16030,6 +16036,8 @@ label password30:
 
     "{b}{i}Vous regardez dans les alentours et vous voyez [I] encore endormie.{/i}{/b}"
     play sound "Click.mp3" noloop 
+
+    $ stockage += 1.0
 
     Na "Oh elle est encore endormie..."
     play sound "Click.mp3" noloop 
@@ -16788,6 +16796,8 @@ label password30:
                     P "ça dois faire deux heures."
                     play sound "Click.mp3" noloop
 
+                    $ stockage += 2.0
+
                     Na "Ah je devais vraiment être concentrée sur ma lecture pour ne pas t'avoir vu venir."
                     play sound "Click.mp3" noloop
 
@@ -16900,6 +16910,8 @@ label password30:
 
                     Na "Peut-être, en tout cas elle avait l'air vraiment concentrée dessus."
                     play sound "Click.mp3" noloop
+
+                    $ stockage += 4.0
 
                     P "Oui c'est vrai."
                     play sound "Click.mp3" noloop
@@ -17062,6 +17074,8 @@ label password30:
             Na "Je ne sais pas trop, peut-être qu'elle s'intéresse à ce genre de sujet."
             play sound "Click.mp3" noloop
 
+            $ stockage += 4.0
+
             P "Oui c'est vrai."
             play sound "Click.mp3" noloop
 
@@ -17071,7 +17085,7 @@ label password30:
             "{b}{i}Un silence étrange s’installe quelques instants dans le dortoir…{/i}{/b}"
             play sound "Click.mp3" noloop
 
-    Na "Bon on fait quoi maintenant ?"
+    Na "Bon on fait quoi cette après-midi ?"
     play sound "Click.mp3" noloop
 
     P "Je ne sais pas trop, tu as des idées ?"
@@ -17081,32 +17095,13 @@ label password30:
     play sound "Click.mp3" noloop
 
     P "Non car on y va déjà ce soir pour la soirée pyjama."
+    play sound "Click.mp3" noloop 
+
+    "{b}{i}Vous passez l'après-midi au dortoir.{/i}{/b}"
     play sound "Click.mp3" noloop
 
-     
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-    P "Alors, on y va ?"
-    play sound "Click.mp3" noloop 
+    P "Bon on va à la salle de club ?"
+    play sound "Click.mp3" noloop
 
     $ suivi = get_random_suivi()
     Na "[suivi]"
@@ -17167,7 +17162,20 @@ label password30:
     Na "Tiens elle est ou Yuna ?"
     play sound "Click.mp3" noloop 
 
-    P ""
+    P "Je ne sais pas, elle n'est pas encore arrivée."
+    play sound "Click.mp3" noloop
+
+    Na "Bon on va attendre un peu."
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Vous vous installez tranquillement en attendant Yuna.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Après quelques minutes Yuna arrive enfin.{/i}{/b}"
+    play sound "Door.mp3" noloop
+
+    
+
 
 
 

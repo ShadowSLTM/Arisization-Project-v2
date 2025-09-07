@@ -3,11 +3,11 @@
 While running game code:
   File "renpy/common/00start.rpy", line 244, in script call
     call _splashscreen from _call_splashscreen_1
-  File "game/securityv2.rpy", line 110, in script
+  File "game/securityv4.rpy", line 146, in script
     $ valid, message = security_check()
-  File "game/securityv2.rpy", line 110, in <module>
+  File "game/securityv4.rpy", line 146, in <module>
     $ valid, message = security_check()
-  File "game/securityv2.rpy", line 66, in security_check
+  File "game/securityv4.rpy", line 105, in security_check
     debug_messages.append(f"Chemin du jeu: '{os.path.dirname(os.path.abspath(__file__))}'")
 NameError: name '__file__' is not defined
 
@@ -16,19 +16,19 @@ NameError: name '__file__' is not defined
 Full traceback:
   File "renpy/common/00start.rpy", line 244, in script call
     call _splashscreen from _call_splashscreen_1
-  File "game/securityv2.rpy", line 110, in script
+  File "game/securityv4.rpy", line 146, in script
     $ valid, message = security_check()
   File "C:\Users\Aris\Documents\renpy-8.3.7-sdk\renpy\ast.py", line 834, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
   File "C:\Users\Aris\Documents\renpy-8.3.7-sdk\renpy\python.py", line 1187, in py_exec_bytecode
     exec(bytecode, globals, locals)
-  File "game/securityv2.rpy", line 110, in <module>
+  File "game/securityv4.rpy", line 146, in <module>
     $ valid, message = security_check()
-  File "game/securityv2.rpy", line 66, in security_check
+  File "game/securityv4.rpy", line 105, in security_check
     debug_messages.append(f"Chemin du jeu: '{os.path.dirname(os.path.abspath(__file__))}'")
 NameError: name '__file__' is not defined
 
 Windows-10-10.0.26100 AMD64
 Ren'Py 8.3.7.25031702
 Arisization Project Version_0.0.5
-Tue Sep  2 18:00:23 2025
+Sun Sep  7 19:37:00 2025

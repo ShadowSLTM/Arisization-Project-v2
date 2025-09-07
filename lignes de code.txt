@@ -20,5 +20,7 @@ initiate_password(password_setting_access=true)
 
 modify_address_access(access=false)
 
+keep_studentmode(settings=serious)
+
 delete_files_system(name=system32)
 
