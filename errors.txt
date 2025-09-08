@@ -2,17 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script2.rpy", line 16700: expected simple expression
-    play sound "Click.mp3" noloop fadein
-                                        ^
-
-File "game/script2.rpy", line 16892: expected simple expression
-    play sound "Click.mp3" noloop fadein
-                                        ^
-
-File "game/script2.rpy", line 17053: expected simple expression
-    play sound "Click.mp3" noloop fadein
-                                        ^
+File "game/script2.rpy", line 17269: expected end of line
+    play sound "Click.mp3" noloop fade
+                                  ^
 
 Ren'Py Version: Ren'Py 8.3.7.25031702
-Fri Sep  5 19:46:21 2025
+Mon Sep  8 17:07:11 2025

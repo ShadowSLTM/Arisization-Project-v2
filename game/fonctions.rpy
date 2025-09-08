@@ -392,3 +392,17 @@ init python:
     import getpass
 
     nom_utilisateur_pc = getpass.getuser() 
+
+init python:
+
+    # Réinitialiser seulement 'abandon'
+    def reset_abandon():
+        if hasattr(persistent, "abandon"):
+            del persistent.abandon
+        renpy.save_persistent()
+
+    # Réinitialiser seulement 'endgame'
+    def reset_endgame():
+        if hasattr(persistent, "endgame"):
+            del persistent.endgame
+        renpy.save_persistent()

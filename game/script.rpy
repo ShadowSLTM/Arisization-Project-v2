@@ -1,4 +1,4 @@
-$ persistent.abandon = True
+$ persistent.abandon = False
 $ persistent.endgame = False
 
 label start: 
@@ -195,14 +195,21 @@ label début:
 
     if persistent.abandon == True: 
 
-        "{b}{i}Réalité D02.{/i}{/b}"
-        play sound "Click.mp3" noloop 
+        if persistent.endgame == True:
+
+            "{b}{i}Réalité D03.{/i}{/b}" 
+            play sound "Click.mp3" noloop 
+
+        else: 
+
+            "{b}{i}Réalité D02.{/i}{/b}" 
+            play sound "Click.mp3" noloop 
 
     else: 
 
         "{b}{i}Réalité racine.{/i}{/b}" 
         play sound "Click.mp3" noloop 
-        
+  
     "{b}{i}Quelque part dans un entrepôt abandonné en 2097.{/i}{/b}"
     play sound "Click.mp3" noloop 
 
@@ -213,7 +220,7 @@ label début:
         P "Bon, on fait quoi ?"
         play sound "Glitch.mp3" noloop
 
-        define  S = Character('Takumi Kisaragi', color="#ffffff") 
+        $ S = Character('Takumi Kisaragi', color="#ffffff") 
 
         S "On pourrait fouiller les lieux déjà ?"
         play sound "Click.mp3" noloop
@@ -223,7 +230,7 @@ label début:
         P "Bon, on fait quoi ?"
         play sound "Click.mp3" noloop  
 
-        define S = Character('Subaru Shinomiya', color="#ffffff") 
+        $ S = Character('Subaru Shinomiya', color="#ffffff")
 
         S "On pourrait fouiller les lieux déjà ?"
         play sound "Click.mp3" noloop
@@ -620,8 +627,8 @@ label choice1:
                     play sound "Menu.mp3" noloop
 
                     $ persistent.abandon = True
-                    return
-
+                    return 
+ 
                 "{b}{i}Réessayer{/i}{/b}" : 
                     play sound "Menu.mp3" noloop
 
@@ -2229,15 +2236,7 @@ label choice2:
 
             P "Oh salut [I]."
             play sound "Click.mp3" noloop
-
-            $ comment_ca_va = get_random_comment_ca_va()
-            I "[comment_ca_va]"
-            play sound "Click.mp3" noloop
-
-            $ je_vais_bien_txt = get_random_je_vais_bien() 
-            P "[je_vais_bien_txt] Sinon que fais-tu ici ?" 
-            play sound "Click.mp3" noloop 
-
+ 
             I "Je travaille sur mon jeu vidéo et toi ?"
             play sound "Click.mp3" noloop
 
@@ -7522,8 +7521,13 @@ label suite:
     "{b}{i} [M] fait signe au lycéen de rentrer. {/i}{/b}"
     play sound "Door.mp3" noloop
 
-    $ S = Character('Subaru Shinomiya', color="#ff8800")
-      
+    if persistent.endgame == True:
+
+        $ S = Character('Takumi Kisaragi', color="#ffffff") 
+
+    else: 
+
+        $ S = Character('Subaru Shinomiya', color="#ffffff")
  
     R "Bonjour à tous."
     play sound "Click.mp3" noloop

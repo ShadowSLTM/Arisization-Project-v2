@@ -17174,8 +17174,134 @@ label password30:
     "{b}{i}Après quelques minutes Yuna arrive enfin.{/i}{/b}"
     play sound "Door.mp3" noloop
 
+    if pronom == "il":
+        
+        I "Salut les amis."
+        play sound "Click.mp3" noloop 
+
+    else:
+
+        I "Salut les amies."
+        play sound "Click.mp3" noloop 
+
+    P "Salut Yuna."
+    play sound "Click.mp3" noloop
+
+    $ comment_ca_va = get_random_comment_ca_va()
+    Na "[comment_ca_va]"
+    play sound "Click.mp3" noloop
+
+    $ je_vais_bien_txt = get_random_je_vais_bien() 
+    I "[je_vais_bien_txt]"
+    play sound "Click.mp3" noloop
+
+    Na "Tant mieux alors."
+    play sound "Click.mp3" noloop
+
+    I "Bon on fait quoi maintenant ?"
+    play sound "Click.mp3" noloop
+
+    P "Je ne sais pas trop, tu as des idées ?"
+    play sound "Click.mp3" noloop
+
+    Na "On pourrait faire un action ou vérité ?"
+    play sound "Click.mp3" noloop
+
+    I "Oui pourquoi pas." 
+    play sound "Click.mp3" noloop
+
+    P "Je sens que ça va être drôle."
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Vous décidez de commencer une partie d'action ou vérité.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    Na "Alors... qui ouvre le bal ?"
+    play sound "Click.mp3" noloop
+
+    P "Je veux bien commencer."
+    play sound "Click.mp3" noloop
+
+    Na "Parfait, alors à toi de jouer."
+    play sound "Click.mp3" noloop
+
+    P "D’accord... [newname], action ou vérité ?"
+    play sound "Click.mp3" noloop
+
+    Na "Hmm... vérité !"
+    play sound "Click.mp3" noloop
+
+    P "Alors dis-moi... est-ce que tu es amoureuse de quelqu’un ?"
+    play sound "Click.mp3" noloop
+
+    I "Ooooh ! Voilà une question intéressante."
+    play sound "Click.mp3" noloop
+
+    Na "Hein ?! Euh... c-c’est embarrassant..."
+    play sound "Click.mp3" noloop
+
+    "{b}{i}[newname] rougit légèrement et détourne le regard.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    Na "Bon... d’accord... il y a bien quelqu’un qui me plaît."
+    play sound "Click.mp3" noloop
+
+    P "Ah oui ? Et qui ça peut bien être… ?"
+    play sound "Click.mp3" noloop
+
+    Na "Euh… je… je préfère ne pas le dire pour l’instant..."
+    play sound "Click.mp3" noloop
+
+    "{b}[newname] joue nerveusement avec ses mains, l'air gênée.{/b}"
+    play sound "Click.mp3" noloop
+
+    I "Haha, tu es trop mignonne quand tu es gênée !"
+    play sound "Click.mp3" noloop
+
+    if pronom == "il":
+
+        P "Ne t’inquiète pas, ton secret est bien gardé. Mais je suis curieux maintenant..."
+        play sound "Click.mp3" noloop
+
+    else:
+
+        P "Ne t’inquiète pas, ton secret est bien gardé. Mais je suis curieuse maintenant..."
+        play sound "Click.mp3" noloop 
+
+    Na "Peut-être un jour, je te le dirai… mais pas tout de suite !"
+    play sound "Click.mp3" noloop
+
+    "{b}{i}[newname] sourit timidement, un peu soulagée.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    P "Bon [newname], c'est à toi de choisir une personne."
+    play sound "Click.mp3" noloop
+
+    Na "D'accord... [I], action ou vérité ?"
+    play sound "Click.mp3" noloop
+
+    I "Vérité !"
+    play sound "Click.mp3" noloop
+
+    Na ""
+    play sound "Click.mp3" noloop
+
+    I ""
+    play sound "Click.mp3" noloop
+
+    P ""
+    play sound "Click.mp3" noloop
+
+
+
+
+
+
+
     
 
+    "{b}{i}Vous continuez de jouer pendant une demi-heure.{/i}{/b}"
+    play sound "Click.mp3" noloop
 
 
 
@@ -17184,6 +17310,8 @@ label password30:
 
 
 
+
+ 
 
     label end_script2:
     call script3 from _call_script3

@@ -343,7 +343,15 @@ screen navigation():
 
         if persistent.abandon == True: 
 
-            textbutton _("Réinitialiser la réalité") action Function(persistent._clear)
+            textbutton _("Réinitialiser") action Function(reset_abandon)
+
+        else: 
+
+            textbutton _("Pas disponible") action NullAction()
+
+        if persistent.endgame == True: 
+
+            textbutton _("Réinitialiser") action Function(reset_endgame)
 
         else: 
 
