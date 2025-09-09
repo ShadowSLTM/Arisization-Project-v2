@@ -3203,7 +3203,7 @@ label examen_francais:
     Y "[thanks]"
     play sound "Click.mp3" noloop
 
-    M "Bon au tour des inégalables décrypteusess maintenant pour finir."
+    M "Bon au tour des jumelles maintenant pour finir."
     play sound "Click.mp3" noloop 
 
     $ validation = get_random_validation() 
@@ -5908,7 +5908,7 @@ label philosophie_technologie:
     Y "[thanks]"
     play sound "Click.mp3" noloop
 
-    M "Bon au tour des inégalables décrypteusess maintenant pour finir."
+    M "Bon au tour des jumelles maintenant pour finir."
     play sound "Click.mp3" noloop 
 
     $ validation = get_random_validation() 
@@ -15754,7 +15754,7 @@ label password29:
     P "[validation]"
     play sound "Click.mp3" noloop 
 
-    "{b}{i}Tu pars te changer avant d'aller de te coucher.{/i}{/b}"
+    "{b}{i}Tu pars te changer avant d'aller de te coucher mais...{/i}{/b}"
     play sound "Click.mp3" noloop 
 
 label lockornot:
@@ -17201,7 +17201,7 @@ label password30:
     I "Bon on fait quoi maintenant ?"
     play sound "Click.mp3" noloop
 
-    P "Je ne sais pas trop, tu as des idées ?"
+    P "Je ne sais pas trop, vous avez des idées ?"
     play sound "Click.mp3" noloop
 
     Na "On pourrait faire un action ou vérité ?"
@@ -17283,35 +17283,166 @@ label password30:
     I "Vérité !"
     play sound "Click.mp3" noloop
 
-    Na ""
+    Na "Très bien... quel est ton plus grand secret ?"
     play sound "Click.mp3" noloop
 
-    I ""
+    I "Euh... c'est un peu embarrassant..."
     play sound "Click.mp3" noloop
 
-    P ""
+    P "Allez, Yuna, tu peux le dire !"
     play sound "Click.mp3" noloop
 
-
-
-
-
-
-
-    
-
-    "{b}{i}Vous continuez de jouer pendant une demi-heure.{/i}{/b}"
+    I "Bon... je... j'ai toujours eu peur de décevoir les gens autour de moi."
     play sound "Click.mp3" noloop
 
+    Na "Oh... merci de me le confier, Yuna."
+    play sound "Click.mp3" noloop
 
+    P "C'est courageux de l'admettre. Tu n'as pas à te sentir seul(e)."
+    play sound "Click.mp3" noloop
 
+    I "Alors, à moi maintenant ! [prenom], action ou vérité ?"
+    play sound "Click.mp3" noloop
 
+    P "Vérité  aussi !"
+    play sound "Click.mp3" noloop
 
+    I "Très bien... quel est ton plus grand rêve, [prenom] ?"
+    play sound "Click.mp3" noloop
 
+    P "Mon plus grand rêve... hmm..."
+    play sound "Click.mp3" noloop
 
+    P "Je veux juste que [newname] puisse apprendre correctement et ait une belle vie."
+    play sound "Click.mp3" noloop
 
+    Na "Wow... c'est vraiment touchant, [prenom]."
+    play sound "Click.mp3" noloop
 
- 
+    I "Oui, c'est inspirant !"
+    play sound "Click.mp3" noloop
+
+    P "Merci... ça me fait chaud au cœur que vous pensiez ça."
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Vous continuez de jouer pendant encore une heure.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    P "On dirait qu'on s'amuse vraiment..."
+    play sound "Click.mp3" noloop
+
+    Na "Oui, c'est agréable de passer du temps comme ça, juste nous trois."
+    play sound "Click.mp3" noloop
+
+    I "On a choisi vérité naturellement, et je crois que ça rend le jeu encore plus sincère."
+    play sound "Click.mp3" noloop 
+
+    P "Exactement... pas besoin de faire des actions ridicules, on peut juste être nous-mêmes."
+    play sound "Click.mp3" noloop
+
+    Na "Et je pense que c’est ce qui rend cette soirée spéciale."
+    play sound "Click.mp3" noloop
+
+    P "Bon on fait quoi maintenant ?"
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Vous continuez de rire et de discuter jusqu'à ce que la soirée touche à sa fin.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    P "Bien et si nous allions manger ?"
+    play sound "Click.mp3" noloop
+
+    I "Oui je suis d'accord j'ai faim aussi"
+    play sound "Click.mp3" noloop
+
+    Na "D'accord je vous suis."
+    play sound "Footsteps.mp3" noloop
+
+    hide screen day with moveoutleft
+    hide screen clubroom with moveoutright 
+    hide screen points with moveoutleft
+    scene black with fade 
+
+    "{b}{i} Vous partez chercher à manger avant de revenir.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    $ points -= 300 
+
+    scene clubroom with fade 
+    show screen day with moveinleft
+    show screen room with moveinright
+    show screen points with moveinleft
+
+    P "Enfin à manger... "
+    play sound "Click.mp3" noloop 
+
+    $ bien = get_random_fais_du_bien()
+    Na "[bien]"
+    play sound "Click.mp3" noloop  
+
+    "{b}{i} Vous mangez tranquillement pendant une demi-heure.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    I "Vous avez fini de manger ?"
+    play sound "Click.mp3" noloop
+
+    Na "Oui, je n'ai plus faim."
+    play sound "Click.mp3" noloop 
+
+    P "Oui moi aussi."
+    play sound "Click.mp3" noloop 
+
+    Na "Bon je vais me déconnecter."
+    play sound "Click.mp3" noloop
+
+    P "D'accord, repose-toi bien !"
+    play sound "Click.mp3" noloop
+
+    "{b}{i}[newname] se déconnecte.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    I "Je pense que je vais aller me coucher aussi."
+    play sound "Click.mp3" noloop 
+
+    P "Oui moi aussi."
+    play sound "Click.mp3" noloop
+
+    I "Oui, je vais me changer."
+    play sound "Click.mp3" noloop
+
+    $ validation = get_random_validation() 
+    P "[validation]"
+    play sound "Click.mp3" noloop
+
+    I "Bon... moi je vais aller me coucher aussi, bonne nuit."
+    play sound "Click.mp3" noloop  
+
+    P "D'accord, repose-toi bien !"
+    play sound "Click.mp3" noloop
+
+    I "Bonne nuit [prenom] !"
+    play sound "Click.mp3" noloop
+
+    P "Bonne nuit Yuna !"
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Tu pars te coucher tranquillement.{/i}{/b}"
+    play sound "Click.mp3" noloop  
+
+    hide screen day with moveoutleft
+    hide screen clubroom with moveoutright
+    hide screen points with moveoutleft
+    scene black with fade
+
+    "{b}{i} Le lendemain matin, le 29 décembre 2097{/i}{/b}"
+    play sound "Alarm.mp3" noloop
+
+    $ day += 1 
+
+    scene room with fade 
+    show screen day with moveinleft
+    show screen clubroom with moveinright
+    show screen points with moveinleft
 
     label end_script2:
     call script3 from _call_script3

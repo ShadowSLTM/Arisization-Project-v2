@@ -148,8 +148,6 @@ label identity:
 
     "Vos informations ont été enregistrées."
     play sound "Menu.mp3" noloop
-
-    $ domaine = "inégalable créateur" if pronom == "il" else "inégalable créatrice"
     
     $ noms_interdits = {"Kusanagi", "Nishimura", "Ayanokoji", "Sato", "Saotome", "Ichinose", "Hiiragi", "Katsuragi", "Hanemiya", "Sumino", "Kisaragi", "Hoshino", "Shinomiya", "Katsuya", "Horimiya", "Tachibana", "Sakayanagi", "Nagumo", "Kaminari", "Suzumiya", "Kobayashi", "Kaneda", "Nanami", "Kurosawa"}
     $ prenoms_interdits = {"Yuna", "Hajime", "Kendo", "Naoto", "Haruki", "Yuki", "Emika", "Kazumi", "Ayano", "Aiko", "Akeno", "Subaru", "Takumi", "Suzune", "Shiro", "Kaede", "Naomi", "Seigo", "Takeshi", "Saori", "Mizuki", "Rika", "Natsuo", "Reiichi", "Mayumi", "Luna", "Hiroyuki"}
@@ -1268,14 +1266,13 @@ label choice1:
     T "Bien vas-y présentes-toi."
     play sound "Click.mp3" noloop 
 
-    I "Je m'appelle [I], j'ai dix-neuf ans et je suis aussi l'inégalable développeuse."
+    I "Je m'appelle [I], j'ai dix-neuf ans je suis passionnée de dévelloppment informatique."
     play sound "Click.mp3" noloop 
     
-    T "L'inégalable développeuse !? oh intéressant."
+    T "Intérressant merci beaucoup pour ta présentation."
     play sound "Click.mp3" noloop
 
     $ character2 = I 
-    $ ultimate2 = "L'inégalable développeuse" 
 
     $ thanks = get_random_thanks()
     I "[thanks]"
@@ -1313,14 +1310,13 @@ label choice1:
     T "Oui, toi, qui d'autre ?"
     play sound "Click.mp3" noloop
 
-    H "Bonjour, je m'appelle [H], j'ai dix-neuf ans et je suis l'inégalable constructeur."
+    H "Bonjour, je m'appelle [H], j'ai dix-neuf ans je suis passionné par les robots."
     play sound "Click.mp3" noloop
 
     T "Enchanté Hajime bienvenue dans notre classe, j'aimerais savoir quel est ton projet dans ce lycée."
     play sound "Click.mp3" noloop
 
     $ character3 = H
-    $ ultimate3 = "L'inégalable constructeur" 
 
     H "Mon projet est de construire un robot." 
     play sound "Click.mp3" noloop 
@@ -1345,21 +1341,15 @@ label choice1:
     T "Bien, présentez vous dans ce cas."
     play sound "Click.mp3" noloop
 
-    J1 "Bonjour, je m'appelle [J1], L'inégalable Décrypteuse alpha, j'ai dix-neuf ans et voici ma soeur décrypteuse."
+    J1 "Bonjour, je m'appelle [J1], j'ai dix-neuf ans et voici ma soeur."
     play sound "Click.mp3" noloop
 
     $ character4 = J1 
 
-    J2 "Bonjour je m'appelle [J2], l'inégalable Décrypteuse bêta, j'ai dix-neuf ans"
+    J2 "Bonjour je m'appelle [J2], j'ai dix-neuf."
     play sound "Click.mp3" noloop
 
     $ character5 = J2 
-
-    J "et nous sommes les inégalables Décrypteuses."                       
-    play sound "Click.mp3" noloop
-
-    $ ultimate4 = "L'inégalable Décrypteuse Alpha" 
-    $ ultimate5 = "L'inégalable Décrypteuse Bêta" 
 
     $ charactertext4 = "Ayano, surnommée l’Alpha, est la plus calme et réfléchie des deux. Derrière son air distant, parfois un brin agaçant, se cache un esprit méthodique et une redoutable capacité à anticiper les failles. Elle préfère observer longuement avant d’agir, mais une fois lancée, elle devient imparable."
 
@@ -1408,20 +1398,18 @@ label choice1:
     T "Oui, vas-y présentes-toi."
     play sound "Click.mp3" noloop
 
-    K "Je m'appelle [K], j'ai dix-neuf ans et je suis l'inégalable architecte réseau."
+    K "Je m'appelle [K], j'ai dix-neuf ans."
     play sound "Click.mp3" noloop
 
     $ character6 = K
-    $ ultimate6 = "L'inégalable architecte réseau"
 
     T "Bien, enchantée de te rencontrer, suivant ?"
     play sound "Click.mp3" noloop 
 
-    N "Je m'appelle [N], j'ai dix-neuf ans et je suis l'inégalable assistant, toujours prêt pour aider."
+    N "Je m'appelle [N], j'ai dix-neuf ans et toujours prêt pour aider."
     play sound "Click.mp3" noloop
 
     $ character7 = N 
-    $ ultimate7 = "L'inégalable assistant" 
     $ charactertext7 = "Naoto est un lycéen de dix-neuf ans, il est généralement en informatique et prêt à aider les autres."
 
     T "Enchantée aussi de te rencontrer [N]."
@@ -1440,7 +1428,7 @@ label choice1:
     play sound "Click.mp3" noloop
 
     $ character8 = Hi
-    $ charactertext8 = "Haruki est un jeune lycéen de dix-neuf ans, il n'a pas de domaine particulier ou il est doué en informatiuqe mias il est assez bon, il veut juste apprendre et devenir meilleure informatique."
+    $ charactertext8 = "Haruki est un jeune lycéen de dix-neuf ans, il n'a pas de domaine particulier ou il est doué en informatiuqe mias il est assez bon, il veut juste apprendre et devenir meilleure en informatique."
    
     T "Ravie de te rencontrer [Hi], bienvenue dans notre classe."
     play sound "Click.mp3" noloop
@@ -1642,8 +1630,7 @@ label choice1:
     play sound "Click.mp3" noloop 
 
     $ character10 = M 
-    $ ultimate10 = "L'inégalable professeure"
-    $ charactertext10 = "27 ans, est surnommée l’Inégalable Professeure. Enseignante au lycée Nexus depuis deux ans, elle est reconnue pour son exigence, son calme et sa pédagogie redoutablement efficace. Bien qu'elle inspire le respect de ses élèves, Sakura garde une réserve certaine envers Aris, le robot humanoïde, doutant encore de sa place réelle parmi les humains."
+    $ charactertext10 = "27 ans, enseignante au lycée Nexus depuis deux ans, elle est reconnue pour son exigence, son calme et sa pédagogie redoutablement efficace. Bien qu'elle inspire le respect de ses élèves, Sakura garde une réserve certaine envers Aris, le robot humanoïde, doutant encore de sa place réelle parmi les humains."
 
     M "J'ai 27 ans et ça fait deux ans que j'enseigne dans le lycée Nexus."
     play sound "Click.mp3" noloop
@@ -5951,7 +5938,7 @@ label choice8:
     Y "[thanks]"
     play sound "Click.mp3" noloop
 
-    M "Bon au tour des inégalables décrypteusess maintenant pour finir."
+    M "Bon au tour des jumelles maintenant pour finir."
     play sound "Click.mp3" noloop 
 
     $ validation = get_random_validation() 
@@ -7527,7 +7514,7 @@ label suite:
 
     else: 
 
-        $ S = Character('Subaru Shinomiya', color="#ffffff")
+        $ S = Character('Subaru Shinomiya', color="#ffbb00")
  
     R "Bonjour à tous."
     play sound "Click.mp3" noloop
@@ -7551,11 +7538,10 @@ label suite:
     M "Vas-y présente-toi."
     play sound "Click.mp3" noloop 
 
-    S "Je m'appelle [S], l'inégalable étudiant et ancien élève du [origine], j'ai dix-neuf ans ravi de vous rencontrer"
+    S "Je m'appelle [S], ancien élève du [origine], j'ai dix-neuf ans ravi de vous rencontrer"
     play sound "Click.mp3" noloop 
 
-    $ charactertext1 = "Il est le nouveau lycéen de la Seconde-E il est l'inégalable étudiant."
-    $ ultimate1 = "l'inégalable étudiant" 
+    $ charactertext1 = "Il est le nouveau lycéen de la Seconde-E, il est doué pour les cours."
 
     P "[S] !? Je croyais que tu étais dans un autre lycée depuis la dernière fois qu'on s'est vu !"
     play sound "Click.mp3" noloop
@@ -7695,7 +7681,7 @@ label suite:
     S "Hey [P], Je peux te parler deux minutes."
     play sound "Click.mp3" noloop 
 
-    P "Qu'est-ce que tu me veux Subaru ?"
+    P "Qu'est-ce que tu me veux ?"
     play sound "Click.mp3" noloop  
 
     S "C'est concernant [newname]."
@@ -9182,10 +9168,8 @@ label debate_success:
     P "Ok à une autre fois."
     play sound "Click.mp3" noloop 
 
-    Su "Aucun probléme on se rappelera un de ces jours mais en tant que l'inégalable affective."
+    Su "Aucun probléme on se rappelera un de ces jours, tu peux compter sur moi."
     play sound "Click.mp3" noloop 
-
-    $ ultimate11 = "L'inégalable affective" 
 
     P "Merci." 
     play sound "Click.mp3" noloop 
@@ -11938,10 +11922,10 @@ label update:
     Na "Oui enfin..."
     play sound "Click.mp3" noloop
 
-    "{b}{i} tu vois soudainement un papier avec écrit l'inégalable complotiste.{/i}{/b}"
+    "{b}{i} tu vois soudainement un papier avec écrit.{/i}{/b}"
     play sound "Click.mp3" noloop
 
-    P "L'inégalable complotiste !? c'est impossible il n'y a aucun lycéen qui a ce titre ici..."
+    P " !? c'est impossible il n'y a aucun lycéen qui a ce titre ici..."
     play sound "Click.mp3" noloop
 
     Na "[prenom] ça va ?"
@@ -12119,7 +12103,7 @@ label update:
             Na "Oui c'est vrai maintenant que tu le dis."
             play sound "Click.mp3" noloop
 
-            P "En plus on ne sais rien de son domaine inégalable."
+            P "En plus on ne sais rien sur elle."
             play sound "Click.mp3" noloop
 
             Na "Tu as raison."
@@ -12202,7 +12186,7 @@ label update:
     E "Oui, dis-moi, qu'est-ce qu'il y a ?"
     play sound "Click.mp3" noloop
 
-    P "J'ai trouvé une note signée 'L'inégalable Complotiste', mais aucun élève n'a ce titre ici."
+    P "J'ai trouvé une note signée par le traître."
     play sound "Click.mp3" noloop
 
     E "Intéressant... Je vois."
@@ -13212,19 +13196,19 @@ label password:
     "{b}{i}[E] lit tranquilement le document et réalise.{/i}{/b}"
     play sound "Click.mp3" noloop 
 
-    E "Hey attendez, ce document est signé par {b}{i}l'inégalable complotiste.{/i}{/b}" 
+    E "Hey attendez, ce document est signé par {b}{i}le traître.{/i}{/b}" 
     play sound "Click.mp3" noloop
 
-    P "Encore l'inégalable complotiste !?" 
+    P "Encore le traître !?" 
     play sound "Click.mp3" noloop 
 
     E "Oui." 
     play sound "Click.mp3" noloop 
 
-    Oh "Attendez, [prenom] n'est pas l'inégalable complotiste ?" 
+    Oh "Attendez, [prenom] n'est pas le traître." 
     play sound "Click.mp3" noloop 
 
-    M "Non, [pronom] est [domaine], donc veuillez le détachez." 
+    M "Non, [pronom] est, donc veuillez le détachez." 
     play sound "Click.mp3" noloop 
 
     Oh "Je vois je m'en excuse alors." 
@@ -15340,7 +15324,7 @@ label examen_pythagore:
     Y "[thanks]"
     play sound "Click.mp3" noloop
 
-    M "Bon au tour des inégalables décrypteusess maintenant pour finir."
+    M "Bon au tour des jumelles maintenant pour finir."
     play sound "Click.mp3" noloop 
 
     $ validation = get_random_validation() 
@@ -16274,7 +16258,7 @@ label password4:
     P "Quoi comme informations ?"
     play sound "Click.mp3" noloop  
 
-    Oh "il semblerait que l'inégalable complotiste aie réduit son activité depuis fin septembre."
+    Oh "il semblerait que le traître aie réduit son activité depuis fin septembre."
     play sound "Click.mp3" noloop  
 
     P "Cool alors."
@@ -16286,7 +16270,7 @@ label password4:
     P "Il y a quoi d'autre ?"
     play sound "Click.mp3" noloop   
 
-    Oh "il semblerait que l'inégalable complotiste aie aussi changé sa façon d'agir depuis ce moment."
+    Oh "il semblerait que le traître aie aussi changé sa façon d'agir depuis ce moment."
     play sound "Click.mp3" noloop  
 
     Y "C'est bizarre cette histoire."
@@ -16319,7 +16303,7 @@ label password4:
     P "Cette même adresse IP a tenté de ce connecter à [newname] plusieurs fois."
     play sound "Click.mp3" noloop  
 
-    Oh "Je vois, J'imagine que l'inégalable complotiste veut s'en prendre à [newname]."
+    Oh "Je vois, J'imagine que le traître veut vraiment s'en prendre à [newname]."
     play sound "Click.mp3" noloop  
 
     P "C'est évident."
@@ -19492,7 +19476,7 @@ label password9:
     Y "[thanks]"
     play sound "Click.mp3" noloop
 
-    M "Bon au tour des inégalables décrypteusess maintenant pour finir."
+    M "Bon au tour des jumelles maintenant pour finir."
     play sound "Click.mp3" noloop 
 
     $ validation = get_random_validation() 

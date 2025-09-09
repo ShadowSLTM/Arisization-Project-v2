@@ -2083,55 +2083,55 @@ screen characters():
 
             label "{b}{i}— Personnages Principaux —\n{/i}{/b}" 
 
-            text _("{b}[character1] — [ultimate1]{/b}\n") 
+            text _("{b}[character1]{/b}\n") 
         
             text _("[charactertext1]\n") 
 
-            text _("{b}[character2] — [ultimate2]{/b}\n") 
+            text _("{b}[character2]{/b}\n") 
 
             text _("[charactertext2]\n") 
 
-            text _("{b}[character3] — [ultimate3]{/b}\n") 
+            text _("{b}[character3]{/b}\n") 
 
             text _("[charactertext3]\n") 
 
-            text _("{b}[character4] — [ultimate4]{/b}\n") 
+            text _("{b}[character4]{/b}\n") 
 
             text _("[charactertext4]\n") 
 
-            text _("{b}[character5] — [ultimate5]{/b}\n") 
+            text _("{b}[character5]{/b}\n") 
 
             text _("[charactertext5]\n") 
 
-            text _("{b}[character6] — [ultimate6]{/b}\n") 
+            text _("{b}[character6]{/b}\n") 
 
             text _("[charactertext6]\n") 
 
-            text _("{b}[character7] — [ultimate7]{/b}\n") 
+            text _("{b}[character7]{/b}\n") 
 
             text _("[charactertext7]\n") 
 
-            text _("{b}[character8] — [ultimate8]{/b}\n") 
+            text _("{b}[character8]{/b}\n") 
 
             text _("[charactertext8]\n") 
 
-            text _("{b}[character9] — [ultimate9]{/b}\n")
+            text _("{b}[character9]{/b}\n")
 
             text _("[charactertext9]\n") 
 
-            text _("{b}[character10] — [ultimate10]{/b}\n") 
+            text _("{b}[character10]{/b}\n") 
 
             text _("[charactertext10]\n") 
 
             label "{b}{i}— Personnages Secondaires —\n{/i}{/b}" 
 
-            text _("[character12] — [ultimate12]\n")
-            text _("[character13] — [ultimate13]\n") 
-            text _("[character14] — [ultimate14]\n") 
-            text _("[character15] — [ultimate15]\n") 
-            text _("[character16] — [ultimate16]\n") 
-            text _("[character17] — [ultimate17]\n") 
-            text _("[character18] — [ultimate18]\n") 
+            text _("[character12]\n")
+            text _("[character13]\n") 
+            text _("[character14]\n") 
+            text _("[character15]\n") 
+            text _("[character16]\n") 
+            text _("[character17]\n") 
+            text _("[character18]\n") 
 
 style about_label is gui_label 
 style about_label_text is gui_label_text

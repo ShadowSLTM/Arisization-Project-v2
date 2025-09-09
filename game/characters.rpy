@@ -29,7 +29,6 @@ define Y = Character('Yuki Hiiragi', color="#0059ff") # Misaki Mikazuki dans la 
 
 define J1 = Character('Ayano Sumino', color="#ff2323") 
 define J2 = Character('Aiko Sumino', color="#ff2323") 
-define J = Character('Les inégalables décrypteuses', color="#ff2323") 
 
 # Les élèves du bureau des élèves. 
  
@@ -79,3 +78,4 @@ define Ln = Character('Luna Nagumo', color="#ffffff")
 
 define Dc = Character('Seydou N\'Doye', color="#ffffff")
 
+ 
