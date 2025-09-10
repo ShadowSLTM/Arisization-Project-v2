@@ -1903,7 +1903,7 @@ screen credit():
 
             text _("Programmation : [Dc] (Shadow_SLTM)\n")  
 
-            text _("Correction du jeu : [Dc] (Shadow_SLTM)\n")
+            text _("Correction du jeu : [Dc] (Shadow_SLTM)\n") 
 
             text _("Gestion des fichiers du jeu : [Dc] (Shadow_SLTM)\n") 
 
@@ -1914,8 +1914,6 @@ screen credit():
             text _("Phrase « Bon après ça ne m'étonne pas venant de toi » : Sararnbb\n") 
 
             text _("Dessin de [Su] : Sararnbb et validé par [Dc] (Shadow_SLTM)\n") 
-
-            text _("Idée du personnage de [Sk] : Kama\n") 
              
             text _("Idée du personnage de Seigo : Kama\n") 
 
@@ -2046,7 +2044,7 @@ screen robot():
 
             text _("Système d'exploitation : [system]\n")
 
-            text _("Mise à jour : [update]\n") 
+            text _("Mise à jour : [update]\n")  
 
             text _("Adresse IP : [baseip]\n")
  
@@ -2079,7 +2077,7 @@ screen characters():
 
             label "{b}{i}— Vous —\n{/i}{/b}" 
 
-            text _("{b}[P] — [domaine]\n{/b}") 
+            text _("{b}[P]\n{/b}") 
 
             label "{b}{i}— Personnages Principaux —\n{/i}{/b}" 
 

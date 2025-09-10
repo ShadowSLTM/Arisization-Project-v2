@@ -8,9 +8,9 @@ default A = Character('??????????', color="#00eeff")
 default Na = Character('[newname] [nom]', color="#00eeff")
 
 
-
 define Su = Character('Suzune Horimiya', color="#ffffff")
 define Sk = Character('Shiro Katsuya', color="#ffffff") 
+
 # antagoniste principale 
 
 default S = Character('??????????', color="#ffffff") 

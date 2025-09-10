@@ -11,6 +11,12 @@ init python:
         "Hmm... je n'ai pas envie de me lever.",
         "Oh déjà...",
         "Oh super....",  
+        "Allez hop, debout !",
+        "Allez hop, on se lève !",
+        "Allez hop, on se bouge !",
+        "Allez hop, on se réveille !",
+        "Encore une journée qui commence...",
+        "Encore une journée qui débute...",
     ]
     
     def get_random_morning_line():
