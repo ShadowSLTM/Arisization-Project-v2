@@ -233,9 +233,6 @@ label début:
         S "On pourrait fouiller les lieux déjà ?"
         play sound "Click.mp3" noloop
 
-    S "On pourrait fouiller les lieux déjà ?"
-    play sound "Click.mp3" noloop
-
     $ character1 = S 
 
     P "Tu penses sérieusement qu'on va trouver quelque chose d'intéressant ici ?"
@@ -474,11 +471,21 @@ label hack:
     P "Oui, je t'écoute."
     play sound "Click.mp3" noloop
 
-    A "Qui est cette personne avec toi ?"
-    play sound "Click.mp3" noloop
+    if persistent.endgame == True:
 
-    P "C'est mon meilleur ami [S]."
-    play sound "Click.mp3" noloop
+        A "Qui est cette personne avec toi ?"
+        play sound "Glitch.mp3" noloop
+
+        P "C'est mon camarade de classe [S]."
+        play sound "Click.mp3" noloop
+
+    else: 
+
+        A "Qui est cette personne avec toi ?"
+        play sound "Click.mp3" noloop
+
+        P "C'est mon meilleur ami [S]."
+        play sound "Click.mp3" noloop
 
     A "J'ai plusieurs questions à te poser."
     play sound "Click.mp3" noloop
@@ -7301,7 +7308,7 @@ label suite:
     hide screen day with moveoutleft
     scene black with fade
 
-    "{b}{i}Vous entrez en .{/i}{/b}"
+    "{b}{i}Vous entrez en classe.{/i}{/b}"
     play sound "Door.mp3" noloop
     
     scene classroom with fade
@@ -7538,7 +7545,7 @@ label suite:
     M "Vas-y présente-toi."
     play sound "Click.mp3" noloop 
 
-    S "Je m'appelle [S], ancien élève du [origine], j'ai dix-neuf ans ravi de vous rencontrer"
+    S "Je m'appelle [S], ancien élève du [origine], j'ai dix-neuf ans ravi de vous rencontrer."
     play sound "Click.mp3" noloop 
 
     $ charactertext1 = "Il est le nouveau lycéen de la Seconde-E, il est doué pour les cours."
@@ -7727,7 +7734,7 @@ label suite:
     P "Oui et alors ?" 
     play sound "Click.mp3" noloop 
 
-    S "Depuis que tu as découvert [newname] j'ai perdu une partie de ma popularité car soit disant j'était une fraude."
+    S "Depuis que tu as découvert [newname] j'ai perdu une partie de ma popularité car soit disant j'était inutile."
     play sound "Click.mp3" noloop 
 
     P "Et alors personnellement ça ne me concerne pas."
@@ -21529,7 +21536,7 @@ label update1:
     play sound "Click.mp3" noloop 
 
     "{b}{i}Tu te changes avant d'aller de te coucher.{/i}{/b}"
-    play sound "Click.mp3" noloop
+    play sound "Click.mp3" noloop 
 
 label end_script:
     call script2 from _call_script2

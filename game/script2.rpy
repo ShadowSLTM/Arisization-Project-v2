@@ -7093,7 +7093,7 @@ label password18:
     Na "Cool alors."
     play sound "Click.mp3" noloop  
 
-        $ go_eat = get_random_go_eat()
+    $ go_eat = get_random_go_eat()
     P "[go_eat]"
     play sound "Click.mp3" noloop 
 
@@ -18189,8 +18189,149 @@ label password31:
         I "Salut les amies, vous avez bien dormi ?"
         play sound "Click.mp3" noloop 
 
+    Na "Nous avons bien dormi."
+    play sound "Click.mp3" noloop 
+
+    P "Oui je confirme."
+    play sound "Click.mp3" noloop 
+
+    I "Cool alors."
+    play sound "Click.mp3" noloop  
+
+    "{b}{i}[I] part se changer avant de revenir.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    P "Bon on va manger ?"
+    play sound "Click.mp3" noloop 
+
+    I "Oui j'ai très faim."
+    play sound "Click.mp3" noloop 
+
+    Na "D'accord, je vous suis."
+    play sound "Footsteps.mp3" noloop
+
+    hide screen room with moveoutright
+    hide screen points with moveoutleft
+    hide screen day with moveoutleft
+    scene black with fade 
+
+    "{b}{i} Vous partez chercher à manger.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    $ points -= 100
+
+    scene room with fade 
+    show screen day with moveinleft
+    show screen points with moveinleft
+    show screen room with moveinright
+
+    Na "Enfin à manger... "
+    play sound "Click.mp3" noloop 
+
+    $ bien = get_random_fais_du_bien()
+    P "[bien]"
+    play sound "Click.mp3" noloop  
+
+    "{b}{i} Vous mangez tranquillement pendant une demi-heure.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    P "Tu as finis de manger ?"
+    play sound "Click.mp3" noloop 
+
+    Na "Oui, je n'ai plus faim."
+    play sound "Click.mp3" noloop 
+
+    P "Bien."
+    play sound "Click.mp3" noloop 
+
+    Na "Bon on fait quoi ce matin ?"
+    play sound "Click.mp3" noloop
+
+    I "Je ne sais pas trop, vous avez des idées ?"
+    play sound "Click.mp3" noloop
+
+    P "On devrait ranger la salle de club pour commencer vu que la soirée pyjama est fini."
+    play sound "Click.mp3" noloop
+
+    Na "Oui tu as rasion."
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Vous commencez à ranger la salle de club.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    P "Bon on a presque fini de ranger."
+    play sound "Click.mp3" noloop
+
+    Na "Oui c'est presque bon."
+    play sound "Click.mp3" noloop
+
+    I "Il reste juste à passer un coup de balai."
+    play sound "Click.mp3" noloop
+
+    P "Et remettre les täbles et les chaises à leur place."
+    play sound "Click.mp3" noloop
+
+    "{b}{i}{/i}{/b}"
+    play sound "Click.mp3" noloop
 
 
+
+    $ suivi = get_random_suivi()
+    Na "[suivi]" 
+    play sound "Footsteps.mp3" noloop
+
+    hide screen clubroom with moveoutright
+    hide screen points with moveoutleft
+    hide screen day with moveoutleft
+    scene black with fade 
+
+    "{b}{i} Vous sortez de la salle de club.{/i}{/b}"
+    play sound "Door.mp3" noloop
+
+    scene hall with fade 
+    show screen day with moveinleft
+    show screen points with moveinleft
+    show screen hall with moveinright
+
+    "{b}{i} Vous continuez votre chemin vers le dortoir.{/i}{/b}"
+    play sound "Footsteps.mp3" noloop
+
+    hide screen hall with moveoutright 
+    hide screen points with moveoutleft
+    hide screen day with moveoutleft
+    scene staircase with fade 
+
+    "{b}{i} Vous montez au premier étage.{/i}{/b}"
+    play sound "Footsteps.mp3" noloop
+
+    scene hallway with fade
+    show screen day with moveinleft
+    show screen points with moveinleft
+    show screen hallway with moveinright 
+
+    "{b}{i} Vous continuez dans le couloir.{/i}{/b}"
+    play sound "Footsteps.mp3" noloop
+
+    hide screen hallway with moveoutright
+    hide screen points with moveoutleft
+    hide screen day with moveoutleft
+    scene black with fade
+
+    "{b}{i}Vous entrez dans ton dortoir.{/i}{/b}"
+    play sound "Door.mp3" noloop
+
+    scene room with fade 
+    show screen day with moveinleft
+    show screen points with moveinleft
+    show screen room with moveinright 
+
+    $ dortoir = get_random_dortoir()
+    P "[dortoir]"
+    play sound "Click.mp3" noloop
+
+    $ bien = get_random_fais_du_bien()
+    Na "[bien]" 
+    play sound "Click.mp3" noloop  
 
     label end_script2:
     call script3 from _call_script3

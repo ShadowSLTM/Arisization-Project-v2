@@ -337,10 +337,6 @@ screen navigation():
 
             textbutton _("Crédits") action ShowMenu("credit")
 
-        if renpy.variant("pc"): 
-
-            textbutton _("Quitter ton robot") action Quit(confirm=not main_menu) 
-
         if persistent.abandon == True: 
 
             textbutton _("Réinitialiser") action Function(reset_abandon)
@@ -357,6 +353,10 @@ screen navigation():
 
             textbutton _("Pas disponible") action NullAction()
 
+        if renpy.variant("pc"): 
+
+            textbutton _("Quitter ton robot") action Quit(confirm=not main_menu) 
+            
 style navigation_button is gui_button 
 style navigation_button_text is gui_button_text
 

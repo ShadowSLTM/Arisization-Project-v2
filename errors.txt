@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script2.rpy", line 17269: expected end of line
-    play sound "Click.mp3" noloop fade
-                                  ^
+File "game/screens.rpy", line 356: 'elif' is not a keyword argument or valid child of the vbox statement.
+    elif not main_menu: 
+        ^
 
 Ren'Py Version: Ren'Py 8.3.7.25031702
-Mon Sep  8 17:07:11 2025
+Thu Sep 11 13:05:06 2025
