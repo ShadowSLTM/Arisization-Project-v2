@@ -280,7 +280,7 @@ label début:
         S "Un [model] !? Tu n'es pas sérieuse j'espère."
         play sound "Click.mp3" noloop
 
-    P "Si, je le suis."
+    P "Si, je le suis." 
     play sound "Click.mp3" noloop 
 
     S "Ok, mais on va faire quoi avec ça maintenant ?"
@@ -383,7 +383,7 @@ label hack:
 
         else: 
 
-            "{/i}{/b}Erreur système, le démarrage a échoué.{/i}{/b}" 
+            "{i}{b}Erreur système, le démarrage a échoué.{/i}{/b}" 
             play sound "Click.mp3" noloop     
 
             P "Mince..." 
@@ -9504,8 +9504,12 @@ label debate_success:
     P "[validation]"
     play sound "Click.mp3" noloop 
 
+    show screen mathbook with moveinbottom
+
     M "Sortez votre livre de math page 12."
     play sound "Click.mp3" noloop
+
+    hide screen mathbook with moveoutbottom 
 
     "{b}{i} Tout le monde sorte le livre.{/i}{/b}"
     play sound "Click.mp3" noloop 
@@ -11934,8 +11938,6 @@ label update:
     M "Rebonjour, bon reprenez votre livre page 11."
     play sound "Click.mp3" noloop 
 
-    # à modifier  
-
     "{b}{i} le cours continue dans le calme.{/i}{/b}"
     play sound "Bell.mp3" noloop 
 
@@ -12890,8 +12892,12 @@ label password:
     P "[validation]"
     play sound "Click.mp3" noloop 
 
+    show screen mathbook with moveinbottom
+
     M "Bien, sortez votre livre de mathématique."
     play sound "Click.mp3" noloop
+
+    hide screen mathbook with moveoutbottom 
 
     $ validation = get_random_validation() 
     P "[validation]"

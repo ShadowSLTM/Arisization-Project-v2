@@ -1577,7 +1577,6 @@ label password13:
 # cours d'informatique 
 ######################################################################################################
 
-
     M "Veuillez sortir pour une fois vos ordinateurs."
     play sound "Click.mp3" noloop
     
@@ -2887,19 +2886,18 @@ label examen_francais:
     Y "Je confirme aussi."
     play sound "Click.mp3" noloop 
 
+    show screen philobook with moveinbottom
+
     M "Sortez vos livre de philo page 6."
     play sound "Click.mp3" noloop
+
+    hide screen philobook with moveoutbottom
 
     "{b}{i}Tous les élèves sortent leur livre.{/i}{/b}"
     play sound "Click.mp3" noloop
 
     M "Bien."
     play sound "Click.mp3" noloop
-
-# cours de philosophie
-############################################################################################
-
-############################################################################################
 
     "{b}{i} Le cours continue tranquillement.{/i}{/b}"
     play sound "Bell.mp3" noloop
@@ -3396,11 +3394,6 @@ label examen_francais:
     $ validation = get_random_validation() 
     P "[validation]"
     play sound "Click.mp3" noloop 
-
-# cours de philosophie
-###############################################################################
-
-###############################################################################
 
     "{b}{i} Le cours continue tranquillement.{/i}{/b}"
     play sound "Bell.mp3" noloop
@@ -5015,7 +5008,6 @@ label password16:
     $ validation = get_random_validation() 
     Y "[validation]"
     play sound "Click.mp3" noloop 
-
 
 # cours de philosophie 3
 ############################################################################################################
@@ -9954,6 +9946,132 @@ label password21:
 # cours de physique 2
 ######################################################################################################################################
 
+    M "Maintenant que nous connaissons les 7 grandeurs fondamentales, voyons comment elles s’assemblent pour former d’autres grandeurs."
+    play sound "Click.mp3" noloop
+
+    M "Première grandeur dérivée : la vitesse."
+    play sound "Click.mp3" noloop
+
+    M "Formule : v = d / t"
+    play sound "Click.mp3" noloop
+
+    M "Unité : le mètre par seconde, symbole m·s⁻¹."
+    play sound "Click.mp3" noloop
+
+    M "Exemple : une voiture roule à 20 m·s⁻¹, soit environ 72 km/h."
+    play sound "Click.mp3" noloop
+
+    M "Exercice : si un coureur parcourt 400 m en 50 s, quelle est sa vitesse moyenne ?"
+    play sound "Click.mp3" noloop
+
+    S "Madame, ça veut dire qu’on doit juste diviser 400 par 50 ?"
+    play sound "Click.mp3" noloop
+
+    M "Exactement Subaru ! Et cela donne 8 m·s⁻¹."
+    play sound "Click.mp3" noloop
+
+    M "Deuxième grandeur dérivée : l’accélération."
+    play sound "Click.mp3" noloop
+
+    M "Formule : a = Δv / Δt"
+    play sound "Click.mp3" noloop
+
+    M "Unité : le mètre par seconde au carré, symbole m·s⁻²."
+    play sound "Click.mp3" noloop
+
+    M "Exemple : un objet en chute libre subit une accélération d’environ 9,81 m·s⁻²."
+    play sound "Click.mp3" noloop
+
+    M "Exercice : une voiture passe de 0 à 25 m·s⁻¹ en 5 secondes. Quelle est son accélération ?"
+    play sound "Click.mp3" noloop
+
+    A "Euh… on fait 25 divisé par 5 ?"
+    play sound "Click.mp3" noloop
+
+    M "Très bien Aris ! Cela fait 5 m·s⁻²."
+    play sound "Click.mp3" noloop
+
+    M "Troisième grandeur dérivée : la force."
+    play sound "Click.mp3" noloop
+
+    M "Formule : F = m · a"
+    play sound "Click.mp3" noloop
+
+    M "Unité : le newton, symbole N."
+    play sound "Click.mp3" noloop
+
+    M "1 N = 1 kg·m·s⁻²."
+    play sound "Click.mp3" noloop
+
+    M "Exemple : soulever une pomme de 0,1 kg demande une force d’environ 1 N."
+    play sound "Click.mp3" noloop
+
+    M "Exercice : une voiture de 800 kg subit une accélération de 2 m·s⁻². Quelle est la force appliquée ?"
+    play sound "Click.mp3" noloop
+
+    I "Ça doit être énorme comme valeur… on multiplie 800 par 2 ?"
+    play sound "Click.mp3" noloop
+
+    M "Exact Iris ! Cela donne 1600 N."
+    play sound "Click.mp3" noloop
+
+    M "Quatrième grandeur dérivée : le travail ou l’énergie."
+    play sound "Click.mp3" noloop
+
+    M "Formule : E = F · d"
+    play sound "Click.mp3" noloop
+
+    M "Unité : le joule, symbole J."
+    play sound "Click.mp3" noloop
+
+    M "1 J = 1 N·m = 1 kg·m²·s⁻²."
+    play sound "Click.mp3" noloop
+
+    M "Exemple : soulever un objet de 10 N sur 2 m correspond à 20 J."
+    play sound "Click.mp3" noloop
+
+    M "Exercice : si un élève pousse une caisse avec une force de 50 N sur une distance de 3 m, quel travail fournit-il ?"
+    play sound "Click.mp3" noloop
+
+    Hi "Facile ! 50 multiplié par 3… ça fait 150 J !"
+    play sound "Click.mp3" noloop
+
+    M "Parfait Haruki !"
+    play sound "Click.mp3" noloop
+
+    M "Cinquième grandeur dérivée : la puissance."
+    play sound "Click.mp3" noloop
+
+    M "Formule : P = E / t"
+    play sound "Click.mp3" noloop
+
+    M "Unité : le watt, symbole W."
+    play sound "Click.mp3" noloop
+
+    M "1 W = 1 J·s⁻¹ = 1 kg·m²·s⁻³."
+    play sound "Click.mp3" noloop
+
+    M "Exemple : une ampoule classique consomme 60 W."
+    play sound "Click.mp3" noloop
+
+    M "Exercice : un moteur fournit 3000 J en 10 secondes. Quelle est sa puissance ?"
+    play sound "Click.mp3" noloop
+
+    A "On divise 3000 par 10… donc 300 W ?"
+    play sound "Click.mp3" noloop
+
+    M "Exactement Aris !"
+    play sound "Click.mp3" noloop
+
+    M "Voilà : toutes ces grandeurs dérivées se construisent uniquement à partir des 7 unités de base."
+    play sound "Click.mp3" noloop
+
+    M "C’est ce qu’on appelle l’analyse dimensionnelle en physique."
+    play sound "Click.mp3" noloop
+
+    M "Grâce à elle, on peut vérifier la cohérence des formules et comprendre les relations entre les grandeurs."
+    play sound "Click.mp3" noloop
+
 ######################################################################################################################################
 
     $ validation = get_random_validation() 
@@ -10663,7 +10781,91 @@ label password22:
     Na "[validation]"
     play sound "Click.mp3" noloop 
 
-    M "Pour cette fin de semaine, nous allons conclure le théme d'informatique sur lequel nous travaillons.."
+    M "Aujourd’hui, nous allons découvrir un chapitre fondamental de la mécanique : les lois de Newton."
+    play sound "Click.mp3" noloop
+
+    M "Ces lois expliquent le mouvement des objets et les forces qui agissent sur eux."
+    play sound "Click.mp3" noloop
+
+    M "Première loi de Newton : le principe d’inertie."
+    play sound "Click.mp3" noloop
+
+    M "Un objet immobile reste immobile, et un objet en mouvement continue à vitesse constante, tant qu’aucune force ne modifie son état."
+    play sound "Click.mp3" noloop
+
+    S "Ça veut dire que si je pousse ma trousse, elle devrait glisser indéfiniment ?"
+    play sound "Click.mp3" noloop
+
+    M "Exact Subaru, mais dans la réalité, les frottements l’arrêtent. Sans frottements, elle glisserait en continu."
+    play sound "Click.mp3" noloop
+
+    M "Deuxième loi de Newton : la loi fondamentale de la dynamique."
+    play sound "Click.mp3" noloop
+
+    M "Formule : F = m · a"
+    play sound "Click.mp3" noloop
+
+    M "Cela signifie que plus la masse est grande, plus il faut de force pour obtenir la même accélération."
+    play sound "Click.mp3" noloop
+
+    I "Donc pour pousser une voiture, il faut beaucoup plus de force que pour pousser une bicyclette ?"
+    play sound "Click.mp3" noloop
+
+    M "Exactement Iris !"
+    play sound "Click.mp3" noloop
+
+    M "Exercice : quelle force faut-il appliquer à une caisse de 20 kg pour lui donner une accélération de 2 m·s⁻² ?"
+    play sound "Click.mp3" noloop
+
+    Na "On fait 20 multiplié par 2… ça donne 40 N !"
+    play sound "Click.mp3" noloop
+
+    M "Parfait Aris."
+    play sound "Click.mp3" noloop
+
+    M "Troisième loi de Newton : action = réaction."
+    play sound "Click.mp3" noloop
+
+    M "Si un objet A exerce une force sur un objet B, alors B exerce une force de même intensité mais de sens opposé sur A."
+    play sound "Click.mp3" noloop
+
+    S "C’est comme quand je saute, le sol me renvoie une force qui me fait décoller ?"
+    play sound "Click.mp3" noloop
+
+    M "Exact Subaru, le sol exerce une réaction égale à l’action que tu exerces dessus."
+    play sound "Click.mp3" noloop
+
+    M "Voyons maintenant une application directe : la notion de poids."
+    play sound "Click.mp3" noloop
+
+    M "Le poids est la force d’attraction gravitationnelle exercée par la Terre sur un objet."
+    play sound "Click.mp3" noloop
+
+    M "Formule : P = m · g"
+    play sound "Click.mp3" noloop
+
+    M "Unité : le newton (N)."
+    play sound "Click.mp3" noloop
+
+    M "Exemple : une masse de 10 kg subit un poids de 98 N sur Terre (car g ≈ 9,8 m·s⁻²)."
+    play sound "Click.mp3" noloop
+
+    M "Exercice : calculez le poids d’un astronaute de 80 kg sur la Terre, puis sur la Lune où g ≈ 1,6 m·s⁻²."
+    play sound "Click.mp3" noloop
+
+    I "Sur Terre, ça fait 80 × 9,8… donc 784 N !"
+    play sound "Click.mp3" noloop
+
+    Na "Et sur la Lune, 80 × 1,6 = 128 N. Il pèse beaucoup moins !"
+    play sound "Click.mp3" noloop
+
+    M "Très bien ! Attention cependant : sa masse reste la même, seul son poids change."
+    play sound "Click.mp3" noloop
+
+    M "Voilà : avec les lois de Newton et la notion de poids, vous avez les bases pour comprendre la dynamique des objets."
+    play sound "Click.mp3" noloop
+
+    M "Pour cette fin de semaine, nous allons conclure les cours sur lesquel nous travaillons..."
     play sound "Click.mp3" noloop  
 
     $ validation = get_random_validation() 
@@ -10770,8 +10972,98 @@ label password22:
     Na "[validation]"
     play sound "Click.mp3" noloop 
 
-# cours de physique 4
+# cours de physique 4 
 ######################################################################################################################################
+
+    M "Aujourd’hui, nous allons parler d’un concept central en physique : l’énergie."
+    play sound "Click.mp3" noloop
+
+    M "Il existe différentes formes d’énergie, mais concentrons-nous sur deux énergies mécaniques :"
+    play sound "Click.mp3" noloop
+
+    M "L’énergie cinétique et l’énergie potentielle gravitationnelle."
+    play sound "Click.mp3" noloop
+
+    M "Premièrement : l’énergie cinétique."
+    play sound "Click.mp3" noloop
+
+    M "Formule : Ec = 1/2 · m · v²"
+    play sound "Click.mp3" noloop
+
+    M "Unité : le joule, symbole J."
+    play sound "Click.mp3" noloop
+
+    M "Exemple : une voiture de 1000 kg roulant à 20 m·s⁻¹ a une énergie cinétique de 200 000 J."
+    play sound "Click.mp3" noloop
+
+    M "Exercice : calculez l’énergie cinétique d’un vélo de 80 kg roulant à 5 m·s⁻¹."
+    play sound "Click.mp3" noloop
+
+    S "Donc on fait 0,5 × 80 × 5² ?"
+    play sound "Click.mp3" noloop
+
+    M "Oui Subaru, et cela donne 1000 J."
+    play sound "Click.mp3" noloop
+
+    M "Deuxièmement : l’énergie potentielle gravitationnelle."
+    play sound "Click.mp3" noloop
+
+    M "Formule : Ep = m · g · h"
+    play sound "Click.mp3" noloop
+
+    M "Unité : le joule (J)."
+    play sound "Click.mp3" noloop
+
+    M "Exemple : un objet de 2 kg placé à 10 m de hauteur possède une énergie potentielle de 196 J."
+    play sound "Click.mp3" noloop
+
+    M "Exercice : quelle est l’énergie potentielle d’un ballon de 0,5 kg placé à 4 m du sol ?"
+    play sound "Click.mp3" noloop
+
+    I "On calcule 0,5 × 9,8 × 4… ça donne 19,6 J."
+    play sound "Click.mp3" noloop
+
+    M "Très bien Iris !"
+    play sound "Click.mp3" noloop
+
+    M "Voyons maintenant un principe essentiel : la conservation de l’énergie."
+    play sound "Click.mp3" noloop
+
+    M "Lorsqu’il n’y a pas de frottement ou de perte, l’énergie mécanique totale reste constante."
+    play sound "Click.mp3" noloop
+
+    M "Énergie mécanique : Em = Ec + Ep"
+    play sound "Click.mp3" noloop
+
+    A "Donc si un objet tombe, son énergie potentielle se transforme en énergie cinétique ?"
+    play sound "Click.mp3" noloop
+
+    M "Exactement Aris ! Et la somme des deux reste la même."
+    play sound "Click.mp3" noloop
+
+    M "Exemple : une bille de 1 kg au sommet d’une pente à 5 m de haut a 49 J d’énergie potentielle et 0 J d’énergie cinétique."
+    play sound "Click.mp3" noloop
+
+    M "En bas de la pente, elle aura 0 J d’énergie potentielle mais 49 J d’énergie cinétique."
+    play sound "Click.mp3" noloop
+
+    M "Exercice : un objet de 2 kg est placé à 3 m de haut sans vitesse initiale. Quelle sera son énergie cinétique en touchant le sol ?"
+    play sound "Click.mp3" noloop
+
+    S "Son énergie potentielle de départ est 2 × 9,8 × 3 = 58,8 J."
+    play sound "Click.mp3" noloop
+
+    I "Donc en bas, toute cette énergie devient cinétique : 58,8 J !"
+    play sound "Click.mp3" noloop
+
+    M "Parfait, vous avez compris."
+    play sound "Click.mp3" noloop
+
+    M "Retenez bien : l’énergie ne disparaît jamais, elle se transforme."
+    play sound "Click.mp3" noloop
+
+    M "C’est un principe fondamental qui régit tout l’univers."
+    play sound "Click.mp3" noloop
 
 ######################################################################################################################################
 
@@ -11007,8 +11299,65 @@ label password22:
     "{b}{i} Tous les élèves sortent leur livre.{/i}{/b}"
     play sound "Click.mp3" noloop
 
-# cours d
+# cours de physique 5 
 ######################################################################################################################################
+
+    M "Pour finir notre module de mécanique, nous allons parler du travail et du rendement."
+    play sound "Click.mp3" noloop
+
+    M "Premièrement, le travail mécanique."
+    play sound "Click.mp3" noloop
+
+    M "Formule : W = F · d · cosθ"
+    play sound "Click.mp3" noloop
+
+    M "Unité : le joule, symbole J."
+    play sound "Click.mp3" noloop
+
+    M "Exemple : pousser une caisse avec 50 N sur 3 m en ligne droite (θ = 0°) : W = 50 × 3 × cos0 = 150 J."
+    play sound "Click.mp3" noloop
+
+    M "Exercice : une personne tire un traîneau avec 200 N sur 10 m à un angle de 60°. Quel travail fournit-elle ?"
+    play sound "Click.mp3" noloop
+
+    S "On utilise cos 60° = 0,5, donc 200 × 10 × 0,5 = 1000 J."
+    play sound "Click.mp3" noloop
+
+    M "Parfait Subaru !"
+    play sound "Click.mp3" noloop
+
+    M "Deuxièmement : le rendement."
+    play sound "Click.mp3" noloop
+
+    M "Tous les appareils ne transforment pas l’énergie parfaitement : il y a toujours des pertes (frottement, chaleur…)."
+    play sound "Click.mp3" noloop
+
+    M "Formule : η = Eutile / Eentrée × 100%"
+    play sound "Click.mp3" noloop
+
+    M "Exemple : un moteur consomme 1000 J pour produire 700 J de travail utile."
+    play sound "Click.mp3" noloop
+
+    A "Donc le rendement est 700 ÷ 1000 × 100 = 70 % ?"
+    play sound "Click.mp3" noloop
+
+    M "Exact Aris ! 30 % de l’énergie est perdue, principalement sous forme de chaleur."
+    play sound "Click.mp3" noloop
+
+    M "Exercice : une ampoule reçoit 60 J et produit seulement 12 J de lumière. Quel est son rendement ?"
+    play sound "Click.mp3" noloop
+
+    I "12 ÷ 60 × 100… ça fait 20 %."
+    play sound "Click.mp3" noloop
+
+    M "Très bien Iris ! La plupart des ampoules classiques ont un rendement faible."
+    play sound "Click.mp3" noloop
+
+    M "Voilà, avec le travail et le rendement, vous avez toutes les bases pour comprendre comment la force et l’énergie interagissent dans la vie réelle."
+    play sound "Click.mp3" noloop
+
+    M "Félicitations, vous avez terminé le module mécanique de base !"
+    play sound "Click.mp3" noloop
 
 ######################################################################################################################################
 
@@ -11077,21 +11426,65 @@ label password22:
     P "Je ne sais pas vraiment."
     play sound "Click.mp3" noloop  
 
-# cours d
-######################################################################################################################################
+    Na "On peut réviser les cours de physique ?"
+    play sound "Click.mp3" noloop
 
-######################################################################################################################################
+    P "Oui pourquoi pas."
+    play sound "Click.mp3" noloop
+
+    Na "Alors, commençons par les unités de base. La masse, c’est en kilogrammes, non ?"
+    play sound "Click.mp3" noloop
+
+    P "Oui, et la longueur c’est en mètres, le temps en secondes."
+    play sound "Click.mp3" noloop
+
+    Na "Donc la vitesse, c’est la distance sur le temps… mètres par seconde."
+    play sound "Click.mp3" noloop
+
+    P "Exactement ! Et l’accélération, c’est vitesse sur temps… donc mètre par seconde carré."
+    play sound "Click.mp3" noloop
+
+    Na "Ok, je crois que je commence à comprendre. Et la force, c’est quoi déjà ?"
+    play sound "Click.mp3" noloop
+
+    P "La force, c’est masse fois accélération… donc kilogramme mètre par seconde carré, ça s’appelle un Newton."
+    play sound "Click.mp3" noloop
+
+    Na "Ah oui, les fameuses formules dérivées ! Et l’énergie, c’est force fois distance, donc Newton mètre."
+    play sound "Click.mp3" noloop
+
+    P "Oui, et ça s’appelle un Joule. Tu vois, toutes ces unités viennent des bases."
+    play sound "Click.mp3" noloop
+
+    Na "C’est logique quand on les met bout à bout comme ça."
+    play sound "Click.mp3" noloop
+
+    P "Exactement. Tu veux qu’on fasse un petit exercice pour vérifier ?"
+    play sound "Click.mp3" noloop
+
+    Na "Oui, bonne idée !"
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Une heure après vous finissez de réviser.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    P "Bon, on a bien révisé. Je trouve que tu te débrouilles bien."
+    play sound "Click.mp3" noloop
 
     $ thanks = get_random_thanks()
     Na "[thanks]"
     play sound "Click.mp3" noloop
 
+    $ nothing = get_random_nothing()
+    P "[nothing]"
+    play sound "Click.mp3" noloop 
+
     $ go_eat = get_random_go_eat()
-    P "[go_eat]"
+    Na "[go_eat]"
     play sound "Click.mp3" noloop 
 
     $ suivi = get_random_suivi()
-    Na "[suivi]" 
+    P "[suivi]" 
     play sound "Footsteps.mp3" noloop
 
     hide screen room with moveoutright
@@ -14080,8 +14473,10 @@ label password27:
     P "Voilà, la nouvelle batterie est installée."
     play sound "Click.mp3" noloop
 
+    # Input runix à mettre     
+
     "{b}{i}Tu refermes le capot arrière d'Aris.{/i}{/b}"
-    play sound "Click.mp3" noloop
+    play sound "Click.mp3" noloop 
 
     P "Voilà, c'est fait je vais rebrancher [newname]."
     play sound "Click.mp3" noloop
@@ -18331,7 +18726,17 @@ label password31:
 
     $ bien = get_random_fais_du_bien()
     Na "[bien]" 
-    play sound "Click.mp3" noloop  
+    play sound "Click.mp3" noloop 
+
+
+
+
+
+
+
+
+
+
 
     label end_script2:
     call script3 from _call_script3
