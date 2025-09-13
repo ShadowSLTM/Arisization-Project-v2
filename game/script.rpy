@@ -17,7 +17,6 @@ label start:
     default origine = ""  
     default domaine = "??????????" 
     default model = "robot humanoïde" 
-    default ending = 0
     default stored_password = ""
     default system = "??????????"
     default ip = ""
@@ -706,8 +705,14 @@ label choice1:
 
     else: 
 
-        P "Mais elle est abandonnée, et en plus je suis bonne en informatique."
+        P "Mais elle est abandonnée, et en plus je suis bonne en informatique pour l'améliorer."
         play sound "Click.mp3" noloop 
+
+    S "Sache-le mais plus tard tu risques d'avoir de problémes."
+    play sound "Click.mp3" noloop
+
+    P "Tu dis n'importe quoi !"
+    play sound "Click.mp3" noloop
 
     "{b}{i}Tu mets le chargeur d'[A] dans ton sac pendant que tu parles avec [S].{/i}{/b}"
     play sound "Click.mp3" noloop  
@@ -721,7 +726,7 @@ label choice1:
     A "Pour aller oû ?"
     play sound "Click.mp3" noloop 
 
-    P "Je te récupére , tu viens avec moi car maintenant je te considére comme ma fille maintenant."
+    P "Je te récupére, tu viens avec moi car maintenant je te considére comme ma fille maintenant."
     play sound "Click.mp3" noloop 
     
     $ validation = get_random_validation() 

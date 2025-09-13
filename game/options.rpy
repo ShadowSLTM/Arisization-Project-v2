@@ -203,6 +203,7 @@ init python:
     build.classify("game/**.jpg", "image")
     build.classify("game/**.jpeg", "image")
     build.classify("game/**.ico", "image")
+    build.classify("game/**.webp", "image")
 
     build.classify("game/**.mp3", "audio")  
 

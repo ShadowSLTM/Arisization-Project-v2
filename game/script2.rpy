@@ -1176,8 +1176,7 @@ label password11:
     show screen points with moveinleft
     show screen room with moveinright 
 
-    $ dortoir = get_random_dortoir() 
-    P "[dortoir]"
+    P "Enfin dans le dortoir:"
     play sound "Click.mp3" noloop
 
     "{b}{i} Tu aperçois [newname] qui est encore déconnectée.{/i}{/b}"
@@ -14473,10 +14472,8 @@ label password27:
     P "Voilà, la nouvelle batterie est installée."
     play sound "Click.mp3" noloop
 
-    # Input runix à mettre     
-
     "{b}{i}Tu refermes le capot arrière d'Aris.{/i}{/b}"
-    play sound "Click.mp3" noloop 
+    play sound "Click.mp3" noloop   
 
     P "Voilà, c'est fait je vais rebrancher [newname]."
     play sound "Click.mp3" noloop
@@ -18058,8 +18055,7 @@ label password30:
             show screen points with moveinleft
             show screen room with moveinright 
 
-            $ dortoir = get_random_dortoir()
-            P "[dortoir]"
+            P "ENfin qu dortoir."
             play sound "Click.mp3" noloop
 
             P "Bon je vais lire un peu mon livre que j'avais pas fini."
@@ -18666,16 +18662,42 @@ label password31:
     P "Et remettre les täbles et les chaises à leur place."
     play sound "Click.mp3" noloop
 
-    "{b}{i}{/i}{/b}"
+    "{b}{i}Vous continuez à ranger la salle de club.{/i}{/b}"
     play sound "Click.mp3" noloop
 
+    P "Bon on a fini de ranger la salle de club."
+    play sound "Click.mp3" noloop
 
+    I "Oui c'est génial."
+    play sound "Click.mp3" noloop
+
+    Na "Oui je confirme."
+    play sound "Click.mp3" noloop
+
+    I "Bon moi je vais vous laisser."
+    play sound "Click.mp3" noloop
+
+    P "D'accord, repose-toi bien !"
+    play sound "Click.mp3" noloop
+
+    I "Merci, bonne journée à vous !"
+    play sound "Click.mp3" noloop
+
+    Na "Bonne journée Yuna !"
+    play sound "Click.mp3" noloop
+
+    "{b}{i}[I] finit par s'en aller.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    $ godorm = get_random_return_dorm()
+    P "[godorm]"
+    play sound "Click.mp3" noloop
 
     $ suivi = get_random_suivi()
     Na "[suivi]" 
     play sound "Footsteps.mp3" noloop
 
-    hide screen clubroom with moveoutright
+    hide screen clubroom with moveoutright 
     hide screen points with moveoutleft
     hide screen day with moveoutleft
     scene black with fade 
@@ -18727,16 +18749,6 @@ label password31:
     $ bien = get_random_fais_du_bien()
     Na "[bien]" 
     play sound "Click.mp3" noloop 
-
-
-
-
-
-
-
-
-
-
 
     label end_script2:
     call script3 from _call_script3
