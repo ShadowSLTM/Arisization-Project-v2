@@ -942,7 +942,7 @@ label choice1:
     P "Oui regarde Emika, Vas-y [A] présentes-toi à elle."
     play sound "Click.mp3" noloop 
 
-    A "Bonjour je suis [A], l'assistante et la création de [P], je suis un [model]."
+    A "Bonjour je suis [A], la création de [P], je suis un [model]."
     play sound "Click.mp3" noloop
 
     E "Bonjour [A], ravie de te rencontrer."
@@ -2802,7 +2802,12 @@ label choice3:
     play sound "Click.mp3" noloop
 
     P "Voilà, ça devrait tenir parfaitement. Maintenant, je vais la redémarrer."
-    play sound "Click.mp3" noloop
+    play sound "Click.mp3" noloop 
+
+    menu:    
+
+        "{b}{i}Démarrer [newname].{/i}{/b}" :
+            play sound "Menu.mp3" noloop 
 
     "{b}{i}Initialisation en cours....{/i}{/b}"
     play sound "Click.mp3" noloop 
