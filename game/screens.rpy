@@ -329,11 +329,11 @@ screen navigation():
  
             textbutton _("Aide") action ShowMenu("help")
 
-            textbutton _("Ton robot") action ShowMenu("robot") 
+        textbutton _("Ton robot") action ShowMenu("robot") 
 
-            textbutton _("Personnages") action ShowMenu("characters")
+        textbutton _("Personnages") action ShowMenu("characters")
 
-            textbutton _("Crédits") action ShowMenu("credit")
+        textbutton _("Crédits") action ShowMenu("credit") 
 
         textbutton _("Ton robot") action ShowMenu("robot") 
 
