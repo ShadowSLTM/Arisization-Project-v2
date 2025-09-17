@@ -18229,7 +18229,7 @@ label password7:
     $ bien = get_random_fais_du_bien()
     Na "[bien]" 
     play sound "Click.mp3" noloop  
- 
+
     "{b}{i} Vous commencez à manger jusqu'à la sonnerie.{/i}{/b}"
     play sound "Bell.mp3" noloop  
 

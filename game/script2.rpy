@@ -2073,10 +2073,10 @@ label newpassword:
         "{b}{i}Vous vous posez tranquillement mais [newname] agit bizarrement.{/i}{/b}"
         play sound "Click.mp3" noloop 
 
-        Na "Mot de passe compromis car il fait moins de dix caractères." 
+        "{b}{i}Mot de passe compromis car il fait moins de dix caractères.{/i}{/b}" 
         play sound "Click.mp3" noloop 
 
-        P "Mince...." 
+        P "Mince il faut que je change ça...." 
         play sound "Click.mp3" noloop 
 
         "{b}{i} Tu ouvres les paramètres pour ajouter un nouveau mot de passe sur [newname].{/i}{/b}"
@@ -2122,16 +2122,25 @@ label newpassword:
                     Na "[salutation_rdm]"
                     play sound "Click.mp3" noloop 
 
-                    P "Bonjour [newname], est-ce que ça va ?"
+                    P "Bonjour [newname], comment tu vas ?"  
                     play sound "Click.mp3" noloop  
 
-                    Na "Oui absolument mais il s'est passé quoi ?"
+                    Na "Ça va bien, merci. Mais… qu’est-ce qui s’est passé ?"  
+                    play sound "Click.mp3" noloop  
+
+                    P "Ton mot de passe a été compromis... Je dois avouer que c’est de ma faute, j’en ai choisi un trop faible."  
+                    play sound "Click.mp3" noloop  
+
+                    Na "Je comprends. C’est une erreur fréquente. Un mot de passe de moins de dix caractères viole l’une des dix règles de l’informatique."  
+                    play sound "Click.mp3" noloop  
+
+                    P "Ah oui, c’est vrai… Je n’y ai pas pensé, et je n’ai pas respecté la règle."  
+                    play sound "Click.mp3" noloop  
+
+                    Na "Bon on se pose un peu maintenant que cette histoire de mot de passe est fini ?"
                     play sound "Click.mp3" noloop 
 
-                    P "Ton mot de passe a été compromis car j'ai choisi un mot de passe trop faible."
-                    play sound "Click.mp3" noloop  
-
-                    Na "Je vois c'est une erreur typique."
+                    P "Oui pourquoi pas."                    
                     play sound "Click.mp3" noloop 
 
                     "{b}{i}Vous vous posez tranquillement.{/i}{/b}"
@@ -2139,22 +2148,28 @@ label newpassword:
 
                 else: 
 
-                    "Mot de passe trop court. Accès refusé." 
+                    "{b}{i}Mot de passe trop court. Accès refusé.{b}{i}" 
                     play sound "Menu.mp3" noloop
                     jump newpassword 
 
-            else:
+            else: 
 
-                "{b}{i}Mot de passe incorrect. Accès refusé.{/i}{/b}" 
+                "{b}{i}Mot de passe incorrect. Accès refusé.c" 
                 play sound "Menu.mp3" noloop
                 jump newpassword  
 
         else:
 
-            "Veuillez entrer un mot de passe."
+            "{b}{i}Veuillez entrer un mot de passe.{/i}{/b}"
             jump newpassword 
 
     else:  
+
+        Na "Bon on se pose un peu ?"
+        play sound "Click.mp3" noloop 
+
+        P "Oui pourquoi pas. "                    
+        play sound "Click.mp3" noloop 
 
         "{b}{i}Vous vous posez tranquillement.{/i}{/b}"
         play sound "Click.mp3" noloop
@@ -3464,7 +3479,6 @@ label examen_francais:
             play sound "Menu.mp3" noloop 
 
             $ renpy.block_rollback()
-
             $ Na = Character('[newname] [nom]', color="#0066ff")
 
             P "Non merci."
@@ -19387,8 +19401,52 @@ label password32:
     P "On a enfin fini pour aujourd'hui."
     play sound "Click.mp3" noloop   
 
-    Na ""
+    Na "Oui ça fait vraiment du bien de réviser."
     play sound "Click.mp3" noloop   
+
+    P "Bon on fait quoi maintenant qu'on a fini de réviser."
+    play sound "Click.mp3" noloop   
+
+    Na "Moi je vais aller lire en tout cas."
+    play sound "Click.mp3" noloop   
+
+    P "Bonne lecture alors."
+    play sound "Click.mp3" noloop   
+
+    $ thanks = get_random_thanks()
+    Na "[thanks]"
+    play sound "Click.mp3" noloop
+
+    $ nothing = get_random_nothing()
+    P "[nothing]"
+    play sound "Click.mp3" noloop
+    
+    "{b}{i}[newname] part se poser pour lire un peu.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     label end_script2:
     call script3 from _call_script3    
