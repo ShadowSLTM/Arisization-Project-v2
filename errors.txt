@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/screens.rpy", line 356: 'elif' is not a keyword argument or valid child of the vbox statement.
-    elif not main_menu: 
-        ^
+File "game/script.rpy", line 5160: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+    play sound "Click.mp3" noloop
+    ^
 
 Ren'Py Version: Ren'Py 8.3.7.25031702
-Thu Sep 11 13:05:06 2025
+Thu Sep 18 09:45:27 2025

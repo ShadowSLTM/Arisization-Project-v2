@@ -205,7 +205,7 @@ label début:
     else: 
 
         "{b}{i}Réalité racine.{/i}{/b}" 
-        play sound "Click.mp3" noloop 
+        play sound "Click.mp3" noloop
   
     "{b}{i}Quelque part dans un entrepôt abandonné en 2097.{/i}{/b}"
     play sound "Click.mp3" noloop 
@@ -3348,7 +3348,12 @@ label studentmode:
     P "[seethat]"     
     play sound "Click.mp3" noloop 
 
-    "{b}{i}Tu allumes ton ordinateur et lances ton éditeur de code.{/i}{/b}" 
+    menu:   
+
+        "{b}{i}Démarrer ton ordinateur.{/i}{/b}" :
+            play sound "Menu.mp3" noloop
+
+    "{b}{i}Tu démarre ton ordinateur et lances ton éditeur de code.{/i}{/b}" 
     play sound "Menu.mp3" noloop
 
     $ studentmode = renpy.input("Écris ceci : initiate_studentmode(settings=serious)")
@@ -4738,6 +4743,20 @@ label studentmode:
             "{b}{i}Tu ranges tes livres avant de sortir ton ordinateur pour voir le système émotionnel d'[newname].{/i}{/b}"
             play sound "Menu.mp3" noloop
 
+            menu:   
+
+                "{b}{i}Démarrer ton ordinateur.{/i}{/b}" :
+                    play sound "Click.mp3" noloop
+
+                    "{b}{i}Ton ordinateur démarre tranquillement.{/i}{/b}" 
+                    play sound "Click.mp3" noloop
+
+            P "Bon je vais me connecter à [newname]."
+            play sound "Click.mp3" noloop  
+
+            "{b}{i}Tu te connectes à [newname]{/i}{/b}"
+            play sound "Menu.mp3" noloop
+
             label choice7:
 
             $ ip = renpy.input("Entre l'adresse IP pour pouvoir te connecter à [newname].")
@@ -5128,6 +5147,23 @@ label studentmode:
 
     "{b}{i} Tu sors rapidement ton ordi pour voir son état.{/i}{/b}"
     play sound "Click.mp3" noloop
+
+    "{b}{i}Tu ranges tes livres avant de sortir ton ordinateur pour voir le système émotionnel d'[newname].{/i}{/b}"
+    play sound "Menu.mp3" noloop
+
+    menu:   
+
+        "{b}{i}Démarrer ton ordinateur.{/i}{/b}" :
+            play sound "Click.mp3" noloop
+
+            "{b}{i}Ton ordinateur démarre tranquillement.{/i}{/b}" 
+            play sound "Click.mp3" noloop
+
+    P "Bon je vais me connecter à [newname]."
+    play sound "Click.mp3" noloop  
+
+    "{b}{i}Tu te connectes à [newname]{/i}{/b}"
+    play sound "Menu.mp3" noloop
 
 label choice8:  
 
@@ -7480,7 +7516,7 @@ label suite:
     P "Oui j'ai déjà eu l'information mais il semblerait qu'un des lycéens en veut à [newname]."
     play sound "Click.mp3" noloop
 
-    I "Pardon !? Ce doit sûrement être [J]...."
+    I "Pardon !? Ce doit sûrement être [J1]...."
     play sound "Click.mp3" noloop
 
     J1 "Hey j'ai peut-être été méchante avec [newname] mais je promets que ce n'est pas moi !"
@@ -19752,7 +19788,7 @@ label password9:
         play music "gameover.mp3" noloop
 
         hide screen class_404 with moveoutright
-        hide screen points with moveoutleftts
+        hide screen points with moveoutleft
         hide screen day with moveoutleft
         scene black with fade
 
@@ -20479,7 +20515,7 @@ label code1:
     scene hall with fade
     show screen day with moveinleft
     show screen points with moveinleft
-    show screen hall with moveiright
+    show screen hall with moveinright
 
     "{b}{i}Tu prends les escaliers.{/i}{/b}" 
     play sound "Footsteps.mp3" noloop

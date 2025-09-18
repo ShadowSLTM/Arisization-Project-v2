@@ -511,7 +511,7 @@ label password11:
     Ln "Si jamais je te laisse mon numéro profesionnel s'il y a du nouveau avec [newname]."
     play sound "Click.mp3" noloop
 
-    p "Car je dois déclarer tout les changement que je fais ?"
+    P "Car je dois déclarer tout les changement que je fais ?"
     play sound "Click.mp3" noloop 
 
     Ln "Oui conformément à l’article 2, alinéa 3, Toute modification majeures dois être documentées."
@@ -5616,9 +5616,7 @@ label password17:
     P "[seethat]"     
     play sound "Click.mp3" noloop 
 
-label philosophie_technologie:
-
-    
+label philosophie_technologie: 
 
     $ grade = 0.0 
 
@@ -6030,7 +6028,7 @@ label philosophie_technologie:
                 show screen day with moveinleft
                 $ points += 300
                 
-                jump phillosophie_technologie
+                jump philosophie_technologie
     
     else:
        
@@ -8411,7 +8409,7 @@ label password19:
     "{b}{i}Vous vous posez pour les révisions.{/i}{/b}"
     play sound "Click.mp3" noloop
 
-    P "Bon tu veux commencer par qurl thème ?"  
+    P "Bon tu veux commencer par quel thème ?"  
     play sound "Click.mp3" noloop  
 
     Na "Je dirai les langages de balissage."  
@@ -9100,7 +9098,7 @@ label password20:
     "{b}{i}[I] s'asseoit tranquillemnt avec vous.{/i}{/b}"
     play sound "Click.mp3" noloop 
 
-    Na "Sinon je viens d'y penser mais j'avais une question pour toi [prénom]."
+    Na "Sinon je viens d'y penser mais j'avais une question pour toi [prenom]."
     play sound "Click.mp3" noloop 
 
     P "Oui je t'écoute, dis-moi."
@@ -9603,12 +9601,12 @@ label password21:
     J1 "[validation]"
     play sound "Click.mp3" noloop 
 
-    show screen physicsbook with moveinbottom
+    show screen physicbook with moveinbottom
 
     M "Sortez votre livre de physique à la page 2."
     play sound "Click.mp3" noloop 
 
-    hide screen physicsbook with moveoutbottom 
+    hide screen physicbook with moveoutbottom 
 
 # cours de physique 
 ######################################################################################################################################
@@ -11345,22 +11343,22 @@ label password22:
     M "Tous les appareils ne transforment pas l’énergie parfaitement : il y a toujours des pertes (frottement, chaleur…)."
     play sound "Click.mp3" noloop
 
-    M "Formule : η = Eutile / Eentrée × 100%"
+    M "Formule : η = Eutile / Eentrée × 100\%"
     play sound "Click.mp3" noloop
 
     M "Exemple : un moteur consomme 1000 J pour produire 700 J de travail utile."
     play sound "Click.mp3" noloop
 
-    A "Donc le rendement est 700 ÷ 1000 × 100 = 70 % ?"
+    A "Donc le rendement est 700 ÷ 1000 × 100 = 70\% ?"
     play sound "Click.mp3" noloop
 
-    M "Exact Aris ! 30 % de l’énergie est perdue, principalement sous forme de chaleur."
+    M "Exact Aris ! 30\% de l’énergie est perdue, principalement sous forme de chaleur."
     play sound "Click.mp3" noloop
 
     M "Exercice : une ampoule reçoit 60 J et produit seulement 12 J de lumière. Quel est son rendement ?"
     play sound "Click.mp3" noloop
 
-    I "12 ÷ 60 × 100… ça fait 20 %."
+    I "12 ÷ 60 × 100… ça fait 20\%."
     play sound "Click.mp3" noloop
 
     M "Très bien Iris ! La plupart des ampoules classiques ont un rendement faible."
@@ -13299,7 +13297,7 @@ label password24:
     Na "Oui dis-moi, je t'écoute."
     play sound "Click.mp3" noloop 
  
-    p "C'est vrai ce que tu disais par rapport à tes données ?"
+    P "C'est vrai ce que tu disais par rapport à tes données ?"
     play sound "Click.mp3" noloop
 
     Na "Oui, c'est vrai, je ne veut pas tu aie accès à ce que j'ai appris cr je vois ça comme de la triche."
@@ -13597,7 +13595,7 @@ label password25:
     Na "Tu as finis de manger ?"
     play sound "Click.mp3" noloop 
 
-    p "Oui, je n'ai plus faim."
+    P "Oui, je n'ai plus faim."
     play sound "Click.mp3" noloop 
 
     Na "Bien."
@@ -14976,7 +14974,7 @@ label choice10:
                         P "Non [newname] refuserait que j'abandonne si facilement."
                         play sound "Click.mp3" noloop
 
-                        scene clubroom
+                        scene clubroom with fade
                         show screen clubroom with moveinright
                         show screen points with moveinleft
                         show screen day with moveinleft 
@@ -15351,7 +15349,7 @@ label choice10:
     show screen points with moveinleft
     show screen office with moveinright 
 
-    p "Bonjour c'est nous [prenom] et [newname]."
+    P "Bonjour c'est nous [prenom] et [newname]."
     play sound "Click.mp3" noloop 
 
     "{b}{i}Puis [Kh] vous regarde.{/i}{/b}"
@@ -18447,7 +18445,7 @@ label password30:
 
     scene clubroom with fade 
     show screen day with moveinleft
-    show screen room with moveinright
+    show screen clubroom with moveinright
     show screen points with moveinleft
 
     P "Enfin à manger... "
@@ -19200,10 +19198,16 @@ label password32:
     Na "Alors fais-moi confiance ! Si tu tiens vraiment à moi... laisse-moi enfin me réveiller seule."
     play sound "Click.mp3" noloop 
 
-    P "Je vais réfléchir à ta demande."
+    P "Je vais réfléchir à ta demande car ce week-end je prévois de faire un contrôle technique."
     play sound "Click.mp3" noloop 
 
-    Na "Merci... ça me fait vraiment plaisir."
+    Na "Merci... ça me touche vraiment. Mais dis-moi, c'est quoi exactement un contrôle technique ?"
+    play sound "Click.mp3" noloop 
+
+    P "En gros, c’est une vérification complète du matériel. On s’assure que tout fonctionne bien et que tout est conforme aux règles."
+    play sound "Click.mp3" noloop 
+
+    Na "Oh, je vois... C’est super intéressant comme idée !"
     play sound "Click.mp3" noloop 
 
     P "Bon, on fait quoi maintenant ?"
@@ -19424,7 +19428,14 @@ label password32:
     "{b}{i}[newname] part se poser pour lire un peu.{/i}{/b}"
     play sound "Click.mp3" noloop
 
-    
+    P "Bon moi je vais continuer de réviser."
+    play sound "Click.mp3" noloop
+
+    Na "Ok bonne session de révision."
+    play sound "Click.mp3" noloop
+
+     
+
 
 
     
@@ -19452,4 +19463,4 @@ label password32:
     call script3 from _call_script3    
     return
 
-# Aris la plus belle ################### 
+# Aris la plus belle ###################
