@@ -146,7 +146,7 @@ label identity:
         jump identity
 
     "Vos informations ont été enregistrées."
-    play sound "Transition.mp3" noloop 
+    play sound "Click.mp3" noloop
     
     $ noms_interdits = {"Kusanagi", "Nishimura", "Ayanokoji", "Sato", "Saotome", "Ichinose", "Hiiragi", "Katsuragi", "Hanemiya", "Sumino", "Kisaragi", "Hoshino", "Shinomiya", "Katsuya", "Horimiya", "Tachibana", "Sakayanagi", "Nagumo", "Kaminari", "Suzumiya", "Kobayashi", "Kaneda", "Nanami", "Kurosawa"}
     $ prenoms_interdits = {"Yuna", "Hajime", "Kendo", "Naoto", "Haruki", "Yuki", "Emika", "Kazumi", "Ayano", "Aiko", "Akeno", "Subaru", "Takumi", "Suzune", "Shiro", "Kaede", "Naomi", "Seigo", "Takeshi", "Saori", "Mizuki", "Rika", "Natsuo", "Reiichi", "Mayumi", "Luna", "Hiroyuki"}
@@ -174,10 +174,12 @@ label identity:
             $ prenom, nom = "Iris", "Natsumi"
 
         "Bienvenue [prenom] [nom]. Puisque aucun nom n'a été choisi, celui-ci vous a été attribué."
-
+        play music "Transition.mp3" noloop
+        
     else:
         
         "Bienvenue [prenom] [nom]."
+        play music "Transition.mp3" noloop 
 
     $ origine = "collège d'hoshikawa" 
     
@@ -6295,7 +6297,7 @@ label choice8:
     play sound "Click.mp3" noloop 
 
     P "Oui je me suis même renseigné sur les articles de loi concernant ça et j'en ai trouvés trois."
-    play sound "Click.mp3" noloop
+    play sound "Click.mp3" noloop 
 
     C "Quels sont ces fameux articles de loi ?"  
     play sound "Click.mp3" noloop  
@@ -6475,7 +6477,7 @@ label choice8:
             play sound "Click.mp3" noloop
 
             C "Mais avant qu'on termine cet entretien, j'aimerais te demander une dernière chose."
-            play sound "Click.mp3" noloop
+            play sound "Click.mp3" noloop 
 
     P "Oui dites-moi."
     play sound "Click.mp3" noloop 
@@ -6515,7 +6517,7 @@ label choice8:
     Na "[thanks]"
     play sound "Click.mp3" noloop
 
-    C "Bien [P] je vois qu'[newname] se débrouille bien avec toi."
+    C "Bien [P], je vois qu'[newname] se débrouille bien avec toi."
     play sound "Click.mp3" noloop
 
     P "Merci ça fait plaisir."
@@ -6528,7 +6530,7 @@ label choice8:
     play sound "Click.mp3" noloop 
 
     C "J'ai entendu dire que quelqu'un veut s'attaquer à [newname] donc fais attention."
-    play sound "Click.mp3" noloop 
+    play sound "Click.mp3" noloop  
 
     E "Je confirme aussi car une personne m'a aussi dit qu'elle avait trouvé des informations concernant une potentielle menace ou traître envers [newname]."
     play sound "Click.mp3" noloop
