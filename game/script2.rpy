@@ -132,6 +132,9 @@ label password11:
 
     $ suivi = get_random_suivi()
     P "[suivi]"
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Vous prenez d'abord vos sac à dos.{/i}{/b}"
     play sound "Footsteps.mp3" noloop 
 
     hide screen room with moveoutright
@@ -139,7 +142,7 @@ label password11:
     hide screen day with moveoutleft
     scene black with fade
 
-    "{b}{i}Tu quittes le dortoir.{/i}{/b}"
+    "{b}{i}Vous quittez le dortoir.{/i}{/b}"
     play sound "Door.mp3" noloop
 
     scene hallway with fade 
@@ -308,8 +311,6 @@ label password11:
 
     "{b}{i}Tu continues vers le bureau des élèves.{/i}{/b}"
     play sound "Footsteps.mp3" noloop
-    
-    stop music fadeout 2.0 
 
     hide screen hall with moveoutright
     hide screen points with moveoutleft
@@ -783,7 +784,10 @@ label password11:
 
     $ suivi = get_random_suivi()
     Na "[suivi]"
-    play sound "Footsteps.mp3" noloop
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Vous prenez d'abord vos sac à dos.{/i}{/b}"
+    play sound "Footsteps.mp3" noloop 
 
     hide screen lunchroom with moveoutright
     hide screen points with moveoutleft
@@ -1425,7 +1429,10 @@ label password13:
 
     $ suivi = get_random_suivi()
     Na "[suivi]"
-    play sound "Footsteps.mp3" noloop
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Vous prenez d'abord vos sac à dos.{/i}{/b}"
+    play sound "Footsteps.mp3" noloop 
 
     hide screen room with moveoutright
     hide screen points with moveoutleft
@@ -2535,6 +2542,9 @@ label password14:
 
     $ suivi = get_random_suivi()
     P "[suivi]"
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Vous prenez d'abord vos sac à dos.{/i}{/b}"
     play sound "Footsteps.mp3" noloop 
 
     hide screen room with moveoutright 
@@ -2792,8 +2802,6 @@ label examen_francais:
     play sound "Click.mp3" noloop 
 
     $ renpy.block_rollback() 
-
-    stop music fadeout 1.0 
 
     Na "Cette examen n'était si dur que ça."
     play sound "Click.mp3" noloop
@@ -3746,6 +3754,9 @@ label password15:
 
     $ suivi = get_random_suivi()
     Na "[suivi]"
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Vous prenez d'abord vos sac à dos.{/i}{/b}"
     play sound "Footsteps.mp3" noloop 
 
     hide screen room with moveoutright 
@@ -4161,7 +4172,10 @@ label password15:
 
     $ suivi = get_random_suivi()
     Na "[suivi]" 
-    play sound "Footsteps.mp3" noloop
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Vous prenez d'abord vos sac à dos.{/i}{/b}"
+    play sound "Footsteps.mp3" noloop 
 
     hide screen lunchroom with moveoutright
     hide screen points with moveoutleft
@@ -4648,6 +4662,9 @@ label password16:
 
     $ suivi = get_random_suivi()
     Na "[suivi]"
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Vous prenez d'abord vos sac à dos.{/i}{/b}"
     play sound "Footsteps.mp3" noloop 
 
     hide screen room with moveoutright 
@@ -4958,6 +4975,9 @@ label password16:
     play sound "Click.mp3" noloop
 
     I "Je te suis aussi."
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Vous prenez d'abord vos sac à dos.{/i}{/b}"
     play sound "Footsteps.mp3" noloop 
 
     hide screen lunchroom with moveoutright
@@ -5481,6 +5501,9 @@ label password17:
 
     $ suivi = get_random_suivi()
     Na "[suivi]"
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Vous prenez d'abord vos sac à dos.{/i}{/b}"
     play sound "Footsteps.mp3" noloop 
 
     hide screen room with moveoutright 
@@ -5732,8 +5755,6 @@ label philosophie_technologie:
 
     $ renpy.block_rollback() 
 
-    stop music fadeout 2.0
-
     "{b}{i}Après l'examen tout le monde remet leur copie à [M].{/i}{/b}"
     play sound "Click.mp3" noloop 
 
@@ -5910,7 +5931,10 @@ label philosophie_technologie:
 
     $ suivi = get_random_suivi()
     Na "[suivi]"
-    play sound "Footsteps.mp3" noloop
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Vous prenez d'abord vos sac à dos.{/i}{/b}"
+    play sound "Footsteps.mp3" noloop 
 
     hide screen lunchroom with moveoutright
     hide screen points with moveoutleft
@@ -7144,6 +7168,9 @@ label password18:
 
     $ suivi = get_random_suivi()
     Na "[suivi]"
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Vous prenez d'abord vos sac à dos.{/i}{/b}"
     play sound "Footsteps.mp3" noloop 
 
     hide screen room with moveoutright 
@@ -7482,7 +7509,10 @@ label password18:
 
     $ suivi = get_random_suivi()
     I "[suivi]"
-    play sound "Footsteps.mp3" noloop
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Vous prenez d'abord vos sac à dos.{/i}{/b}"
+    play sound "Footsteps.mp3" noloop 
 
     hide screen hallway with moveoutright
     hide screen points with moveoutleft
@@ -7929,7 +7959,10 @@ label password19:
 
     $ suivi = get_random_suivi()
     Na "[suivi]"
-    play sound "Footsteps.mp3" noloop 
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Vous prenez d'abord vos sac à dos.{/i}{/b}"
+    play sound "Footsteps.mp3" noloop  
 
     hide screen room with moveoutright 
     hide screen points with moveoutleft
@@ -8265,7 +8298,10 @@ label password19:
 
     $ suivi = get_random_suivi()
     Na "[suivi]"
-    play sound "Footsteps.mp3" noloop
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Vous prenez d'abord vos sac à dos.{/i}{/b}"
+    play sound "Footsteps.mp3" noloop 
 
     hide screen lunchroom with moveoutright
     hide screen points with moveoutleft
@@ -8660,6 +8696,9 @@ label password20:
 
     $ suivi = get_random_suivi()
     Na "[suivi]"
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Vous prenez d'abord vos sac à dos.{/i}{/b}"
     play sound "Footsteps.mp3" noloop 
 
     hide screen room with moveoutright 
@@ -9168,7 +9207,10 @@ label password20:
 
     $ suivi = get_random_suivi()
     Na "[suivi]"
-    play sound "Footsteps.mp3" noloop
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Vous prenez d'abord vos sac à dos.{/i}{/b}"
+    play sound "Footsteps.mp3" noloop 
 
     hide screen lunchroom with moveoutright
     hide screen points with moveoutleft
@@ -9483,6 +9525,9 @@ label password21:
 
     $ suivi = get_random_suivi()
     Na "[suivi]"
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Vous prenez d'abord vos sac à dos.{/i}{/b}"
     play sound "Footsteps.mp3" noloop 
 
     hide screen room with moveoutright 
@@ -9898,7 +9943,10 @@ label password21:
              
     $ suivi = get_random_suivi()
     Na "[suivi]" 
-    play sound "Footsteps.mp3" noloop
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Vous prenez d'abord vos sac à dos.{/i}{/b}"
+    play sound "Footsteps.mp3" noloop 
 
     hide screen lunchroom with moveoutright
     hide screen points with moveoutleft
@@ -10658,6 +10706,9 @@ label password22:
 
     $ suivi = get_random_suivi()
     Na "[suivi]"
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Vous prenez d'abord vos sac à dos.{/i}{/b}"
     play sound "Footsteps.mp3" noloop 
 
     hide screen room with moveoutright 
@@ -11244,7 +11295,10 @@ label password22:
              
     $ suivi = get_random_suivi()
     Na "[suivi]" 
-    play sound "Footsteps.mp3" noloop
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Vous prenez d'abord vos sac à dos.{/i}{/b}"
+    play sound "Footsteps.mp3" noloop 
 
     hide screen lunchroom with moveoutright
     hide screen points with moveoutleft
@@ -11668,6 +11722,9 @@ label password23:
 
     $ suivi = get_random_suivi()
     Na "[suivi]"
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Vous prenez d'abord vos sac à dos.{/i}{/b}"
     play sound "Footsteps.mp3" noloop 
 
     hide screen room with moveoutright 
@@ -12114,7 +12171,10 @@ label password23:
              
     $ suivi = get_random_suivi() 
     I "[suivi]" 
-    play sound "Footsteps.mp3" noloop
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Vous prenez d'abord vos sac à dos.{/i}{/b}"
+    play sound "Footsteps.mp3" noloop 
 
     hide screen lunchroom with moveoutright
     hide screen points with moveoutleft
@@ -12404,6 +12464,8 @@ label password23:
         "{b}{i}Oui, parlons-en.{/i}{/b}":
             play sound "Menu.mp3" noloop
 
+            $ renpy.block_rollback() 
+
             P "Je sais que ce n’est pas idéal, mais ce silence du traître m’inquiète. Il a arrêté d’agir... ça me semble trop bizarre."
             play sound "Click.mp3" noloop
 
@@ -12428,6 +12490,8 @@ label password23:
 
         "{b}{i}Non, pas maintenant.{/i}{/b}":
             play sound "Menu.mp3" noloop
+
+            $ renpy.block_rollback() 
 
             P "Tu as raison, j’aurais peut-être dû garder ça pour plus tard. J’ai juste du mal à tourner la page."
             play sound "Click.mp3" noloop
@@ -13914,6 +13978,8 @@ label password26:
         "{b}{i} Le chargeur{/i}{/b}" :  
             play sound "Menu.mp3" noloop 
 
+            $ renpy.block_rollback() 
+
             P "c'est peut être le cable d'alimention qui a laché."
             play sound "Click.mp3" noloop 
 
@@ -13934,6 +14000,8 @@ label password26:
             
         "{b}{i} La batterie.{/i}{/b}" :  
             play sound "Menu.mp3" noloop 
+
+            $ renpy.block_rollback() 
 
             P "C'est peut-être la batterie qui a lâché et qui ne supporte plus les cycles de charge."
             play sound "Click.mp3" noloop
@@ -14915,6 +14983,8 @@ label choice10:
         "{b}{i} Supprimer le system32.{/i}{/b}" : 
             play sound "Menu.mp3" noloop 
 
+            $ renpy.block_rollback() 
+
             "{b}{i}Tu te pose tranquillement à ton bureau en silence.{/i}{/b}"
             play sound "Click.mp3" noloop       
 
@@ -14989,6 +15059,8 @@ label choice10:
         
         "{b}{i}surveiller les fichiers.{/i}{/b}" : 
             play sound "Menu.mp3" noloop 
+
+            $ renpy.block_rollback() 
 
             P "évidemment que je ne vais pas le supprimer."
             play sound "Click.mp3" noloop 
@@ -16843,6 +16915,8 @@ label lockornot:
         "{b}{i}Ne rien faire.{/i}{/b}" : 
             play sound "Menu.mp3" noloop 
 
+            $ renpy.block_rollback() 
+
             P "Je ne vois pas trop l'intérêt de verrouiller la porte car on est les seuls ici."
             play sound "Click.mp3" noloop
 
@@ -16949,6 +17023,8 @@ label lockornot:
 
         "{b}{i}Verrouiller la porte.{/i}{/b}" : 
             play sound "Menu.mp3" noloop 
+
+            $ renpy.block_rollback() 
 
     P "Oui bonne idée, je vais le faire."
     play sound "Click.mp3" noloop
@@ -17361,7 +17437,7 @@ label password30:
     play sound "Click.mp3" noloop
 
     "{b}{i}[I] lance sa playlist et une musique douce commence à jouer.{/i}{/b}"
-    play music "Click.mp3" noloop
+    play sound "Click.mp3" noloop
 
     Na "J'aime bien cette chanson, c'est quoi ?"
     play sound "Click.mp3" noloop
@@ -17618,6 +17694,8 @@ label password30:
         "{b}{i}Aller à la bibliothèque.{/i}{/b}" :
             play sound "Menu.mp3" noloop 
 
+            $ renpy.block_rollback() 
+
             P "Je pense que je vais aller à la bibliothèque pour changer."
             play sound "Click.mp3" noloop
 
@@ -17654,6 +17732,8 @@ label password30:
 
                 "{b}{i}Aller voir [newname].{/i}{/b}" :
                     play sound "Menu.mp3" noloop 
+
+                    $ renpy.block_rollback() 
 
                     P "Je vais aller la voir."
                     play sound "Click.mp3" noloop 
@@ -17835,6 +17915,8 @@ label password30:
 
                 "{b}{i}Aller lire en solitude.{/i}{/b}" :
                     play sound "Menu.mp3" noloop 
+
+                    $ renpy.block_rollback() 
 
                     P "Je vais la laisser tranquille et lire un peu mon livre que j'avais pas fini."
                     play sound "Click.mp3" noloop 
@@ -18034,6 +18116,8 @@ label password30:
 
         "{b}{i}Aller au dortoir.{/i}{/b}" :
             play sound "Menu.mp3" noloop 
+
+            $ renpy.block_rollback() 
 
             "{b}{i}Tu continues vers les escaliers.{/i}{/b}"
             play sound "Footsteps.mp3" noloop
@@ -19434,26 +19518,161 @@ label password32:
     Na "Ok bonne session de révision."
     play sound "Click.mp3" noloop
 
-     
+    P "Merci."
+    play sound "Click.mp3" noloop
 
+    "{b}{i}Tu te poses pour réviser deux heures.{/i}{/b}"
+    play sound "Click.mp3" noloop
 
+    P "Enfin j'ai fini de réviser."
+    play sound "Click.mp3" noloop
 
+    Na "Tu as fini de réviser ?"
+    play sound "Click.mp3" noloop
+
+    P "Oui enfin, c'était pas mal."
+    play sound "Click.mp3" noloop
+
+    Na "Cool alors, tu as bien fait de réviser."
+    play sound "Click.mp3" noloop
+
+    P "Oui c'est vrai."
+    play sound "Click.mp3" noloop
+
+    $ go_eat = get_random_go_eat()
+    P "[go_eat]"
+    play sound "Click.mp3" noloop
+
+    $ suivi = get_random_suivi()    
+    Na "[suivi]"
+    play sound "Footsteps.mp3" noloop
+
+    hide screen room with moveoutright 
+    hide screen points with moveoutleft 
+    hide screen day with moveoutleft
+    scene black with fade   
+
+    "{b}{i} Vous partez chercher à manger.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    $ points -= 300
+
+    scene room with fade
+    show screen day with moveinleft
+    show screen points with moveinleft
+    show screen room with moveinright
+
+    P "Enfin à manger... "
+    play sound "Click.mp3" noloop 
+
+    $ bien = get_random_fais_du_bien()
+    Na "[bien]"
+    play sound "Click.mp3" noloop  
+
+    "{b}{i} Vous mangez tranquillement pendant une demi-heure.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    P "Tu as finis de manger ?"
+    play sound "Click.mp3" noloop 
+
+    Na "Oui, je n'ai plus faim."
+    play sound "Click.mp3" noloop 
+
+    P "Bien."
+    play sound "Click.mp3" noloop
+
+    Na "Bon Je vais me déconnecter et me recharger car je suis fatiguée à cause du jeu."
+    play sound "Click.mp3" noloop 
+
+    P "D'accord, bonne nuit [newname]."
+    play sound "Click.mp3" noloop
+
+    Na "Bonne nuit [prenom]."
+    play sound "Click.mp3" noloop
+
+    "{b}{i}[newname] se déconnecte et recharge sa batterie.{/i}{/b}"
+    play sound "Click.mp3" noloop 
+
+    P "Enfin fini je vais pouvoir aller dormir pour demain."
+    play sound "Click.mp3" noloop  
+
+    "{b}{i}Tu te changes avant d'aller de te coucher.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    hide screen day with moveoutleft
+    hide screen room with moveoutright
+    hide screen points with moveoutleft
+    scene black with fade
+
+    "{b}{i} Le lendemain matin, le 30 décembre 2097{/i}{/b}"
+    play sound "Alarm.mp3" noloop
+
+    $ day += 1 
+
+    scene room with fade 
+    show screen day with moveinleft
+    show screen room with moveinright
+    show screen points with moveinleft 
+
+    "{b}{i}Tu te réveilles tranquillement.{/i}{/b}"
+    play sound "Click.mp3" noloop 
+
+    $ line = get_random_morning_line()
+    P "[line]"
+    play sound "Click.mp3" noloop 
+
+    "{b}{i}Tu te changes et puis tu aperçois [newname] déconnectée contre le mur.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    P "Elle est encore déconnectée."
+    play sound "Click.mp3" noloop 
     
+    P "Je vais la démarrer."
+    play sound "Menu.mp3" noloop   
 
+    menu:   
 
+        "{b}{i} Démarrer [newname].{/i}{/b}" :
+            play sound "Menu.mp3" noloop 
 
+label password33:  
 
+    $ entered_password = renpy.input("Veuillez entrer votre mot de passe pour [newname].")
+    $ entered_password = entered_password.strip()
 
+    if entered_password == stored_password: 
 
+        "{b}{i}Mot de passe correct. Accès autorisé.{/i}{/b}"
+        play sound "Menu.mp3" noloop
 
+    else: 
 
+        "{b}{i}Mot de passe incorrect. Accès refusé.{/i}{/b}" 
+        play sound "Menu.mp3" noloop
 
+        jump password33 
 
+    $ start = get_random_start()
+    "{b}{i}[start]{/i}{/b}"
+    play sound "Click.mp3" noloop 
 
+    Na "Démarrage terminé, Bonjour [P]."
+    play sound "Click.mp3" noloop 
 
+    $ comment_ca_va = get_random_comment_ca_va()
+    P "[comment_ca_va]"
+    play sound "Click.mp3" noloop
 
+    $ je_vais_bien_txt = get_random_je_vais_bien() 
+    Na "[je_vais_bien_txt] Et toi ?" 
+    play sound "Click.mp3" noloop
 
+    $ je_vais_bien_txt = get_random_je_vais_bien() 
+    P "[je_vais_bien_txt]"
+    play sound "Click.mp3" noloop
 
+    Na "Cool alors."
+    play sound "Click.mp3" noloop 
 
 
 

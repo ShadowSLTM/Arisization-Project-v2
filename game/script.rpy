@@ -1,11 +1,11 @@
 $ persistent.abandon = False
 $ persistent.endgame = False
 
+
 label start: 
 
     stop music fadeout 2.0   
 
-    default key = ""
     default grade = 0.0  
     default points = 0 
     default day = 0 
@@ -146,7 +146,7 @@ label identity:
         jump identity
 
     "Vos informations ont été enregistrées."
-    play sound "Menu.mp3" noloop
+    play sound "Transition.mp3" noloop 
     
     $ noms_interdits = {"Kusanagi", "Nishimura", "Ayanokoji", "Sato", "Saotome", "Ichinose", "Hiiragi", "Katsuragi", "Hanemiya", "Sumino", "Kisaragi", "Hoshino", "Shinomiya", "Katsuya", "Horimiya", "Tachibana", "Sakayanagi", "Nagumo", "Kaminari", "Suzumiya", "Kobayashi", "Kaneda", "Nanami", "Kurosawa"}
     $ prenoms_interdits = {"Yuna", "Hajime", "Kendo", "Naoto", "Haruki", "Yuki", "Emika", "Kazumi", "Ayano", "Aiko", "Akeno", "Subaru", "Takumi", "Suzune", "Shiro", "Kaede", "Naomi", "Seigo", "Takeshi", "Saori", "Mizuki", "Rika", "Natsuo", "Reiichi", "Mayumi", "Luna", "Hiroyuki"}
@@ -211,6 +211,8 @@ label début:
     play sound "Click.mp3" noloop 
 
     scene warehouse with fade
+
+    play music "Soundtrack2.mp3" loop volume 2.0
 
     if persistent.endgame == True:
 
@@ -733,8 +735,10 @@ label choice1:
     A "[validation]"
     play sound "Click.mp3" noloop 
 
+    stop music fadeout 2.0   
+
     "{b}{i}Tu quittes l'entrepôt avec [A] en coupant les ponts avec [S].{/i}{/b}"
-    play sound "Click.mp3" noloop 
+    play sound "Transition.mp3" noloop 
 
     scene main with fade 
 
@@ -4330,7 +4334,10 @@ label studentmode:
 
     $ suivi = get_random_suivi()
     I "[suivi]"
-    play sound "Footsteps.mp3" noloop
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Vous prenez d'abord vos sac à dos.{/i}{/b}"
+    play sound "Footsteps.mp3" noloop 
 
     hide screen lunchroom with moveoutright
     hide screen points with moveoutleft
@@ -4549,8 +4556,6 @@ label studentmode:
     M "Ok à demain." 
     play sound "Footsteps.mp3" noloop
 
-    stop music fadeout 2.0 
-
     hide screen class_404 with moveoutright 
     hide screen points with moveoutleft
     hide screen day with moveoutleft
@@ -4563,8 +4568,6 @@ label studentmode:
     show screen day with moveinleft
     show screen points with moveinleft
     show screen hallway with moveinright 
-
-    play music "Soundtrack3.mp3" volume 1.0
 
     P "Bon je vais...."
     play sound "Menu.mp3" noloop 
@@ -5348,12 +5351,8 @@ label choice8:
     Na "[validation]"
     play sound "Click.mp3" noloop 
 
-    stop music fadeout 2.0
-
     "{b}{i}[M] Commence à distribuer les copies.{/i}{/b}"
     play sound "Click.mp3" noloop 
-
-    play music "Soundtrack2.mp3" volume 1.0
 
     Na "Bien vous pouvez commencer, vous avez une heure."
     play sound "Click.mp3" noloop 
@@ -5693,7 +5692,10 @@ label choice8:
 
     $ suivi = get_random_suivi()
     I "[suivi]"
-    play sound "Footsteps.mp3" noloop
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Vous prenez d'abord vos sac à dos.{/i}{/b}"
+    play sound "Footsteps.mp3" noloop 
 
     hide screen lunchroom with moveoutright
     hide screen points with moveoutleft
@@ -6133,8 +6135,6 @@ label choice8:
 
     "{b}{i}Tu continues vers le bureau des élèves.{/i}{/b}"
     play sound "Footsteps.mp3" noloop
-    
-    stop music fadeout 2.0 
 
     hide screen hall with moveoutright
     hide screen points with moveoutleft
@@ -6548,8 +6548,6 @@ label choice8:
 
     P "Merci au revoir."
     play sound "Click.mp3" noloop 
-
-    stop music fadeout 2.0
 
     hide screen office with moveoutright
     hide screen points with moveoutleft
@@ -7555,8 +7553,6 @@ label suite:
     $ validation = get_random_validation() 
     I "[validation]" 
     play sound "Click.mp3" noloop 
-
-    stop music fadeout 2.0  
 
     "{b}{i} [M] fait signe au lycéen de rentrer. {/i}{/b}"
     play sound "Door.mp3" noloop
@@ -9602,8 +9598,6 @@ label debate_success:
     hide screen day with moveoutleft
     scene black with fade 
 
-    stop music fadeout 2.0   
-
     if pronom == "il":
 
         "{b}{i}Quelques instants plus tard, tu te réveilles dans ta chambre, couché sur ton lit.{/i}{/b}"
@@ -9613,8 +9607,6 @@ label debate_success:
 
         "{b}{i}Quelques instants plus tard, tu te réveilles dans ta chambre, couchée sur ton lit.{/i}{/b}"
         play sound "Click.mp3" noloop
-
-    play music "Soundtrack3.mp3" loop volume 2.0
 
     scene room with fade
     show screen day with moveinleft
@@ -10313,7 +10305,10 @@ label debate_success:
     play sound "Click.mp3" noloop 
 
     I "Ok je vous suis."
-    play sound "Click.mp3" noloop 
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Vous prenez d'abord vos sac à dos.{/i}{/b}"
+    play sound "Footsteps.mp3" noloop 
 
     hide screen lunchroom with moveoutright
     hide screen points with moveoutleft
@@ -10634,7 +10629,7 @@ label debate_success:
     scene black with fade
 
     "{b}{i}Vous entrez dans la salle de club.{/i}{/b}"
-    play music "Door.mp3" noloop 
+    play sound "Door.mp3" noloop 
 
     scene clubroom with fade 
     show screen day with moveinleft
@@ -11875,7 +11870,10 @@ label update:
 
             $ suivi = get_random_suivi()
             Na "[suivi]"
-            play sound "Footsteps.mp3" noloop
+            play sound "Click.mp3" noloop
+
+            "{b}{i}Vous prenez d'abord vos sac à dos.{/i}{/b}"
+            play sound "Footsteps.mp3" noloop 
 
         "{b}{i} Aller manger avec [Na]{/i}{/b}" : 
             play sound "Menu.mp3" noloop 
@@ -11928,6 +11926,9 @@ label update:
              
             $ suivi = get_random_suivi()
             Na "[suivi]" 
+            play sound "Click.mp3" noloop
+
+            "{b}{i}Vous prenez d'abord vos sac à dos.{/i}{/b}"
             play sound "Footsteps.mp3" noloop 
 
     hide screen lunchroom with moveoutright
@@ -12951,8 +12952,6 @@ label password:
 
     "{b}{i} Le cours se passe tranquillement pendant une demi-heure.{/i}{/b}"
     play sound "Knock.mp3" noloop 
-
-    play music "Soundtrack2.mp3" loop 
 
     "{b}{i}Soudainement quelqu'un frappe à la porte.{/i}{/b}"
     play sound "Click.mp3" noloop 
@@ -14460,7 +14459,10 @@ label password1:
 
     $ suivi = get_random_suivi()
     Na "[suivi]"
-    play sound "Footsteps.mp3" noloop
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Vous prenez d'abord vos sac à dos.{/i}{/b}"
+    play sound "Footsteps.mp3" noloop 
 
     hide screen lunchroom with moveoutright
     hide screen points with moveoutleft
@@ -15110,8 +15112,6 @@ label examen_pythagore:
             $ grade += 0.0
 
     $ renpy.block_rollback()
- 
-    stop music fadeout 2.0
 
     "{b}{i}Aprés l'examen tout le monde remit leur copie à [M].{/i}{/b}"
     play sound "Click.mp3" noloop 
@@ -15299,7 +15299,10 @@ label examen_pythagore:
     play sound "Click.mp3" noloop 
 
     S "Ok je vous suis."
-    play sound "Click.mp3" noloop 
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Vous prenez d'abord vos sac à dos.{/i}{/b}"
+    play sound "Footsteps.mp3" noloop 
 
     hide screen lunchroom with moveoutright
     hide screen points with moveoutleft
@@ -16818,7 +16821,10 @@ label password4:
     play sound "Click.mp3" noloop 
 
     S "Ok je vous suis."
-    play sound "Click.mp3" noloop 
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Vous prenez d'abord vos sac à dos.{/i}{/b}"
+    play sound "Footsteps.mp3" noloop 
 
     hide screen lunchroom with moveoutright
     hide screen points with moveoutleft
@@ -17651,7 +17657,10 @@ label password6:
 
     $ suivi = get_random_suivi()
     Na "[suivi]"
-    play sound "Footsteps.mp3" noloop
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Vous prenez d'abord vos sac à dos.{/i}{/b}"
+    play sound "Footsteps.mp3" noloop 
 
     hide screen lunchroom with moveoutright
     hide screen points with moveoutleft
@@ -18274,7 +18283,10 @@ label password7:
 
     $ suivi = get_random_suivi()
     Na "[suivi]"
-    play sound "Footsteps.mp3" noloop
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Vous prenez d'abord vos sac à dos.{/i}{/b}"
+    play sound "Footsteps.mp3" noloop 
 
     hide screen lunchroom with moveoutright
     hide screen points with moveoutleft
@@ -18925,8 +18937,6 @@ label examen_runix:
 
     $ renpy.block_rollback()
 
-    stop music fadeout 2.0
-
     P "Enfin fini..." 
     play sound "Click.mp3" noloop 
 
@@ -19298,7 +19308,10 @@ label examen_runix:
     play sound "Click.mp3" noloop 
 
     I "Ok je vous suis."
-    play sound "Click.mp3" noloop 
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Vous prenez d'abord vos sac à dos.{/i}{/b}"
+    play sound "Footsteps.mp3" noloop  
 
     hide screen lunchroom with moveoutright
     hide screen points with moveoutleft
