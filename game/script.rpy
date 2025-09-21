@@ -141,18 +141,20 @@ label identity:
     play sound "Menu.mp3" noloop 
     
     if pronom not in {"il", "elle"}:
-        "Erreur système. Veuillez réessayer."
+
+        "{b}{i}Erreur système. Veuillez réessayer.{/i}{/b}"
         $ renpy.restart_interaction()
         jump identity
 
-    "Vos informations ont été enregistrées."
+    "{b}{i}Vos informations ont été enregistrées.{/i}{/b}"
     play sound "Click.mp3" noloop
     
     $ noms_interdits = {"Kusanagi", "Nishimura", "Ayanokoji", "Sato", "Saotome", "Ichinose", "Hiiragi", "Katsuragi", "Hanemiya", "Sumino", "Kisaragi", "Hoshino", "Shinomiya", "Katsuya", "Horimiya", "Tachibana", "Sakayanagi", "Nagumo", "Kaminari", "Suzumiya", "Kobayashi", "Kaneda", "Nanami", "Kurosawa"}
     $ prenoms_interdits = {"Yuna", "Hajime", "Kendo", "Naoto", "Haruki", "Yuki", "Emika", "Kazumi", "Ayano", "Aiko", "Akeno", "Subaru", "Takumi", "Suzune", "Shiro", "Kaede", "Naomi", "Seigo", "Takeshi", "Saori", "Mizuki", "Rika", "Natsuo", "Reiichi", "Mayumi", "Luna", "Hiroyuki"}
 
     if prenom in prenoms_interdits:
-        "Ce prénom n'est pas autorisé."
+
+        "{b}{i}Ce prénom n'est pas autorisé.{/i}{/b}"
         jump identity  
     
     if prenom == "Aris":
@@ -160,7 +162,7 @@ label identity:
         jump identity  
     
     if nom in noms_interdits:
-        "Ce nom n'est pas autorisé."
+        "{b}{i}Ce nom n'est pas autorisé.{/i}{/b}"
         jump identity 
 
     if not prenom and not nom:
@@ -173,12 +175,12 @@ label identity:
 
             $ prenom, nom = "Iris", "Natsumi"
 
-        "Bienvenue [prenom] [nom]. Puisque aucun nom n'a été choisi, celui-ci vous a été attribué."
+        "{b}{i}Bienvenue [prenom] [nom]. Puisque aucun nom n'a été choisi, celui-ci vous a été attribué.{/i}{/b}"
         play music "Transition.mp3" noloop
         
     else:
         
-        "Bienvenue [prenom] [nom]."
+        "{b}{i}Bienvenue [prenom] [nom].{/i}{/b}"
         play music "Transition.mp3" noloop 
 
     $ origine = "collège d'hoshikawa" 
@@ -213,8 +215,6 @@ label début:
     play sound "Click.mp3" noloop 
 
     scene warehouse with fade
-
-    play music "Soundtrack2.mp3" loop volume 2.0
 
     if persistent.endgame == True:
 
@@ -252,6 +252,9 @@ label début:
     "{b}{i}[entrepot]{/i}{/b}"
     play sound "Click.mp3" noloop 
 
+    P "{=Pensee}C'est vraiment le bazarre ici...{/Pensee}"
+    play sound "Click.mp3" noloop
+  
     P "Tu trouves quelques choses ?"
     play sound "Click.mp3" noloop
 
@@ -265,6 +268,9 @@ label début:
     play sound "Click.mp3" noloop
 
     P "Fais voir ce que c'est ?"
+    play sound "Click.mp3" noloop
+
+    P "{=Pensee}Je me demande sur quoi il est tombé.{/Pensee}"
     play sound "Footsteps.mp3" noloop 
 
     "{b}{i}Tu t'approches et tu découvres un [model].{/i}{/b}"
@@ -311,6 +317,9 @@ label début:
     play sound "Click.mp3" noloop 
 
     S "Je ne suis pas sûr que ce soit une bonne idée..."
+    play sound "Click.mp3" noloop 
+
+    P "{=Pensee}Il ne va pas commencer à me fatiguer avec ça...{/Pensee}"
     play sound "Click.mp3" noloop 
 
     P "Oh, c'est bon, elle est abandonnée et en plus ça ne brise ni la loi ni l'une des dix règles de l'informatique."
@@ -737,8 +746,6 @@ label choice1:
     A "[validation]"
     play sound "Click.mp3" noloop 
 
-    stop music fadeout 2.0   
-
     "{b}{i}Tu quittes l'entrepôt avec [A] en coupant les ponts avec [S].{/i}{/b}"
     play sound "Transition.mp3" noloop 
 
@@ -1063,7 +1070,7 @@ label choice1:
     play sound "Click.mp3" noloop 
 
     $ nothing = get_random_nothing()
-    E "[nothing] C'est normal"
+    E "[nothing] C'est normal."
     play sound "Click.mp3" noloop
 
     "{b}{i}Tu regardes tes documents et ceux d'[newname] et vous remarquez que vous étes en Seconde-E.{/i}{/b}"
@@ -1204,11 +1211,14 @@ label choice1:
     P "Je ne sais pas du tout."
     play sound "Click.mp3" noloop
 
+    P "{=Pensee}J'ai un mauvais présentiment avec cet élève...{/Pensee}"
+    play sound "Click.mp3" noloop
+
     "{b}{i}L'élève s'approche un peu trop près d'[A]...{/i}{/b}"
     play sound "Click.mp3" noloop
 
     A "Mais qu'est-ce que tu fais !?" 
-    play sound "Click.mp3" noloop
+    play sound "Click.mp3" noloop 
 
     "{b}{i}Tu prends l'élève par le bras.{/i}{/b}"
     play sound "Click.mp3" noloop
@@ -1428,7 +1438,7 @@ label choice1:
     play sound "Click.mp3" noloop
 
     $ character7 = N 
-    $ charactertext7 = "Naoto est un lycéen de dix-neuf ans, il est généralement en informatique et prêt à aider les autres."
+    $ charactertext7 = "Naoto est un lycéen de dix-neuf ans, il est généralement bon en informatique et prêt à aider les autres."
 
     T "Enchantée aussi de te rencontrer [N]."
     play sound "Click.mp3" noloop
@@ -1954,11 +1964,11 @@ label choice1:
     P "[validation]"
     play sound "Click.mp3" noloop 
 
-    M "Vous utillserez une partie des livres jusqu'au vacances de Noël."
+    M "Vous utiliserez une partie des livres jusqu'au vacances de Noël."
     play sound "Click.mp3" noloop
 
     $ validation = get_random_validation() 
-    Na "[validation]"
+    P "[validation]"
     play sound "Click.mp3" noloop 
 
     M "Bon, maintenant que toutes les informations ont été données, vous pouvez disposer. N'hésitez pas à visiter le lycée puisque vous n'avez pas cours cet après-midi."
@@ -2320,7 +2330,7 @@ label choice2:
                     play sound "Click.mp3" noloop 
 
                     P "Je dois te laisser j'ai une urgence !"
-                    play sound "Click.mp3" noloop
+                    play sound "Click.mp3" noloop 
     
                     I "Ok."
                     play sound "Footsteps.mp3" noloop 
@@ -2714,6 +2724,7 @@ label choice3:
 
     "{b}{i}Tu effectues le paiement.{/i}{/b}"
     play sound "Click.mp3" noloop 
+
     $ points -= 1500
 
     $ thanks = get_random_thanks()
@@ -4093,6 +4104,9 @@ label studentmode:
     play sound "Click.mp3" noloop
 
     P "Ok je vois."
+    play sound "Click.mp3" noloop
+
+    P "{=Pensee}Je me demande pourquoi [newname] n'a pas été démantelée ?{/Pensee}"
     play sound "Click.mp3" noloop
 
     M "J'aurai une question pour toi [prenom]."
@@ -14196,7 +14210,7 @@ label password1:
     "{b}{i} Tu fais ta commission avant de sortir des toilettes mais tu commences à avoir une pensée.{/i}{/b}"
     play sound "Toilet.mp3" noloop 
 
-    P "{i}Et si je quittais le lycée comme ça [newname] sera en sécurité.{/i}"
+    P "{=Pensee}Et si je quittais le lycée comme ça [newname] sera en sécurité...{/Pensee}"
     play sound "Click.mp3" noloop
 
     "{b}{i} Tu continues de réfléchir.{/i}{/b}"
@@ -14236,6 +14250,10 @@ label password1:
     
     M "Bien reprenez les exercices."
     play sound "Click.mp3" noloop
+
+    $ validation = get_random_validation() 
+    P "[validation]"
+    play sound "Click.mp3" noloop 
 
     "{b}{i} Le cours continue tranquillement.{/i}{/b}"
     play sound "Bell.mp3" noloop

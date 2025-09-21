@@ -19294,6 +19294,8 @@ label password32:
     Na "Oh, je vois... C’est super intéressant comme idée !"
     play sound "Click.mp3" noloop 
 
+    $ stockage += 10.0 
+
     P "Bon, on fait quoi maintenant ?"
     play sound "Click.mp3" noloop
 
@@ -19311,6 +19313,8 @@ label password32:
 
     "{b}{i}Après deux heures de révisions, vous faites une pause.{/i}{/b}"
     play sound "Click.mp3" noloop
+
+    $ stockage += 10.0
 
     P "On a bien bossé."
     play sound "Click.mp3" noloop
@@ -19485,6 +19489,8 @@ label password32:
 
     "{b}{i}Après deux heures de révisions, vous faites une pause.{/i}{/b}"
     play sound "Click.mp3" noloop
+
+    $ stockage += 15.0
 
     P "On a enfin fini pour aujourd'hui."
     play sound "Click.mp3" noloop   

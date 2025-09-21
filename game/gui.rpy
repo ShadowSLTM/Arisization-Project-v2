@@ -499,3 +499,10 @@ init python:
 
         gui.nvl_button_width = 1860
         gui.nvl_button_xpos = 30
+
+init python:
+    # Créer un style Pensée
+    style.Pensee = Style(style.default)
+    style.Pensee.italic = True
+    style.Pensee.color = "#0095ff"
+    style.Pensee.size = 30

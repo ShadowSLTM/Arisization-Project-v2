@@ -1,34 +1,44 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 21594, in script call
-    call script2 from _call_script2
-  File "game/script2.rpy", line 19463, in script call
-    call script3 from _call_script3
-  File "game/script.rpy", line 21594, in script call
-    call script2 from _call_script2
-  File "game/script2.rpy", line 19463, in script call
-    call script3 from _call_script3
-ScriptError: could not find label 'script3'.
+  File "game/script.rpy", line 131, in script
+    P "[style=Pensee]Je dois rester discret...[/style]"
+SyntaxError: invalid syntax (<none>, line 1)
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 21594, in script call
-    call script2 from _call_script2
-  File "game/script2.rpy", line 19463, in script call
-    call script3 from _call_script3
-  File "C:\Users\Aris\Documents\renpy-8.3.7-sdk\renpy\ast.py", line 1427, in execute
-    rv = renpy.game.context().call(label, return_site=self.next.name)
-  File "game/script.rpy", line 21594, in script call
-    call script2 from _call_script2
-  File "game/script2.rpy", line 19463, in script call
-    call script3 from _call_script3
-  File "C:\Users\Aris\Documents\renpy-8.3.7-sdk\renpy\script.py", line 1103, in lookup
-    raise ScriptError("could not find label '%s'." % str(original))
-ScriptError: could not find label 'script3'.
+  File "game/script.rpy", line 131, in script
+    P "[style=Pensee]Je dois rester discret...[/style]"
+  File "C:\Users\Aris\Documents\renpy-8.3.7-sdk\renpy\ast.py", line 2586, in execute
+    Say.execute(self)
+  File "C:\Users\Aris\Documents\renpy-8.3.7-sdk\renpy\ast.py", line 623, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "C:\Users\Aris\Documents\renpy-8.3.7-sdk\renpy\exports\sayexports.py", line 132, in say
+    who(what, *args, **kwargs)
+  File "C:\Users\Aris\Documents\renpy-8.3.7-sdk\renpy\character.py", line 1456, in __call__
+    what = self.prefix_suffix("what", self.what_prefix, what, self.what_suffix)
+  File "C:\Users\Aris\Documents\renpy-8.3.7-sdk\renpy\character.py", line 1369, in prefix_suffix
+    return (sub(prefix) + sub(body) + sub(suffix))
+  File "C:\Users\Aris\Documents\renpy-8.3.7-sdk\renpy\character.py", line 1349, in sub
+    return renpy.substitutions.substitute(s, scope=scope, force=force, translate=translate)[0]
+  File "C:\Users\Aris\Documents\renpy-8.3.7-sdk\renpy\substitutions.py", line 373, in substitute
+    s = interpolate(s, variables) # type: ignore
+  File "C:\Users\Aris\Documents\renpy-8.3.7-sdk\renpy\substitutions.py", line 86, in interpolate
+    raise e
+  File "C:\Users\Aris\Documents\renpy-8.3.7-sdk\renpy\substitutions.py", line 78, in interpolate
+    value = renpy.python.py_eval(code, {}, scope)
+  File "C:\Users\Aris\Documents\renpy-8.3.7-sdk\renpy\python.py", line 1216, in py_eval
+    code = py_compile(code, 'eval')
+  File "C:\Users\Aris\Documents\renpy-8.3.7-sdk\renpy\python.py", line 1153, in py_compile
+    raise e
+  File "C:\Users\Aris\Documents\renpy-8.3.7-sdk\renpy\python.py", line 1090, in py_compile
+    raise orig_e
+  File "C:\Users\Aris\Documents\renpy-8.3.7-sdk\renpy\python.py", line 1082, in py_compile
+    tree = compile(source, filename, py_mode, ast.PyCF_ONLY_AST | flags, 1)
+SyntaxError: invalid syntax (<none>, line 1)
 
 Windows-10-10.0.26100 AMD64
 Ren'Py 8.3.7.25031702
 Arisization Project Version_0.0.5
-Thu Sep 18 19:44:48 2025
+Sun Sep 21 20:56:17 2025
