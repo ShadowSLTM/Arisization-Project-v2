@@ -1,6 +1,6 @@
 $ persistent.abandon = False
-$ persistent.endgame = False
-
+$ persistent.arrestation = False
+$ persistent.game_completed = False
 
 label start: 
 
@@ -196,27 +196,34 @@ label début:
 
     if persistent.abandon == True: 
 
-        if persistent.endgame == True:
+        if persistent.arrestation == True:
+
+            "{b}{i}Réalité D04.{/i}{/b}" 
+            play sound "Click.mp3" noloop  
+
+        else: 
 
             "{b}{i}Réalité D03.{/i}{/b}" 
             play sound "Click.mp3" noloop 
 
-        else: 
-
-            "{b}{i}Réalité D02.{/i}{/b}" 
-            play sound "Click.mp3" noloop 
-
     else: 
 
-        "{b}{i}Réalité racine.{/i}{/b}" 
-        play sound "Click.mp3" noloop
+        if persistent.arrestation == True:
+
+            "{b}{i}Réalité D02.{/i}{/b}" 
+            play sound "Click.mp3" noloop  
+
+        else: 
+
+            "{b}{i}Réalité racine.{/i}{/b}" 
+            play sound "Click.mp3" noloop
   
     "{b}{i}Quelque part dans un entrepôt abandonné en 2097.{/i}{/b}"
     play sound "Click.mp3" noloop 
 
     scene warehouse with fade
 
-    if persistent.endgame == True:
+    if persistent.arrestation == True:
 
         P "Bon, on fait quoi ?"
         play sound "Glitch.mp3" noloop
@@ -483,7 +490,7 @@ label hack:
     P "Oui, je t'écoute."
     play sound "Click.mp3" noloop
 
-    if persistent.endgame == True:
+    if persistent.arrestation == True:
 
         A "Qui est cette personne avec toi ?"
         play sound "Glitch.mp3" noloop
@@ -7573,7 +7580,7 @@ label suite:
     "{b}{i} [M] fait signe au lycéen de rentrer. {/i}{/b}"
     play sound "Door.mp3" noloop
 
-    if persistent.endgame == True:
+    if persistent.arrestation == True:
 
         $ S = Character('Takumi Kisaragi', color="#ffffff") 
 

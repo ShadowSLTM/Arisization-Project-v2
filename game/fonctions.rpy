@@ -410,5 +410,5 @@ init python:
     # Réinitialiser seulement 'endgame'
     def reset_endgame():
         if hasattr(persistent, "endgame"):
-            del persistent.endgame
+            del persistent.arrestation
         renpy.save_persistent()

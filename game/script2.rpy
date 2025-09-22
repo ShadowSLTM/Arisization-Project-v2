@@ -15317,7 +15317,7 @@ label choice10:
     N "Oui dis-moi, je t'écoute."
     play sound "Click.mp3" noloop 
 
-    if persistent.endgame == True:
+    if persistent.arrestation == True:
 
         P "Tu sais ce que [Y] fait de ses journées ?"   
         play sound "Glitch.mp3" noloop 
@@ -17845,7 +17845,7 @@ label password30:
                     I "Sinon j'ai croisé Yuki avec un livre."
                     play sound "Click.mp3" noloop
 
-                    if persistent.endgame == True:
+                    if persistent.arrestation == True:
 
                         P "Un livre et c'était quoi comme livre ?"
                         play sound "Glitch.mp3" noloop
@@ -18044,7 +18044,7 @@ label password30:
                     I "Sinon j'ai croisé Yuki avec un livre."
                     play sound "Click.mp3" noloop 
 
-                    if persistent.endgame == True:
+                    if persistent.arrestation == True:
 
                         P "Un livre et c'était quoi comme livre ?"
                         play sound "Glitch.mp3" noloop
@@ -18211,7 +18211,7 @@ label password30:
             Na "Elle venait de croiser Yuki avec un livre."
             play sound "Click.mp3" noloop
 
-            if persistent.endgame == True:
+            if persistent.arrestation == True:
 
                 P "Un livre et c'était quoi comme livre ?"
                 play sound "Glitch.mp3" noloop

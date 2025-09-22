@@ -345,7 +345,7 @@ screen navigation():
 
             textbutton _("Pas disponible") action NullAction()
 
-        if persistent.endgame == True: 
+        if persistent.arrestation == True: 
 
             textbutton _("Réinitialiser") action Function(reset_endgame)
 
