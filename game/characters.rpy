@@ -23,7 +23,7 @@ define H = Character('Hajime Yukizome', color="#ffffff")
 define K = Character('Kendo Sato', color="#ffffff")
 define N = Character('Naoto Saotome', color="#ffee00") 
 define Hi = Character('Haruki Ichinose', color="#ffffff")
-define Y = Character('Yuki Hiiragi', color="#0059ff") # Misaki Mikazuki dans la D04
+default Y = Character('??????????', color="#ffffff")
   
 # Les antagonistes secondaires.  
 

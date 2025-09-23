@@ -1823,7 +1823,7 @@ screen physicbook():
     frame: 
         yalign 0.3
         xalign 0.5
-        add "physicbook.png "
+        add "physicbook.png"
 
 screen philobook():
     frame: 

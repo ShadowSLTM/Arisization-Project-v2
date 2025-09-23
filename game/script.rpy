@@ -30,6 +30,7 @@ label start:
     default robotname = ""  
     default baseip = ""
     default newbattery = ""
+    default origine = "collège d'hoshikawa" 
 
 #############################################
 
@@ -149,19 +150,21 @@ label identity:
     "{b}{i}Vos informations ont été enregistrées.{/i}{/b}"
     play sound "Click.mp3" noloop
     
-    $ noms_interdits = {"Kusanagi", "Nishimura", "Ayanokoji", "Sato", "Saotome", "Ichinose", "Hiiragi", "Katsuragi", "Hanemiya", "Sumino", "Kisaragi", "Hoshino", "Shinomiya", "Katsuya", "Horimiya", "Tachibana", "Sakayanagi", "Nagumo", "Kaminari", "Suzumiya", "Kobayashi", "Kaneda", "Nanami", "Kurosawa"}
+    $ noms_interdits = {"Kusanagi", "Nishimura", "Ayanokoji", "Sato", "Saotome", "Ichinose", "Hiiragi", "Mikazuki", "Katsuragi", "Hanemiya", "Sumino", "Kisaragi", "Hoshino", "Shinomiya", "Katsuya", "Horimiya", "Tachibana", "Sakayanagi", "Nagumo", "Kaminari", "Suzumiya", "Kobayashi", "Kaneda", "Nanami", "Kurosawa"}
     $ prenoms_interdits = {"Yuna", "Hajime", "Kendo", "Naoto", "Haruki", "Yuki", "Emika", "Kazumi", "Ayano", "Aiko", "Akeno", "Subaru", "Takumi", "Suzune", "Shiro", "Kaede", "Naomi", "Seigo", "Takeshi", "Saori", "Mizuki", "Rika", "Natsuo", "Reiichi", "Mayumi", "Luna", "Hiroyuki"}
 
-    if prenom in prenoms_interdits:
+    if prenom in prenoms_interdits: 
 
         "{b}{i}Ce prénom n'est pas autorisé.{/i}{/b}"
         jump identity  
     
     if prenom == "Aris":
+
         R "Cher joueur/chère joueuse, je ne suis pas sûr qu’avoir le prénom Aris soit une bonne idée pour la suite de l'histoire. Veuillez en choisir un autre."
         jump identity  
     
     if nom in noms_interdits:
+        
         "{b}{i}Ce nom n'est pas autorisé.{/i}{/b}"
         jump identity 
 
@@ -182,8 +185,6 @@ label identity:
         
         "{b}{i}Bienvenue [prenom] [nom].{/i}{/b}"
         play music "Transition.mp3" noloop 
-
-    $ origine = "collège d'hoshikawa" 
     
 label début: 
 
@@ -1473,14 +1474,27 @@ label choice1:
 
     $ stockage += 2.0 
 
-    $ nothing = get_random_nothing()
-    T "[nothing] Bon suivante."
-    play sound "Click.mp3" noloop
+
+    if persistent.arrestation == True:
+
+        $ nothing = get_random_nothing()
+        T "[nothing] Bon suivante."
+        play sound "Glitch.mp3" noloop
+
+        define Y = Character('Yuki Mikazuki', color="#134f3eff") 
+
+    else: 
+
+        $ nothing = get_random_nothing()
+        T "[nothing] Bon suivante."
+        play sound "Click.mp3" noloop
+
+        define Y = Character('Yuki Hiiragi', color="#0059ff") 
 
     Y "Je m'appelle [Y], j'ai dix-neuf ans ravie de vous rencontrer."
     play sound "Click.mp3" noloop 
 
-    $ character9 = Y
+    $ character9 = Y 
     $ charactertext9 = "Elle est une lycéenne de dix-neuf ans, elle est douée en informatique comme les autres lycéens mais personne ne sait ce qu'elle fait."
 
     T "Enchantée de te rencontrer aussi bienvenue dans notre classe."
@@ -7582,7 +7596,7 @@ label suite:
 
     if persistent.arrestation == True:
 
-        $ S = Character('Takumi Kisaragi', color="#ffffff") 
+        $ S = Character('Takumi Kisaragi', color="#9a7100") 
 
     else: 
 
