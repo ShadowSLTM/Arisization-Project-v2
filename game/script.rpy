@@ -7764,7 +7764,10 @@ label suite:
     "{b}{i}Mais soudainement [S] t'interpelle.{/i}{/b}"
     play sound "Click.mp3" noloop 
 
-    S "Hey [P], Je peux te parler deux minutes."
+"{b}{i}Mais soudainement [S] t'interpelle.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    S "Hey [P], je peux te parler deux minutes."
     play sound "Click.mp3" noloop 
 
     P "Qu'est-ce que tu me veux ?"
@@ -7773,79 +7776,123 @@ label suite:
     S "C'est concernant [newname]."
     play sound "Click.mp3" noloop 
 
-    P "Il n'y a quoi encore ?"
+    P "Et encore quoi ?"
     play sound "Click.mp3" noloop 
 
-    S "J'aimerais savoir pourquoi tout le monde apprécie [newname] ?"
-    play sound "Click.mp3" noloop 
- 
-    P "Car elle est sympa et bienveillante."
-    play sound "Click.mp3" noloop 
+    if persistent.arrestation == True: 
 
-    if pronom == "il":
+        P "Et encore quoi ?"
+        play sound "Glitch.mp3" noloop 
 
-        S "Comment en es-tu arrivé là ?"
+        S "J'aimerais te parler de quelque chose qui me préoccupe."
+        play sound "Click.mp3" noloop 
+     
+        P "Qu'est-ce qui t'inquiète ?"
+        play sound "Click.mp3" noloop 
+
+        S "C'est à propos de [newname]... Je sais que c'est ton robot, mais j'ai des doutes sur elle."
+        play sound "Click.mp3" noloop 
+
+        P "Des doutes ? Qu'est-ce que tu veux dire ?"
         play sound "Click.mp3" noloop
 
-    else: 
+        S "Le fait qu'elle soit un robot humanoïde me met mal à l'aise. J'ai l'impression qu'elle développe une conscience propre."
+        play sound "Click.mp3" noloop 
 
-        S "Comment en es-tu arrivée là ?"
-        play sound "Click.mp3" noloop
+        P "Tu penses qu'elle pourrait devenir imprévisible ?"
+        play sound "Click.mp3" noloop 
 
-    P "Je dirai que c'est de la détermination et de l'ingéniosité."
-    play sound "Click.mp3" noloop 
+        S "Exactement. Je ne sais pas... mais un robot qui évolue au-delà de sa programmation, ça peut devenir dangereux."
+        play sound "Click.mp3" noloop 
 
-    S "Je te hais vraiment aujourd'hui, saches-le."
-    play sound "Click.mp3" noloop 
+        if pronom == "il":
 
-    P "Mais pourquoi !?"
-    play sound "Click.mp3" noloop 
- 
-    S "Tu te souviens qu'on était au [origine] à l'époque ?" 
-    play sound "Click.mp3" noloop 
+            S "Je ne veux pas t'alarmer, mais surveille bien ton robot. Si elle devient trop autonome..."
+            play sound "Click.mp3" noloop 
 
-    P "Oui pourquoi ?"
-    play sound "Click.mp3" noloop 
+        else: 
 
-    S "Au [origine] j'étais le meilleur et tout le monde m'acclamait pendant que tu restais dans ton coin."
-    play sound "Click.mp3" noloop 
+            S "Je ne veux pas t'alarmer, mais surveille bien ton robot. Si elle devient trop autonome..."
+            play sound "Click.mp3" noloop 
 
-    P "Oui et alors ?" 
-    play sound "Click.mp3" noloop 
-
-    S "Depuis que tu as découvert [newname] j'ai perdu une partie de ma popularité car soit disant j'était inutile."
-    play sound "Click.mp3" noloop 
-
-    P "Et alors personnellement ça ne me concerne pas."
-    play sound "Click.mp3" noloop 
-
-    S "Même quand je suis allé à Lexus après avoir finis mon cursus au [origine], cette histoire m'a suivi."
-    play sound "Click.mp3" noloop 
-
-    P "Ok je vois maintement."
-    play sound "Click.mp3" noloop 
-
-    S "Tu comprends maintenant pourquoi je dêteste."
-    play sound "Click.mp3" noloop 
-
-    if pronom == "il":
-
-        P "Désolé je ne voulais pas te causer ça."
+        P "Je comprends tes inquiétudes... Je vais rester vigilant."
         play sound "Click.mp3" noloop 
 
     else: 
 
-        P "Désolée je ne voulais pas te causer ça."
+        P "Et encore quoi ?"
         play sound "Click.mp3" noloop 
 
-    S "Ouais ouais bon je te laisse je dois y aller."
+        S "J'aimerais comprendre pourquoi tout le monde l'apprécie autant."
+        play sound "Click.mp3" noloop 
+     
+        P "Parce qu'elle est sympa et bienveillante."
+        play sound "Click.mp3" noloop 
+
+        if pronom == "il":
+
+            S "Comment en es-tu arrivé là ?"
+            play sound "Click.mp3" noloop
+
+        else:
+
+            S "Comment en es-tu arrivée là ?"
+            play sound "Click.mp3" noloop
+
+        P "Je dirai que c'est de la détermination, de l'ingéniosité et beaucoup de patience."
+        play sound "Click.mp3" noloop 
+
+        S "Je te hais vraiment aujourd'hui, sache-le."
+        play sound "Click.mp3" noloop 
+
+        P "Mais pourquoi !?"
+        play sound "Click.mp3" noloop 
+     
+        S "Tu te souviens du [origine] ?"
+        play sound "Click.mp3" noloop 
+
+        P "Oui, pourquoi ?"
+        play sound "Click.mp3" noloop 
+
+        S "Là-bas, j'étais le meilleur. Tout le monde m'acclamait, pendant que toi tu restais dans ton coin."
+        play sound "Click.mp3" noloop 
+
+        P "Et alors ?" 
+        play sound "Click.mp3" noloop 
+
+        S "Depuis que tu as rencontré [newname], tout a changé. On a commencé à dire que je ne servais plus à rien."
+        play sound "Click.mp3" noloop 
+
+        P "Et alors ? Ce n'est pas de ma faute."
+        play sound "Click.mp3" noloop 
+
+        S "Même quand je suis allé à Lexus après le [origine], cette histoire m'a suivi comme une ombre."
+        play sound "Click.mp3" noloop 
+
+        P "Je comprends mieux, maintenant."
+        play sound "Click.mp3" noloop 
+
+        S "Voilà pourquoi je te déteste."
+        play sound "Click.mp3" noloop 
+
+        if pronom == "il":
+
+            P "Désolé, je ne voulais pas te causer ça."
+            play sound "Click.mp3" noloop 
+
+        else: 
+
+            P "Désolée, je ne voulais pas te causer ça."
+            play sound "Click.mp3" noloop 
+
+    S "Ouais... peu importe. Bon, je te laisse, je dois y aller."
     play sound "Click.mp3" noloop 
 
-    P "Ok à plus tard." 
+    P "Ok, à plus tard." 
     play sound "Footsteps.mp3" noloop  
 
-    "{b}{i}[S] s'éloigna pour aller à son dortoir et en même [J1] vient vers toi.{/i}{/b}"
-    play sound "Click.mp3" noloop
+    "{b}{i}[S] s'éloigna pour aller à son dortoir et en même temps [J1] vient vers toi.{/i}{/b}"
+    play sound "Click.mp3" noloop 
 
     J1 "Hey salut [prenom] je veux juste m'excuser pour tous ce que j'ai dit à [newname]..."
     play sound "Click.mp3" noloop  

@@ -19972,6 +19972,34 @@ label password33:
     Na "Oui ça fait vraiment du bien de réviser."
     play sound "Click.mp3" noloop   
 
+    P "Sinon tu te débrouille bien avec le Runix ?"
+    play sound "Click.mp3" noloop   
+
+    Na "Oui je m'améliore je trouve."
+    play sound "Click.mp3" noloop   
+
+    P "Mais c'est génial si tu t'améliore."
+    play sound "Click.mp3" noloop 
+
+    $ thanks = get_random_thanks()
+    Na "[thanks]"
+    play sound "Click.mp3" noloop
+
+    $ nothing = get_random_nothing()
+    P "[nothing]"
+    play sound "Click.mp3" noloop
+
+    Na ""
+    
+
+
+
+
+
+
+
+
+
 
 
 
