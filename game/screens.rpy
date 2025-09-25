@@ -353,6 +353,14 @@ screen navigation():
 
             textbutton _("Pas disponible") action NullAction()
 
+        if persistent.game_completed == True:
+
+            textbutton _("Histoires annexes") action NullAction()
+
+        else: 
+
+            textbutton _("Pas disponible") action NullAction() 
+
         if renpy.variant("pc"): 
 
             textbutton _("Quitter ton robot") action Quit(confirm=not main_menu) 
@@ -2013,8 +2021,6 @@ screen success():
             text _("La liberté : [quest39]/1\n")          
             text _("Quatrième mise à jour : [quest40]/1\n")
             text _("Maître du chaos ordonné : [quest41]/1\n") 
-
-            
 
 style about_label is gui_label   
 style about_label_text is gui_label_text

@@ -19989,28 +19989,45 @@ label password33:
     P "[nothing]"
     play sound "Click.mp3" noloop
 
-    Na ""
-    
+    Na "Bon moi je vais trîner sur mon téléphone."
+    play sound "Click.mp3" noloop
 
+    $ validation = get_random_validation() 
+    P "[validation]"
+    play sound "Click.mp3" noloop 
 
+    "{b}{i}[newname] part se poser pour aller lire.{/i}{/b}"
+    play sound "Click.mp3" noloop 
 
+    P "{=Pensee}Et dire qu'elle a tellement changé depuis que l'ai récupérée.{/Pensee}"
+    play sound "Click.mp3" noloop 
 
+    P "Bon moi je vais aller sur mon téléphone un peu."
+    play sound "Click.mp3" noloop 
 
+    "{b}{i}Tu te pose sur ton lit tranquillement pendant le reste de l'après-midi.{/i}{/b}"
+    play sound "Click.mp3" noloop 
 
+    Na "J'ai enfin fini de lire ce chapître."
+    play sound "Click.mp3" noloop 
 
+    P "Cool, il était bien ou pas ?"
+    play sound "Click.mp3" noloop 
 
+    Na "Oui absolument."
+    play sound "Click.mp3" noloop 
 
+    P "Tant mieux alors mais ça parle de quoi ?"
+    play sound "Click.mp3" noloop
 
+    Na "ça parle d'une apocalypse Zombie oû une fille se retrouve complément seule contre eux."
+    play sound "Click.mp3" noloop
 
+    P "ça la l'air pas mal comme histoire."
+    play sound "Click.mp3" noloop
 
-
-
-
-
-
-
-
-
+    Na "Oui c'est vraiment pas mal."
+    play sound "Click.mp3" noloop
 
     $ go_eat = get_random_go_eat()
     P "[go_eat]"
@@ -20146,6 +20163,69 @@ label password34:
 
     Na "Cool alors mais il faut que je te dise un truc."
     play sound "Click.mp3" noloop 
+
+    P "Hm ? Je t’écoute. Qu’est-ce qu’il y a ?"
+    play sound "Click.mp3" noloop
+
+    Na "je voulais savoir si tu t'es décidé pour le mot de passe ?"
+    play sound "Click.mp3" noloop
+
+    P "Non pas encore, je vais y réfléchir encore."
+    play sound "Click.mp3" noloop
+    
+    Na "D'accord, je te laisse le temps de réfléchir."
+    play sound "Click.mp3" noloop
+
+    P "Merci."
+    play sound "Click.mp3" noloop
+
+    P "{=Pensee}Le mot de passe la dérange autant que ça ?{/Pensee}"
+    play sound "Click.mp3" noloop
+
+    Na "Est-ce que ça va ?"
+    play sound "Click.mp3" noloop 
+
+    P "Oui je pense juste à quelque chose."
+    play sound "Click.mp3" noloop
+
+    Na "Ah d'accord."
+    play sound "Click.mp3" noloop
+  
+    $ go_eat = get_random_go_eat()
+    P "[go_eat]"
+    play sound "Click.mp3" noloop
+
+    $ suivi = get_random_suivi()    
+    Na "[suivi]"
+    play sound "Footsteps.mp3" noloop
+  
+    hide screen room with moveoutright 
+    hide screen points with moveoutleft 
+    hide screen day with moveoutleft
+    scene black with fade   
+
+    "{b}{i} Vous partez chercher à manger.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    $ points -= 100
+
+    scene room with fade
+    show screen day with moveinleft
+    show screen points with moveinleft
+    show screen room with moveinright
+
+    P "Enfin à manger... "
+    play sound "Click.mp3" noloop 
+
+    $ bien = get_random_fais_du_bien()
+    Na "[bien]"
+    play sound "Click.mp3" noloop  
+
+    "{b}{i} Vous mangez tranquillement pendant une demi-heure.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    
+
 
 
 

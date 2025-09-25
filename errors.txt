@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/gui.rpy", line 504: expected 'word' not found.
-    style.Pensee = Style("default", italic=True, color="#0000ff", size=26)
-         ^
+File "game/DRM.rpy", line 62: 'return' outside function
+
+File "game/DRM.rpy", line 143: 'return' outside function
 
 Ren'Py Version: Ren'Py 8.3.7.25031702
-Sun Sep 21 20:57:22 2025
+Thu Sep 25 13:09:21 2025

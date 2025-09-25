@@ -14,7 +14,6 @@ label start:
     default success = 0
     default wallbreak = 0
     default update = 1.0
-    default origine = ""  
     default domaine = "??????????" 
     default model = "robot humanoïde" 
     default stored_password = ""
@@ -7762,9 +7761,6 @@ label suite:
     play sound "Click.mp3" noloop 
 
     "{b}{i}Mais soudainement [S] t'interpelle.{/i}{/b}"
-    play sound "Click.mp3" noloop 
-
-"{b}{i}Mais soudainement [S] t'interpelle.{/i}{/b}"
     play sound "Click.mp3" noloop
 
     S "Hey [P], je peux te parler deux minutes."
@@ -17048,6 +17044,9 @@ label password4:
     play sound "Click.mp3" noloop 
 
     Y "Oui de mon point de vue."
+    play sound "Click.mp3" noloop 
+
+    P "{=Pensee}Mais qu'est ce qu'elle ranconte encore...{/Pensee}"
     play sound "Click.mp3" noloop 
 
     M "Bien, nous allons faire un exercice pour voir si vous avez bien compris."
