@@ -20191,7 +20191,7 @@ label password34:
     Na "Je vois, mais laisse moi diviner tu penses encore au mot de passe que tu m'as mis ?"
     play sound "Click.mp3" noloop 
 
-    if persistent.game_completed == True:
+    if persistent.game_completed == True: 
 
         P "Oui je pense à ça car j'hésite."
         play sound "Glitch.mp3" noloop 
@@ -20262,10 +20262,29 @@ label password34:
     Na "Bon on fait quoi aujourd'hui ?"
     play sound "Click.mp3" noloop
 
-    P "Pour aujourd'hui nous pourrions faire " 
+    P "Pour aujourd'hui nous pourrions faire une activité ensemble."
     play sound "Click.mp3" noloop
 
-    Na ""
+    Na "Oui ça serait géniale."
+    play sound "Click.mp3" noloop
+
+    P "Parfait, on va faire ça alors."
+    play sound "Click.mp3" noloop
+
+    Na "D'accord, je te suis."
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Vous passez la matinée à faire des activités ensemble.{/i}{/b}"
+    play sound "Click.mp3" noloop 
+
+     
+
+
+
+
+
+
+
 
 
 
@@ -20349,6 +20368,8 @@ label password34:
 
     "{b}{i} Vous allez vous asseoir dans le réfectoire.{/i}{/b}"
     play sound "Click.mp3" noloop
+
+
 
 
 
