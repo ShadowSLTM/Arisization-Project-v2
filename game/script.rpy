@@ -888,14 +888,14 @@ label choice1:
     "{b}{i}Vous vous dirigez vers la salle de classe mais quelqu'un s'approche...{/i}{/b}"
     play sound "Click.mp3" noloop
 
-    R "Bonjour, je suis venue vous. Je suis la personne qui doit se charger des nouveaux lycéens ici, dont vous."
+    R "Bonjour, je suis venue vous voir. Je suis la personne qui doit se charger des nouveaux lycéens ici, dont vous."
     play sound "Click.mp3" noloop
 
     P "Ok, merci de nous guider. Mais comment vous vous appelez ?"
     play sound "Click.mp3" noloop              
 
     E "Je m'appelle [E], actuelle présidente du bureau des élèves ou B.D.E. pour faire simple."
-    play sound "Click.mp3" noloop
+    play sound "Click.mp3" noloop 
 
     $ character13 = E
     $ ultimate13 = "Présidente du BDE"
@@ -984,7 +984,7 @@ label choice1:
     P "Comment ça ? expliquez nous plus en détail."
     play sound "Click.mp3" noloop
 
-    E "Déjà, tous les lycéens qui sont ici ont un projet informatique ou technologique ou veulent juste étudier l'informatique."
+    E "Déjà, tous les lycéens qui sont ici sont les meilleurs."
     play sound "Click.mp3" noloop 
 
     P "Ok, intéressant..."
@@ -1405,7 +1405,7 @@ label choice1:
     play sound "Click.mp3" noloop
 
     T "Pourquoi vous avez pratiquement le meme titre ?" 
-    play sound "Click.mp3" noloop
+    play sound "Click.mp3" noloop 
 
     J1 "C'est simple, on est jumelles et le même projet."
     play sound "Click.mp3" noloop

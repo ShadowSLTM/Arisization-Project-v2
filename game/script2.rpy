@@ -12709,9 +12709,9 @@ label password24:
     Na "Oui pourquoi pas mais quoi comme jeu vidéo ?"
     play sound "Click.mp3" noloop  
 
-    P "Et si on essayait de voir ton niveau dans un jeu vidéo comme Nocture core."
+    P "Et si on essayait de voir ton niveau dans un jeu vidéo comme Nocturn core."
     play sound "Click.mp3" noloop  
-
+ 
     Na "Sérieusement un jeu avec une difficulté mécanique."
     play sound "Click.mp3" noloop 
 
@@ -12727,7 +12727,7 @@ label password24:
     Na "C’est quoi tous ces boutons ?! Il y a plus de commandes que dans un avion de chasse."
     play sound "Click.mp3" noloop
 
-    P "Bienvenue dans le monde de Nocture Core. Ici, c’est réflexes ou défaite."
+    P "Bienvenue dans le monde de Nocturn Core. Ici, c’est réflexes ou défaite."
     play sound "Click.mp3" noloop
 
     Na "Je vais me faire humilier, je le sens…"
@@ -12968,7 +12968,7 @@ label password24:
     I "Ah oui et quel est le jeu pour savoir ?"
     play sound "Click.mp3" noloop 
 
-    P "Le jeu en question est le cultissime Nocture core."
+    P "Le jeu en question est le cultissime Nocturn core."
     play sound "Click.mp3" noloop 
 
     "{b}{i}[I] réalise de quel jeu vous parlez.{/i}{/b}"
@@ -13110,7 +13110,7 @@ label password24:
     Na "Bon on fait quoi ?"
     play sound "Click.mp3" noloop  
  
-    P "On peut continuer de jouer à Nocture core."
+    P "On peut continuer de jouer à Nocturn core."
     play sound "Click.mp3" noloop  
 
     Na "Oui pourquoi pas mais je ne suis pas sûre de vouloir continuer."
@@ -13517,7 +13517,7 @@ label password25:
     Na "Je veux essayer le jeu Watch Dogs que j'ai vu sur internet, regardes la page du jeu."
     play sound "Click.mp3" noloop 
 
-    P "Oui pourquoi pas, en plus il pousse ta réflexion sans être trop complexe comme Nocture core."
+    P "Oui pourquoi pas, en plus il pousse ta réflexion sans être trop complexe comme Nocturn core."
     play sound "Click.mp3" noloop
 
     Na "Mais c'est génial ! J'adore les jeux où il faut réfléchir et trouver des indices."
@@ -17583,16 +17583,16 @@ label password30:
     I "Je ne sais pas trop à vrai dire et vous ?"
     play sound "Click.mp3" noloop 
 
-    P "On pourrait retenter de rejouer à Nocture core."
+    P "On pourrait retenter de rejouer à Nocturn core."
     play sound "Click.mp3" noloop
 
-    Na "Je refuse catégoriquement de rejouer à Nocture core."
+    Na "Je refuse catégoriquement de rejouer à Nocturn core."
     play sound "Click.mp3" noloop
 
     P "Je vois, on pourra faire autre chose."
     play sound "Click.mp3" noloop
 
-    I "Je pense que Nocture core l'a vraiment fatigué."
+    I "Je pense que Nocturn core l'a vraiment fatigué."
     play sound "Click.mp3" noloop
 
     Na "Oui c'est vrai."
@@ -20277,20 +20277,8 @@ label password34:
     "{b}{i}Vous passez la matinée à faire des activités ensemble.{/i}{/b}"
     play sound "Click.mp3" noloop 
 
-     
-
-
-
-
-
-
-
-
-
-
-
-
-
+    P  "On s'est bien amusé ce matin."
+    play sound "Click.mp3" noloop 
 
     $ go_eat = get_random_go_eat() 
     Na "[go_eat]"
@@ -20369,6 +20357,16 @@ label password34:
     "{b}{i} Vous allez vous asseoir dans le réfectoire.{/i}{/b}"
     play sound "Click.mp3" noloop
 
+    P "Bonne appétit."
+    play sound "Click.mp3" noloop
+
+    Na "Bonne appétit à toi aussi."
+    play sound "Click.mp3" noloop
+
+    "{b}{i} Vous mangez tranquillement pendant que vous commencez à discuter.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    
 
 
 
