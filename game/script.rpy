@@ -12745,6 +12745,11 @@ label choisir_mot_de_passe:
     P "C'est bon, je lui ai mis un mot de passe, je vais la redémarrer pour voir."
     play sound "Click.mp3" noloop 
 
+    menu:   
+
+        "{b}{i}Relancer [newname].{/i}{/b}" :
+            play sound "Menu.mp3" noloop 
+
     "{b}{i} Tu relances [newname].{/i}{/b}"
     play sound "Click.mp3" noloop
 
@@ -12769,7 +12774,7 @@ label password:
 
         else:
 
-            "{b}{i}Mot de passe correct. Accès autorisé.{/i}{/b}"
+            "{b}{i}Mot de passe incorrect. Accès refusé.{/i}{/b}"
             play sound "Menu.mp3" noloop
         
     else:

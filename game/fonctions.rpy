@@ -199,6 +199,11 @@ init python:
         "Pas de souci.",
         "Il n'y a pas de quoi.",
         "Pas de quoi.",
+        "De rien, c'est normal.",
+        "Mais de rien, c'est normal.",
+        "Il n'y a pas de quoi, c'est normal.",
+        "Pas de quoi, c'est normal.",
+        "Pas de souci, c'est normal.",
     ]
 
     def get_random_nothing():
