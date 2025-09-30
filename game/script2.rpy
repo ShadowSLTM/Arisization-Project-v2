@@ -9867,7 +9867,7 @@ label password21:
     show screen points with moveinleft
     show screen hallway with moveinright 
 
-    "{b}{i}Tu continues vers les escaliers.{/i}{/b}"
+    "{b}{i}Vous continuez vers les escaliers.{/i}{/b}"
     play sound "Click.mp3" noloop
 
     hide screen hallway with moveoutright
@@ -20561,4 +20561,4 @@ label password34:
 
     label end_script2:
     call script3 from _call_script3    
-    return
+    return 

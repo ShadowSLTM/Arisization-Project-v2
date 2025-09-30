@@ -2059,7 +2059,7 @@ label choice1:
     play sound "Click.mp3" noloop 
 
     "{b}{i}en entrant vous voyez deux lits.{/i}{/b}" 
-    play sound "Door.mp3" noloop
+    play sound "Click.mp3" noloop
 
     P "Oui c'est vraiment comfortable."
     play sound "Click.mp3" noloop 
