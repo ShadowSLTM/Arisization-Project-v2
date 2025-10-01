@@ -19339,7 +19339,7 @@ label password32:
     P "En gros, c’est une vérification complète du matériel. On s’assure que tout fonctionne bien et que tout est conforme aux règles."
     play sound "Click.mp3" noloop 
 
-    Na "Oh, je vois... C’est super intéressant comme idée !"
+    Na "Oh, je vois... C’est super intéressant comme idée."
     play sound "Click.mp3" noloop 
 
     $ stockage += 10.0 
@@ -19367,8 +19367,14 @@ label password32:
     P "On a bien bossé."
     play sound "Click.mp3" noloop
 
-    Na "Oui, c'était intense mais productif."
-    play sound "Click.mp3" noloop  
+    Na "Oui, c'était intense mais productif mais j'y pense faut qu'on s'occupe de faire les test pour le Paper Shuffle."
+    play sound "Click.mp3" noloop 
+
+    P "Oui tu as raison on le fera ce week-end."
+    play sound "Click.mp3" noloop 
+
+    Na "Ok alors on le fera ce week-end."
+    play sound "Click.mp3" noloop 
 
     $ go_eat = get_random_go_eat()
     P "[go_eat]"
@@ -20541,7 +20547,7 @@ label password34:
     P "Bien."
     play sound "Click.mp3" noloop
 
-    Na "Bon Je vais me déconnecter et me recharger car je suis fatiguée à cause du jeu."
+    Na "Bon Je vais me déconnecter et me recharger car je suis fatiguée."
     play sound "Click.mp3" noloop 
 
     P "D'accord, bonne nuit [newname]."
