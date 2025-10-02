@@ -1,6 +1,7 @@
 $ persistent.abandon = False
 $ persistent.arrestation = False
 $ persistent.game_completed = False
+$ persistent.first_start = False
 
 label start: 
 
@@ -10939,6 +10940,9 @@ label code:
 
     P "Bon il m'aura fallu beaucoup du temps mais j'ai enfin fini, j'ai le fichier de système d'exploitation qui est [system].rnx"
     play sound "Click.mp3" noloop 
+
+    "{b}{i}Tu fermes ton éditeur de code et tu t'approches d'[newname].{/i}{/b}"
+    play sound "Click.mp3" noloop
 
     menu:   
 

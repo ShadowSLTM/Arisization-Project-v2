@@ -750,15 +750,8 @@ label password35:
     Na "Non ça va aller, je veux juste aller chercher à manger."
     play sound "Click.mp3" noloop 
 
-
-
-
-
-
-
-    $ go_eat = get_random_go_eat()
-    P "[go_eat]"
-    play sound "Click.mp3" noloop 
+    P "D'accord, on y va maintenant vu qu'on a fini."
+    play sound "Click.mp3" noloop
 
     $ suivi = get_random_suivi()
     Na "[suivi]"
@@ -816,7 +809,7 @@ label password35:
     P "De rien car je pense que tu dois complétment être libre même si tu l'es déjà pratiqument à part ton réveil."
     play sound "Click.mp3" noloop
 
-    Na " Bon moi je vais vraiment aller me déconnecter."
+    Na "Bon moi je vais vraiment aller me déconnecter."
     play sound "Click.mp3" noloop
 
     P "D'accord, bonne nuit [newname]."
@@ -834,6 +827,371 @@ label password35:
     "{b}{i}Tu te changes avant d'aller de te coucher.{/i}{/b}"
     play sound "Click.mp3" noloop
 
+    "{b}{i}Tu te couches et t'endors rapidement.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    hide screen day with moveoutleft
+    hide screen room with moveoutright
+    hide screen points with moveoutleft
+    scene black with fade
+
+    "{b}{i}Le lendemain matin, le 4 janvier 2098{/i}{/b}"
+    play sound "Alarm.mp3" noloop
+
+    $ day += 1 
+
+    scene room with fade 
+    show screen day with moveinleft
+    show screen room with moveinright
+    show screen points with moveinleft 
+
+    "{b}{i}Tu te réveilles tranquillement.{/i}{/b}"
+    play sound "Click.mp3" noloop 
+
+    $ line = get_random_morning_line()
+    P "[line]"
+    play sound "Click.mp3" noloop 
+
+    "{b}{i}Tu te changes et puis tu aperçois [newname] déconnectée contre le mur.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    P "Elle est encore déconnectée."
+    play sound "Click.mp3" noloop 
+
+    P "Et dire que c'est la dernière fois que je vais utiliser le mot de passe pour la réveiller."
+    play sound "Click.mp3" noloop
+    
+    P "Bon il faut y aller."
+    play sound "Menu.mp3" noloop   
+
+    menu:   
+
+        "{b}{i} Démarrer [newname].{/i}{/b}" :
+            play sound "Menu.mp3" noloop 
+
+label password36:  
+
+    $ entered_password = renpy.input("Veuillez entrer votre mot de passe pour [newname].")
+    $ entered_password = entered_password.strip()
+
+    if entered_password == stored_password: 
+
+        "{b}{i}Mot de passe correct. Accès autorisé.{/i}{/b}"
+        play sound "Menu.mp3" noloop
+
+    else: 
+
+        "{b}{i}Mot de passe incorrect. Accès refusé.{/i}{/b}" 
+        play sound "Menu.mp3" noloop
+
+        jump password36
+
+    $ start = get_random_start()
+    "{b}{i}[start]{/i}{/b}"
+    play sound "Click.mp3" noloop 
+
+    Na "Démarrage terminé, Bonjour [P]."
+    play sound "Click.mp3" noloop 
+
+    $ comment_ca_va = get_random_comment_ca_va()
+    P "[comment_ca_va]"
+    play sound "Click.mp3" noloop
+
+    $ je_vais_bien_txt = get_random_je_vais_bien() 
+    Na "[je_vais_bien_txt] Et toi ?" 
+    play sound "Click.mp3" noloop
+
+    $ je_vais_bien_txt = get_random_je_vais_bien() 
+    P "[je_vais_bien_txt]"
+    play sound "Click.mp3" noloop
+
+    Na "Cool alors."
+    play sound "Click.mp3" noloop 
+
+    $ go_eat = get_random_go_eat()
+    P "[go_eat]"
+    play sound "Click.mp3" noloop 
+
+    $ suivi = get_random_suivi()
+    Na "[suivi]"
+    play sound "Footsteps.mp3" noloop
+
+    hide screen room with moveoutright
+    hide screen points with moveoutleft
+    hide screen day with moveoutleft
+    scene black with fade 
+
+    "{b}{i} Vous partez chercher à manger.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    $ points -= 100
+
+    scene room with fade 
+    show screen day with moveinleft
+    show screen points with moveinleft
+    show screen room with moveinright
+
+    Na "Enfin à manger... "
+    play sound "Click.mp3" noloop 
+
+    $ bien = get_random_fais_du_bien()
+    P "[bien]"
+    play sound "Click.mp3" noloop  
+
+    "{b}{i}Vous mangez tranquillement pendant une demi-heure.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    P "Tu as finis de manger ?"
+    play sound "Click.mp3" noloop 
+
+    Na "Oui, je n'ai plus faim."
+    play sound "Click.mp3" noloop 
+
+    P "Bien."
+    play sound "Click.mp3" noloop 
+
+    Na "Aujourd'hui tu as du boulot ?"
+    play sound "Click.mp3" noloop
+
+    P "Oui comme je te l'ai déjà dit, je vais retirer ton mot de passe et faire un contrôle technique."
+    play sound "Click.mp3" noloop
+
+    Na "Oui c'est vrai donc on peut se mettre au travail vu que tu sais quoi faire."
+    play sound "Click.mp3" noloop
+    
+    P "Oui, on va commencer par ça."
+    play sound "Click.mp3" noloop
+
+    Na "D'accord, je te suis."
+    play sound "Click.mp3" noloop
+
+    P "On va aller à la salle de club."
+    play sound "Click.mp3" noloop
+
+    $ suivi = get_random_suivi()
+    Na "[suivi]"
+    play sound "Footsteps.mp3" noloop
+
+    hide screen room with moveoutright  
+    hide screen points with moveoutleft
+    hide screen day with moveoutleft
+    scene black with fade 
+
+    "{b}{i}Tu quittes ta chambre avec [newname].{/i}{/b}"
+    play sound "Door.mp3" noloop
+
+    scene hallway with fade 
+    show screen day with moveinleft
+    show screen points with moveinleft
+    show screen hallway with moveinright
+
+    "{b}{i}Tu continues dans le couloir avec [newname].{/i}{/b}"
+    play sound "Footsteps.mp3" noloop  
+
+    hide screen hallway with moveoutright
+    hide screen points with moveoutleft
+    hide screen day with moveoutleft
+    scene staircase with fade 
+
+    "{b}{i}Tu continues vers le hall avec [newname].{/i}{/b}"
+    play sound "Footsteps.mp3" noloop  
+
+    scene hall with fade
+    show screen day with moveinleft
+    show screen points with moveinleft
+    show screen hall with moveinright 
+
+    "{b}{i}Vous continuez vers la salle de clubes{/i}{/b}"
+    play sound "Footsteps.mp3" noloop
+
+    hide screen hall with moveinright
+    hide screen points with moveoutleft
+    hide screen day with moveoutleft
+    scene black with fade
+
+    "{b}{i}Vous entrez dans la salle de club générale.{/i}{/b}"
+    play sound "Door.mp3" noloop
+ 
+    scene clubroom with fade
+    show screen day with moveinleft
+    show screen points with moveinleft
+    show screen clubroom with moveinright 
+
+    P "Enfin dans la salle de club."
+    play sound "Click.mp3" noloop
+
+    Na "Oui, enfin."
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Tu te poses tranquillement devant ton ordinateur avant de le démarrer.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    P "Je vais devoir aller dans les paramètres pour retirer ton mot de passe mais il faut que tu sois en veille."
+    play sound "Click.mp3" noloop
+
+    Na "D'accord, je me mets en veille alors."
+    play sound "Click.mp3" noloop
+
+    "{b}{i}[newname] se met en veille.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    P "Aller, c'est parti."
+    play sound "Click.mp3" noloop
+
+    menu: 
+
+        "{b}{i}Démarrer ton ordinateur.{/i}{/b}" :
+            play sound "Menu.mp3" noloop
+
+    "{b}{i}ton ordinateur se lances tranquillemnt.{/i}{/b}" 
+    play sound "Menu.mp3" noloop
+
+    $ seethat = get_seethat()
+    P "[seethat]"     
+    play sound "Click.mp3" noloop 
+
+    "{b}{i}Tu vas dans les paramètres d'[newname].{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    P "Ici il y a l'option pour retirer le mot de passe."
+    play sound "Click.mp3" noloop
+
+    menu:
+
+        "{b}{i}Retirer le mot de passe.{/i}{/b}" :
+            play sound "Menu.mp3" noloop
+
+    "{b}{i}Tu retires le mot de passe d'[newname].{/i}{/b}"
+    play sound "Click.mp3" noloop 
+
+    P "ça c'est fait, vais je vais devoir une modification du code."
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Tu ouvres ton éditeur de code.{/i}{/b}"
+    play sound "Click.mp3" noloop 
+
+    $ Line10 = renpy.input("Écris ceci : remove_password(password_setting_access=false)")
+    play sound "Menu.mp3" noloop 
+
+    $ Line11 = renpy.input("Écris ceci : initiate_awakening(settings=auto,condition=clock)")
+    play sound "Menu.mp3" noloop
+
+    menu: 
+
+        "{b}{i} Compiler le code.{/i}{/b}" :
+            play sound "Menu.mp3" noloop 
+
+            "{b}{i}Vérification en cours....{/i}{/b}"
+            play sound "Menu.mp3" noloop 
+
+            if Line10 == "remove_password(password_setting_access=false)":
+
+                if Line11 == "initiate_awakening(settings=auto,condition=clock)":
+
+                    "{b}{i}10\%{/i}{/b}"
+                    play sound "Click.mp3" noloop
+
+                    "{b}{i}20\%{/i}{/b}"
+                    play sound "Click.mp3" noloop
+
+                    "{b}{i}30\%{/i}{/b}"
+                    play sound "Click.mp3" noloop
+
+                    "{b}{i}40\%{/i}{/b}"
+                    play sound "Click.mp3" noloop
+
+                    "{b}{i}50\%{/i}{/b}"
+                    play sound "Click.mp3" noloop
+
+                    "{b}{i}60\%{/i}{/b}"
+                    play sound "Click.mp3" noloop
+
+                    "{b}{i}70\%{/i}{/b}"
+                    play sound "Click.mp3" noloop
+
+                    "{b}{i}80\%{/i}{/b}" 
+                    play sound "Click.mp3" noloop
+
+                    "{b}{i}90\%{/i}{/b}"
+                    play sound "Click.mp3" noloop
+
+                    "{b}{i}100\%{/i}{/b}"
+                    play sound "Click.mp3" noloop
+
+                    "{b}{i}Vérification en cours...{/i}{/b}"
+                    play sound "Menu.mp3" noloop
+
+                    show screen update with moveinright
+
+                    "{b}{i}Compilation réussie !{/i}{/b}"
+                    play sound "Menu.mp3" noloop
+
+                    hide screen update with moveoutright
+
+                    $ success += 1 
+                    $ quest39 += 1 
+                    $ stockage += 3.0 
+
+                else: 
+
+                    "{b}{i}Erreur détectée à la seconde ligne, le code a été mal compilé.{/i}{/b}"
+                    play sound "Click.mp3" noloop 
+
+                    jump code2
+    
+            else: 
+
+                "{b}{i}Erreur détectée à la première ligne, le code a été mal compilé.{/i}{/b}"
+                play sound "Click.mp3" noloop 
+
+                jump code2 
+
+    P "C'est bon j'ai fini de modifier le code."
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Tu fermes ton éditeur de code.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    P "Aller, je vais redémarrer [newname] pour que les modifications soient prises en compte."
+    play sound "Click.mp3" noloop
+
+    menu:    
+
+        "{b}{i} Redémarrer [newname].{/i}{/b}" :
+            play sound "Menu.mp3" noloop 
+
+    "{b}{i}[newname] redémarre tranquillement.{/i}{/b}"
+    play sound "Click.mp3" noloop 
+
+    $ start = get_random_start()
+    "{b}{i}[start]{/i}{/b}"
+    play sound "Click.mp3" noloop 
+
+    Na "Redémarrage terminé, Bonjour [P]."
+    play sound "Click.mp3" noloop 
+
+    P "Pas besoin d'être aussi formel."
+    play sound "Click.mp3" noloop 
+
+    Na "Désolée j'ai juste l'habitude à force."
+    play sound "Click.mp3" noloop 
+
+    $ comment_ca_va = get_random_comment_ca_va()
+    P "[comment_ca_va]"
+    play sound "Click.mp3" noloop
+
+    Na "Je vais bien merci mais je me sens différente ?"
+    play sound "Click.mp3" noloop
+
+    P "C'est normal, tu n'as plus de mot de passe pour te réveiller et tu es programmée pour te réveiller automatiquement à l'heure."
+    play sound "Click.mp3" noloop
+
+  
+
+
+
+
+    
 
 
 
