@@ -2,9 +2,13 @@
 errors listed below, and try again.
 
 
-File "game/DRM.rpy", line 62: 'return' outside function
+File "game/script.rpy", line 136: Line is indented, but the preceding one-line python statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+    f.write("Ceci est un message secret de Yuki.\nOuvre-moi dans le dossier du jeu...")
+    ^
 
-File "game/DRM.rpy", line 143: 'return' outside function
+File "game/script.rpy", line 145: Line is indented, but the preceding one-line python statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+    os.remove("game/Yuki.txt")
+    ^
 
 Ren'Py Version: Ren'Py 8.3.7.25031702
-Thu Sep 25 13:09:21 2025
+Fri Oct  3 17:04:10 2025

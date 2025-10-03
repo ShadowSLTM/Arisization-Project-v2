@@ -1186,7 +1186,94 @@ label password36:
     P "C'est normal, tu n'as plus de mot de passe pour te réveiller et tu es programmée pour te réveiller automatiquement à l'heure."
     play sound "Click.mp3" noloop
 
-  
+    Na "Ah d'accord je vois, merci [prenom] car je trouve que c'est un choix plus humain."
+    play sound "Click.mp3" noloop
+
+    $ nothing = get_random_nothing()
+    P "[nothing]"
+    play sound "Click.mp3" noloop
+
+    Na "Tu vas faire quoi d'autre maintenant ?"
+    play sound "Click.mp3" noloop
+
+    P "Je vais verifier ton processeur et ta mémoire pour voir si tout est en ordre."
+    play sound "Click.mp3" noloop
+
+    Na "Ok alors je te laisse faire ça."
+    play sound "Click.mp3" noloop
+
+    P "Aller, c'est parti."
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Tu ouvres les paramètres de la mémoire de [newname].{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    P "Tout à l'air en ordre ici."
+    play sound "Click.mp3" noloop
+
+    P "tu as [stockage] Go de données dans ta mémoire."
+    play sound "Click.mp3" noloop
+
+    Na "j'ai accumlé autant de données qu ça !?"
+    play sound "Click.mp3" noloop
+
+    P "Oui et c'est vraiment impresionnant que tu aies autant appris."
+    play sound "Click.mp3" noloop
+
+    Na "Cela va de soi."
+    play sound "Click.mp3" noloop   
+
+    P "Bon, je vais vérifier ton processeur maintenant."
+    play sound "Click.mp3" noloop
+
+    $ validation = get_random_validation() 
+    Na "[validation]"
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Tu ouvres son capot pour accéder au processeur.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    P "Tout à l'air en ordre ici aussi."
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Mais tu remarque quelques petite rayures sur le processeur.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    P "Il y a quelques rayures sur ton processeur, rien de grave."
+    play sound "Click.mp3" noloop
+
+    Na "Oh, j'espère que ça n'affectera pas mes performances."
+    play sound "Click.mp3" noloop
+
+    P "Non, ça ne devrait pas poser de problème."
+    play sound "Click.mp3" noloop
+
+    Na "D'accord, merci de m'avoir vérifiée."
+    play sound "Click.mp3" noloop
+
+    $ nothing = get_random_nothing()
+    P "[nothing]"
+    play sound "Click.mp3" noloop
+
+    Na "il reste quoi à faire maintenant ?"
+    play sound "Click.mp3" noloop
+
+    P "Je pense que c'est tout pour aujourd'hui mais je vais devoir prrendre notes de tout ça."
+    play sound "Click.mp3" noloop
+
+    Na "D'accord, je te laisse faire ça."
+    play sound "Click.mp3" noloop
+
+    P "Aller, c'est parti."
+    play sound "Click.mp3" noloop   
+
+    "{b}{i}Tu ouvres ton carnet de notes.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+
+   
+
+
 
 
 

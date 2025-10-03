@@ -263,7 +263,7 @@ define gui.file_slot_rows = 2
 ## La position sur le côté gauche des boutons de navigation, relatif au côté
 ## gauche de l'écran.
 
-define gui.navigation_xpos = 30
+define gui.navigation_xpos = 35
 
 ## La position vertical du l’indicateur de saut des dialogues.
 define gui.skip_ypos = 15
@@ -313,7 +313,6 @@ define gui.notify_frame_borders = Borders(24, 8, 60, 8)
 ## Est-ce que les arrière-plans des cadres doivent être en mosaïque ?
 
 define gui.frame_tile = False
-
 
 ## Barres, ascenseurs et curseurs ##############################################
 ##

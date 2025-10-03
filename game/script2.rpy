@@ -1309,7 +1309,7 @@ label password12:
     $ day += 1 
 
     scene room with fade 
-    show screen day with moveinleft
+    show screen day with moveinleft 
     show screen room with moveinright
     show screen points with moveinleft
 

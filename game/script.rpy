@@ -5,8 +5,6 @@ $ persistent.first_start = False
 
 label start: 
 
-    stop music fadeout 2.0   
-
     default grade = 0.0  
     default points = 0 
     default day = 0 
@@ -129,6 +127,9 @@ label start:
 
 label identity: 
 
+    stop music fadeout 2.0   
+    scene black with fade
+
     $ prenom = renpy.input("Quel est votre prénom de lycéen ?")
     $ prenom = prenom.strip() 
     play sound "Menu.mp3" noloop 
@@ -145,7 +146,7 @@ label identity:
 
         "{b}{i}Erreur système. Veuillez réessayer.{/i}{/b}"
         $ renpy.restart_interaction()
-        jump identity
+        jump identity 
 
     "{b}{i}Vos informations ont été enregistrées.{/i}{/b}"
     play sound "Click.mp3" noloop
@@ -935,7 +936,7 @@ label choice1:
     P "Oui dis-moi, je t'écoute."
     play sound "Click.mp3" noloop 
 
-    E "Qui est cette magnifique fille qui est tout le temps avec toi ?"
+    E "Qui est cette magnifique fille qui est avec toi ?"
     play sound "Click.mp3" noloop 
 
     A "Magnifique !? je suis vraiment flattée merci beaucoup."
@@ -953,7 +954,7 @@ label choice1:
 
     E "Un [model] !?"
     play sound "Click.mp3" noloop 
-
+  
     P "Oui, c'est un [model] que j'ai créé."
     play sound "Click.mp3" noloop 
 
@@ -979,25 +980,19 @@ label choice1:
     P "Ok, merci de nous expliquer."
     play sound "Click.mp3" noloop 
 
-    E "Pour commencer, les cours ici sont un peu particulier."
-    play sound "Click.mp3" noloop
-
-    P "Comment ça ? expliquez nous plus en détail."
-    play sound "Click.mp3" noloop
-
-    E "Déjà, tous les lycéens qui sont ici sont les meilleurs."
+    E "Déjà, tous les lycéens qui sont ici sont les meilleurs de leur ancien collége."
     play sound "Click.mp3" noloop 
-
+    
     P "Ok, intéressant..."
     play sound "Click.mp3" noloop
 
-    E "Donc, tous les lycéens passent beaucoup de temps au club."
+    E "Donc, tous les lycéens passent beaucoup de temps au club après les cours."
     play sound "Click.mp3" noloop 
 
     P "Vraiment ? autant que ça ?"
     play sound "Click.mp3" noloop
 
-    E "Oui vraiment, le jeudi ou le vendredi sont consacrés aux activités du club."
+    E "Oui vraiment, ."
     play sound "Click.mp3" noloop 
 
     P "Merci, c'est intéressant à savoir."
@@ -1018,7 +1013,7 @@ label choice1:
     E "Pour les clubs, chaque élève peut, soit rejoindre le club général du lycée, soit créer son propre club." 
     play sound "Click.mp3" noloop 
 
-    P "Créer son propre club vraiment !?" 
+    P "Créer son propre club vraiment !?"  
     play sound "Click.mp3" noloop 
 
     E "Oui et je pense que c'est la meilleure solution pour toi et [A]."
@@ -1056,29 +1051,26 @@ label choice1:
     E "Je vais vous expliquer comment fonctionnent les cours."
     play sound "Click.mp3" noloop 
 
-    P "Comment ça, il y a une particularité avec les cours ?" 
+    P "Je vous écoute" 
     play sound "Click.mp3" noloop
 
-    E "Oui. Par exemple, il n'y a pas beaucoup d'examens durant l'année." 
-    play sound "Click.mp3" noloop 
-
-    P "Heureusement, ce sera moins stressant pour moi et [A]."
-    play sound "Click.mp3" noloop 
-
-    E "Et il y a que quatre jours de cours par semaine."
+    E "Vous en aurez beaucoup de cours toute la semaine sauf certains après-midi." # à Mmdifier
     play sound "Click.mp3" noloop 
 
     P "Merci pour ces informations."
     play sound "Click.mp3" noloop
 
-    E "Ah et aussi, voilà tes informations concernant ta classe et tes horaires." 
+    E "Ah et aussi, voilà tes informations concernant ta classe et tes horaires." # à Mmdifier
     play sound "Click.mp3" noloop
+
+    "{b}{i}[E] te donne les doccuments.{/i}{/b}"
+    play sound "Click.mp3" noloop 
 
     P "Merci beaucoup, Emika."
     play sound "Click.mp3" noloop 
 
     $ nothing = get_random_nothing()
-    E "[nothing] C'est normal."
+    E "[nothing]"
     play sound "Click.mp3" noloop
 
     "{b}{i}Tu regardes tes documents et ceux d'[newname] et vous remarquez que vous étes en Seconde-E.{/i}{/b}"
@@ -1092,48 +1084,87 @@ label choice1:
 
     $ stockage += 2.0 
 
-    E "Oui et aussi, avant que tu partes, j'ai un dernier truc a régler avec toi."
+    E "Oui et aussi, avant que tu partes, j'ai un dernier truc à régler avec toi."
     play sound "Click.mp3" noloop
 
-    P "Oui, dis-moi ?"
+    P "Oui, dites-moi ?"
     play sound "Click.mp3" noloop
 
-    E "Normalement, les lycéens ne n'en ont pas besoin car ils ont des projets simples."
-    play sound "Click.mp3" noloop 
-
-    P "Comment ça ? Je ne comprend pas..."
-    play sound "Click.mp3" noloop 
-
-    E "Normalement, ils n'ont pas de besoin de contrat ou de dérogation mais toi oui vue l'ampleur de ton projet."
+    E "Il y aura quelques règles à suivre pour toi vu qu'[A] est un [model]."
     play sound "Click.mp3" noloop
 
     P "Quoi !? Comment ça !?"
     play sound "Click.mp3" noloop
 
-    A "Quoi !? Comment ça, une dérogation pour que [prenom] puisse bosser sur mon amélioration !?"
+    A "Quoi !? Comment ça des règles !?"
     play sound "Click.mp3" noloop
 
-    E "Oui, et il faudra l'accepter pour continuer ton projet."
+    E "Oui, et il faudra les respecter scrupuleusement. Voici les conditions :"
+    play sound "Click.mp3" noloop
+
+    E "Premièrement : [A] doit être rechargé tous les soirs. Son autonomie ne dépasse pas 20 heures."
+    play sound "Click.mp3" noloop
+
+    A "Hé ! C'est personnel ça !"
     play sound "Click.mp3" noloop 
 
-    "{b}{i}Après un moment de réflexion, tu réalises et tu te prépares à accepter le contrat.{/i}{/b}"
-    play sound "Menu.mp3" noloop 
+    E "Deuxièmement : Toute modification doit être garder par toi seulement pour sa sécurité."
+    play sound "Click.mp3" noloop
+
+    P "D'accord... et ?"
+    play sound "Click.mp3" noloop
+
+    E "Troisièmement : Tu dois prendre des notes de ce que tu fait comme changements."
+    play sound "Click.mp3" noloop
+
+    P " Ok, je note tout."
+    play sound "Click.mp3" noloop
+
+    E "Et enfin : En cas de dysfonctionnement, tu contactes immédiatement le laboratoire. N'essaie pas de réparer toi-même."
+    play sound "Click.mp3" noloop
+    
+    P "Je vous arrete tou de suite."
+    play sound "Click.mp3" noloop
+
+    E "Et pour quel raison ?"
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Tu montres ton guide d'utilisation d'[A] à [E].{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    P "Car j'ai le guide d'utilisation d'[A] et je peux réparer moi-même les petits problèmes."
+    play sound "Click.mp3" noloop
+
+    E "Je vois je m'excuse, mais tu dois quand même suivre les autres règles."
+    play sound "Click.mp3" noloop
+
+    P "Oui, promis."
+    play sound "Click.mp3" noloop
+
+    E "Bien. Ce sont les conditions pour que [A] puisse rester avec toi."
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Après un moment de réflexion, tu réalises l'ampleur de la responsabilité et tu te prépares à accepter le contrat.{/i}{/b}"
+    play sound "Menu.mp3" noloop
 
     menu:
 
-        "{b}{i}Accepter le contrat{/i}{/b}":
-            play sound "Menu.mp3" noloop 
-
+        "{b}{i}Accepter les régles{/i}{/b}":
+            play sound "Menu.mp3" noloop
+        
             $ renpy.block_rollback()
             $ success += 1
-            $ quest4 += 1 
+            $ quest4 += 1
 
-    show screen update with moveinright
+            show screen update with moveinright
 
-    P "Ok, je l'accepte."
-    play sound "Click.mp3" noloop 
+            P "Ok, j'accepte. Je respecterai toutes ces règles."
+            play sound "Click.mp3" noloop
 
-    hide screen update with moveoutright
+            hide screen update with moveoutright
+
+    A "Eh bien... ça promet d'être intéressant."
+    play sound "Click.mp3" noloop
 
     E "Bien. Voici le contrat UCN000001 pour l'utilsation complète d'[A] au sain du lycée Nexus." 
     play sound "Click.mp3" noloop

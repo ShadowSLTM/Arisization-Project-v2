@@ -210,6 +210,8 @@ init python:
 
     build.classify("game/**.ttf", "font") 
 
+    
+
 ## Une clé de licence Google Play est requise pour permettre les achats depuis
 ## l'application. Vous pourrez la trouver dans la console de développement
 ## Google Play, sous "Monétiser" > "Configuration de la monétisation" >
