@@ -382,26 +382,6 @@ label hack:
             "{b}{i}Vérification en cours...{/i}{/b}"
             play sound "Menu.mp3" noloop
 
-            $ success += 1 
-            $ quest1 += 1
-
-            if persistent.abandon == True: 
-
-                $ stockage += 30.0
-
-            else: 
-
-                $ stockage = 0.0
-
-            show screen update with moveinright
-
-            "{b}{i}système ouvert avec succès.{/i}{/b}" 
-            play sound "Click.mp3" noloop 
-
-            hide screen update with moveoutright
-
-            $ stockage += 2.0 
-
         else: 
 
             "{i}{b}Erreur système, le démarrage a échoué.{/i}{/b}" 
@@ -428,15 +408,36 @@ label hack:
 
         jump hack 
 
+    $ success += 1 
+    $ quest1 += 1
+
     if persistent.abandon == True: 
+
+        show screen update with moveinright
+
+        $ stockage += 32.0 
+
+        "{b}{i}système ouvert avec succès.{/i}{/b}" 
+        play sound "Glitch.mp3" noloop 
+
+        hide screen update with moveoutright
 
         $ A = Character("AK-25", color="#00eeff")
         $ stockage += 1.0 
 
     else: 
 
+        show screen update with moveinright
+
+        $ stockage += 2.0 
+
+        "{b}{i}système ouvert avec succès.{/i}{/b}" 
+        play sound "Click.mp3" noloop 
+
+        hide screen update with moveoutright
+
         $ A = Character("AK-24", color="#00eeff")
-        $ stockage += 1.0 
+        $ stockage += 1.0  
 
     R "Initialisation en cours......" 
     play sound "Click.mp3" noloop

@@ -1270,8 +1270,48 @@ label password36:
     "{b}{i}Tu ouvres ton carnet de notes.{/i}{/b}"
     play sound "Click.mp3" noloop
 
+    $ seethat = get_seethat()
+    P "[seethat]"     
+    play sound "Click.mp3" noloop 
 
-   
+    "{b}{i}Tu prends des notes sur [newname].{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    P "C'est bon j'ai fini de prendre des notes."
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Tu ranges ton carnet de notes.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    P "Bon, je pense que c'est tout pour aujourd'hui."
+    play sound "Click.mp3" noloop   
+
+    Na "D'accord, merci pour tout [prenom]."
+    play sound "Click.mp3" noloop
+
+    P "Maintenant je dois dois voir si tu as besoin d'une mise à jour."
+    play sound "Click.mp3" noloop
+
+    Na "D'accord, je te laisse faire ça."
+    play sound "Click.mp3" noloop
+
+    P "Aller, c'est parti."
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Tu ouvres les paramètres de mise à jour de [newname].{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    P "Il n'y a pas de mise à jour disponible pour toi."
+    play sound "Click.mp3" noloop
+
+    Na "D'accord, merci de m'avoir vérifiée."
+    play sound "Click.mp3" noloop
+
+    $ nothing = get_random_nothing()
+    P "[nothing]"
+    play sound "Click.mp3" noloop
+
+    
 
 
 
