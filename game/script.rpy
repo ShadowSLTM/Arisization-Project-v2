@@ -310,7 +310,26 @@ label début:
     P "Attends deux secondes, il manque quelque chose... Elle n'a pas sa batterie."
     play sound "Click.mp3" noloop 
 
-    "{b}{i}tu fouilles dans l'entrepôt et tu trouves par chance une batterie que tu installes avec précaution.{/i}{/b}"
+    "{b}{i}tu fouilles dans l'entrepôt et tu trouves par chance une batterie.{/i}{/b}"
+    play sound "Click.mp3" noloop 
+
+    P "Parfait, j'ai trouvé une batterie qui pourrait lui aller."
+    play sound "Click.mp3" noloop
+
+    if pronom == "il":
+
+        S "Ok, mais tu n'es pas sûr qu'elle fonctionne encore."   
+        play sound "Click.mp3" noloop
+
+    else:  
+
+        S "Ok, mais tu n'es pas sûr qu'elle fonctionne encore."
+        play sound "Click.mp3" noloop
+
+    P "Oui mais on n'a pas le choix, on va tenter le coup." 
+    play sound "Click.mp3" noloop  
+
+    "{b}{i}Tu installes la batterie avec précaution.{/i}{/b}"
     play sound "Click.mp3" noloop 
 
     P "Voilà, elle devrait pouvoir tenir un moment avec ça, c’est plus sûr."
@@ -462,7 +481,7 @@ label hack:
     S "Ok, mais c'est juste que je ne suis pas à l'aise à coté d'elle."
     play sound "Click.mp3" noloop 
 
-    P "Oh c'est bon, c'est juste un [model]."
+    P "Oh c'est bon, c'est juste un [model]." 
     play sound "Click.mp3" noloop
 
     S "Ok si tu le dit."
@@ -474,10 +493,10 @@ label hack:
     A "Malheureusement je ne connais que mon nom de code et mon âge, la date d'aujourd'hui, j'ai oublié le reste."
     play sound "Click.mp3" noloop 
 
-    $ charactertext11 = "Elle est un robot humanoïde abandonné de 18 ans qui se souvient que de son nom de code et mon âge et a oublié le reste."  
+    $ charactertext11 = "C'est un robot humanoïde abandonné de 18 ans qui se souvient que de son nom de code et mon âge et a oublié le reste."  
 
     P "Je vois..."
-    play sound "Click.mp3" noloop
+    play sound "Click.mp3" noloop 
 
     A "Tu t'appelles comment ?"
     play sound "Click.mp3" noloop
@@ -694,7 +713,7 @@ label choice1:
                 play sound "Click.mp3" noloop 
 
                 P "Mais de rien c'est normal."
-                play sound "Click.mp3" noloop 
+                play sound "Click.mp3" noloop  
 
             if pronom == "il":
 
@@ -736,6 +755,18 @@ label choice1:
 
     P "Tu dis n'importe quoi !"
     play sound "Click.mp3" noloop
+
+    S "Je te préviens juste."
+    play sound "Click.mp3" noloop
+
+    P "Bon je vais juste récupérer son chargeur."
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Tu récupères le chargeur d'[A] tu l'examines.{/i}{/b}"
+    play sound "Click.mp3" noloop  
+
+    P "Parfait, il est encore en bon état il a une tension de 230 volts et une intensité de 5,217 ampères."
+    play sound "Click.mp3" noloop  
 
     "{b}{i}Tu mets le chargeur d'[A] dans ton sac pendant que tu parles avec [S].{/i}{/b}"
     play sound "Click.mp3" noloop  

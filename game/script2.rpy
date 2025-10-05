@@ -14178,7 +14178,7 @@ label password26:
     P "La seconde ?" 
     play sound "Click.mp3" noloop
 
-    Rn "il y a le neutronix qui fait 7000W"
+    Rn "il y a le neutronix qui fait 24000W"
     play sound "Click.mp3" noloop
 
     P "Et la dernière ?"
@@ -14208,11 +14208,11 @@ label choice9:
 
     menu: 
 
-        "{b}{i}4000 W.{/i}{/b}" : 
+        "{b}{i}20000 W.{/i}{/b}" : 
             play sound "Menu.mp3" noloop
 
             $ renpy.block_rollback() 
-            $ newbattery = "4000"
+            $ newbattery = "20000"
 
             P "Celle de 4000W."
             play sound "Click.mp3" noloop
@@ -14228,13 +14228,13 @@ label choice9:
 
             $ points -= 2000 
 
-        "{b}{i}7000 W.{/i}{/b}" :  
+        "{b}{i}24000 W.{/i}{/b}" :  
             play sound "Menu.mp3" noloop
 
             $ renpy.block_rollback() 
-            $ newbattery = "7000"
+            $ newbattery = "24000"
 
-            P "Celle de 7000W."
+            P "Celle de 24000W."
             play sound "Click.mp3" noloop
 
             Rn "Bien ça te fera 3000 points."
@@ -14254,7 +14254,7 @@ label choice9:
             $ renpy.block_rollback() 
             $ newbattery = "10000"
 
-            P "Celle de 10000W."
+            P "Celle de 28000W."
             play sound "Click.mp3" noloop
 
             Rn "Bien ça te fera 4000 points."
@@ -14310,7 +14310,7 @@ label choice9:
     P "Bon, j'ai commandé la batterie de [newbattery] W, elle arrivera dans deux heures dans notre salle de club."
     play sound "Click.mp3" noloop
 
-    if newbattery == "7000":
+    if newbattery == "24000":
 
         Na "Super, merci beaucoup [prenom], je suis sûre qu'elle sera parfaite la nouvelle batterie."
         play sound "Click.mp3" noloop 
@@ -14598,7 +14598,7 @@ label battery_start:
     "{b}{i}40\%{/i}{/b}"
     play sound "Click.mp3" noloop
 
-    if newbattery == "7000":
+    if newbattery == "24000":
 
         "{b}{i}50\%{/i}{/b}"
         play sound "Click.mp3" noloop
@@ -14632,7 +14632,7 @@ label battery_start:
 
         hide screen update with moveoutright
 
-    elif newbattery == "4000":
+    elif newbattery == "20000":
   
         "{b}{i}Échec de l'initialisation de la batterie.{b}{i}"
         play sound "Click.mp3" noloop 
@@ -14725,6 +14725,7 @@ label battery_start:
         play sound "Menu.mp3" noloop
 
         menu:
+            
             "{b}{i}Abandonner{/i}{/b}":
                 play sound "Menu.mp3" noloop 
                 return
@@ -15209,7 +15210,7 @@ label choice10:
     P "J'ai commandé une nouvelle batterie pour [newname] car l'ancienne était trop faible."
     play sound "Click.mp3" noloop
 
-    Na "Oui, et la nouvelle batterie est de 7000 W."
+    Na "Oui, et la nouvelle batterie est de 24000 W."
     play sound "Click.mp3" noloop
 
     I "Ah d'accord, c'est cool ça."
