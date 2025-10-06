@@ -1904,13 +1904,12 @@ label password13:
     P "Bon appétit [newname]."
     play sound "Click.mp3" noloop 
 
-    Na "Bon appétit  à toi aussi [prenom]."
+    Na "Bon appétit à toi aussi [prenom]."
     play sound "Click.mp3" noloop 
 
     $ thanks = get_random_thanks()
     P "[thanks]"
     play sound "Click.mp3" noloop
-
 
     "{b}{i} Vous mangez tranquillement puis [I] viens s'asseoir avec vous.{/i}{/b}"
     play sound "Click.mp3" noloop 
@@ -6382,7 +6381,7 @@ label philosophie_technologie:
 
     M "suivant, [I] tu feras un examen pour [J2]."
     play sound "Click.mp3" noloop   
-    
+     
     $ validation = get_random_validation()
     I "[validation]"
     play sound "Click.mp3" noloop 
@@ -14208,7 +14207,7 @@ label choice9:
 
     menu: 
 
-        "{b}{i}20000 W.{/i}{/b}" : 
+        "{b}{i}20 KW.{/i}{/b}" : 
             play sound "Menu.mp3" noloop
 
             $ renpy.block_rollback() 
@@ -14228,7 +14227,7 @@ label choice9:
 
             $ points -= 2000 
 
-        "{b}{i}24000 W.{/i}{/b}" :  
+        "{b}{i}24 kW.{/i}{/b}" :  
             play sound "Menu.mp3" noloop
 
             $ renpy.block_rollback() 
@@ -14248,7 +14247,7 @@ label choice9:
 
             $ points -= 3000 
 
-        "{b}{i}10000 W.{/i}{/b}" :  
+        "{b}{i}10KW.{/i}{/b}" :  
             play sound "Menu.mp3" noloop
 
             $ renpy.block_rollback() 

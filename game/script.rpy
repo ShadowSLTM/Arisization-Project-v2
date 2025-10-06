@@ -313,7 +313,7 @@ label début:
     "{b}{i}tu fouilles dans l'entrepôt et tu trouves par chance une batterie.{/i}{/b}"
     play sound "Click.mp3" noloop 
 
-    P "Parfait, j'ai trouvé une batterie qui pourrait lui aller."
+    P "Parfait, j'ai trouvé une batterie de 1000 Wh qui pourrait lui aller."
     play sound "Click.mp3" noloop
 
     if pronom == "il":
@@ -671,6 +671,9 @@ label choice1:
 
                 "{b}{i}Retourner au menu{/i}{/b}" : 
                     play sound "Menu.mp3" noloop
+
+                    P "Bon, personne ne le saura jamais ce que j'ai fait."
+                    play sound "Click.mp3" noloop
 
                     $ persistent.abandon = True
                     return 
@@ -6856,7 +6859,10 @@ label choice8:
             P "Je vois que c'est le vingt-quatrième robot de la première série de 2079."
             play sound "Click.mp3" noloop 
 
-        P "Elle a aussi le RCMS Robot Control Management System."
+        P "Elle a aussi le RCMS, Robot Control Management System."
+        play sound "Click.mp3" noloop 
+
+        P "ELle a une résistivité Total de 44,083 Ohms."
         play sound "Click.mp3" noloop 
 
         "{b}{i}Tu continues de regarder pendant un petit moment.{/i}{/b}" 
