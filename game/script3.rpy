@@ -1687,7 +1687,117 @@ label password36:
     P "Allez debout, on a du boulot aujourd'hui."
     play sound "Click.mp3" noloop
 
-    
+    Na "D'accord, je me lève."
+    play sound "Click.mp3" noloop
+
+    "{b}{i}[newname] se lève doucement.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    Na "Merci de m'avoir réveillée [prenom]."
+    play sound "Click.mp3" noloop
+
+    P "De rien, c'est normal."
+    play sound "Click.mp3" noloop
+
+    "{b}{i}[newname] se change tranquillement.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    Na "Je suis prête."
+    play sound "Click.mp3" noloop
+
+    P "Cool alors."
+    play sound "Click.mp3" noloop 
+
+    $ go_eat = get_random_go_eat()
+    Na "[go_eat]"
+    play sound "Click.mp3" noloop 
+
+    $ suivi = get_random_suivi() 
+    P "[suivi]"
+    play sound "Footsteps.mp3" noloop
+
+    hide screen room with moveoutright
+    hide screen points with moveoutleft
+    hide screen day with moveoutleft
+    scene black with fade 
+
+    "{b}{i} Vous partez chercher à manger.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    $ points -= 100
+
+    scene room with fade 
+    show screen day with moveinleft
+    show screen points with moveinleft
+    show screen room with moveinright
+
+    Na "Enfin à manger... "
+    play sound "Click.mp3" noloop 
+
+    $ bien = get_random_fais_du_bien()
+    P "[bien]"
+    play sound "Click.mp3" noloop  
+
+    "{b}{i}Vous mangez tranquillement pendant une demi-heure.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    P "Tu as finis de manger ?"
+    play sound "Click.mp3" noloop 
+
+    Na "Oui, je n'ai plus faim."
+    play sound "Click.mp3" noloop 
+
+    P "Bien."
+    play sound "Click.mp3" noloop 
+
+    Na "Aujourd'hui tu as du boulot ?"
+    play sound "Click.mp3" noloop
+
+    P "On a du boulot tu veux dire."
+    play sound "Click.mp3" noloop
+
+    Na  "Oui, on doit finir nos copies pour le Paper shuffle déjà."
+    play sound "Click.mp3" noloop
+
+    P "Oui, on va commencer par ça."
+    play sound "Click.mp3" noloop
+
+    Na "Bien alors, on va se mettre au travail."
+    play sound "Click.mp3" noloop
+
+    P "OK, on y va."
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Vous vous mettez au travail.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    P "Il te reste combien de questions à faire ?"
+    play sound "Click.mp3" noloop
+
+    Na "Il me reste une vingtaine de questions à écrire."
+    play sound "Click.mp3" noloop
+
+    P "D'accord, on va faire ça alors."
+    play sound "Click.mp3" noloop
+
+    Na "Et toi, il te reste combien de questions ?"
+    play sound "Click.mp3" noloop
+
+    P "Il me reste une quinzaine de questions à écrire."
+    play sound "Click.mp3" noloop
+
+    Na "D'accord, bon courage pour ça."
+    play sound "Click.mp3" noloop
+
+    P "Merci, toi aussi."
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Vous travaillez pendant deux heures.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+
+
+
 
     label end_script3:
     call script4 from _call_script4  
