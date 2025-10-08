@@ -1,7 +1,6 @@
 $ persistent.abandon = False
 $ persistent.arrestation = False
 $ persistent.game_completed = False
-$ persistent.first_start = False
 
 label start: 
 
