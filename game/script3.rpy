@@ -1316,8 +1316,7 @@ label password36:
     Na "D'accord, merci de m'avoir vérifiée."
     play sound "Click.mp3" noloop
 
-    $ nothing = get_random_nothing()
-    P "[nothing]"
+    P "Mais de rien, je te rappelle que c'est mon rôle après tout."
     play sound "Click.mp3" noloop
 
     "{b}{i}La matinée se passe tranquillement.{/i}{/b}"
@@ -1906,13 +1905,6 @@ label password36:
     "{b}{i} Vous mangez tranquillement ensemble pendant une demi-heure.{/i}{/b}"
     play sound "Click.mp3" noloop
 
-
-
-
-
-
-
-
     P "Tu as finis de manger ?"
     play sound "Click.mp3" noloop 
 
@@ -1978,12 +1970,158 @@ label password36:
 
     $ bien = get_random_fais_du_bien()
     P "[bien]" 
+    play sound "Click.mp3" noloop
+
+    Na "Bon on fait quoi maintenant ?"
+    play sound "Click.mp3" noloop
+
+    P "On peut aller réviser un peu si tu veux."
+    play sound "Click.mp3" noloop
+
+    Na "D'accord je te suis."
+    play sound "Click.mp3" noloop
+
+    P "OK, on y va."
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Vous vous posez pour réviser pendant deux heures.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    P "On a bien travaillé."
+    play sound "Click.mp3" noloop
+
+    Na "Oui tu as raison."
+    play sound "Click.mp3" noloop
+
+    P "Bon aller, on range nos affaires."
+    play sound "Click.mp3" noloop
+
+    Na "Ok, on remballe tout."
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Vous rangez vos affaires.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    Na "Bon je vais aller lire un peu."
+    play sound "Click.mp3" noloop
+
+    P "D'accord, bonne lecture."
+    play sound "Click.mp3" noloop   
+
+    Na "Merci, à plus tard [prenom]."
+    play sound "Click.mp3" noloop
+
+    P "À plus tard [newname]."
+    play sound "Click.mp3" noloop
+
+    "{b}{i}[newname] part lire un peu.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    P "Bon je ne sais pas quoi faire."
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Tu finis par traîner sur ton téléphone.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    P "Bon voyons voir les réseaux sociaux."
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Deux heures se passent tranquillement.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    Na "J'ai fini de lire pour aujourd'hui."
+    play sound "Click.mp3" noloop
+
+    P "tu aimees vraiment lire toi."
     play sound "Click.mp3" noloop 
 
+    Na "Oui, j'adore ça."
+    play sound "Click.mp3" noloop
 
+    $ go_eat = get_random_go_eat()
+    P "[go_eat]"
+    play sound "Click.mp3" noloop 
 
+    $ suivi = get_random_suivi() 
+    Na "[suivi]"
+    play sound "Footsteps.mp3" noloop
 
+    hide screen room with moveoutright
+    hide screen points with moveoutleft
+    hide screen day with moveoutleft
+    scene black with fade 
 
+    "{b}{i} Vous partez chercher à manger.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    $ points -= 100
+
+    scene room with fade 
+    show screen day with moveinleft
+    show screen points with moveinleft
+    show screen room with moveinright
+
+    Na "Enfin à manger... "
+    play sound "Click.mp3" noloop 
+
+    $ bien = get_random_fais_du_bien()
+    P "[bien]"
+    play sound "Click.mp3" noloop  
+
+    "{b}{i}Vous mangez tranquillement pendant une demi-heure.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    P "Tu as finis de manger ?"
+    play sound "Click.mp3" noloop 
+
+    Na "Oui, je n'ai plus faim."
+    play sound "Click.mp3" noloop 
+
+    P "Bien."
+    play sound "Click.mp3" noloop 
+
+    Na "Bon Je vais me déconnecter et me recharger car je suis fatiguée."
+    play sound "Click.mp3" noloop 
+
+    P "D'accord, bonne nuit [newname] car demain on reprend les cours."
+    play sound "Click.mp3" noloop
+
+    Na "Bonne nuit [prenom]."
+    play sound "Click.mp3" noloop
+
+    "{b}{i}[newname] se déconnecte et recharge sa batterie.{/i}{/b}"
+    play sound "Click.mp3" noloop 
+
+    P "Enfin fini je vais pouvoir aller dormir pour demain."
+    play sound "Click.mp3" noloop  
+
+    "{b}{i}Tu te changes avant d'aller de te coucher.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    hide screen day with moveoutleft
+    hide screen room with moveoutright
+    hide screen points with moveoutleft
+    scene black with fade
+
+    "{b}{i}Le lundi qui suit, le 6 janvier 2098{/i}{/b}"
+    play sound "Alarm.mp3" noloop 
+
+    $ day += 1 
+
+    scene room with fade 
+    show screen day with moveinleft
+    show screen room with moveinright 
+    show screen points with moveinleft 
+
+    "{b}{i}Tu te réveilles tranquillement.{/i}{/b}"
+    play sound "Click.mp3" noloop 
+
+    $ line = get_random_morning_line()
+    P "[line]"
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Tu te changes et puis tu aperçois [newname] encore endormie.{/i}{/b}"
+    play sound "Click.mp3" noloop 
 
 
 

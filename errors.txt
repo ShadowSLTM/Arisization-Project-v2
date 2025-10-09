@@ -2,13 +2,11 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 136: Line is indented, but the preceding one-line python statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
-    f.write("Ceci est un message secret de Yuki.\nOuvre-moi dans le dossier du jeu...")
-    ^
+The label start is defined twice, at File "game/script.rpy", line 5:
+label start:
+and File "game/script.rpy", line 7:
+label start:
 
-File "game/script.rpy", line 145: Line is indented, but the preceding one-line python statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
-    os.remove("game/Yuki.txt")
-    ^
 
 Ren'Py Version: Ren'Py 8.3.7.25031702
-Fri Oct  3 17:04:10 2025
+Thu Oct  9 21:03:20 2025

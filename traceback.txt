@@ -1,26 +1,39 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/DRM.rpy", line 160, in script
-    python:
-  File "game/DRM.rpy", line 161, in <module>
-    internet_checker.stop_monitoring()
-NameError: name 'internet_checker' is not defined
+  File "renpy/common/00audio.rpy", line 47, in script
+    init python:
+  File "renpy/common/00audio.rpy", line 47, in script
+    init python:
+  File "renpy/common/00audio.rpy", line 48, in <module>
+    _scan_audio_directory()
+  File "renpy/common/00audio.rpy", line 34, in _scan_audio_directory
+    for fn in renpy.list_files():
+AttributeError: module 'renpy' has no attribute 'list_files'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/DRM.rpy", line 160, in script
-    python:
+  File "C:\Users\Aris\Documents\renpy-8.3.7-sdk\renpy\bootstrap.py", line 359, in bootstrap
+    renpy.main.main()
+  File "C:\Users\Aris\Documents\renpy-8.3.7-sdk\renpy\main.py", line 541, in main
+    renpy.game.context().run(node)
+  File "renpy/common/00audio.rpy", line 47, in script
+    init python:
+  File "lib/python3.9/future/utils/__init__.py", line 444, in raise_
+  File "renpy/common/00audio.rpy", line 47, in script
+    init python:
   File "C:\Users\Aris\Documents\renpy-8.3.7-sdk\renpy\ast.py", line 834, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
   File "C:\Users\Aris\Documents\renpy-8.3.7-sdk\renpy\python.py", line 1187, in py_exec_bytecode
     exec(bytecode, globals, locals)
-  File "game/DRM.rpy", line 161, in <module>
-    internet_checker.stop_monitoring()
-NameError: name 'internet_checker' is not defined
+  File "renpy/common/00audio.rpy", line 48, in <module>
+    _scan_audio_directory()
+  File "renpy/common/00audio.rpy", line 34, in _scan_audio_directory
+    for fn in renpy.list_files():
+AttributeError: module 'renpy' has no attribute 'list_files'
 
 Windows-10-10.0.26100 AMD64
 Ren'Py 8.3.7.25031702
 Arisization Project Version_0.0.5
-Thu Sep 25 13:09:56 2025
+Thu Oct  9 21:01:14 2025

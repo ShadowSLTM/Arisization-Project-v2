@@ -2,7 +2,7 @@ $ persistent.abandon = False
 $ persistent.arrestation = False
 $ persistent.game_completed = False
 
-label start: 
+label start:
 
     default grade = 0.0  
     default points = 0 
@@ -28,6 +28,7 @@ label start:
     default baseip = ""
     default newbattery = ""
     default origine = "collège d'hoshikawa" 
+
 
 #############################################
 
