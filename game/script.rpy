@@ -13572,12 +13572,12 @@ label password:
     P "Oui pourquoi pas." 
     play sound "Click.mp3" noloop 
 
-    if pronom == "il" : 
+   if pronom == "il": 
     
         M "Tu es sûr de vouloir faire ça ?" 
         play sound "Click.mp3" noloop 
 
-    elif pronom == "elle" :
+    else:
 
         M "Tu es sûre de vouloir faire ça ?" 
         play sound "Click.mp3" noloop 
@@ -19427,12 +19427,12 @@ label examen_runix:
     "{b}{i}Puis vous ignorez [S] avant d'allez vous asseoir.{/i}{/b}"
     play sound "Click.mp3" noloop 
 
-    if pronom == "il" : 
+   if pronom == "il": 
     
         Na "Enfin assis."
         play sound "Click.mp3" noloop
 
-    elif pronom == "elle" :
+    else:
 
         Na "Enfin assises."
         play sound "Click.mp3" noloop 
@@ -21445,12 +21445,12 @@ label password10:
             Rk "Qui es-tu pour [newname] ?"
             play sound "Click.mp3" noloop 
 
-            if pronom == "il" : 
+           if pronom == "il": 
   
                 P "Je suis [P], son créateur."
                 play sound "Click.mp3" noloop 
 
-            elif pronom == "elle" :
+            else:
 
                 P "Je suis [P], sa créatrice."
                 play sound "Click.mp3" noloop 
@@ -21491,12 +21491,12 @@ label password10:
 
             show screen update with moveinright
 
-            if pronom == "il" : 
+           if pronom == "il": 
     
                 P "Je suis navré de vous dire que je refuse votre interview."
                 play sound "Click.mp3" noloop
 
-            elif pronom == "elle" : 
+            else: 
 
                 P "Je suis navrée de vous dire que je refuse votre interview."
                 play sound "Click.mp3" noloop
