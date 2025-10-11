@@ -2449,26 +2449,8 @@ label password36:
         Y "Bon après c'est pas étonnant, elles ont l^habitude faire ça."
         play sound "Click.mp3" noloop 
 
-    
-
-
-
-
-
-
-
-
-
-    
-
-    
-
-
-   
-
-
-
-
+    S "Toi lire !? tu fais surtout de la programmation."
+    play sound "Click.mp3" noloop
 
     label end_script3:
     call script4 from _call_script4  
