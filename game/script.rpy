@@ -29,7 +29,6 @@ label start:
     default newbattery = ""
     default origine = "collège d'hoshikawa" 
 
-
 #############################################
 
     default character1 = "??????????"
