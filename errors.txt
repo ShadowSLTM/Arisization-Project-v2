@@ -2,11 +2,7 @@
 errors listed below, and try again.
 
 
-The label start is defined twice, at File "game/script.rpy", line 5:
-label start:
-and File "game/script.rpy", line 7:
-label start:
-
+File "game/script2.rpy", line 6685: Indentation mismatch.
 
 Ren'Py Version: Ren'Py 8.3.7.25031702
-Thu Oct  9 21:03:20 2025
+Sun Oct 12 15:31:45 2025

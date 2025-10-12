@@ -1974,7 +1974,7 @@ label password13:
             Na "Hey je veux vraiment qu'on finisse cette discussion." 
             play sound "Click.mp3" noloop 
 
-           if pronom == "il": 
+            if pronom == "il": 
     
                 P "Désolé."
                 play sound "Click.mp3" noloop  
@@ -3989,7 +3989,7 @@ label password15:
     "{b}{i} Vous asseyez à une table.{/i}{/b}"
     play sound "Click.mp3" noloop 
  
-   if pronom == "il": 
+    if pronom == "il": 
 
         P "Enfin assis pour manger."
         play sound "Click.mp3" noloop
@@ -4009,7 +4009,7 @@ label password15:
     P "Oh salut Yuna."
     play sound "Click.mp3" noloop 
 
-   if pronom == "il": 
+    if pronom == "il": 
 
         I "Bonjour les amis."
         play sound "Click.mp3" noloop 
@@ -4107,7 +4107,7 @@ label password15:
 
             $ renpy.block_rollback()
 
-           if pronom == "il": 
+            if pronom == "il": 
 
                 P "Franchement je suis vraiment content qu'elle soit reconnue."
                 play sound "Click.mp3" noloop 
@@ -6666,7 +6666,7 @@ label philosophie_technologie:
     K "Je me posais la même question."  
     play sound "Click.mp3" noloop  
 
-   if pronom == "il": 
+    if pronom == "il": 
     
         P "Je suis venu car j'avais un service à demander à Kendo."
         play sound "Click.mp3" noloop
@@ -6682,12 +6682,12 @@ label philosophie_technologie:
     P "J'aimerai que tu te connectes à [newname] pour voir l'historique complet de connexion qui ne viens pas de moi."  
     play sound "Click.mp3" noloop 
 
-   if pronom == "il": 
+    if pronom == "il": 
     
         Na "Ah c'est donc pour ça que tu es venu voir [K]."  
         play sound "Click.mp3" noloop 
 
-    else:
+    else: 
 
         Na "Ah c'est donc pour ça que tu es venue voir [K]."  
         play sound "Click.mp3" noloop 
