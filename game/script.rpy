@@ -4532,14 +4532,17 @@ label studentmode:
     "{b}{i} Tout le monde y compris la [T] se met à regarder [newname].{/i}{/b}" 
     play sound "Click.mp3" noloop
 
+    P "{=Pensee}Non mais sérieusement… ils ne pensent quand même pas que j’ai activé ce mode-là !?{/=Pensee}"
+    play sound "Click.mp3" noloop
+
     P "Hey calmez-vous je sais à quoi vous pensez et non je ne l'ai pas amélioré pour cet usage."
     play sound "Click.mp3" noloop
 
-    "{b}{i} La [T] se retourne vers [H].{/i}{/b}"
+    "{b}{i}La [T] se retourne vers [H].{/i}{/b}"
     play sound "Click.mp3" noloop
     
     M "Désolée [H] mais [pronom] a raison, on ne peut pas considérer [newname] comme une arme de guerre."
-    play sound "Click.mp3" noloop 
+    play sound "Click.mp3" noloop  
 
     H "Désolé j'avais juste fait le lien avec votre cours."
     play sound "Click.mp3" noloop

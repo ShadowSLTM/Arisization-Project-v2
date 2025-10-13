@@ -2452,13 +2452,16 @@ label password36:
     S "Toi lire !? tu fais surtout de la programmation."
     play sound "Click.mp3" noloop
 
+    P "{=Pensee}Pour qui il se prend pour juger les autres ?{/Pensee}"
+    play sound "Click.mp3" noloop
+
     P "Il ne faut se pas fier aux apparences, je ne fais pas que de la programmation."
     play sound "Click.mp3" noloop
 
-     
+    
+
+
  
-
-
     label end_script3:
     call script4 from _call_script4  
     return 

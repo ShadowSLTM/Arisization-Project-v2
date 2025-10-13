@@ -404,7 +404,7 @@ init python:
 
     nom_utilisateur_pc = getpass.getuser() 
 
-init python:
+init python: 
 
     # Réinitialiser seulement 'abandon'
     def reset_abandon():
