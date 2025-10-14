@@ -2458,7 +2458,17 @@ label password36:
     P "Il ne faut se pas fier aux apparences, je ne fais pas que de la programmation."
     play sound "Click.mp3" noloop
 
-    
+    S "Ouais, peu importe pour moi tu seras toujours celui qui fait que de la programmation."
+    play sound "Click.mp3" noloop
+
+    P "Et toi [S], tu as fait quoi durant les vacances ?"
+    play sound "Click.mp3" noloop
+
+    S ""
+
+
+
+
 
 
  
