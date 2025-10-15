@@ -2464,9 +2464,21 @@ label password36:
     P "Et toi [S], tu as fait quoi durant les vacances ?"
     play sound "Click.mp3" noloop
 
+    P "{=Pensee}Je m'attend déjà à sa réponse.{/Pensee}"
+    play sound "Click.mp3" noloop
+
+    S "Euh.....J'ai surtout joué aux jeux vidéos."
+    play sound "Click.mp3" noloop 
+
+    P "Voilà, c'est ce que je me disais."
+    play sound "Click.mp3" noloop 
+
     S ""
+    play sound "Click.mp3" noloop 
+  
 
 
+    
 
 
 
