@@ -2473,19 +2473,26 @@ label password36:
     P "Voilà, c'est ce que je me disais."
     play sound "Click.mp3" noloop 
 
-    S ""
+    S "Oh c'est bon."
     play sound "Click.mp3" noloop 
-  
 
+    M "Et sinon vous avez fait quoi d'autre ?"
+    play sound "Click.mp3" noloop 
+
+    if update == 4.0: 
+
+        P "J'ai fait un contrôle technique sur [newname] pour voir si tout aller bien et une mise à jour."
+        play sound "Click.mp3" noloop 
+
+    else: 
+
+        P "J'ai fait un contrôle technique sur [newname] pour voir si tout aller bien."
+        play sound "Click.mp3" noloop  
+
+    M "Oh vraiment intérresant."
+    play sound "Click.mp3" noloop 
 
     
+    
 
-
-
-
- 
-    label end_script3:
-    call script4 from _call_script4  
-    return 
-
-# Aris la plus belle ###################    
+    
