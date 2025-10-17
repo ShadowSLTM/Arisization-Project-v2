@@ -620,6 +620,9 @@ label password11:
     M "[endlesson]"
     play sound "Click.mp3" noloop
 
+    "{b}{i}Les élèves commencent à ranger leurs affaires.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
     $ go_eat = get_random_go_eat()
     P "[go_eat]"
     play sound "Click.mp3" noloop 
@@ -859,6 +862,9 @@ label password11:
 
     $ endlesson = get_random_endlesson()
     M "[endlesson]"
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Les élèves commencent à ranger leurs affaires.{/i}{/b}"
     play sound "Click.mp3" noloop
 
     M "Si jamis le l'examen de français sera le 2 décembre 2097."
@@ -1818,6 +1824,9 @@ label password13:
     $ endlesson = get_random_endlesson()
     M "[endlesson]"
     play sound "Click.mp3" noloop 
+
+    "{b}{i}Les élèves commencent à ranger leurs affaires.{/i}{/b}"
+    play sound "Click.mp3" noloop
 
     M "Si jamais vous étes libre cette après-midi."
     play sound "Click.mp3" noloop
@@ -2927,6 +2936,9 @@ label examen_francais:
     M "[endlesson]"
     play sound "Click.mp3" noloop 
 
+    "{b}{i}Les élèves commencent à ranger leurs affaires.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
     $ stockage += 5.0
 
     $ go_eat = get_random_go_eat()
@@ -3423,6 +3435,9 @@ label examen_francais:
     M "[endlesson]"
     play sound "Click.mp3" noloop
 
+    "{b}{i}Les élèves commencent à ranger leurs affaires.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
     $ godorm = get_random_return_dorm()
     P "[godorm]"
     play sound "Click.mp3" noloop
@@ -3911,6 +3926,9 @@ label password15:
     M "[endlesson]"
     play sound "Click.mp3" noloop 
 
+    "{b}{i}Les élèves commencent à ranger leurs affaires.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
     $ go_eat = get_random_go_eat()
     P "[go_eat]"
     play sound "Click.mp3" noloop 
@@ -4295,6 +4313,9 @@ label password15:
     $ endlesson = get_random_endlesson()
     M "[endlesson]" 
     play sound "Click.mp3" noloop 
+
+    "{b}{i}Les élèves commencent à ranger leurs affaires.{/i}{/b}"
+    play sound "Click.mp3" noloop
 
     $ godorm = get_random_return_dorm()
     P "[godorm]"
@@ -4834,6 +4855,9 @@ label password16:
     M "[endlesson]"
     play sound "Click.mp3" noloop 
 
+    "{b}{i}Les élèves commencent à ranger leurs affaires.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
     $ go_eat = get_random_go_eat()
     P "[go_eat]"
     play sound "Click.mp3" noloop 
@@ -5093,6 +5117,9 @@ label password16:
     $ endlesson = get_random_endlesson()
     M "[endlesson]" 
     play sound "Click.mp3" noloop 
+
+    "{b}{i}Les élèves commencent à ranger leurs affaires.{/i}{/b}"
+    play sound "Click.mp3" noloop
 
     M "L'examen de philo sera le 11 décembre." 
     play sound "Click.mp3" noloop 
@@ -6474,6 +6501,9 @@ label philosophie_technologie:
     M "[endlesson]"
     play sound "Click.mp3" noloop
 
+    "{b}{i}Les élèves commencent à ranger leurs affaires.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
     $ stockage += 5.0
 
     $ godorm = get_random_return_dorm()
@@ -7319,6 +7349,9 @@ label password18:
     M "[endlesson]"
     play sound "Click.mp3" noloop
 
+    "{b}{i}Les élèves commencent à ranger leurs affaires.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
     $ stockage += 6.0 
 
     $ go_eat = get_random_go_eat()
@@ -7598,6 +7631,9 @@ label password18:
 
     $ endlesson = get_random_endlesson()
     M "[endlesson]"
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Les élèves commencent à ranger leurs affaires.{/i}{/b}"
     play sound "Click.mp3" noloop
 
     $ stockage += 6.0 
@@ -8128,6 +8164,9 @@ label password19:
     M "[endlesson]"
     play sound "Click.mp3" noloop
 
+    "{b}{i}Les élèves commencent à ranger leurs affaires.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
     $ stockage += 6.0 
 
     $ go_eat = get_random_go_eat()
@@ -8387,6 +8426,9 @@ label password19:
     $ validation = get_random_validation() 
     Na "[validation]"
     play sound "Click.mp3" noloop 
+
+    "{b}{i}Les élèves commencent à ranger leurs affaires.{/i}{/b}"
+    play sound "Click.mp3" noloop
 
     P "Bon [newname] on y va ?"
     play sound "Click.mp3" noloop 
@@ -9009,6 +9051,9 @@ label password20:
 
     $ endlesson = get_random_endlesson()
     M "[endlesson]"
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Les élèves commencent à ranger leurs affaires.{/i}{/b}"
     play sound "Click.mp3" noloop
 
     $ go_eat = get_random_go_eat()
@@ -9842,6 +9887,9 @@ label password21:
     M "[endlesson]"
     play sound "Click.mp3" noloop
 
+    "{b}{i}Les élèves commencent à ranger leurs affaires.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
     M "N'oubliez l'examen de la semaine prochaine..."
     play sound "Click.mp3" noloop
 
@@ -10142,6 +10190,9 @@ label password21:
     $ endlesson = get_random_endlesson() 
     M "[endlesson]"
     play sound "Click.mp3" noloop 
+
+    "{b}{i}Les élèves commencent à ranger leurs affaires.{/i}{/b}"
+    play sound "Click.mp3" noloop
 
     $ stockage += 10.0 
 
@@ -11135,6 +11186,9 @@ label password22:
     M "[endlesson]" 
     play sound "Click.mp3" noloop
 
+    "{b}{i}Les élèves commencent à ranger leurs affaires.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
     $ go_eat = get_random_go_eat()
     P "[go_eat]"
     play sound "Click.mp3" noloop 
@@ -11430,6 +11484,9 @@ label password22:
 
     $ endlesson = get_random_endlesson()
     M "[endlesson]"
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Les élèves commencent à ranger leurs affaires.{/i}{/b}"
     play sound "Click.mp3" noloop
 
     P "Bon [newname] on n'y va ?"
@@ -12021,6 +12078,9 @@ label password23:
     M "[endlesson]"
     play sound "Click.mp3" noloop 
 
+    "{b}{i}Les élèves commencent à ranger leurs affaires.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
     $ stockage += 5.0
 
     $ go_eat = get_random_go_eat()
@@ -12342,6 +12402,9 @@ label password23:
     $ endlesson = get_random_endlesson()
     M "[endlesson]"
     play sound "Click.mp3" noloop 
+
+    "{b}{i}Les élèves commencent à ranger leurs affaires.{/i}{/b}"
+    play sound "Click.mp3" noloop
 
     $ godorm = get_random_return_dorm()
     P "[godorm]"

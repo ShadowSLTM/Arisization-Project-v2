@@ -2,7 +2,8 @@
 errors listed below, and try again.
 
 
-File "game/script2.rpy", line 6685: Indentation mismatch.
+File "game/controller.rpy", line 19: is not terminated with a newline. (Check strings and parenthesis.)
+                self.layouts = {
 
 Ren'Py Version: Ren'Py 8.3.7.25031702
-Sun Oct 12 15:31:45 2025
+Sat Oct 18 00:39:03 2025

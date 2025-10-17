@@ -4250,6 +4250,9 @@ label studentmode:
     M "[endlesson]"
     play sound "Click.mp3" noloop 
 
+    "{b}{i}Les élèves commencent à ranger leurs affaires.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
     $ stockage += 10.0
 
     $ go_eat = get_random_go_eat()
@@ -5613,6 +5616,9 @@ label choice8:
     $ endlesson = get_random_endlesson()
     M "[endlesson]"
     play sound "Click.mp3" noloop 
+
+    "{b}{i}Les élèves commencent à ranger leurs affaires.{/i}{/b}"
+    play sound "Click.mp3" noloop
 
     $ go_eat = get_random_go_eat()
     P "[go_eat]"
@@ -7810,11 +7816,14 @@ label suite:
     M "[endlesson]"
     play sound "Click.mp3" noloop
 
+    "{b}{i}Les élèves commencent à ranger leurs affaires.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
     P "Bon [newname] on y va ?"
     play sound "Click.mp3" noloop 
 
     Na "Oui je suis fatiguée."
-    play sound "Click.mp3" noloop 
+    play sound "Footsteps.mp3" noloop 
 
     hide screen class_404 with moveoutright
     hide screen points with moveoutleft
@@ -8482,6 +8491,9 @@ label suite:
 
     $ endlesson = get_random_endlesson()
     M "[endlesson]"
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Les élèves commencent à ranger leurs affaires.{/i}{/b}"
     play sound "Click.mp3" noloop
 
     P "Bon [newname] on va manger ?"
@@ -9179,6 +9191,9 @@ label debate_success:
 
     $ endlesson = get_random_endlesson()
     M "[endlesson]"
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Les élèves commencent à ranger leurs affaires.{/i}{/b}"
     play sound "Click.mp3" noloop
 
     $ godorm = get_random_return_dorm()
@@ -10293,6 +10308,9 @@ label debate_success:
     M "N'oubliez l'examen de la semaine prochaine..."
     play sound "Click.mp3" noloop
 
+    "{b}{i}Les élèves commencent à ranger leurs affaires.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
     $ go_eat = get_random_go_eat()
     P "[go_eat]"
     play sound "Click.mp3" noloop 
@@ -10568,7 +10586,7 @@ label debate_success:
 
         hide screen update with moveoutright
 
-    else :
+    else:
 
         M "Mauvaise réponse."
         play sound "Click.mp3" noloop
@@ -10578,6 +10596,9 @@ label debate_success:
 
     $ endlesson = get_random_endlesson()
     M "[endlesson]"
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Les élèves commencent à ranger leurs affaires.{/i}{/b}"
     play sound "Click.mp3" noloop
 
     $ godorm = get_random_return_dorm()
@@ -11876,6 +11897,9 @@ label update:
     M "[endlesson]"
     play sound "Click.mp3" noloop
 
+    "{b}{i}Les élèves commencent à ranger leurs affaires.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
     $ go_eat = get_random_go_eat()
     P "[go_eat]"
     play sound "Click.mp3" noloop 
@@ -12145,6 +12169,9 @@ label update:
 
     $ endlesson = get_random_endlesson()
     M "[endlesson]"
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Les élèves commencent à ranger leurs affaires.{/i}{/b}"
     play sound "Click.mp3" noloop
 
     P "Bon [newname] on n'y va ?"
@@ -14406,6 +14433,9 @@ label password1:
     M "[endlesson]"
     play sound "Click.mp3" noloop
 
+    "{b}{i}Les élèves commencent à ranger leurs affaires.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
     $ go_eat = get_random_go_eat()
     P "[go_eat]"
     play sound "Click.mp3" noloop 
@@ -14685,6 +14715,9 @@ label password1:
 
     $ endlesson = get_random_endlesson()
     M "[endlesson]"
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Les élèves commencent à ranger leurs affaires.{/i}{/b}"
     play sound "Click.mp3" noloop
 
     $ godorm = get_random_return_dorm()
@@ -15310,6 +15343,9 @@ label examen_pythagore:
 
     $ endlesson = get_random_endlesson()
     M "[endlesson]"
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Les élèves commencent à ranger leurs affaires.{/i}{/b}"
     play sound "Click.mp3" noloop
 
     $ go_eat = get_random_go_eat()
@@ -16865,6 +16901,9 @@ label password4:
     M "[endlesson]" 
     play sound "Click.mp3" noloop
 
+    "{b}{i}Les élèves commencent à ranger leurs affaires.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
     $ go_eat = get_random_go_eat()
     P "[go_eat]"
     play sound "Click.mp3" noloop 
@@ -17186,6 +17225,9 @@ label password4:
 
     $ endlesson = get_random_endlesson()
     M "[endlesson]"
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Les élèves commencent à ranger leurs affaires.{/i}{/b}"
     play sound "Click.mp3" noloop
 
     $ godorm = get_random_return_dorm()
@@ -17680,6 +17722,9 @@ label password6:
 
     $ endlesson = get_random_endlesson()
     M "[endlesson]"
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Les élèves commencent à ranger leurs affaires.{/i}{/b}"
     play sound "Click.mp3" noloop
 
     $ go_eat = get_random_go_eat()
@@ -18358,6 +18403,9 @@ label password7:
     M "[endlesson]"
     play sound "Click.mp3" noloop 
 
+    "{b}{i}Les élèves commencent à ranger leurs affaires.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
     $ go_eat = get_random_go_eat()
     P "[go_eat]"
     play sound "Click.mp3" noloop 
@@ -18515,6 +18563,9 @@ label password7:
 
     $ endlesson = get_random_endlesson()
     M "[endlesson]"
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Les élèves commencent à ranger leurs affaires.{/i}{/b}"
     play sound "Click.mp3" noloop
 
     $ godorm = get_random_return_dorm()
@@ -19316,6 +19367,9 @@ label examen_runix:
     M "[endlesson]"
     play sound "Click.mp3" noloop 
 
+    "{b}{i}Les élèves commencent à ranger leurs affaires.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
     $ go_eat = get_random_go_eat()
     P "[go_eat]"
     play sound "Click.mp3" noloop 
@@ -19589,6 +19643,9 @@ label examen_runix:
 
     $ endlesson = get_random_endlesson()
     M "[endlesson]"
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Les élèves commencent à ranger leurs affaires.{/i}{/b}"
     play sound "Click.mp3" noloop
 
     $ godorm = get_random_return_dorm()
@@ -20261,6 +20318,9 @@ label password9:
     $ endlesson = get_random_endlesson()
     M "[endlesson]"
     play sound "Click.mp3" noloop 
+
+    "{b}{i}Les élèves commencent à ranger leurs affaires.{/i}{/b}"
+    play sound "Click.mp3" noloop
 
     M "Si jamais vous étes libre cette après-midi car nous avons fini le sujet de français."
     play sound "Click.mp3" noloop 
@@ -21096,6 +21156,9 @@ label password10:
     M "[endlesson]"
     play sound "Click.mp3" noloop
 
+    "{b}{i}Les élèves commencent à ranger leurs affaires.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
     $ stockage += 15.0 
 
     $ go_eat = get_random_go_eat()
@@ -21313,6 +21376,9 @@ label password10:
     $ endlesson = get_random_endlesson()
     M "[endlesson]"
     play sound "Click.mp3" noloop
+
+    "{b}{i}Les élèves commencent à ranger leurs affaires.{/i}{/b}"
+    play sound "Click.mp3" noloop 
 
     $ stockage += 5.0 
 
