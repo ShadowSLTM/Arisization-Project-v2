@@ -2481,12 +2481,12 @@ label password36:
 
     if update == 4.0: 
 
-        P "J'ai fait un contrôle technique sur [newname] pour voir si tout aller bien et une mise à jour."
+        P "J'ai fait un contrôle technique sur [newname] pour voir si tout aller bien."
         play sound "Click.mp3" noloop 
 
     else: 
 
-        P "J'ai fait un contrôle technique sur [newname] pour voir si tout aller bien."
+        P "J'ai fait un contrôle technique sur [newname] pour voir si tout aller bien et une mise à jour."
         play sound "Click.mp3" noloop  
 
     M "Oh vraiment intérresant."
@@ -2571,7 +2571,7 @@ label password36:
     M "Pardon [S], [newname] est déjà avec [P], tu seras avec [K] et [N]."
     play sound "Click.mp3" noloop
 
-    Na "D'accord madame." 
+    S "D'accord madame." 
     play sound "Click.mp3" noloop
 
     M "Bien, maintenant ouvrez vos cahiers et prenez des notes."
@@ -2704,16 +2704,37 @@ label password36:
     J1 "[nothing]"
     play sound "Click.mp3" noloop
 
+    "{b}{i}Vous commencez à manger et discuter.{/i}{/b}"
+    play sound "Click.mp3" noloop  
 
+    J1 "Juste j'avais une question à te poser [prenom]."
+    play sound "Click.mp3" noloop  
 
+    P "Oui dis-moi ce qu'il y a ?"
+    play sound "Click.mp3" noloop  
 
+    J1 "C'est moi ou [newname] me semble différente."
+    play sound "Click.mp3" noloop  
 
-    
+    P "Oui car j'ai retiré le mot de passe que j'utilisais pour la réveiller le matin."
+    play sound "Click.mp3" noloop  
 
+    J1 "Et ça veut dire quoi ?"
+    play sound "Click.mp3" noloop  
 
+    P "ça veut dire que maintenant qu'[newname] peut se réveiller toute seule le matin."
+    play sound "Click.mp3" noloop  
 
+    J1 "Oh vraiment mais c'est génial ça."
+    play sound "Click.mp3" noloop  
 
+    $ thanks = get_random_thanks()
+    Na "[thanks]"
+    play sound "Click.mp3" noloop
 
+    $ nothing = get_random_nothing()
+    J1 "[nothing]"
+    play sound "Click.mp3" noloop
 
     "{b}{i}Vous continuez de discuter jusqu'à la sonnerie.{/i}{/b}"
     play sound "Bell.mp3" noloop 
@@ -2785,6 +2806,81 @@ label password36:
     M ""
     play sound "Click.mp3" noloop  
 
+    "{b}{i}Le soleil filtre à travers les vitres, illuminant les tables encore encombrées de cahiers et de stylos.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    M "J’espère que vous avez bien mangé, car cet après-midi, on passe à la pratique."
+    play sound "Click.mp3" noloop
+
+    I "Pratique ? Vous voulez dire... coder ?"
+    play sound "Click.mp3" noloop
+
+    M "Exactement. Chaque binôme devra créer son propre programme de tri, en utilisant l’un des algorithmes vus ce matin."
+    play sound "Click.mp3" noloop
+
+    H "Donc... on a le choix ?"
+    play sound "Click.mp3" noloop
+
+    M "Oui. Tri à bulles, tri par insertion, tri rapide… à vous de choisir celui qui vous semble le plus efficace."
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Des chuchotements enthousiastes se font entendre, certains élèves ouvrant déjà leurs ordinateurs portables.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    P "Bon... on s’y met ?"
+    play sound "Click.mp3" noloop
+
+    Na "Ouais, allons-y. Si on fait un tri rapide, on peut impressionner la prof."
+    play sound "Click.mp3" noloop
+
+    P "Ou tout faire planter, au choix."
+    play sound "Click.mp3" noloop
+
+    "{b}{i}La [T] circule entre les rangs, observant les binômes au travail.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    M "N’oubliez pas : commentez votre code, et surtout... testez-le avant de me le présenter."
+    play sound "Click.mp3" noloop
+
+    S "Euh... madame, le tri à bulles, c’est bien celui où on compare deux valeurs à la fois ?"
+    play sound "Click.mp3" noloop
+
+    M "Exactement [S]. Mais attention à ne pas vous noyer dans les boucles imbriquées."
+    play sound "Click.mp3" noloop
+
+    "{b}{i}L’ambiance devient studieuse. On n’entend plus que le bruit des claviers et quelques soupirs de concentration.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Une heure plus tard...{/i}{/b}"
+    play sound "Bell.mp3" noloop
+
+    M "Très bien, levez les mains. Les binômes qui ont terminé peuvent venir me montrer leur code."
+    play sound "Click.mp3" noloop
+
+    I "On n’a pas fini, [H] ! Il manque une accolade !"
+    play sound "Click.mp3" noloop
+
+    H "C’est pas une accolade, c’est une parenthèse !"
+    play sound "Click.mp3" noloop
+
+    M "Calmez-vous, on n’est pas à un hackathon."
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Quelques rires éclatent dans la classe.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    M "Bon, on arrête là pour aujourd’hui. Le reste du code sera à terminer pour demain."
+    play sound "Bell.mp3" noloop
+
+    $ endlesson = get_random_endlesson()
+    M "[endlesson]"
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Les élèves ferment leurs ordinateurs et commencent à quitter la salle dans une ambiance détendue.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    M "Merci d'avoir correctement rangé les ordinateurs."
+    play sound "Click.mp3" noloop
 
 
 
@@ -2794,9 +2890,184 @@ label password36:
 
 
 
+    "{b}{i}Les élèves commencent à ranger leurs affaires.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    $ godorm = get_random_return_dorm()
+    P "[godorm]"
+    play sound "Click.mp3" noloop
+
+    $ suivi = get_random_suivi()
+    Na "[suivi]"
+    play sound "Footsteps.mp3" noloop
+
+    hide screen class_404 with moveoutright
+    hide screen points with moveoutleft
+    hide screen day with moveoutleft
+    scene black with fade 
+
+    "{b}{i} Vous sortez de la salle de classe.{/i}{/b}"
+    play sound "Door.mp3" noloop
+
+    scene hallway with fade
+    show screen day with moveinleft
+    show screen points with moveinleft
+    show screen hallway with moveinright 
+
+    "{b}{i} Vous continues vers le dortoir.{/i}{/b}"
+    play sound "Click.mp3" noloop 
+
+    hide screen hallway with moveoutright
+    hide screen points with moveoutleft
+    hide screen day with moveoutleft
+    scene black with fade
+
+    "{b}{i}Tu entres dans ton dortoir.{/i}{/b}"
+    play sound "Door.mp3" noloop
+
+    scene room with fade 
+    show screen day with moveinleft
+    show screen points with moveinleft
+    show screen room with moveinright 
+
+    $ dortoir = get_random_dortoir()
+    Na "[dortoir]"
+    play sound "Click.mp3" noloop
+
+    $ bien = get_random_fais_du_bien()
+    P "[bien]" 
+    play sound "Click.mp3" noloop  
+
+    "{b}{i} Vous posez tranquillement vos affaires.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    Na "Bon on fait quoi ?"
+    play sound "Click.mp3" noloop
+
+    P "On Pourrait réviser un peu."
+    play sound "Click.mp3" noloop
 
 
 
+
+
+
+
+
+
+label update3: 
+
+    if update == 4.0: 
+
+        "{b}{i}Vous vous posez tranquillement mais [newname] agit bizarrement.{/i}{/b}"
+        play sound "Click.mp3" noloop
+
+        A "Système opérationnel."
+        play sound "Click.mp3" noloop
+
+        P "Comment ça ? Qu'est-ce que tu racontes !?"
+        play sound "Click.mp3" noloop
+
+        A "Démarrage de la récupérations des données."
+        play sound "Click.mp3" noloop 
+
+        $ stockage -= 15.0 
+
+        P "Mince elle est en train de se faire pirater, je dois activer le Recovery Mode....."
+        play sound "Click.mp3" noloop 
+
+        menu: 
+
+            "{b}{i}Activer le recovery mode.{/i}{/b}":
+                play sound "Menu.mp3" noloop
+
+        $ reboot = renpy.input("Écris ceci : shutdown_humanoid_robot(security_override=false)")
+        $ reboot = reboot.strip() 
+
+        if reboot == "shutdown_humanoid_robot(security_override=false)":
+            
+            A "Fermeture du système d'exploitation [system]....."
+            play sound "Click.mp3" noloop
+
+            P "Enfin mais c'est bizarre on dirait que la faille venais du systéme d'exploitation."
+            play sound "Click.mp3" noloop 
+
+            P "Bon je vais la redémarrer."
+            play sound "Click.mp3" noloop 
+
+            menu: 
+
+                "{b}{i}Redémarrer [newname].{/i}{/b}":
+                    play sound "Menu.mp3" noloop
+
+            $ stockage += 5.0 
+            define Na = Character('[newname] [nom]', color="#00eeff")
+            
+            $ start = get_random_start()
+            "{b}{i}[start]{/i}{/b}"
+            play sound "Click.mp3" noloop 
+
+            $  salutation_rdm = get_random_salutation()
+            Na "[salutation_rdm]"
+            play sound "Click.mp3" noloop
+
+            $ comment_ca_va = get_random_comment_ca_va()
+            P "[comment_ca_va]"
+            play sound "Click.mp3" noloop
+
+            $ je_vais_bien_txt = get_random_je_vais_bien() 
+            Na "[je_vais_bien_txt]"
+            play sound "Click.mp3" noloop
+
+            "{b}{i}Vous vous posez tranquillement.{/i}{/b}"
+            play sound "Click.mp3" noloop
+            
+        else:
+
+            A "Qu'est-ce que tu tentes de faire."
+            play sound "Stumble.mp3" noloop
+
+            "{b}{i}[newname] se met à te plaquer au sol.{/i}{/b}"
+            play music "gameover.mp3" noloop
+
+            hide screen room with moveoutright 
+            hide screen points with moveoutleft
+            hide screen day with moveoutleft
+            scene black with fade 
+
+            if pronom == "il":
+
+                "{b}{i}Fin numéro 19 : Complétement plaqué et étranglé par [Na].{/i}{/b}"
+                play sound "Menu.mp3" noloop
+
+            else:
+
+                "{b}{i}Fin numéro 19 : Complétement plaquée et étranglée par [Na].{/i}{/b}"
+                play sound "Menu.mp3" noloop
+
+            menu: 
+
+                "{b}{i}Abandonner{/i}{/b}": 
+                    play sound "Menu.mp3" noloop 
+                    return 
+                    
+                "{b}{i}Réessayer.{/i}{/b}":
+                    play sound "Menu.mp3" noloop 
+
+                    P "Non [newname] refuserait que j'abandonne si facilement."
+                    play sound "Click.mp3" noloop
+
+                    scene room with fade
+                    show screen room with moveinright
+                    show screen points with moveinleft
+                    show screen day with moveinleft
+                    
+                    jump update2
+
+    else: 
+
+        "{b}{i}Vous vous posez tranquillement.{/i}{/b}"
+        play sound "Click.mp3" noloop
 
 
 
@@ -2805,4 +3076,3 @@ label password36:
     label end_script3:
     call script3 from _call_script4    
     return 
-

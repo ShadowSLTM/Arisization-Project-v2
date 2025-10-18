@@ -10614,7 +10614,7 @@ label debate_success:
     hide screen day with moveoutleft
     scene black with fade 
 
-    "{b}{i} Vous sortez de le dortoir.{/i}{/b}"
+    "{b}{i} Vous sortez de la salle de classe.{/i}{/b}"
     play sound "Door.mp3" noloop
 
     scene hallway with fade
