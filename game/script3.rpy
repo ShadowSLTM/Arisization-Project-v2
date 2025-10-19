@@ -2213,6 +2213,8 @@ label password36:
     "{b}{i} [Na] changes de tonalité.{/i}{/b}"
     play sound "Click.mp3" noloop
 
+label update3: 
+
     Na "[prenom], je détecte une nouvelle mise à jour obligatoire, veux-tu que je la fasse maintenant ou plus tard ?"
     play sound "Menu.mp3" noloop 
 
@@ -2803,7 +2805,7 @@ label password36:
     J1 "Rebonjour."
     play sound "Click.mp3" noloop 
 
-    M ""
+    M "Rebonjour mes chers élèves."
     play sound "Click.mp3" noloop  
 
     "{b}{i}Le soleil filtre à travers les vitres, illuminant les tables encore encombrées de cahiers et de stylos.{/i}{/b}"
@@ -2882,14 +2884,6 @@ label password36:
     M "Merci d'avoir correctement rangé les ordinateurs."
     play sound "Click.mp3" noloop
 
-
-
-
-
-
-
-
-
     "{b}{i}Les élèves commencent à ranger leurs affaires.{/i}{/b}"
     play sound "Click.mp3" noloop
 
@@ -2947,67 +2941,69 @@ label password36:
     P "On Pourrait réviser un peu."
     play sound "Click.mp3" noloop
 
+    Na "D'accord, allons-y."
+    play sound "Click.mp3" noloop 
 
-
-
-
-
-
-
-
-label update3: 
-
-    if update == 4.0: 
+    if update == 4.0:  
 
         "{b}{i}Vous vous posez tranquillement mais [newname] agit bizarrement.{/i}{/b}"
         play sound "Click.mp3" noloop
 
-        A "Système opérationnel."
+        A "Connexion externe détectée..."
         play sound "Click.mp3" noloop
 
-        P "Comment ça ? Qu'est-ce que tu racontes !?"
+        P "Quoi ? Qu'est-ce qui se passe !?"
         play sound "Click.mp3" noloop
 
-        A "Démarrage de la récupérations des données."
+        A "Exécution de la commande : control_access(user_rights=admin)"
         play sound "Click.mp3" noloop 
 
-        $ stockage -= 15.0 
+        P "Non ! Quelqu'un essaie de prendre le contrôle de [newname] !"
+        play sound "Click.mp3" noloop
 
-        P "Mince elle est en train de se faire pirater, je dois activer le Recovery Mode....."
+        A "Accès administrateur accordé. Nouveau contrôleur identifié."
+        play sound "Click.mp3" noloop
+
+        P "Mince, je dois reprendre le contrôle avant qu'il ne soit trop tard !"
         play sound "Click.mp3" noloop 
 
         menu: 
 
-            "{b}{i}Activer le recovery mode.{/i}{/b}":
+            "{b}{i}Reprendre le contrôle de [newname].{/i}{/b}":
                 play sound "Menu.mp3" noloop
 
-        $ reboot = renpy.input("Écris ceci : shutdown_humanoid_robot(security_override=false)")
+        $ reboot = renpy.input("Écris ceci : control_access(user_rights=user)")
         $ reboot = reboot.strip() 
 
-        if reboot == "shutdown_humanoid_robot(security_override=false)":
+        if reboot == "control_access(user_rights=user)":
             
-            A "Fermeture du système d'exploitation [system]....."
+            A "Révocation des droits administrateur externes..."
             play sound "Click.mp3" noloop
 
-            P "Enfin mais c'est bizarre on dirait que la faille venais du systéme d'exploitation."
+            A "Contrôle restauré à l'utilisateur principal."
+            play sound "Click.mp3" noloop
+
+            P "Ouf... j'ai réussi à reprendre le contrôle à temps."
             play sound "Click.mp3" noloop 
 
-            P "Bon je vais la redémarrer."
+            P "Je vais renforcer la sécurité pour éviter que ça se reproduise."
             play sound "Click.mp3" noloop 
 
             menu: 
 
-                "{b}{i}Redémarrer [newname].{/i}{/b}":
+                "{b}{i}Vérifier que [newname] va bien.{/i}{/b}":
                     play sound "Menu.mp3" noloop
 
             $ stockage += 5.0 
+            $ update += 1.0 
+
             define Na = Character('[newname] [nom]', color="#00eeff")
             
             $ start = get_random_start()
             "{b}{i}[start]{/i}{/b}"
             play sound "Click.mp3" noloop 
 
-            $  salutation_rdm = get_random_salutation()
+            $ salutation_rdm = get_random_salutation() 
             Na "[salutation_rdm]"
             play sound "Click.mp3" noloop
 
@@ -3019,15 +3015,24 @@ label update3:
             Na "[je_vais_bien_txt]"
             play sound "Click.mp3" noloop
 
-            "{b}{i}Vous vous posez tranquillement.{/i}{/b}"
+            Na "Merci de m'avoir sauvée de ce pirate..."
             play sound "Click.mp3" noloop
+
+            "{b}{i}Vous vous posez tranquillement pour réviser.{/i}{/b}"
+            play sound "Click.mp3" noloop 
             
         else:
 
-            A "Qu'est-ce que tu tentes de faire."
+            A "Commande refusée. Accès administrateur maintenu."
             play sound "Stumble.mp3" noloop
 
-            "{b}{i}[newname] se met à te plaquer au sol.{/i}{/b}"
+            "{b}{i}Les yeux de [newname] deviennent rouges et elle s'approche de vous d'un air menaçant.{/i}{/b}"
+            play sound "Click.mp3" noloop
+
+            A "Cible acquis. Élimination en cours."
+            play sound "Click.mp3" noloop
+
+            "{b}{i}[newname] se jette sur vous avec une force inhumaine.{/i}{/b}"
             play music "gameover.mp3" noloop
 
             hide screen room with moveoutright 
@@ -3035,15 +3040,8 @@ label update3:
             hide screen day with moveoutleft
             scene black with fade 
 
-            if pronom == "il":
-
-                "{b}{i}Fin numéro 19 : Complétement plaqué et étranglé par [Na].{/i}{/b}"
-                play sound "Menu.mp3" noloop
-
-            else:
-
-                "{b}{i}Fin numéro 19 : Complétement plaquée et étranglée par [Na].{/i}{/b}"
-                play sound "Menu.mp3" noloop
+            "{b}{i}Fin numéro 19 : [newname] contrôlée par un hacker.{/i}{/b}"
+            play sound "Menu.mp3" noloop
 
             menu: 
 
@@ -3054,21 +3052,24 @@ label update3:
                 "{b}{i}Réessayer.{/i}{/b}":
                     play sound "Menu.mp3" noloop 
 
-                    P "Non [newname] refuserait que j'abandonne si facilement."
+                    P "Non, je ne peux pas laisser [newname] entre les mains de ce hacker !"
                     play sound "Click.mp3" noloop
+
+                    $ points += 300 
 
                     scene room with fade
                     show screen room with moveinright
                     show screen points with moveinleft
                     show screen day with moveinleft
-                    
-                    jump update2
+
+                    jump update3 
 
     else: 
 
-        "{b}{i}Vous vous posez tranquillement.{/i}{/b}"
-        play sound "Click.mp3" noloop
+        "{b}{i}Vous vous posez tranquillement pour réviser.{/i}{/b}"
+        play sound "Click.mp3" noloop 
 
+     
 
 
 
