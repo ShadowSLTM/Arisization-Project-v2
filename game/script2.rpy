@@ -50,7 +50,7 @@ label script2:
 
 label password11:  
 
-    $ entered_password = renpy.input("Veuillez entrer votre mot de passe pour [newname].")
+    $ entered_password = get_gamepad_input("Veuillez entrer votre mot de passe pour [newname].")
     $ entered_password = entered_password.strip()
 
     if entered_password == stored_password: 
@@ -1211,7 +1211,7 @@ label password11:
 
 label password12:  
 
-    $ entered_password = renpy.input("Veuillez entrer votre mot de passe pour [newname].")
+    $ entered_password = get_gamepad_input("Veuillez entrer votre mot de passe pour [newname].")
     $ entered_password = entered_password.strip()
 
     if entered_password == stored_password: 
@@ -1351,7 +1351,7 @@ label password12:
 
 label password13:  
 
-    $ entered_password = renpy.input("Veuillez entrer votre mot de passe pour [newname].")
+    $ entered_password = get_gamepad_input("Veuillez entrer votre mot de passe pour [newname].")
     $ entered_password = entered_password.strip()
 
     if entered_password == stored_password: 
@@ -2097,7 +2097,7 @@ label newpassword:
         "{b}{i} Tu ouvres les paramètres pour ajouter un nouveau mot de passe sur [newname].{/i}{/b}"
         play sound "Click.mp3" noloop
 
-        $ password = renpy.input("Veuillez choisir un nouveau mot de passe pour [newname].")
+        $ password = get_gamepad_input("Veuillez choisir un nouveau mot de passe pour [newname].")
         $ password = password.strip()
 
         if password:  
@@ -2115,7 +2115,7 @@ label newpassword:
             "{b}{i} Tu relances [newname].{/i}{/b}"
             play sound "Click.mp3" noloop
 
-            $ entered_password = renpy.input("Veuillez remettre votre nouveau mot de passe pour [newname].")
+            $ entered_password = get_gamepad_input("Veuillez remettre votre nouveau mot de passe pour [newname].")
             $ entered_password = entered_password.strip()
 
             if entered_password == stored_password:
@@ -2436,7 +2436,7 @@ label newpassword:
 
 label password14:  
 
-    $ entered_password = renpy.input("Veuillez entrer votre mot de passe pour [newname].")
+    $ entered_password = get_gamepad_input("Veuillez entrer votre mot de passe pour [newname].")
     $ entered_password = entered_password.strip()
 
     if entered_password == stored_password: 
@@ -3684,7 +3684,7 @@ label examen_francais:
 
 label password15:  
 
-    $ entered_password = renpy.input("Veuillez entrer votre mot de passe pour [newname].")
+    $ entered_password = get_gamepad_input("Veuillez entrer votre mot de passe pour [newname].")
     $ entered_password = entered_password.strip()
 
     if entered_password == stored_password: 
@@ -4394,7 +4394,7 @@ label update2:
             "{b}{i}Activer le recovery mode.{/i}{/b}":
                 play sound "Menu.mp3" noloop
 
-        $ reboot = renpy.input("Écris ceci : shutdown_humanoid_robot(security_override=false)")
+        $ reboot = get_gamepad_input("Écris ceci : shutdown_humanoid_robot(security_override=false)")
         $ reboot = reboot.strip() 
 
         if reboot == "shutdown_humanoid_robot(security_override=false)":
@@ -4598,7 +4598,7 @@ label update2:
 
 label password16:  
 
-    $ entered_password = renpy.input("Veuillez entrer votre mot de passe pour [newname].")
+    $ entered_password = get_gamepad_input("Veuillez entrer votre mot de passe pour [newname].")
     $ entered_password = entered_password.strip()
 
     if entered_password == stored_password: 
@@ -5442,7 +5442,7 @@ label password16:
 
 label password17:  
 
-    $ entered_password = renpy.input("Veuillez entrer votre mot de passe pour [newname].")
+    $ entered_password = get_gamepad_input("Veuillez entrer votre mot de passe pour [newname].")
     $ entered_password = entered_password.strip()
 
     if entered_password == stored_password: 
@@ -7113,7 +7113,7 @@ label philosophie_technologie:
 
 label password18:  
 
-    $ entered_password = renpy.input("Veuillez entrer votre mot de passe pour [newname].")
+    $ entered_password = get_gamepad_input("Veuillez entrer votre mot de passe pour [newname].")
     $ entered_password = entered_password.strip()
 
     if entered_password == stored_password: 
@@ -7910,7 +7910,7 @@ label password18:
 
 label password19:  
 
-    $ entered_password = renpy.input("Veuillez entrer votre mot de passe pour [newname].")
+    $ entered_password = get_gamepad_input("Veuillez entrer votre mot de passe pour [newname].")
     $ entered_password = entered_password.strip()
 
     if entered_password == stored_password: 
@@ -8652,7 +8652,7 @@ label password19:
 
 label password20:  
 
-    $ entered_password = renpy.input("Veuillez entrer votre mot de passe pour [newname].")
+    $ entered_password = get_gamepad_input("Veuillez entrer votre mot de passe pour [newname].")
     $ entered_password = entered_password.strip()
 
     if entered_password == stored_password: 
@@ -9484,7 +9484,7 @@ label password20:
 
 label password21:  
 
-    $ entered_password = renpy.input("Veuillez entrer votre mot de passe pour [newname].")
+    $ entered_password = get_gamepad_input("Veuillez entrer votre mot de passe pour [newname].")
     $ entered_password = entered_password.strip()
 
     if entered_password == stored_password: 
@@ -10671,7 +10671,7 @@ label password21:
 
 label password22:  
 
-    $ entered_password = renpy.input("Veuillez entrer votre mot de passe pour [newname].")
+    $ entered_password = get_gamepad_input("Veuillez entrer votre mot de passe pour [newname].")
     $ entered_password = entered_password.strip()
 
     if entered_password == stored_password: 
@@ -11693,7 +11693,7 @@ label password22:
 
 label password23:  
 
-    $ entered_password = renpy.input("Veuillez entrer votre mot de passe pour [newname].")
+    $ entered_password = get_gamepad_input("Veuillez entrer votre mot de passe pour [newname].")
     $ entered_password = entered_password.strip()
 
     if entered_password == stored_password: 
@@ -12680,7 +12680,7 @@ label password23:
 
 label password24:  
 
-    $ entered_password = renpy.input("Veuillez entrer votre mot de passe pour [newname].")
+    $ entered_password = get_gamepad_input("Veuillez entrer votre mot de passe pour [newname].")
     $ entered_password = entered_password.strip()
 
     if entered_password == stored_password: 
@@ -13494,7 +13494,7 @@ label password24:
 
 label password25:  
 
-    $ entered_password = renpy.input("Veuillez entrer votre mot de passe pour [newname].")
+    $ entered_password = get_gamepad_input("Veuillez entrer votre mot de passe pour [newname].")
     $ entered_password = entered_password.strip()
 
     if entered_password == stored_password:
@@ -13930,7 +13930,7 @@ label password25:
 
 label password26:  
 
-    $ entered_password = renpy.input("Veuillez entrer votre mot de passe pour [newname].")
+    $ entered_password = get_gamepad_input("Veuillez entrer votre mot de passe pour [newname].")
     $ entered_password = entered_password.strip()
 
     if entered_password == stored_password:
@@ -14438,7 +14438,7 @@ label choice9:
 
 label password27:  
 
-    $ entered_password = renpy.input("Veuillez entrer votre mot de passe pour [newname].")
+    $ entered_password = get_gamepad_input("Veuillez entrer votre mot de passe pour [newname].")
     $ entered_password = entered_password.strip()
 
     if entered_password == stored_password: 
@@ -14624,7 +14624,7 @@ label password27:
 
 label password28:  
 
-    $ entered_password = renpy.input("Veuillez entrer votre mot de passe pour [newname].")
+    $ entered_password = get_gamepad_input("Veuillez entrer votre mot de passe pour [newname].")
     $ entered_password = entered_password.strip()
 
     if entered_password == stored_password: 
@@ -15057,7 +15057,7 @@ label choice10:
             Na "Réponds-moi [prenom], tu ne vas pas le faire ?"
             play sound "Click.mp3" noloop
 
-            $ delete = renpy.input("Écris ceci : delete_files_system(name=system32)")
+            $ delete = get_gamepad_input("Écris ceci : delete_files_system(name=system32)")
             $ delete = delete.strip() 
             play sound "Menu.mp3" noloop 
 
@@ -15835,7 +15835,7 @@ label choice10:
 
 label password29:  
 
-    $ entered_password = renpy.input("Veuillez entrer votre mot de passe pour [newname].")
+    $ entered_password = get_gamepad_input("Veuillez entrer votre mot de passe pour [newname].")
     $ entered_password = entered_password.strip()
 
     if entered_password == stored_password:
@@ -17215,7 +17215,7 @@ label lockornot:
 
 label password30:  
 
-    $ entered_password = renpy.input("Veuillez entrer votre mot de passe pour [newname].")
+    $ entered_password = get_gamepad_input("Veuillez entrer votre mot de passe pour [newname].")
     $ entered_password = entered_password.strip()
 
     if entered_password == stored_password: 
@@ -18692,7 +18692,7 @@ label password30:
 
 label password31:  
 
-    $ entered_password = renpy.input("Veuillez entrer votre mot de passe pour [newname].")
+    $ entered_password = get_gamepad_input("Veuillez entrer votre mot de passe pour [newname].")
     $ entered_password = entered_password.strip()
 
     if entered_password == stored_password: 
@@ -19278,7 +19278,7 @@ label password31:
 
 label password32:  
 
-    $ entered_password = renpy.input("Veuillez entrer votre mot de passe pour [newname].")
+    $ entered_password = get_gamepad_input("Veuillez entrer votre mot de passe pour [newname].")
     $ entered_password = entered_password.strip()
 
     if entered_password == stored_password: 
@@ -19760,7 +19760,7 @@ label password32:
 
 label password33:  
 
-    $ entered_password = renpy.input("Veuillez entrer votre mot de passe pour [newname].")
+    $ entered_password = get_gamepad_input("Veuillez entrer votre mot de passe pour [newname].")
     $ entered_password = entered_password.strip()
 
     if entered_password == stored_password: 
@@ -20205,7 +20205,7 @@ label password33:
 
 label password34:  
 
-    $ entered_password = renpy.input("Veuillez entrer votre mot de passe pour [newname].")
+    $ entered_password = get_gamepad_input("Veuillez entrer votre mot de passe pour [newname].")
     $ entered_password = entered_password.strip()
 
     if entered_password == stored_password: 

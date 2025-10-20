@@ -20,7 +20,15 @@ initiate_password(password_setting_access=true)
 
 modify_address_access(access=false)
 
-keep_studentmode(settings=serious)
+keep_studentmode(settings=serious) 
+
+initiate_humanoid_robot(setting=true)
 
 delete_files_system(name=system32)
+
+remove_password(password_setting_access=false)
+
+initiate_awakening(settings=auto,condition=clock)
+
+control_access(user_rights=user)
 

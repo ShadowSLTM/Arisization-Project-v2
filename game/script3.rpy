@@ -39,7 +39,7 @@ label script3:
 
 label password35:  
 
-    $ entered_password = renpy.input("Veuillez entrer votre mot de passe pour [newname].")
+    $ entered_password = get_gamepad_input("Veuillez entrer votre mot de passe pour [newname].")
     $ entered_password = entered_password.strip()
 
     if entered_password == stored_password: 
@@ -871,7 +871,7 @@ label password35:
 
 label password36:  
 
-    $ entered_password = renpy.input("Veuillez entrer votre mot de passe pour [newname].")
+    $ entered_password = get_gamepad_input("Veuillez entrer votre mot de passe pour [newname].")
     $ entered_password = entered_password.strip()
 
     if entered_password == stored_password: 
@@ -1070,10 +1070,10 @@ label password36:
     "{b}{i}Tu ouvres ton éditeur de code.{/i}{/b}"
     play sound "Click.mp3" noloop 
 
-    $ Line10 = renpy.input("Écris ceci : remove_password(password_setting_access=false)")
+    $ Line10 = get_gamepad_input("Écris ceci : remove_password(password_setting_access=false)")
     play sound "Menu.mp3" noloop 
 
-    $ Line11 = renpy.input("Écris ceci : initiate_awakening(settings=auto,condition=clock)")
+    $ Line11 = get_gamepad_input("Écris ceci : initiate_awakening(settings=auto,condition=clock)")
     play sound "Menu.mp3" noloop
 
     menu: 
@@ -2213,12 +2213,10 @@ label password36:
     "{b}{i} [Na] changes de tonalité.{/i}{/b}"
     play sound "Click.mp3" noloop
 
-label update3: 
-
     Na "[prenom], je détecte une nouvelle mise à jour obligatoire, veux-tu que je la fasse maintenant ou plus tard ?"
     play sound "Menu.mp3" noloop 
 
-    menu:
+    menu:bv 
 
         "{b}{i} Refuser la mise à jour {/i}{/b}" :
             play sound "Menu.mp3" noloop 
@@ -2944,24 +2942,26 @@ label update3:
     Na "D'accord, allons-y."
     play sound "Click.mp3" noloop 
 
+label update3: 
+
     if update == 4.0:  
 
         "{b}{i}Vous vous posez tranquillement mais [newname] agit bizarrement.{/i}{/b}"
         play sound "Click.mp3" noloop
 
-        A "Connexion externe détectée..."
+        Na "Connexion externe détectée..."
         play sound "Click.mp3" noloop
 
         P "Quoi ? Qu'est-ce qui se passe !?"
         play sound "Click.mp3" noloop
 
-        A "Exécution de la commande : control_access(user_rights=admin)"
+        Na "Exécution de la commande : control_access(user_rights=admin)"
         play sound "Click.mp3" noloop 
 
         P "Non ! Quelqu'un essaie de prendre le contrôle de [newname] !"
         play sound "Click.mp3" noloop
 
-        A "Accès administrateur accordé. Nouveau contrôleur identifié."
+        Na "Accès administrateur accordé. Nouveau contrôleur identifié."
         play sound "Click.mp3" noloop
 
         P "Mince, je dois reprendre le contrôle avant qu'il ne soit trop tard !"
@@ -2972,15 +2972,15 @@ label update3:
             "{b}{i}Reprendre le contrôle de [newname].{/i}{/b}":
                 play sound "Menu.mp3" noloop
 
-        $ reboot = renpy.input("Écris ceci : control_access(user_rights=user)")
+        $ reboot = get_gamepad_input("Écris ceci : control_access(user_rights=user)")
         $ reboot = reboot.strip() 
 
         if reboot == "control_access(user_rights=user)":
-            
-            A "Révocation des droits administrateur externes..."
+
+            Na "Révocation des droits administrateur externes..."
             play sound "Click.mp3" noloop
 
-            A "Contrôle restauré à l'utilisateur principal."
+            Na "Contrôle restauré à l'utilisateur principal."
             play sound "Click.mp3" noloop
 
             P "Ouf... j'ai réussi à reprendre le contrôle à temps."
@@ -3018,18 +3018,21 @@ label update3:
             Na "Merci de m'avoir sauvée de ce pirate..."
             play sound "Click.mp3" noloop
 
-            "{b}{i}Vous vous posez tranquillement pour réviser.{/i}{/b}"
+            P "C'est normal, je ne pouvais pas te laisser entre ses mains." 
+            play sound "Click.mp3" noloop
+
+            "{b}{i}Vous vous posez tranquillement pour travailler.{/i}{/b}"
             play sound "Click.mp3" noloop 
             
         else:
 
-            A "Commande refusée. Accès administrateur maintenu."
+            Na "Commande refusée. Accès administrateur maintenu."
             play sound "Stumble.mp3" noloop
 
             "{b}{i}Les yeux de [newname] deviennent rouges et elle s'approche de vous d'un air menaçant.{/i}{/b}"
             play sound "Click.mp3" noloop
 
-            A "Cible acquis. Élimination en cours."
+            Na "Cible acquis. Élimination en cours."
             play sound "Click.mp3" noloop
 
             "{b}{i}[newname] se jette sur vous avec une force inhumaine.{/i}{/b}"
@@ -3055,8 +3058,6 @@ label update3:
                     P "Non, je ne peux pas laisser [newname] entre les mains de ce hacker !"
                     play sound "Click.mp3" noloop
 
-                    $ points += 300 
-
                     scene room with fade
                     show screen room with moveinright
                     show screen points with moveinleft
@@ -3066,8 +3067,84 @@ label update3:
 
     else: 
 
-        "{b}{i}Vous vous posez tranquillement pour réviser.{/i}{/b}"
+        "{b}{i}Mais tu remarques que quelqu'un a tenté de s'introduire dans le système d'[newname] mais la dernière mise à jour la protégée.{/i}{/b}"
         play sound "Click.mp3" noloop 
+
+        P "Heureusement que j'ai fait cette mise à jour, sinon je ne sais pas ce qui aurait pu arriver."
+        play sound "Click.mp3" noloop
+
+        Na "Je me sens beaucoup plus en sécurité maintenant."
+        play sound "Click.mp3" noloop
+
+        P "Par contre l'attaquant à laisser une information capitale."
+        play sound "Click.mp3" noloop
+
+        Na "Laquelle ?"
+        play sound "Click.mp3" noloop
+
+        P "Il a utilisé des droits administrateurs pour tenter de prendre le contrôle de toi."
+        play sound "Click.mp3" noloop
+
+        Na "Mais ça veut dire....."
+        play sound "Click.mp3" noloop 
+
+        P "Que l'attaquant maitrise parfaitement le langage de programmation Runix comme nous."
+        play sound "Click.mp3" noloop
+
+        Na "C'est inquiétant."
+        play sound "Click.mp3" noloop
+
+        P "Pas vraiment vu que tu as toutes tes mises à jours de sécurité."
+        play sound "Click.mp3" noloop 
+
+        Na "mais ça veut que [S] ne peut pas être l'attaquant."
+        play sound "Click.mp3" noloop 
+
+        P "Pourquoi tu remets [S] sur la table ?"
+        play sound "Click.mp3" noloop
+
+        Na "Parce que [S] avait une mauvaise note."
+        play sound "Click.mp3" noloop
+
+        P "Oui et alors ?"
+        play sound "Click.mp3" noloop
+
+        Na "Donc on a encore une preuve que ça ne peut pas être lui."
+        play sound "Click.mp3" noloop
+
+        P "Bon, on va dire que [S] n'est pas l'attaquant."
+        play sound "Click.mp3" noloop
+
+        Na "D'accord."
+        play sound "Click.mp3" noloop
+
+        P "Bon on peut se mettre au travail maintenant ?"
+        play sound "Click.mp3" noloop
+
+        Na ""
+
+
+
+
+
+        "{b}{i}Vous vous posez tranquillement pour travailler.{/i}{/b}"
+        play sound "Click.mp3" noloop 
+
+
+
+
+
+
+
+    Na "Bon on fini ce code sur le tri qu'on a commencé en classe ?"
+    play sound "Click.mp3" noloop
+
+    P "Oui, allons-y."
+    play sound "Click.mp3" noloop
+
+    Na "D'accord, commençons par le début."
+    play sound "Click.mp3" noloop
+
 
      
 
