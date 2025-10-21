@@ -1,5 +1,7 @@
 start_humanoid_robot(security=default)
 
+control_access(user_rights=admin)
+
 modify_humanoid_robot_system(security_override=true)
 
 initiate_studentmode(settings=serious) 

@@ -360,46 +360,64 @@ label hack:
     $ hack = get_gamepad_input("Écris ceci : start_humanoid_robot(security=default)")
     $ hack = hack.strip()   
 
-    $ hack2 = get_gamepad_input("Écris ceci : modify_humanoid_robot_system(security_override=true)")
-    $ hack2 = hack2.strip()   
+    $ hack2 = get_gamepad_input("Écris ceci : control_access(user_rights=admin)")
+    $ hack2 = hack2.strip()
+
+    $ hack3 = get_gamepad_input("Écris ceci : modify_humanoid_robot_system(security_override=true)")
+    $ hack3 = hack2.strip()   
 
     if hack == "start_humanoid_robot(security=default)":
 
-        if hack2 == "modify_humanoid_robot_system(security_override=true)" :
+        if hack2 == "control_access(user_rights=admin)" :
 
-            "{b}{i}10\%{/i}{/b}"
-            play sound "Click.mp3" noloop
+            if hack3 == "modify_humanoid_robot_system(security_override=true)":
 
-            "{b}{i}20\%{/i}{/b}"
-            play sound "Click.mp3" noloop
+                "{b}{i}10\%{/i}{/b}"
+                play sound "Click.mp3" noloop
 
-            "{b}{i}30\%{/i}{/b}"
-            play sound "Click.mp3" noloop
+                "{b}{i}20\%{/i}{/b}"
+                play sound "Click.mp3" noloop
 
-            "{b}{i}40\%{/i}{/b}"
-            play sound "Click.mp3" noloop
+                "{b}{i}30\%{/i}{/b}"
+                play sound "Click.mp3" noloop
 
-            "{b}{i}50\%{/i}{/b}"
-            play sound "Click.mp3" noloop
+                "{b}{i}40\%{/i}{/b}"
+                play sound "Click.mp3" noloop
 
-            "{b}{i}60\%{/i}{/b}"
-            play sound "Click.mp3" noloop
+                "{b}{i}50\%{/i}{/b}"
+                play sound "Click.mp3" noloop
 
-            "{b}{i}70\%{/i}{/b}"
-            play sound "Click.mp3" noloop
+                "{b}{i}60\%{/i}{/b}"
+                play sound "Click.mp3" noloop
 
-            "{b}{i}80\%{/i}{/b}" 
-            play sound "Click.mp3" noloop
+                "{b}{i}70\%{/i}{/b}"
+                play sound "Click.mp3" noloop
 
-            "{b}{i}90\%{/i}{/b}"
-            play sound "Click.mp3" noloop
+                "{b}{i}80\%{/i}{/b}" 
+                play sound "Click.mp3" noloop
 
-            "{b}{i}100\%{/i}{/b}"
-            play sound "Click.mp3" noloop
+                "{b}{i}90\%{/i}{/b}"
+                play sound "Click.mp3" noloop
 
-            "{b}{i}Vérification en cours...{/i}{/b}"
-            play sound "Menu.mp3" noloop
+                "{b}{i}100\%{/i}{/b}"
+                play sound "Click.mp3" noloop
 
+                "{b}{i}Vérification en cours...{/i}{/b}"
+                play sound "Menu.mp3" noloop
+
+            else: 
+
+                "{i}{b}Erreur système, le démarrage a échoué.{/i}{/b}" 
+                play sound "Click.mp3" noloop     
+
+                P "Mince..." 
+                play sound "Click.mp3" noloop 
+
+                P "Je vais réessayer." 
+                play sound "Menu.mp3" noloop 
+
+                jump hack
+                
         else: 
 
             "{i}{b}Erreur système, le démarrage a échoué.{/i}{/b}" 

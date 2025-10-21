@@ -2216,7 +2216,7 @@ label password36:
     Na "[prenom], je détecte une nouvelle mise à jour obligatoire, veux-tu que je la fasse maintenant ou plus tard ?"
     play sound "Menu.mp3" noloop 
 
-    menu:bv 
+    menu: 
 
         "{b}{i} Refuser la mise à jour {/i}{/b}" :
             play sound "Menu.mp3" noloop 
@@ -3121,20 +3121,11 @@ label update3:
         P "Bon on peut se mettre au travail maintenant ?"
         play sound "Click.mp3" noloop
 
-        Na ""
-
-
-
-
+        Na "Oui, allons-y."
+        play sound "Click.mp3" noloop
 
         "{b}{i}Vous vous posez tranquillement pour travailler.{/i}{/b}"
         play sound "Click.mp3" noloop 
-
-
-
-
-
-
 
     Na "Bon on fini ce code sur le tri qu'on a commencé en classe ?"
     play sound "Click.mp3" noloop
@@ -3145,12 +3136,138 @@ label update3:
     Na "D'accord, commençons par le début."
     play sound "Click.mp3" noloop
 
+    P "Parfait."
+    play sound "Click.mp3" noloop
 
-     
+    "{b}{i}Vous travaillez sur le code pendant deux heure.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    Na "On a enfin fini pour le code pour demain."
+    play sound "Click.mp3" noloop
+
+    P "Oui, on a bien travaillé."
+    play sound "Click.mp3" noloop
+
+    Na "Je suis contente qu'on ait pu avancer autant."
+    play sound "Click.mp3" noloop
+
+    P "Moi aussi."
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Vous rangez vos affaires et décidez d'aller manger.{/i}{/b}"
+    play sound "Click.mp3" noloop 
+
+    $ go_eat = get_random_go_eat()
+    P "[go_eat]"
+    play sound "Click.mp3" noloop 
+
+    $ suivi = get_random_suivi()
+    Na "[suivi]"
+    play sound "Footsteps.mp3" noloop
+
+    hide screen room with moveoutright
+    hide screen points with moveoutleft
+    hide screen day with moveoutleft
+    scene black with fade 
+
+    "{b}{i} Vous partez chercher à manger.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    $ points -= 100
+
+    scene room with fade 
+    show screen day with moveinleft
+    show screen points with moveinleft
+    show screen room with moveinright
+
+    Na "Enfin à manger... "
+    play sound "Click.mp3" noloop 
+
+    $ bien = get_random_fais_du_bien()
+    P "[bien]"
+    play sound "Click.mp3" noloop  
+
+    "{b}{i}Vous mangez tranquillement pendant une demi-heure.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    P "Tu as finis de manger ?"
+    play sound "Click.mp3" noloop
+
+    Na "Oui, je n'ai plus faim."
+    play sound "Click.mp3" noloop
+
+    P "Bien."
+    play sound "Click.mp3" noloop
+
+    Na "Bon Je vais me déconnecter et me recharger car je suis fatiguée."
+    play sound "Click.mp3" noloop 
+
+    P "D'accord, repose toi bien."
+    play sound "Click.mp3" noloop
+
+    Na "Bonne nuit [prenom]."
+    play sound "Click.mp3" noloop
+
+    P "Bonne nuit [newname] à toi aussi."
+    play sound "Click.mp3" noloop
+
+    "{b}{i}[newname] se déconnecte et recharge sa batterie.{/i}{/b}"
+    play sound "Click.mp3" noloop 
+
+    P "Enfin fini je vais pouvoir aller dormir pour demain."
+    play sound "Click.mp3" noloop  
+
+    "{b}{i}Tu te changes avant d'aller de te coucher.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    hide screen day with moveoutleft
+    hide screen room with moveoutright
+    hide screen points with moveoutleft
+    scene black with fade
+
+    "{b}{i}Le lendemain matin, le 7 janvier 2098{/i}{/b}"
+    play sound "Alarm.mp3" noloop
+
+    $ day += 1 
+
+    scene room with fade 
+    show screen day with moveinleft
+    show screen room with moveinright
+    show screen points with moveinleft 
+
+    "{b}{i}Tu te réveilles tranquillement.{/i}{/b}"
+    play sound "Click.mp3" noloop 
+
+    $ line = get_random_morning_line()
+    P "[line]"
+    play sound "Click.mp3" noloop 
+
+    "{b}{i}Tu te changes et puis tu aperçois [newname] encore endormie.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    P "Elle est encore endormie, je vais laisser encore cinq minutes pour voir si elle se réveile."
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Tu attends patiemment qu'elle se réveille.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    P "Bon elle ne se réveille pas, je vais devoir la réveiller moi-même."
+    play sound "Click.mp3" noloop
+
+    Na "Hmmm....."
+    play sound "Click.mp3" noloop
+
+    Na "Bonjour [prenom], je suis désolée de ne pas m'être réveillée toute seule."
+    play sound "Click.mp3" noloop
+
+    P "Ce n'est pas grave, l'important c'est que tu sois réveillée maintenant."
+    play sound "Click.mp3" noloop
+
+ 
 
 
-
+    
 
     label end_script3:
-    call script3 from _call_script4    
+    call script4 from _call_script4    
     return 
