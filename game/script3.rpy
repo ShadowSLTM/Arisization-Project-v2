@@ -3438,10 +3438,17 @@ label update3:
     play sound "Click.mp3" noloop  
 
     M "Bien nous pouvons commencer le cours."
-    play sound "Click.mp3" noloop  
+    play sound "Click.mp3" noloop   
 
-    
+    M "Je vais commencer par ramasser les codes que je vous ai demandé de finir."
+    play sound "Click.mp3" noloop
 
+    M "Merci de me les remettre."
+    play sound "Click.mp3" noloop
+
+    $ validation = get_random_validation() 
+    P "[validation]"
+    play sound "Click.mp3" noloop 
 
 
     label end_script3:
