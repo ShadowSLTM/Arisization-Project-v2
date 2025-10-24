@@ -39,7 +39,7 @@ label script3:
 
 label password35:  
 
-    $ entered_password = get_gamepad_input("Veuillez entrer votre mot de passe pour [newname].")
+    $ entered_password = renpy.input("Veuillez entrer votre mot de passe pour [newname].")
     $ entered_password = entered_password.strip()
 
     if entered_password == stored_password: 
@@ -871,7 +871,7 @@ label password35:
 
 label password36:  
 
-    $ entered_password = get_gamepad_input("Veuillez entrer votre mot de passe pour [newname].")
+    $ entered_password = renpy.input("Veuillez entrer votre mot de passe pour [newname].")
     $ entered_password = entered_password.strip()
 
     if entered_password == stored_password: 
@@ -1070,10 +1070,10 @@ label password36:
     "{b}{i}Tu ouvres ton éditeur de code.{/i}{/b}"
     play sound "Click.mp3" noloop 
 
-    $ Line10 = get_gamepad_input("Écris ceci : remove_password(password_setting_access=false)")
+    $ Line10 = renpy.input("Écris ceci : remove_password(password_setting_access=false)")
     play sound "Menu.mp3" noloop 
 
-    $ Line11 = get_gamepad_input("Écris ceci : initiate_awakening(settings=auto,condition=clock)")
+    $ Line11 = renpy.input("Écris ceci : initiate_awakening(settings=auto,condition=clock)")
     play sound "Menu.mp3" noloop
 
     menu: 
@@ -2972,7 +2972,7 @@ label update3:
             "{b}{i}Reprendre le contrôle de [newname].{/i}{/b}":
                 play sound "Menu.mp3" noloop
 
-        $ reboot = get_gamepad_input("Écris ceci : control_access(user_rights=user)")
+        $ reboot = renpy.input("Écris ceci : control_access(user_rights=user)")
         $ reboot = reboot.strip() 
 
         if reboot == "control_access(user_rights=user)":
@@ -3448,7 +3448,24 @@ label update3:
 
     $ validation = get_random_validation() 
     P "[validation]"
-    play sound "Click.mp3" noloop 
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Tout le monde a rendu leur travail.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    M "Parfait, maintenant nous allons passer à la suite du cours."
+    play sound "Click.mp3" noloop
+
+    M "Aujourd'hui, nous allons analyser différents codes que vous avez fait."
+    play sound "Click.mp3" noloop
+
+    P "Intéressant de savoir comment les autres ont fait."
+    play sound "Click.mp3" noloop
+
+    M "Exactement, c'est important de voir différentes approches."
+    play sound "Click.mp3" noloop
+
+    
 
 
     label end_script3:

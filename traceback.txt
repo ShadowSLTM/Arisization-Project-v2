@@ -1,26 +1,28 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 132, in script
-    $ prenom = get_gamepad_input("Quel est votre prénom de lycéen ?")
-  File "game/script.rpy", line 132, in <module>
-    $ prenom = get_gamepad_input("Quel est votre prénom de lycéen ?")
-NameError: name 'get_gamepad_input' is not defined
+  File "game/script.rpy", line 144, in script
+    if pronom not "il" or pronom not "elle":
+SyntaxError: invalid syntax (game/script.rpy, line 144)
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 132, in script
-    $ prenom = get_gamepad_input("Quel est votre prénom de lycéen ?")
-  File "C:\Users\Aris\Documents\renpy-8.3.7-sdk\renpy\ast.py", line 834, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "C:\Users\Aris\Documents\renpy-8.3.7-sdk\renpy\python.py", line 1187, in py_exec_bytecode
-    exec(bytecode, globals, locals)
-  File "game/script.rpy", line 132, in <module>
-    $ prenom = get_gamepad_input("Quel est votre prénom de lycéen ?")
-NameError: name 'get_gamepad_input' is not defined
+  File "game/script.rpy", line 144, in script
+    if pronom not "il" or pronom not "elle":
+  File "C:\Users\Aris\Documents\renpy-8.3.7-sdk\renpy\ast.py", line 1856, in execute
+    if renpy.python.py_eval(condition):
+  File "C:\Users\Aris\Documents\renpy-8.3.7-sdk\renpy\python.py", line 1216, in py_eval
+    code = py_compile(code, 'eval')
+  File "C:\Users\Aris\Documents\renpy-8.3.7-sdk\renpy\python.py", line 1153, in py_compile
+    raise e
+  File "C:\Users\Aris\Documents\renpy-8.3.7-sdk\renpy\python.py", line 1090, in py_compile
+    raise orig_e
+  File "C:\Users\Aris\Documents\renpy-8.3.7-sdk\renpy\python.py", line 1082, in py_compile
+    tree = compile(source, filename, py_mode, ast.PyCF_ONLY_AST | flags, 1)
+SyntaxError: invalid syntax (game/script.rpy, line 144)
 
 Windows-10-10.0.26200 AMD64
 Ren'Py 8.3.7.25031702
 Arisization Project Version_0.0.5
-Sat Oct 18 01:09:14 2025
+Sat Oct 25 00:40:11 2025

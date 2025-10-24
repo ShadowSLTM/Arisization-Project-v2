@@ -129,22 +129,23 @@ label identity:
     stop music fadeout 2.0   
     scene black with fade
 
-    $ prenom = get_gamepad_input("Quel est votre prénom de lycéen ?")
+    $ prenom = renpy.input("Quel est votre prénom de lycéen ?")
     $ prenom = prenom.strip() 
     play sound "Menu.mp3" noloop 
 
-    $ nom = get_gamepad_input("Quel est votre nom de lycéen ?")
+    $ nom = renpy.input("Quel est votre nom de lycéen ?")
     $ nom = nom.strip()
     play sound "Menu.mp3" noloop 
 
-    $ pronom = get_gamepad_input("Quel est votre genre ? (il ou elle)")
-    $ pronom = pronom.strip()
+    $ pronom = renpy.input("Quel est votre genre ? (il ou elle)")
+    $ pronom = pronom.strip().lower()
     play sound "Menu.mp3" noloop 
     
     if pronom not in {"il", "elle"}:
 
         "{b}{i}Erreur système. Veuillez réessayer.{/i}{/b}"
         $ renpy.restart_interaction()
+
         jump identity 
 
     "{b}{i}Vos informations ont été enregistrées.{/i}{/b}"
@@ -357,13 +358,13 @@ label début:
 
 label hack: 
 
-    $ hack = get_gamepad_input("Écris ceci : start_humanoid_robot(security=default)")
+    $ hack = renpy.input("Écris ceci : start_humanoid_robot(security=default)")
     $ hack = hack.strip()   
 
-    $ hack2 = get_gamepad_input("Écris ceci : control_access(user_rights=admin)")
+    $ hack2 = renpy.input("Écris ceci : control_access(user_rights=admin)")
     $ hack2 = hack2.strip()
 
-    $ hack3 = get_gamepad_input("Écris ceci : modify_humanoid_robot_system(security_override=true)")
+    $ hack3 = renpy.input("Écris ceci : modify_humanoid_robot_system(security_override=true)")
     $ hack3 = hack2.strip()   
 
     if hack == "start_humanoid_robot(security=default)":
@@ -2999,7 +3000,7 @@ label choice3:
 label choice4:
 
     play sound "Menu.mp3" noloop
-    $ newname = get_gamepad_input("Veuillez écrire le nouveau prénom d'[A].")
+    $ newname = renpy.input("Veuillez écrire le nouveau prénom d'[A].")
     $ newname = newname.strip()
 
     if newname == "Aris":
@@ -3041,7 +3042,7 @@ label choice4:
 
 label choice5:
 
-    $ ip = get_gamepad_input("Entrez l'adresse IP d'[newname] en suivant la méthode de conversion suggérée (trois chiffres pour chaque partie : 000.000.000.000).")
+    $ ip = renpy.input("Entrez l'adresse IP d'[newname] en suivant la méthode de conversion suggérée (trois chiffres pour chaque partie : 000.000.000.000).")
     $ ip = ip.strip()
 
     if ip == "001.018.009.019":
@@ -3477,7 +3478,7 @@ label studentmode:
     "{b}{i}Tu démarre ton ordinateur et lances ton éditeur de code.{/i}{/b}" 
     play sound "Menu.mp3" noloop
 
-    $ studentmode = get_gamepad_input("Écris ceci : initiate_studentmode(settings=serious)")
+    $ studentmode = renpy.input("Écris ceci : initiate_studentmode(settings=serious)")
     play sound "Menu.mp3" noloop 
 
     if studentmode == "initiate_studentmode(settings=serious)":
@@ -4888,7 +4889,7 @@ label studentmode:
 
             label choice7:
 
-            $ ip = get_gamepad_input("Entre l'adresse IP pour pouvoir te connecter à [newname].")
+            $ ip = renpy.input("Entre l'adresse IP pour pouvoir te connecter à [newname].")
             $ ip = ip.strip()
 
             if ip == "001.018.009.019":
@@ -5297,7 +5298,7 @@ label studentmode:
 label choice8:  
 
     play sound "Menu.mp3" noloop
-    $ ip = get_gamepad_input("Entre l'adresse IP pour pouvoir te connecter à [newname].")
+    $ ip = renpy.input("Entre l'adresse IP pour pouvoir te connecter à [newname].")
     $ ip = ip.strip()
 
     if ip == "001.018.009.019":
@@ -10589,7 +10590,7 @@ label debate_success:
     M "Bien."
     play sound "Click.mp3" noloop
     
-    $ Code = get_gamepad_input("Veuillez écrire la réponse.")
+    $ Code = renpy.input("Veuillez écrire la réponse.")
     $ Code = Code.strip() 
 
     if Code == "print(\"text\")":
@@ -10877,34 +10878,34 @@ label debate_success:
 
 label code: 
 
-    $ system = get_gamepad_input("Choisis un nom pour son système d'exploitation.")
+    $ system = renpy.input("Choisis un nom pour son système d'exploitation.")
     play sound "Menu.mp3" noloop 
 
-    $ Line1 = get_gamepad_input("Écris ceci : create_system(name=Aris,mode=secure,boot=true,fightmode=false)")
+    $ Line1 = renpy.input("Écris ceci : create_system(name=Aris,mode=secure,boot=true,fightmode=false)")
     play sound "Menu.mp3" noloop 
 
-    $ Line2 = get_gamepad_input("Écris ceci : create_files_system(name=system32)")
+    $ Line2 = renpy.input("Écris ceci : create_files_system(name=system32)")
     play sound "Menu.mp3" noloop
 
-    $ Line3 = get_gamepad_input("Écris ceci : create_system(settings_access=default)")
+    $ Line3 = renpy.input("Écris ceci : create_system(settings_access=default)")
     play sound "Menu.mp3" noloop
 
-    $ Line4 = get_gamepad_input("Écris ceci : modify_system(setting_access=true)")
+    $ Line4 = renpy.input("Écris ceci : modify_system(setting_access=true)")
     play sound "Menu.mp3" noloop
 
-    $ Line5 = get_gamepad_input("Écris ceci : create_database(database_access=false)")
+    $ Line5 = renpy.input("Écris ceci : create_database(database_access=false)")
     play sound "Menu.mp3" noloop
 
-    $ Line6 = get_gamepad_input("Écris ceci : initiate_indexation(source=database)")
+    $ Line6 = renpy.input("Écris ceci : initiate_indexation(source=database)")
     play sound "Menu.mp3" noloop
 
-    $ Line7 = get_gamepad_input("Écris ceci : initiate_password(password_setting_access=true)")
+    $ Line7 = renpy.input("Écris ceci : initiate_password(password_setting_access=true)")
     play sound "Menu.mp3" noloop
 
-    $ Line8 = get_gamepad_input("Écris ceci : modify_address_access(access=false)")
+    $ Line8 = renpy.input("Écris ceci : modify_address_access(access=false)")
     play sound "Menu.mp3" noloop 
 
-    $ Line9 = get_gamepad_input("Écris ceci : keep_studentmode(settings=serious)")
+    $ Line9 = renpy.input("Écris ceci : keep_studentmode(settings=serious)")
     play sound "Menu.mp3" noloop
 
     menu: 
@@ -11270,7 +11271,7 @@ label update:
             "{b}{i}Activer le recovery mode.{/i}{/b}":
                 play sound "Menu.mp3" noloop
 
-        $ reboot = get_gamepad_input("Écris ceci : shutdown_humanoid_robot(security_override=false)")
+        $ reboot = renpy.input("Écris ceci : shutdown_humanoid_robot(security_override=false)")
         $ reboot = reboot.strip() 
 
         if reboot == "shutdown_humanoid_robot(security_override=false)":
@@ -12853,7 +12854,7 @@ label update:
 
 label choisir_mot_de_passe:
 
-    $ password = get_gamepad_input("Veuillez choisir un mot de passe pour [newname].")
+    $ password = renpy.input("Veuillez choisir un mot de passe pour [newname].")
     $ password = password.strip()
 
     if password:  
@@ -12875,7 +12876,7 @@ label choisir_mot_de_passe:
 
 label password:  
 
-    $ entered_password = get_gamepad_input("Veuillez remettre votre mot de passe pour [newname].")
+    $ entered_password = renpy.input("Veuillez remettre votre mot de passe pour [newname].")
     $ entered_password = entered_password.strip()
 
     if entered_password == stored_password:
@@ -14127,7 +14128,7 @@ label password:
 
 label password1:  
 
-    $ entered_password = get_gamepad_input("Veuillez entrer votre mot de passe pour [newname].")
+    $ entered_password = renpy.input("Veuillez entrer votre mot de passe pour [newname].")
     $ entered_password = entered_password.strip()
 
     if entered_password == stored_password:
@@ -14973,7 +14974,7 @@ label password1:
 
 label password2:  
 
-    $ entered_password = get_gamepad_input("Veuillez entrer votre mot de passe pour [newname].")
+    $ entered_password = renpy.input("Veuillez entrer votre mot de passe pour [newname].")
     $ entered_password = entered_password.strip()
 
     if entered_password == stored_password:
@@ -16011,7 +16012,7 @@ label examen_pythagore:
 
 label password3:  
 
-    $ entered_password = get_gamepad_input("Veuillez entrer votre mot de passe pour [newname].")
+    $ entered_password = renpy.input("Veuillez entrer votre mot de passe pour [newname].")
     $ entered_password = entered_password.strip()
 
     if entered_password == stored_password:
@@ -16632,7 +16633,7 @@ label password3:
 
 label password4:  
 
-    $ entered_password = get_gamepad_input("Veuillez entrer votre mot de passe pour [newname].")
+    $ entered_password = renpy.input("Veuillez entrer votre mot de passe pour [newname].")
     $ entered_password = entered_password.strip()
 
     if entered_password == stored_password: 
@@ -17201,7 +17202,7 @@ label password4:
     M "Presque ça, il manque quelque chose." 
     play sound "Click.mp3" noloop
 
-    $ answer = get_gamepad_input("écris ta réponse.") 
+    $ answer = renpy.input("écris ta réponse.") 
     $ answer = answer.strip() 
 
     M "[prenom] as-tu une idée ?" 
@@ -17313,7 +17314,7 @@ label password4:
 
 label password5:  
 
-    $ entered_password = get_gamepad_input("Veuillez entrer votre mot de passe pour [newname].")
+    $ entered_password = renpy.input("Veuillez entrer votre mot de passe pour [newname].")
     $ entered_password = entered_password.strip()
 
     if entered_password == stored_password:
@@ -17474,7 +17475,7 @@ label password5:
 
 label password6:  
 
-    $ entered_password = get_gamepad_input("Veuillez entrer votre mot de passe pour [newname].")
+    $ entered_password = renpy.input("Veuillez entrer votre mot de passe pour [newname].")
     $ entered_password = entered_password.strip()
 
     if entered_password == stored_password: 
@@ -18181,7 +18182,7 @@ label password6:
 
 label password7:  
 
-    $ entered_password = get_gamepad_input("Veuillez entrer votre mot de passe pour [newname].")
+    $ entered_password = renpy.input("Veuillez entrer votre mot de passe pour [newname].")
     $ entered_password = entered_password.strip()
 
     if entered_password == stored_password: 
@@ -18745,7 +18746,7 @@ label password7:
 
 label password8:  
 
-    $ entered_password = get_gamepad_input("Veuillez entrer votre mot de passe pour [newname].")
+    $ entered_password = renpy.input("Veuillez entrer votre mot de passe pour [newname].")
     $ entered_password = entered_password.strip()
 
     if entered_password == stored_password: 
@@ -19101,70 +19102,70 @@ label examen_runix:
     P "[seethat]"     
     play sound "Click.mp3" noloop 
 
-    $ answer1 = get_gamepad_input("En quelle année a été créé Runix ?").strip()
+    $ answer1 = renpy.input("En quelle année a été créé Runix ?").strip()
 
     if answer1 == "2079":
         $ grade += 2.0
     else:
         $ grade += 0.0
 
-    $ answer2 = get_gamepad_input("Citez une des deux personnes qui a créé Runix.").strip().lower()
+    $ answer2 = renpy.input("Citez une des deux personnes qui a créé Runix.").strip().lower()
 
     if answer2 in ["saori kaminari", "mizuki suzumiya"]:
         $ grade += 2.0
     else:
         $ grade += 0.0
 
-    $ answer3 = get_gamepad_input("Comment commence-t-on une ligne de code en Runix ?").strip()
+    $ answer3 = renpy.input("Comment commence-t-on une ligne de code en Runix ?").strip()
 
     if answer3 in ["initiate", "initiate_", "create", "create_", "modify", "modify_"]:
         $ grade += 2.0
     else:
         $ grade += 0.0
 
-    $ answer4 = get_gamepad_input("Quelle est l'extension des fichiers codés en Runix ?").strip().lower()
+    $ answer4 = renpy.input("Quelle est l'extension des fichiers codés en Runix ?").strip().lower()
 
     if answer4 in ["rnx", ".rnx"]:
         $ grade += 2.0
     else:
         $ grade += 0.0
 
-    $ answer5 = get_gamepad_input("Quelle est la fonction pour activer les paramètres ?").strip()
+    $ answer5 = renpy.input("Quelle est la fonction pour activer les paramètres ?").strip()
 
     if answer5 == "(settings=true)":
         $ grade += 2.0
     else:
         $ grade += 0.0
 
-    $ answer6 = get_gamepad_input("Quelle est la fonction pour désactiver les paramètres ?").strip()
+    $ answer6 = renpy.input("Quelle est la fonction pour désactiver les paramètres ?").strip()
 
     if answer6 == "(settings=false)":
         $ grade += 2.0
     else:
         $ grade += 0.0
 
-    $ answer7 = get_gamepad_input("Quelle est la commande pour créer un système ?").strip()
+    $ answer7 = renpy.input("Quelle est la commande pour créer un système ?").strip()
 
     if answer7 == "create_system":
         $ grade += 2.0
     else:
         $ grade += 0.0
 
-    $ answer8 = get_gamepad_input("Pour quelle technologie le langage Runix a-t-il été créé à la base ?").strip().lower()
+    $ answer8 = renpy.input("Pour quelle technologie le langage Runix a-t-il été créé à la base ?").strip().lower()
 
     if answer8 == "les robots":
         $ grade += 2.0
     else:
         $ grade += 0.0
 
-    $ answer9 = get_gamepad_input("Quel est le nom de la société ayant développé Runix ?").strip().lower()
+    $ answer9 = renpy.input("Quel est le nom de la société ayant développé Runix ?").strip().lower()
 
     if answer9 == "neogen technologies":
         $ grade += 2.0
     else: 
         $ grade += 0.0
 
-    $ answer10 = get_gamepad_input("Quel est le bout de code pour éteindre en désactivant les paramètres ?").strip()
+    $ answer10 = renpy.input("Quel est le bout de code pour éteindre en désactivant les paramètres ?").strip()
 
     if answer10 == "shutdown(settings=false)":
         $ grade += 2.0
@@ -19797,7 +19798,7 @@ label examen_runix:
 
 label password9:  
 
-    $ entered_password = get_gamepad_input("Veuillez entrer votre mot de passe pour [newname].")
+    $ entered_password = renpy.input("Veuillez entrer votre mot de passe pour [newname].")
     $ entered_password = entered_password.strip()
 
     if entered_password == stored_password: 
@@ -20903,7 +20904,7 @@ label code1:
 
 label password10:  
 
-    $ entered_password = get_gamepad_input("Veuillez entrer votre mot de passe pour [newname].")
+    $ entered_password = renpy.input("Veuillez entrer votre mot de passe pour [newname].")
     $ entered_password = entered_password.strip()
 
     if entered_password == stored_password: 
@@ -21696,7 +21697,7 @@ label update1:
             "{b}{i}Accéder à l'interface bios d'[newname].{/i}{/b}":
                 play sound "Menu.mp3" noloop
 
-        $ reboot = get_gamepad_input("Écris ceci : shutdown_humanoid_robot(security_override=false)")
+        $ reboot = renpy.input("Écris ceci : shutdown_humanoid_robot(security_override=false)")
         $ reboot = reboot.strip() 
 
         if reboot == "shutdown_humanoid_robot(security_override=false)":
