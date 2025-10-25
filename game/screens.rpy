@@ -1915,6 +1915,8 @@ screen credit():
             text _("Gestion des fichiers du jeu : [Dc] (Shadow_SLTM)\n") 
 
             text _("Sécurités du jeu : [Dc] (Shadow_SLTM)\n") 
+
+            text _("Tests de sécurité : [Dc] (Shadow_SLTM)\n") 
             
             label "{b}{i}— Contributions secondaires —\n{/i}{/b}" 
 
@@ -1954,9 +1956,11 @@ screen credit():
 
             label "{b}{i}— Propriété —\n{/i}{/b}"   
 
-            text _("Arisization Project (The Realization Project of Aris) appartient à [Dc] (Shadow_SLTM)\n")        
+            text _("Arisization Project (The Realization Project of Aris) appartient à [Dc] (Shadow_SLTM)\n")       
 
-            text _("Éditeur : SLTM\n") 
+            text _("Distribution du jeu : [Dc] (Shadow_SLTM)\n") 
+
+            text _("Éditeur : SLTM\n")
 
 style about_label is gui_label  
 style about_label_text is gui_label_text

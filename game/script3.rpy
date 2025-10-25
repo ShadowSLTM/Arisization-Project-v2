@@ -3456,7 +3456,7 @@ label update3:
     M "Parfait, maintenant nous allons passer à la suite du cours."
     play sound "Click.mp3" noloop
 
-    M "Aujourd'hui, nous allons analyser différents codes que vous avez fait."
+    M "Aujourd'hui, nous allons analyser différents codes de tri que vous avez fait."
     play sound "Click.mp3" noloop
 
     P "Intéressant de savoir comment les autres ont fait."
@@ -3465,8 +3465,378 @@ label update3:
     M "Exactement, c'est important de voir différentes approches."
     play sound "Click.mp3" noloop
 
-    
+    M "Commençons par le groupe de [I] et [H]. Pouvez-vous nous montrer votre code ?"
+    play sound "Click.mp3" noloop
 
+    I "Oui madame. Nous avons utilisé un tri par sélection."
+    play sound "Click.mp3" noloop
+
+    M "Très bien. Expliquez-nous le principe."
+    play sound "Click.mp3" noloop
+
+    H "On cherche le plus petit élément et on le place au début, puis on recommence avec le reste."
+    play sound "Click.mp3" noloop
+
+    M "Parfait. Et quelle est la complexité de cet algorithme ?"
+    play sound "Click.mp3" noloop
+
+    I "O(n²) dans tous les cas, madame."
+    play sound "Click.mp3" noloop
+
+    P "{=Pensee}Classique, mais pas très optimisé...{/Pensee}"
+    play sound "Click.mp3" noloop
+
+    M "Exact. Pouvez-vous nous montrer votre code au tableau ?"
+    play sound "Click.mp3" noloop
+
+    I "Bien sûr."
+    play sound "Click.mp3" noloop
+
+    "{b}{i}[I] se lève et écrit le code au tableau.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    H "On a utilisé deux boucles imbriquées. La première parcourt le tableau..."
+    play sound "Click.mp3" noloop
+
+    I "Et la deuxième cherche le minimum dans la partie non triée."
+    play sound "Click.mp3" noloop
+
+    M "Bien expliqué. Quelqu'un voit des points à améliorer ?"
+    play sound "Click.mp3" noloop
+
+    "{b}{i}La classe reste silencieuse quelques instants.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    Na "On pourrait éviter les échanges inutiles si l'élément est déjà à sa place."
+    play sound "Click.mp3" noloop
+
+    M "Excellente remarque, [newname]. C'est ce genre d'optimisation qui fait la différence."
+    play sound "Click.mp3" noloop
+
+    I "Ah oui, on n'y avait pas pensé."
+    play sound "Click.mp3" noloop
+
+    M "Ce n'est pas grave, l'important est d'apprendre. Maintenant, [P] et [newname], montrez-nous votre approche."
+    play sound "Click.mp3" noloop
+
+    P "Nous avons implémenté un tri rapide avec partition."
+    play sound "Click.mp3" noloop
+
+    S "Évidemment qu'ils ont fait le plus compliqué...."
+    play sound "Click.mp3" noloop
+
+    M "Intéressant. Et pourquoi ce choix ?"
+    play sound "Click.mp3" noloop
+
+    P "Parce que la complexité moyenne est O(n log n), bien meilleure que O(n²)."
+    play sound "Click.mp3" noloop
+
+    M "Excellent raisonnement. Pouvez-vous expliquer le principe à la classe ?"
+    play sound "Click.mp3" noloop
+
+    P "Le tri rapide fonctionne par division. On choisit un pivot et on partitionne le tableau."
+    play sound "Click.mp3" noloop
+
+    Na "Les éléments plus petits que le pivot vont à gauche, les plus grands à droite."
+    play sound "Click.mp3" noloop
+
+    P "Ensuite on applique récursivement le même principe sur chaque partie."
+    play sound "Click.mp3" noloop
+
+    M "Très clair. Et vous avez mentionné des optimisations ?"
+    play sound "Click.mp3" noloop
+
+    Na "Oui, pour les petits tableaux de moins de 10 éléments, on bascule sur un tri par insertion."
+    play sound "Click.mp3" noloop
+
+    M "Pourquoi cette approche ?"
+    play sound "Click.mp3" noloop
+
+    P "Parce que le tri par insertion est plus rapide sur de petites données, malgré sa complexité O(n²)."
+    play sound "Click.mp3" noloop
+
+    M "Exactement. La théorie de la complexité ne fait pas tout, les constantes comptent aussi."
+    play sound "Click.mp3" noloop
+
+    Hi "Et comment vous avez choisi le pivot ?"
+    play sound "Click.mp3" noloop
+
+    Na "On prend la médiane de trois valeurs : premier, milieu et dernier élément."
+    play sound "Click.mp3" noloop
+
+    M "Technique classique pour éviter le pire cas. Bien pensé."
+    play sound "Click.mp3" noloop
+
+    S "Ils ont vraiment pensé à tout ces deux-là..."
+    play sound "Click.mp3" noloop
+
+    M "Maintenant, [K], [N] et [S], à vous."
+    play sound "Click.mp3" noloop
+
+    S "Nous... on a fait un tri à bulles, madame."
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Quelques rires étouffés se font entendre dans la classe.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    M "Du calme ! Le tri à bulles n'est pas ridicule s'il est bien implémenté."
+    play sound "Click.mp3" noloop
+
+    K "Avec quelques optimisations quand même !"
+    play sound "Click.mp3" noloop
+
+    N "On arrête si le tableau est déjà trié en vérifiant s'il y a eu des échanges."
+    play sound "Click.mp3" noloop
+
+    M "C'est une bonne idée d'optimisation. Expliquez-nous."
+    play sound "Click.mp3" noloop
+
+    S "Si pendant un passage complet on n'a fait aucun échange, c'est que le tableau est trié."
+    play sound "Click.mp3" noloop
+
+    M "Exactement. Et quelle est la complexité dans le meilleur cas avec cette optimisation ?"
+    play sound "Click.mp3" noloop
+
+    K "O(n) si le tableau est déjà trié !"
+    play sound "Click.mp3" noloop
+
+    M "Très bien. Vous voyez, même un algorithme simple peut être amélioré."
+    play sound "Click.mp3" noloop
+
+    P "{=Pensee}Au moins ils ont essayé d'optimiser... Mais ça reste du tri à bulles.{/Pensee}"
+    play sound "Click.mp3" noloop
+
+    M "Continuons avec [Hi] et [Y]. Qu'avez-vous fait ?"
+    play sound "Click.mp3" noloop
+
+    Hi "Nous avons implémenté un tri par insertion, madame."
+    play sound "Click.mp3" noloop
+
+    Y "On a trouvé que c'était un bon compromis entre simplicité et efficacité."
+    play sound "Click.mp3" noloop
+
+    M "Intéressant. Développez votre pensée."
+    play sound "Click.mp3" noloop
+
+    Hi "Le tri par insertion est simple à comprendre et à coder."
+    play sound "Click.mp3" noloop
+
+    Y "Et il est très efficace sur des tableaux presque triés ou de petite taille."
+    play sound "Click.mp3" noloop
+
+    M "Excellent point. C'est d'ailleurs pour ça que [P] et [newname] l'utilisent dans leur optimisation."
+    play sound "Click.mp3" noloop
+
+    P "C'est vrai, le tri par insertion a son utilité dans certains contextes."
+    play sound "Click.mp3" noloop
+
+    Hi "Merci. On a aussi remarqué qu'il est stable, contrairement au tri rapide."
+    play sound "Click.mp3" noloop
+
+    M "Quelqu'un peut expliquer ce qu'est la stabilité d'un tri ?"
+    play sound "Click.mp3" noloop
+
+    Na "C'est quand deux éléments égaux gardent leur ordre relatif après le tri."
+    play sound "Click.mp3" noloop
+
+    M "Parfait. Et pourquoi est-ce important ?"
+    play sound "Click.mp3" noloop
+
+    Y "Si on trie des données déjà triées par un autre critère, on ne perd pas cet ordre."
+    play sound "Click.mp3" noloop
+
+    M "Exactement. Par exemple, des étudiants triés par classe puis par nom."
+    play sound "Click.mp3" noloop
+
+    P "{=Pensee}C'est vrai que je n'avais pas pensé à la stabilité...{/Pensee}"
+    play sound "Click.mp3" noloop
+
+    M "Passons maintenant à [J1] et [J2]. Montrez-nous votre travail."
+    play sound "Click.mp3" noloop
+
+    J1 "On a fait un tri par fusion, madame."
+    play sound "Click.mp3" noloop
+
+    J2 "C'est un peu comme le tri rapide mais en divisant toujours en deux parties égales."
+    play sound "Click.mp3" noloop
+
+    M "Bonne description. Quelle est la différence principale ?"
+    play sound "Click.mp3" noloop
+
+    J1 "Le tri rapide divise selon un pivot, le tri fusion divise simplement au milieu."
+    play sound "Click.mp3" noloop
+
+    J2 "Et la fusion se fait après, en combinant deux sous-tableaux triés."
+    play sound "Click.mp3" noloop
+
+    M "Très bien. Et quels sont les avantages ?"
+    play sound "Click.mp3" noloop
+
+    J1 "La complexité est toujours O(n log n), même dans le pire cas."
+    play sound "Click.mp3" noloop
+
+    J2 "Et c'est un tri stable !"
+    play sound "Click.mp3" noloop
+
+    M "Excellent. Y a-t-il des inconvénients ?"
+    play sound "Click.mp3" noloop
+
+    P "Il nécessite de la mémoire supplémentaire pour la fusion."
+    play sound "Click.mp3" noloop
+
+    M "Exactement, [P]. La complexité spatiale est O(n)."
+    play sound "Click.mp3" noloop
+
+    J1 "Oui, on a dû créer des tableaux temporaires."
+    play sound "Click.mp3" noloop
+
+    M "C'est le compromis. Performance garantie contre utilisation mémoire."
+    play sound "Click.mp3" noloop
+
+    S "Tous ces algorithmes différents... C'est compliqué."
+    play sound "Click.mp3" noloop
+
+    M "Bien, nous avons vu plusieurs approches. Quelle est la conclusion ?"
+    play sound "Click.mp3" noloop
+
+    P "Il n'y a pas de meilleur algorithme universel."
+    play sound "Click.mp3" noloop
+
+    M "Développez."
+    play sound "Click.mp3" noloop
+
+    P "Ça dépend du contexte : taille des données, si elles sont presque triées, mémoire disponible..."
+    play sound "Click.mp3" noloop
+
+    Na "Et aussi si on a besoin de stabilité ou pas."
+    play sound "Click.mp3" noloop
+
+    M "Parfaitement résumé. C'est exactement ce que je voulais que vous compreniez."
+    play sound "Click.mp3" noloop
+
+    M "Un bon programmeur connaît plusieurs outils et sait choisir le bon selon la situation."
+    play sound "Click.mp3" noloop
+
+    I "Donc notre tri par sélection n'est pas nul finalement ?"
+    play sound "Click.mp3" noloop
+
+    M "Absolument pas. Il est simple, ne nécessite pas de mémoire supplémentaire et fait peu d'écritures."
+    play sound "Click.mp3" noloop
+
+    H "Peu d'écritures ?"
+    play sound "Click.mp3" noloop
+
+    M "Oui, au maximum n échanges. C'est utile quand les écritures sont coûteuses, comme sur certains supports."
+    play sound "Click.mp3" noloop
+
+    I "Ah, je comprends mieux !"
+    play sound "Click.mp3" noloop
+
+    M "Bien. Pour le prochain cours, je veux que vous réfléchissiez à d'autres algorithmes."
+    play sound "Click.mp3" noloop
+
+    M "Faites des recherches sur le tri par tas et le tri par comptage."
+    play sound "Click.mp3" noloop
+
+    P "{=Pensee}Le tri par tas, ça va être intéressant...{/Pensee}"
+    play sound "Click.mp3" noloop
+
+    S "Madame, on doit les implémenter ?"
+    play sound "Click.mp3" noloop
+
+    M "Non, juste comprendre leur principe et leurs cas d'usage. On les codera ensemble la semaine prochaine."
+    play sound "Click.mp3" noloop
+
+    K "Ouf, ça nous laisse le temps de comprendre."
+    play sound "Click.mp3" noloop
+
+    M "Exactement. La compréhension avant l'implémentation."
+    play sound "Click.mp3" noloop
+
+    "{b}{i}La sonnerie retentit.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    M "Bien, c'est tout pour aujourd'hui. Bon travail à tous !"
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Les élèves commencent à ranger leurs affaires.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    $ stockage += 10.0
+
+    $ go_eat = get_random_go_eat()
+    P "[go_eat]"
+    play sound "Click.mp3" noloop 
+
+    $ suivi = get_random_suivi()
+    Na "[suivi]"
+    play sound "Footsteps.mp3" noloop
+
+    hide screen class_404 with moveoutright 
+    hide screen points with moveoutleft
+    hide screen day with moveoutleft
+    scene black with fade 
+
+    "{b}{i} Vous sortez de la salle de classe.{/i}{/b}"
+    play sound "Door.mp3" noloop
+
+    scene hallway with fade
+    show screen day with moveinleft
+    show screen points with moveinleft
+    show screen hallway with moveinright 
+
+    "{b}{i}Tu continues vers les escaliers.{/i}{/b}"
+    play sound "Footsteps.mp3" noloop
+
+    hide screen hallway with moveoutright
+    hide screen points with moveoutleft
+    hide screen day with moveoutleft
+    scene staircase with fade 
+
+    "{b}{i}Puis vers le hall.{/i}{/b}"
+    play sound "Footsteps.mp3" noloop
+
+    scene hall with fade
+    show screen day with moveinleft
+    show screen points with moveinleft
+    show screen hall with moveinright 
+
+    "{b}{i} Puis encore vers le réféctoire.{/i}{/b}"
+    play sound "Footsteps.mp3" noloop
+
+    hide screen hall with moveoutright
+    hide screen points with moveoutleft
+    hide screen day with moveoutleft
+    scene black with fade
+
+    "{b}{i} Vous entrez enfin au réfectoire.{/i}{/b}"
+    play sound "Door.mp3" noloop
+
+    scene lunchroom with fade
+    show screen day with moveinleft
+    show screen points with moveinleft
+    show screen lunchroom with moveinright
+
+    $ find_food = get_random_find_food()
+    Na "[find_food]"
+    play sound "Click.mp3" noloop 
+
+    $ suivi = get_random_suivi()
+    Na "[suivi]"
+    play sound "Footsteps.mp3" noloop
+
+    "{b}{i} Vous allez vers le comptoir pour prendre à manger.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    $ points -= 300 
+
+    $ service = get_random_service()
+    P "[service]"
+    play sound "Click.mp3" noloop 
+
+    $ sit = get_random_sit()
+    Na "[sit]"
+    play sound "Click.mp3" noloop
 
     label end_script3:
     call script4 from _call_script4    
