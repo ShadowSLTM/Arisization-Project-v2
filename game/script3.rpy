@@ -3838,6 +3838,22 @@ label update3:
     Na "[sit]"
     play sound "Click.mp3" noloop
 
+    "{b}{i} Vous asseyez à une table.{/i}{/b}"
+    play sound "Click.mp3" noloop 
+
+    Na "Bonne appétit."
+    play sound "Click.mp3" noloop
+
+    P "Bonne appétit à toi aussi."
+    play sound "Click.mp3" noloop
+
+    "{b}{i} Vous mangez tranquillement puis [K] viens vers vous en mode sérieux.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+
+
+
+
     label end_script3:
     call script4 from _call_script4    
     return 
