@@ -13230,9 +13230,9 @@ label password24:
     P "[toilet]"
     play sound "Footsteps.mp3" noloop
 
-    hide screen class_404 with moveoutright
+    hide screen room with moveoutright
     hide screen points with moveoutleft
-    hide screen day with moveoutleft
+    hide screen day with moveoutleft 
     scene black with fade
 
     "{b}{i}Tu te diriges vers le couloir.{/i}{/b}"

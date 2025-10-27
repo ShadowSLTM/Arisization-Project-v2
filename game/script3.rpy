@@ -3850,9 +3850,398 @@ label update3:
     "{b}{i} Vous mangez tranquillement puis [K] viens vers vous en mode sérieux.{/i}{/b}"
     play sound "Click.mp3" noloop
 
+    P "Oh salut."
+    play sound "Click.mp3" noloop
+
+    K "Salut, tu vas bien ?"
+    play sound "Click.mp3" noloop
+
+    P "Oui et toi ?"
+    play sound "Click.mp3" noloop
+
+    K "Ça va, merci."
+    play sound "Click.mp3" noloop
+
+    P "Sinon quoi de neuf ?"
+    play sound "Click.mp3" noloop
+
+    K "Je vais te parler de ce qu'il s'est passé hier en fin d'après-midi, après les cours."
+    play sound "Click.mp3" noloop
+
+    P "Si tu parles de l'attaque qu'il y a eu hier après les cours, je suis au courant."
+    play sound "Click.mp3" noloop 
+
+    K "Bien et il s'est passé quoi de ton coté ?"
+    play sound "Click.mp3" noloop 
+
+    if quest40 == 1:
+
+        P "Rien de spécial car [newname] était à jour niveau sécurité."
+        play sound "Click.mp3" noloop   
+
+        K "Ah cool alors si rien de spécial ne s'est passé."
+        play sound "Click.mp3" noloop
+
+        P "Oui, heureusement d'ailleurs."
+        play sound "Click.mp3" noloop 
+
+    else: 
+
+        P "Elle a failli se faire pirater par quelqu'un qui connaissait les privilèges administrateur."
+        play sound "Click.mp3" noloop 
+
+        K "Ah bon, il a réussi ?"
+        play sound "Click.mp3" noloop
+
+        P "Non, j'ai récupéré les droits derrière son dos avant qu'il n'aille plus loin."
+        play sound "Click.mp3" noloop 
+
+        K "Ouf, heureusement que tu étais là pour l'aider."
+        play sound "Click.mp3" noloop
+
+    P "Sinon, de ton coté, quoi de neuf ?"
+    play sound "Click.mp3" noloop
+
+    K "Eh bien, après les cours, j'ai remarqué quelque chose d'étrange sur le réseau."
+    play sound "Click.mp3" noloop
+
+    P "Quoi donc ?"
+    play sound "Click.mp3" noloop
+
+    K "Il y avait beaucoup de requétes venant de l'addresse IP {b}{i}201.125.114.115.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    P "Encore cette addresse IP ? C'est celle qui a essayé de pirater [newname] ?"
+    play sound "Click.mp3" noloop
+
+    K "Oui, c'est ça."
+    play sound "Click.mp3" noloop
+
+    P "C'est vraiment bizarre que cette addresse IP revienne tout le temps."
+    play sound "Click.mp3" noloop
+
+    K "Je ne sais pas, mais ça m'inquiète un peu."
+    play sound "Click.mp3" noloop
+
+    P "Oui tu as raison de t'inquiéter sur ça."
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Vous continuez de discuter jusqu'à la sonnerie.{/i}{/b}"
+    play sound "Bell.mp3" noloop 
+
+    P "Bon il faut qu'on retourne en cours."
+    play sound "Click.mp3" noloop 
+             
+    $ suivi = get_random_suivi() 
+    Na "[suivi]" 
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Vous prenez d'abord vos sac à dos.{/i}{/b}"
+    play sound "Footsteps.mp3" noloop 
+
+    hide screen lunchroom with moveoutright
+    hide screen points with moveoutleft
+    hide screen day with moveoutleft
+    scene black with fade 
+
+    "{b}{i} Vous sortez du réfectoire.{/i}{/b}"
+    play sound "Door.mp3" noloop
+
+    scene hall with fade
+    show screen day with moveinleft
+    show screen points with moveinleft
+    show screen hall with moveinright
+
+    "{b}{i} Vous continuez dans le hall.{/i}{/b}"
+    play sound "Footsteps.mp3" noloop  
+
+    hide screen hall with moveoutright
+    hide screen points with moveoutleft
+    hide screen day with moveoutleft
+    scene staircase with fade 
+
+    "{b}{i} Vous montez au premier étage.{/i}{/b}"
+    play sound "Footsteps.mp3" noloop
+
+    scene hallway with fade 
+    show screen day with moveinleft
+    show screen points with moveinleft
+    show screen hallway with moveinright
+
+    "{b}{i} Vous continuez dans le couloir.{/i}{/b}"
+    play sound "Footsteps.mp3" noloop
+
+    hide screen hallway with moveoutright
+    hide screen points with moveoutleft
+    hide screen day with moveoutleft
+    scene black with fade
+
+    "{b}{i}Vous entrez en classe.{/i}{/b}"
+    play sound "Door.mp3" noloop
+    
+    scene classroom with fade
+    show screen day with moveinleft
+    show screen points with moveinleft
+    show screen class_404 with moveinright 
+
+    P "Rebonjour."
+    play sound "Click.mp3" noloop 
+
+    Na "Rebonjour."
+    play sound "Click.mp3" noloop 
+
+    J1 "Rebonjour."
+    play sound "Click.mp3" noloop 
+
+    M "Rebonjour mes chers élèves."
+    play sound "Click.mp3" noloop  
+
+    "{b}{i}Tout le monde s'asseoit à sa place et le cours continue tranquillement.{/i}{/b}"
+    play sound "Bell.mp3" noloop
+
+    $ endlesson = get_random_endlesson()
+    M "[endlesson]"
+    play sound "Click.mp3" noloop 
+
+    "{b}{i}Les élèves commencent à ranger leurs affaires.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    $ stockage += 10.0
+
+    P "[newname]on va en permanance pour réviser ?"
+    play sound "Click.mp3" noloop
+
+    $ suivi = get_random_suivi()
+    Na "[suivi]"
+    play sound "Footsteps.mp3" noloop
+
+    hide screen class_404 with moveoutright
+    hide screen points with moveoutleft
+    hide screen day with moveoutleft
+    scene black with fade 
+
+    "{b}{i} Vous sortez de la salle de classe.{/i}{/b}"
+    play sound "Door.mp3" noloop
+
+    scene hallway with fade
+    show screen day with moveinleft
+    show screen points with moveinleft
+    show screen hallway with moveinright 
+
+    "{b}{i} Vous continues vers le dortoir.{/i}{/b}"
+    play sound "Click.mp3" noloop 
+
+    hide screen hallway with moveoutright
+    hide screen points with moveoutleft
+    hide screen day with moveoutleft
+    scene black with fade
+
+    "{b}{i}Vous vous dirigez vers la salle de permanence.{/i}{/b}"
+    play sound "Footsteps.mp3" noloop
+
+    hide screen hallway with moveoutright
+    hide screen points with moveoutleft
+    hide screen day with moveoutleft
+    scene black with fade
+
+    "{b}{i}Vous entrez en salle de permanence.{/i}{/b}"
+    play sound "Door.mp3" noloop
+
+    scene classroom with fade
+    show screen day with moveinleft
+    show screen points with moveinleft
+    show screen perm with moveinright
+
+    "{b}{i}Vous vous installez à une place.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    Na "Bon, par quoi on commence ?"
+    play sound "Click.mp3" noloop
+
+    P ""
+    play sound "Click.mp3" noloop
+
+    Na "Alors oui poourquoi pas"
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Puis Les jumelles et [S] entre ici.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    J2 "Oh c'est vous...salut."
+    play sound "Click.mp3" noloop   
+
+    P "Salut..."
+    play sound "Click.mp3" noloop
+
+    P "{=Pensee}Je me demande aussi ce qu'ils font ici...{/Pensee}"
+    play sound "Click.mp3" noloop
+
+    S "Salut..."
+    play sound "Click.mp3" noloop 
+
+    Na "Salut Vous venez réviser aussi ?"
+    play sound "Click.mp3" noloop 
+
+    J1 "Oui, on a besoin de réviser pour le prochain contrôle."
+    play sound "Click.mp3" noloop
+
+    S "Mouais, je suis là parce que je révise avec elles."
+    play sound "Click.mp3" noloop 
+
+    if pronom == "il":
+
+        P "{=Pensee}Ça promet d'être sympa cette séance de révision... mais il faut que je lui demande un truc pour être sûr.{/Pensee}"
+        play sound "Click.mp3" noloop 
+
+    else: 
+
+        P "{=Pensee}Ça promet d'être sympa cette séance de révision... mais il faut que je lui demande un truc pour être sûre.{/Pensee}"
+        play sound "Click.mp3" noloop 
+
+    menu:  
+
+        "{b}{i}Poser un affront à [S]{/i}{/b}":
+            play sound "Menu.mp3" noloop
+
+            $ renpy.block_rollback()
+
+    P "Au fait [S], j'ai une question à te poser !"
+    play sound "Click.mp3" noloop
+
+    S "Oui quoi encore ?"
+    play sound "Click.mp3" noloop
+
+    P "Tu étais ou hier après les cours !?"
+    play sound "Click.mp3" noloop
+
+    Na "Tu ne va pas recommencer avec ça !"
+    play sound "Click.mp3" noloop
+
+    P "Mais il faut que je sache ce qu'il faisait."
+    play sound "Click.mp3" noloop
+
+    S "De quoi vous parlez ?"
+    play sound "Click.mp3" noloop
+
+    P "Je te demande juste où tu étais hier après les cours."
+    play sound "Click.mp3" noloop
+
+    S "Pour répondre à ta question, j'étais en permanence en train d'étudier."
+    play sound "Click.mp3" noloop
+
+    P "Ah bon et il y a quelqu'un pour confirmer ton affirmation ?"
+    play sound "Click.mp3" noloop
+
+    S "Oui il y a les jumelles qui peuvent confirmer."
+    play sound "Click.mp3" noloop
+
+    J1 "Oui c'est vrai, [S] était avec nous en permanance."
+    play sound "Click.mp3" noloop
+
+    J2 "Oui, on a révisé ensemble après les cours et alors."
+    play sound "Click.mp3" noloop
+
+    if quest40 == 1:
+
+        P "Je demande car hier il y a eu une tentative d'intrusion dans le système de [newname] avec une commande administrateur."
+        play sound "Click.mp3" noloop
+
+    else:
+
+        P "Je demande car hier il y a eu une attaque informatique contre [newname] avec une commande administrateur."
+        play sound "Click.mp3" noloop
+
+    J2 "Hey pourquoi tu nous accuses toute de suite sans preuve ?"
+    play sound "Click.mp3" noloop
+
+    P "Je tiens à rappeller que tu as insulté et frappé [newname] sous mes yeux !"
+    play sound "Click.mp3" noloop
+
+    J2 "Je t'assure que ce n'est pas nous !!"
+    play sound "Click.mp3" noloop
+
+    S "Oui c'est vrai, on n'a rien fait du tout."
+    play sound "Click.mp3" noloop
+
+    P "Je vois alors si vous le dites."
+    play sound "Click.mp3" noloop
+
+    P "{=Pensee}Pourquoi j'ai l'impression qu'il y a un truc qui cloche ?{/Pensee}"
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Puis ils finissent par aller s'installer pour réviser.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    Na "Bon, on se met au travail maintenant, [prenom]."
+    play sound "Click.mp3" noloop
+
+    P "Oui, tu as raison."
+    play sound "Click.mp3" noloop
+
+    Na "On a du pain sur la planche."
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Vous révisez tranquillement pendant une heure et demi.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    P "Enfin fini de réviser."
+    play sound "Click.mp3" noloop
+
+    Na "On peut enfin se détendre un peu."
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Vous prenez d'abord vos sac à dos.{/i}{/b}"
+    play sound "Footsteps.mp3" noloop 
+
+    $ godorm = get_random_return_dorm()
+    P "[godorm]"
+    play sound "Click.mp3" noloop
+
+    $ suivi = get_random_suivi()
+    Na "[suivi]"
+    play sound "Footsteps.mp3" noloop
+
+    hide screen perm with moveoutright
+    hide screen points with moveoutleft
+    hide screen day with moveoutleft
+    scene black with fade
+
+    "{b}{i}Vous quittez la salle de permanence.{/i}{/b}"
+    play sound "Door.mp3" noloop
+
+    scene hallway with fade 
+    show screen day with moveinleft
+    show screen points with moveinleft
+    show screen hallway with moveinright
+
+    "{b}{i} Vous continues vers le dortoir.{/i}{/b}"
+    play sound "Footsteps.mp3" noloop 
+
+    hide screen hallway with moveoutright
+    hide screen points with moveoutleft
+    hide screen day with moveoutleft
+    scene black with fade
+
+    "{b}{i}Tu entres dans ton dortoir.{/i}{/b}"
+    play sound "Door.mp3" noloop
+
+    scene room with fade 
+    show screen day with moveinleft
+    show screen points with moveinleft
+    show screen room with moveinright 
+
+    $ dortoir = get_random_dortoir()
+    Na "[dortoir]"
+    play sound "Click.mp3" noloop
+
+    $ bien = get_random_fais_du_bien()
+    P "[bien]" 
+    play sound "Click.mp3" noloop  
 
 
+     
 
+    
 
     label end_script3:
     call script4 from _call_script4    

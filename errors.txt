@@ -2,8 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/controller.rpy", line 19: is not terminated with a newline. (Check strings and parenthesis.)
-                self.layouts = {
+File "game/script.rpy", line 5: Line is indented, but the preceding one-line python statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+    default grade = 0.0  
+    ^
 
 Ren'Py Version: Ren'Py 8.3.7.25031702
-Sat Oct 18 00:39:03 2025
+Mon Oct 27 21:05:46 2025

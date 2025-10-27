@@ -2,6 +2,8 @@ $ persistent.abandon = False
 $ persistent.arrestation = False
 $ persistent.game_completed = False
 
+label start:
+
     default grade = 0.0  
     default points = 0 
     default day = 0 
