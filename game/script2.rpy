@@ -12397,7 +12397,7 @@ label password23:
     play sound "Click.mp3" noloop
 
     Y "ça va c'est pas si mal."
-    play sound "Click.mp3" noloop
+    play sound "Bell.mp3" noloop
 
     $ endlesson = get_random_endlesson()
     M "[endlesson]"
