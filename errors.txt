@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 5: Line is indented, but the preceding one-line python statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
-    default grade = 0.0  
-    ^
+File "game/script3.rpy", line 4248: expected simple expression
+    play sound "Click.mp3" noloop fadein
+                                        ^
 
 Ren'Py Version: Ren'Py 8.3.7.25031702
-Mon Oct 27 21:05:46 2025
+Thu Oct 30 09:45:34 2025

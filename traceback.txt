@@ -1,28 +1,30 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 144, in script
-    if pronom not "il" or pronom not "elle":
-SyntaxError: invalid syntax (game/script.rpy, line 144)
+  File "game/script.rpy", line 228, in script
+    $ renpy.error("Yuki Hiiragi a modifié les fichiers du jeu et crée une erreur.")
+  File "game/script.rpy", line 228, in <module>
+    $ renpy.error("Yuki Hiiragi a modifié les fichiers du jeu et crée une erreur.")
+Exception: Yuki Hiiragi a modifié les fichiers du jeu et crée une erreur.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 144, in script
-    if pronom not "il" or pronom not "elle":
-  File "C:\Users\Aris\Documents\renpy-8.3.7-sdk\renpy\ast.py", line 1856, in execute
-    if renpy.python.py_eval(condition):
-  File "C:\Users\Aris\Documents\renpy-8.3.7-sdk\renpy\python.py", line 1216, in py_eval
-    code = py_compile(code, 'eval')
-  File "C:\Users\Aris\Documents\renpy-8.3.7-sdk\renpy\python.py", line 1153, in py_compile
-    raise e
-  File "C:\Users\Aris\Documents\renpy-8.3.7-sdk\renpy\python.py", line 1090, in py_compile
-    raise orig_e
-  File "C:\Users\Aris\Documents\renpy-8.3.7-sdk\renpy\python.py", line 1082, in py_compile
-    tree = compile(source, filename, py_mode, ast.PyCF_ONLY_AST | flags, 1)
-SyntaxError: invalid syntax (game/script.rpy, line 144)
+  File "game/script.rpy", line 228, in script
+    $ renpy.error("Yuki Hiiragi a modifié les fichiers du jeu et crée une erreur.")
+  File "C:\Users\Aris\Documents\renpy-8.3.7-sdk\renpy\ast.py", line 834, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "C:\Users\Aris\Documents\renpy-8.3.7-sdk\renpy\python.py", line 1187, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/script.rpy", line 228, in <module>
+    $ renpy.error("Yuki Hiiragi a modifié les fichiers du jeu et crée une erreur.")
+  File "C:\Users\Aris\Documents\renpy-8.3.7-sdk\renpy\exports\debugexports.py", line 138, in error
+    _error_handlers[-1](msg)
+  File "C:\Users\Aris\Documents\renpy-8.3.7-sdk\renpy\exports\debugexports.py", line 117, in _error
+    raise Exception(msg)
+Exception: Yuki Hiiragi a modifié les fichiers du jeu et crée une erreur.
 
 Windows-10-10.0.26200 AMD64
 Ren'Py 8.3.7.25031702
 Arisization Project Version_0.0.5
-Sat Oct 25 00:40:11 2025
+Thu Oct 30 09:48:33 2025

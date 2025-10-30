@@ -223,7 +223,7 @@ label début:
     "{b}{i}Quelque part dans un entrepôt abandonné en 2097.{/i}{/b}"
     play sound "Click.mp3" noloop 
 
-    scene warehouse with fade
+    scene warehouse with fade 
 
     if persistent.arrestation == True:
 
