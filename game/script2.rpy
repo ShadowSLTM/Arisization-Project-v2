@@ -6362,7 +6362,7 @@ label philosophie_technologie:
 
     $ stockage += 2.0
 
-    M "Donc la première semaine de janvier quand vous revenez les permanance seront obligatoire."
+    M "Donc la première semaine de janvier quand vous revenez les permanences seront obligatoires."
     play sound "Click.mp3" noloop 
 
     J1 "Quoi mais pourquoi !?"
