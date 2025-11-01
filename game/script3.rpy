@@ -5702,10 +5702,169 @@ label update3:
     play sound "Click.mp3" noloop 
 
     "{b}{i}Tu te changes et puis tu aperçois [newname] se lever doucement aussi.{/i}{/b}"
+    play sound "Click.mp3" noloop 
+
+    $ comment_ca_va = get_random_comment_ca_va()
+    P "[comment_ca_va]"
+    play sound "Click.mp3" noloop  
+
+    $ je_vais_bien_txt = get_random_je_vais_bien() 
+    Na "[je_vais_bien_txt]" 
     play sound "Click.mp3" noloop
 
+    P "Tu as bien dormi ?"
+    play sound "Click.mp3" noloop
 
+    Na "Oui très bien merci et toi ?"
+    play sound "Click.mp3" noloop
+
+    P "Moi aussi, j'ai bien dormi."
+    play sound "Click.mp3" noloop
+
+    Na "Cool alors, bon moi je vais aller me changer."
+    play sound "Click.mp3" noloop
+
+    $ validation = get_random_validation() 
+    P "[validation]"
+    play sound "Click.mp3" noloop 
+
+    "{b}{i}[newname] part se changer.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    P "[newname], tu es prête ?"
+    play sound "Click.mp3" noloop
+
+    Na "Je suis prête."
+    play sound "Click.mp3" noloop
+
+    P "Cool alors."
+    play sound "Click.mp3" noloop
+
+    "{b}{i}Vous continuez de discuter.{/i}{/b}"
+    play sound "Click.mp3" noloop 
+
+    P "Bon, on va en cours avant d'être en retard."
+    play sound "Click.mp3" noloop 
+
+    $ suivi = get_random_suivi()
+    Na "[suivi]"
+    play sound "Footsteps.mp3" noloop
+
+    "{b}{i}Vous prenez d'abord vos sac à dos.{/i}{/b}"
+    play sound "Click.mp3" noloop 
+
+    hide screen room with moveoutright 
+    hide screen points with moveoutleft
+    hide screen day with moveoutleft
+    scene black with fade
+
+    "{b}{i} Tu quiites le dortoir avec [newname].{/i}{/b}"
+    play sound "Door.mp3" noloop 
+
+    scene hallway with fade
+    show screen day with moveinleft
+    show screen points with moveinleft
+    show screen hallway with moveinright 
+
+    "{b}{i} Vous continuez vers la salle de classe.{/i}{/b}"
+    play sound "Footsteps.mp3" noloop
+
+    hide screen hallway with moveoutright
+    hide screen points with moveoutleft
+    hide screen day with moveoutleft
+    scene black with fade
+
+    "{b}{i}Vous entrez en classe.{/i}{/b}"
+    play sound "Door.mp3" noloop
+
+    scene classroom with fade
+    show screen day with moveinleft
+    show screen points with moveinleft
+    show screen class_404 with moveinright 
+
+    $  salutation_rdm = get_random_salutation()
+    Na "[salutation_rdm]"
+    play sound "Click.mp3" noloop
+
+    $  salutation_rdm = get_random_salutation()
+    P "[salutation_rdm]"
+    play sound "Click.mp3" noloop 
+
+    "{b}{i}Tout le monde s'asseoit à sa place respective.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    M "Très bien, commençons la vérification des présences."
+    play sound "Click.mp3" noloop  
+
+    M "[I] ?"
+    play sound "Click.mp3" noloop  
+
+    I "Présente."
+    play sound "Click.mp3" noloop  
+
+    M "[H] ?"
+    play sound "Click.mp3" noloop  
+
+    H "Ouais, je suis là."
+    play sound "Click.mp3" noloop  
+
+    M "[K] ?"
+    play sound "Click.mp3" noloop  
+
+    K "Présent, madame."
+    play sound "Click.mp3" noloop  
+
+    M "[N] ?"
+    play sound "Click.mp3" noloop  
+
+    N "Ici."
+    play sound "Click.mp3" noloop  
+
+    M "[Hi] ?"
+    play sound "Click.mp3" noloop  
+
+    Hi "Présent."
+    play sound "Click.mp3" noloop  
+
+    M "[Y] ?"
+    play sound "Click.mp3" noloop  
+
+    Y "Oui, présente."
+    play sound "Click.mp3" noloop  
+
+    M "[S] ?"
+    play sound "Click.mp3" noloop  
+
+    S "Toujours là."
+    play sound "Click.mp3" noloop  
+
+    M "[J1] ?"
+    play sound "Click.mp3" noloop  
+
+    J1 "Présente."
+    play sound "Click.mp3" noloop  
+
+    M "[J2] ?"
+    play sound "Click.mp3" noloop  
+
+    J2 "Présente aussi."
+    play sound "Click.mp3" noloop  
+
+    M "[P] ?"
+    play sound "Click.mp3" noloop  
+
+    P "Oui, je suis là."
+    play sound "Click.mp3" noloop  
+
+    M "[Na] ?"
+    play sound "Click.mp3" noloop  
+
+    Na "Présente, madame."
+    play sound "Click.mp3" noloop  
+
+    M "Bien nous pouvons commencer le cours."
+    play sound "Click.mp3" noloop    
 
     label end_script3:
     call script4 from _call_script4    
-    return  
+    return   

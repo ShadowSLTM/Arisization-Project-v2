@@ -1942,7 +1942,7 @@ screen credit():
 
             label "{b}{i}— Remerciements —\n{/i}{/b}"  
 
-            text _("Musique du menu principal : Hayden Folker")
+            text _("Musique du menu principal : Hayden Folker\n")
 
             text _("Musique de la fin du jeu : Chan Walrus\n") 
 
